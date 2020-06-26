@@ -1,0 +1,34 @@
+audioapi: 1
+noaudioin: False
+audioindev1: 0 2
+audioindevname1: bcm2835 ALSA (hardware)
+noaudioout: False
+audiooutdev1: 0 2
+audiooutdevname1: bcm2835 ALSA (hardware)
+audiobuf: 25
+rate: 44100
+callback: 0
+blocksize: 64
+midiapi: 1
+nomidiin: False
+midiindev1: 0
+midiindevname1: ALSA MIDI device #1
+nomidiout: False
+midioutdev1: 0
+midioutdevname1: ALSA MIDI device #1
+path1: /home/pi/StuART
+path2: /usr/lib/pd/extra/cyclone
+path3: ~/StuART/DMX
+path4: ~/StuART/CueLoader
+path5: ~/StuART/command
+path6: ~/StuART/convert
+path7: ~/StuART/ARTNET
+path8: ~/StuART/sACN
+npath: 8
+standardpath: 1
+verbose: 0
+nloadlib: 0
+defeatrt: 0
+flags: 
+zoom: 1
+loading: no
