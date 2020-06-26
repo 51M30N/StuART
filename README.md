@@ -14,7 +14,7 @@ Il s’agit aujourd’hui de développer l’outil pour le rendre disponible à 
 StuArt est destiné aux théâtres, festivals, musées, établissements artistiques et culturels, compagnies, ensembles musicaux et collectivités et, à tous les porteurs de projets artistiques et culturels utilisant dans leurs pratiques des effets techniques. Les  professionnels concernés seraient : régisseurs, créateurs lumière, metteurs en scène, chorégraphes, musiciens,  plasticiens… Le modèle économique de StuArt lui permettra également d’être utilisé dans le cadre de pratiques amateurs.
 
 
-#Installation de StuART
+# Installation de StuART
 
 StuART est écrit et optimisé pour fonctionner sous Raspbian Buster sur un raspberry pi 4 avec Pd 0.49.0
 
