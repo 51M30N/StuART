@@ -1,0 +1,18 @@
+#!/bin/bash
+#|||||||||||||#
+#|by_51M30N|||#
+#|for__StuART|#
+#|||||||||||||# rev 02092019
+#|||||||||||||#
+
+if [ $1 ]
+    then
+        IP=$1
+    else
+        exitlxterminal -e ssh -X pi@192.168.1.101
+
+    fi
+    echo "IP=$IP"
+
+
+lxterminal -e ssh -X pi@192.168.1.101

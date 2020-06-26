@@ -1,0 +1,53 @@
+13 tcontrol Open_Cue
+14 tcontrol previous_scene_list
+15 tcontrol next_scene_list
+
+44 tcontrol go_1
+43 tcontrol +go+_1
+42 tcontrol -go-_1
+41
+40
+
+58 cue F_fade_out_1s
+59 cue F_noir
+
+0 fader fader_1
+1 fader fader_2
+2 fader fader_3
+3 fader fader_4
+4 fader fader_5
+5 fader fader_6
+6 fader fader_7
+7 fader fader_8
+16 fader knob_1
+17 fader knob_2
+18 fader knob_3
+19 fader knob_4
+20 fader knob_5
+21 fader knob_6
+22 fader knob_7
+23 fader knob_8
+32 fader exec1_1
+33 fader exec1_2
+34 fader exec1_3
+35 fader exec1_4
+36 fader exec1_5
+37 fader exec1_6
+38 fader exec1_7
+39 fader exec1_8
+48 fader exec2_1
+49 fader exec2_2
+50 fader exec2_3
+51 fader exec2_4
+52 fader exec2_5
+53 fader exec2_6
+54 fader exec2_7
+55 fader exec2_8
+64 fader exec3_1
+65 fader exec3_2
+66 fader exec3_3
+67 fader exec3_4
+68 fader exec3_5
+69 fader exec3_6
+70 fader exec3_7
+71 fader exec3_8

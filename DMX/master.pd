@@ -1,0 +1,180 @@
+#N canvas 8 93 1680 966 10;
+#X obj 99 202 cnv 15 149 299 empty empty master 5 6 2 10 -204786 -66577
+0;
+#X obj 138 373 tgl 20 0 toggle_rec_faderdmx toggle_rec_faderdmxM rec_faderdmx
+22 10 0 12 -257985 -260097 -1 0 1;
+#X obj 138 393 tgl 20 0 toggle_out_faderdmx toggle_out_faderdmxM out_faderdmx
+22 10 0 12 -260097 -262130 -1 0 1;
+#X obj 138 353 tgl 20 0 Live_Mode Live_ModeM Live_Mode 22 10 0 12 -4032
+-1 -1 0 1;
+#X obj 138 455 bng 20 250 50 0 Store_fdmx Store_fdmxM Store_fdmx 22
+10 0 12 -258113 -4034 -1;
+#X obj 202 663 s globaltime;
+#X floatatom 202 643 5 0 0 1 time_(s) - -;
+#X obj 563 199 r globaltimeM;
+#X obj 138 434 bng 20 250 50 0 SET_fader empty SET_fader 22 10 0 10
+-4160 -258113 -1;
+#X obj 138 413 tgl 20 0 COLOR_FADER COLOR_FADERM COLOR_FADER 22 10
+0 12 -159808 -262144 -1 0 1;
+#X msg 563 281 \; Live_ModeM 1 \; toggle_out_faderdmxM 1 \; toggle_rec_faderdmxM
+0 \; COLOR_FADERM 0 \;;
+#X obj 73 690 r SELECT;
+#X msg 67 927 \; to_control_f-SELECT fader_CanardB2 \$1 \$2;
+#X obj 149 776 int;
+#X obj 149 797 pack;
+#X obj 184 769 * 1000;
+#X msg 563 219 \; CCOLOR color 14 0 21;
+#X obj 138 475 bng 20 250 50 0 empty empty base_StuART 22 10 1 12 -261234
+-1 -261234;
+#X floatatom 101 229 14 0 9999 0 - - -;
+#X obj 299 35 r time_SELECT_master;
+#X obj 298 56 / 3;
+#X obj 298 77 int;
+#X msg 326 140 \; cnv_time_SELECT_master label f-time=\$1s;
+#X floatatom 101 245 14 0 255 0 - - -;
+#X obj 498 30 r level_SELECT_master;
+#X msg 498 85 \; cnv_level_SELECT_master label level=\$1;
+#X obj 498 51 * 2;
+#X obj 100 214 cnv 15 149 15 empty cnv_fader_SELECT_master CLEAR 2
+8 2 12 -1 -4032 0;
+#X obj 18 15 bng 15 250 50 0 empty empty empty 17 7 0 10 -1 -262144
+-1;
+#X obj 376 121 + 0;
+#X obj 445 121 + 255;
+#X obj 100 260 bng 30 250 50 0 empty empty 255 3 16 2 15 -45076 -232576
+-232576;
+#X obj 100 290 bng 30 250 50 0 empty empty 128 3 16 2 15 -45076 -232576
+-232576;
+#X obj 100 320 bng 30 250 50 0 empty empty 0 11 16 2 15 -45076 -232576
+-232576;
+#X obj 406 121 + 128;
+#X obj 191 260 bng 30 250 50 0 empty empty 2 11 16 2 15 -13381 -1 -261682
+;
+#X obj 161 260 bng 30 250 50 0 empty empty 1 11 16 2 15 -13381 -1 -261682
+;
+#X obj 131 260 bng 30 250 50 0 empty empty 0 11 16 2 15 -13381 -1 -261682
+;
+#X obj 191 290 bng 30 250 50 0 empty empty 9 11 16 2 15 -13381 -1 -261682
+;
+#X obj 161 290 bng 30 250 50 0 empty empty 5 11 16 2 15 -13381 -1 -261682
+;
+#X obj 131 290 bng 30 250 50 0 empty empty 3 11 16 2 15 -13381 -1 -261682
+;
+#X obj 191 320 bng 30 250 50 0 empty empty 35 8 16 2 15 -13381 -1 -261682
+;
+#X obj 161 320 bng 30 250 50 0 empty empty 21 8 16 2 15 -13381 -1 -261682
+;
+#X obj 131 320 bng 30 250 50 0 empty empty 14 7 16 2 15 -13381 -1 -261682
+;
+#X obj 376 51 + 0;
+#X obj 406 51 + 1;
+#X obj 445 51 + 2;
+#X obj 376 71 + 3;
+#X obj 406 71 + 5;
+#X obj 445 71 + 9;
+#X obj 376 91 + 14;
+#X obj 406 91 + 21;
+#X obj 445 91 + 35;
+#X obj 100 229 cnv 15 90 15 empty cnv_time_SELECT_master f-time=0s
+2 8 2 14 -13381 -261682 0;
+#X obj 100 245 cnv 15 90 15 empty cnv_level_SELECT_master level=0 2
+8 2 14 -45076 -232576 0;
+#X obj 45 108 r level_0_SELECT_master;
+#X obj 65 128 r level_128_SELECT_master;
+#X obj 85 148 r level_255_SELECT_master;
+#X obj 716 603 print SELECT_master;
+#X obj 19 504 bng 20 250 50 0 empty empty CLEAR-GROUP 22 10 1 10 -4160
+-261682 -4160;
+#X msg 43 546 set;
+#X msg 401 906 \; to_control_f-SELECT fader_0 \$1 \$2 \;, f 44;
+#X msg 401 877 set \, add \, add2 to_control_f-SELECT fader_\$1 \,
+adddollar 1 \, adddollar 2 \, add;
+#X msg 78 874 add \, add2 to_control_f-SELECT fader_\$1 \, adddollar
+1 \, adddollar 2;
+#X msg 78 546 CLEAR;
+#X obj 78 565 symbol;
+#X msg 563 344 \; midi_pattern base_StuART;
+#X obj 104 363 vradio 12 1 0 10 empty empty 0-9 -1 -5 0 8 -260097 -261682
+-13381 0;
+#X obj 118 363 vradio 12 1 0 10 empty empty x10 1 -5 0 8 -260097 -261682
+-13381 0;
+#X obj 212 570 * 10;
+#X obj 202 620 +;
+#X obj 212 591 t b f;
+#X obj 143 548 s CLEAR-SELECT;
+#X msg 563 250 \; CLEAR-GROUP 1 \;;
+#X obj 224 821 outlet;
+#X msg 319 783 \; cnv_fader_SELECT_master label \$1;
+#X obj 4 483 r CLEAR-GROUP;
+#X obj 22 837 print ****************SELECT _;
+#X obj 73 741 select NO;
+#X obj 73 713 list;
+#X connect 6 0 5 0;
+#X connect 6 0 18 0;
+#X connect 7 0 67 0;
+#X connect 11 0 75 0;
+#X connect 11 0 74 0;
+#X connect 11 0 79 0;
+#X connect 13 0 14 0;
+#X connect 14 0 12 0;
+#X connect 15 0 14 1;
+#X connect 17 0 66 0;
+#X connect 18 0 22 0;
+#X connect 18 0 15 0;
+#X connect 19 0 20 0;
+#X connect 20 0 21 0;
+#X connect 21 0 18 0;
+#X connect 23 0 25 0;
+#X connect 23 0 13 0;
+#X connect 24 0 26 0;
+#X connect 26 0 23 0;
+#X connect 28 0 25 0;
+#X connect 28 0 22 0;
+#X connect 28 0 59 0;
+#X connect 29 0 23 0;
+#X connect 30 0 23 0;
+#X connect 31 0 30 0;
+#X connect 32 0 34 0;
+#X connect 33 0 29 0;
+#X connect 34 0 23 0;
+#X connect 35 0 46 0;
+#X connect 36 0 45 0;
+#X connect 37 0 44 0;
+#X connect 38 0 49 0;
+#X connect 39 0 48 0;
+#X connect 40 0 47 0;
+#X connect 41 0 52 0;
+#X connect 42 0 51 0;
+#X connect 43 0 50 0;
+#X connect 44 0 18 0;
+#X connect 45 0 18 0;
+#X connect 46 0 18 0;
+#X connect 47 0 18 0;
+#X connect 48 0 18 0;
+#X connect 49 0 18 0;
+#X connect 50 0 18 0;
+#X connect 51 0 18 0;
+#X connect 52 0 18 0;
+#X connect 55 0 33 0;
+#X connect 56 0 32 0;
+#X connect 57 0 31 0;
+#X connect 59 0 60 0;
+#X connect 59 0 64 0;
+#X connect 59 0 72 0;
+#X connect 60 0 12 0;
+#X connect 62 0 61 0;
+#X connect 63 0 12 0;
+#X connect 64 0 65 0;
+#X connect 65 0 75 0;
+#X connect 65 0 77 0;
+#X connect 67 0 70 0;
+#X connect 68 0 69 0;
+#X connect 69 0 71 0;
+#X connect 70 0 6 0;
+#X connect 71 0 70 0;
+#X connect 71 1 70 1;
+#X connect 76 0 59 0;
+#X connect 78 1 63 0;
+#X connect 78 1 77 0;
+#X connect 79 0 78 0;
+#X coords 0 -1 1 1 150 300 1 100 200;

@@ -1,0 +1,16 @@
+#N canvas 4 80 1325 603 10;
+#X obj 101 101 cnv 15 749 420 empty empty LED_Controller_HF_1 20 12
+0 14 -204786 -66577 0;
+#X obj 121 126 faderdmx 128 R-F-strip D;
+#X obj 181 126 faderdmx 129 G-F-strip D;
+#X obj 241 126 faderdmx 130 B-F-strip D;
+#X obj 301 126 faderdmx 131 CW-C-strip D;
+#X obj 361 126 faderdmx 132 WW-C-strip D;
+#X obj 421 126 faderdmx 133 a6fader D;
+#X obj 481 126 faderdmx 134 CW-F-strip D;
+#X obj 541 126 faderdmx 135 WW-F-strip D;
+#X obj 601 126 faderdmx 136 L_platine_Ovide D;
+#X obj 661 126 faderdmx 137 Pin-MAISON D;
+#X obj 721 126 faderdmx 138 Pin-bosq1 D;
+#X obj 781 126 faderdmx 139 Pin-bosq2 D;
+#X coords 0 -1 1 1 750 420 1 100 100;

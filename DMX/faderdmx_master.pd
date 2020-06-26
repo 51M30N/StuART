@@ -1,0 +1,25 @@
+#N canvas 30 414 1037 246 10;
+#X obj 385 118 tgl 20 0 toggle_rec_faderdmx toggle_rec_faderdmxM toggle_rec_faderdmx
+20 10 0 12 -257985 -260097 -1 0 1;
+#X obj 215 118 tgl 20 0 toggle_out_faderdmx toggle_out_faderdmxM toggle_out_faderdmx
+20 10 0 12 -260097 -262130 -1 1 1;
+#X obj 101 118 tgl 20 0 Live_Mode Live_ModeM Live_Mode 20 10 0 12 -4032
+-1 -1 1 1;
+#X obj 555 118 bng 20 250 50 0 Store_fdmx Store_fdmxM Store_fdmx 20
+10 0 12 -258113 -4034 -1;
+#X obj 876 159 s globaltime;
+#X obj 101 102 hradio 15 1 0 45 empty empty empty 0 -8 0 10 -260097
+-4032 -1 12;
+#X floatatom 787 105 5 0 0 1 time_(s) - -;
+#X obj 93 56 r globaltimeM;
+#X msg 514 7 \; Store_fdmxM 1;
+#X obj 681 120 bng 15 250 50 0 SET_fader empty SET_fader 17 7 0 10
+-4160 -258113 -1;
+#X obj 761 119 tgl 15 0 COLOR_FADER COLOR_FADERM COLOR_FADER 17 7 0
+10 -159808 -262144 -1 0 1;
+#X msg 333 12 \; Live_ModeM 1 \; toggle_out_faderdmxM 1 \; toggle_rec_faderdmxM
+0 \; COLOR_FADERM 0 \;;
+#X connect 5 0 6 0;
+#X connect 6 0 4 0;
+#X connect 7 0 5 0;
+#X coords 0 -1 1 1 799 40 1 100 100;

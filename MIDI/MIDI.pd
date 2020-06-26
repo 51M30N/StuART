@@ -1,0 +1,115 @@
+#N canvas 109 163 941 914 10;
+#X obj 1 1 cnv 15 398 58 empty BACK_MIDI empty 6 8 1 12 -261234 -4160
+0;
+#X msg 321 480 aconnect -lo;
+#X msg 321 463 aconnect -li;
+#X msg 322 742 SDOUT client 0: 'System' [type=kernel] \; SDOUT 0 'Timer
+' \; SDOUT 1 'Announce ' \; SDOUT client 14: 'Midi Through' [type=kernel]
+\; SDOUT 0 'Midi Through Port-0' \; SDOUT client 24: 'nanoKONTROL2'
+[type=kernel \; SDOUT card=2] \; SDOUT 0 'nanoKONTROL2 MIDI 1' \; SDOUT
+client 128: 'Pure Data' [type=user \; SDOUT pid=18458] \; SDOUT 1 'Pure
+Data Midi-Out 1' \; DONE 0 \; SDOUT client 14: 'Midi Through' [type=kernel]
+\; SDOUT 0 'Midi Through Port-0' \; SDOUT client 24: 'nanoKONTROL2'
+[type=kernel \; SDOUT card=2] \; SDOUT 0 'nanoKONTROL2 MIDI 1' \; SDOUT
+client 128: 'Pure Data' [type=user \; SDOUT pid=18458] \; SDOUT 0 'Pure
+Data Midi-In 1' \; DONE 0 \; DONE 0 \; DONE 0 \;, f 64;
+#X msg 244 728 set;
+#X obj 244 687 bng 15 250 50 0 empty Clear_MIDI Clear_MIDI 17 7 0 10
+-261234 -1 -1;
+#X obj 345 713 outlet;
+#X obj 379 599 cyclone/prepend add DONE;
+#X obj 322 619 cyclone/prepend add SDOUT;
+#X obj 368 685 print MIDI;
+#X obj 322 641 t a a a;
+#X obj 199 450 bng 15 250 50 0 empty List_input_MIDI List_input_MIDI
+17 7 0 10 -203904 -1 -1;
+#X obj 199 467 bng 15 250 50 0 empty List_output_MIDI List_output_MIDI
+17 7 0 10 -232576 -1 -1;
+#X obj 237 141 bng 15 250 50 0 empty Connect_MIDI Connect_MIDI 17 7
+0 10 -204786 -1 -1;
+#X floatatom 82 158 0 0 0 0 - - -;
+#X obj 55 140 ctlin;
+#X text 437 461 liste les input MIDI;
+#X text 437 481 liste les output MIDI;
+#X text 480 519 |aconnect "$input":0 "$output":0(;
+#X text 482 536 changer la valeur input selon le peripherique midi
+;
+#X obj 322 567 ggee/shell;
+#X obj 55 185 pack;
+#X msg 130 509 aconnect \$1:0 \$2:0;
+#X obj 235 21 bng 15 250 50 0 List_input_MIDI empty List_input_MIDI
+17 7 0 10 -203904 -1 -1;
+#X obj 235 36 bng 15 250 50 0 List_output_MIDI empty List_output_MIDI
+17 7 0 10 -232576 -1 -1;
+#X obj 235 6 bng 15 250 50 0 Connect_MIDI empty Connect_MIDI 17 7 0
+10 -204786 -1 -1;
+#X floatatom 7 23 5 0 0 1 Velocity - -;
+#X floatatom 7 38 5 0 0 1 ControlChange - -;
+#X obj 55 254 spigot;
+#X obj 109 273 tgl 15 1 empty empty empty 17 7 0 10 -262144 -1 -1 1
+1;
+#X obj 55 275 t b a b;
+#X text 55 235 limite à 1 message midi/10ms;
+#X obj 55 209 route 127 0;
+#X obj 135 255 prepend 127;
+#X obj 212 255 prepend 0;
+#X obj 55 297 delay 20;
+#X obj 114 363 list;
+#X msg 322 517 aconnect 20:0 128:0;
+#X obj 114 384 s to_control_midi;
+#X obj 352 172 r MIDI_CONNECT-\$1;
+#X obj 391 255 unpack;
+#X obj 237 171 f;
+#X floatatom 125 23 5 0 0 1 --midiindev - -;
+#X floatatom 125 38 5 0 0 1 --midioutdev - -;
+#X obj 237 199 pack;
+#X msg 372 288 \; BACK_MIDI label MIDI_Connect:\$1-\$2;
+#X msg 353 141 \; MIDI_CONNECT-1 20 128;
+#X obj 352 213 t a a a;
+#X msg 493 141 \; MIDI_CONNECT-1 24 128;
+#X connect 1 0 20 0;
+#X connect 2 0 20 0;
+#X connect 4 0 3 0;
+#X connect 4 0 6 0;
+#X connect 5 0 4 0;
+#X connect 7 0 10 0;
+#X connect 8 0 10 0;
+#X connect 10 0 3 0;
+#X connect 10 1 6 0;
+#X connect 10 2 9 0;
+#X connect 11 0 2 0;
+#X connect 12 0 1 0;
+#X connect 13 0 41 0;
+#X connect 15 0 26 0;
+#X connect 15 1 27 0;
+#X connect 15 2 14 0;
+#X connect 20 0 8 0;
+#X connect 20 1 7 0;
+#X connect 21 0 32 0;
+#X connect 22 0 20 0;
+#X connect 26 0 21 0;
+#X connect 27 0 21 1;
+#X connect 28 0 30 0;
+#X connect 29 0 28 1;
+#X connect 30 0 35 0;
+#X connect 30 1 36 0;
+#X connect 30 2 29 0;
+#X connect 32 0 33 0;
+#X connect 32 1 34 0;
+#X connect 32 2 28 0;
+#X connect 33 0 36 0;
+#X connect 34 0 36 0;
+#X connect 35 0 29 0;
+#X connect 36 0 38 0;
+#X connect 37 0 20 0;
+#X connect 39 0 47 0;
+#X connect 40 0 42 0;
+#X connect 40 1 43 0;
+#X connect 41 0 44 0;
+#X connect 42 0 41 1;
+#X connect 43 0 44 1;
+#X connect 44 0 47 0;
+#X connect 47 0 22 0;
+#X connect 47 1 45 0;
+#X connect 47 2 40 0;
+#X coords 0 -1 1 1 400 60 1 0 0;

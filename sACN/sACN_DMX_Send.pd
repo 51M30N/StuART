@@ -1,0 +1,36 @@
+#N canvas 195 125 720 437 10;
+#X obj 101 101 cnv 15 198 58 empty empty Universe-\$2->sACN-\$1 20
+12 0 14 -4032 -260097 0;
+#X obj 100 140 sACN-send;
+#X obj 400 147 sACN_DMPLayer;
+#X obj 400 192 sACN_RootLayer 4;
+#X obj 400 170 sACN_DMPFramingLayer \$1;
+#X obj 400 96 array get Universe-\$2;
+#X obj 400 119 prepend 0;
+#X obj 400 73 metro 40;
+#X obj 39 73 inlet;
+#X obj 126 123 bng 15 250 50 0 restart_ola\$0 restart_ola restart_ola
+17 7 0 10 -45076 -262144 -1;
+#X obj 216 122 tgl 15 0 TOGGLE_DMX_\$0 TOGGLE_DMX TOGGLE_DMX 17 7 0
+10 -258113 -4034 -1 0 1;
+#X msg 394 283 sudo service olad restart;
+#X obj 394 306 ggee/shell;
+#X obj 394 261 bng 15 250 50 0 empty restart_ola\$0 restart_ola\$0
+17 7 0 10 -45076 -262144 -1;
+#X obj 400 47 tgl 15 0 empty TOGGLE_DMX_\$0 TOGGLE_DMX_\$0 17 7 0 10
+-258113 -4034 -1 0 1;
+#X obj 100 15 r sACN_DMX_Send_IP;
+#X msg 100 45 connect \$1 \$2 \$3 \$4;
+#X connect 2 0 4 0;
+#X connect 3 0 1 0;
+#X connect 4 0 3 0;
+#X connect 5 0 6 0;
+#X connect 6 0 2 0;
+#X connect 7 0 5 0;
+#X connect 8 0 1 0;
+#X connect 11 0 12 0;
+#X connect 13 0 11 0;
+#X connect 14 0 7 0;
+#X connect 15 0 16 0;
+#X connect 16 0 1 0;
+#X coords 0 -1 1 1 200 60 1 100 100;

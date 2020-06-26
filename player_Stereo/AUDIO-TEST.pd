@@ -1,0 +1,21 @@
+#N canvas 8 241 1920 1028 10;
+#X obj 191 101 ESIuDJ6;
+#X obj 357 1103 LGQ_player_Stereo;
+#X obj 1127 1103 LGQ_player_Stereo_remote;
+#X obj 352 291 player_Stereo;
+#X obj 198 291 receiveLRmixer~;
+#X obj 359 585 temp_player_Stereo;
+#X obj 1127 585 temp_player_Stereo_remote;
+#X msg 1124 549 OPEN_PLAYER_REMOTE "nombre_de_faders" "IP_cible" "outport"
+"inport", f 81;
+#X msg 360 549 OPEN_PLAYER "nombre_de_faders" "IP_cible" "outport"
+"inport", f 81;
+#X text 269 548 SCRIPT;
+#X text 82 292 ABSTRACTIONS;
+#X text 249 583 PROTOTYPE;
+#X text 265 597 depend OSC;
+#X text 128 99 DEVICE;
+#X text 276 1101 MOD_LGQ;
+#X obj 1114 291 player_Stereo_remote 1;
+#X msg 837 499 CREATE_PLAYERS_and_REMOTES "nombre_de_faders" "IP_cible"
+"outport" "inport", f 79;

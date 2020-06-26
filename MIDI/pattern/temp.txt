@@ -1,0 +1,17 @@
+13 tcontrol Open_Cue
+14 tcontrol previous_scene_list
+15 tcontrol next_scene_list
+
+44 tcontrol go_1
+43 tcontrol +go+_1
+42 tcontrol -go-_1
+41
+40
+58 cue F_fade_out_1s
+59 cue F_noir
+
+7 control level_SELECT_master
+23 control time_SELECT_master
+39 tcontrol level_255_SELECT_master
+55 tcontrol level_128_SELECT_master
+71 tcontrol level_0_SELECT_master

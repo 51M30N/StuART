@@ -1,0 +1,14 @@
+#!/bin/bash
+#|||||||||||||#
+#|by_51M30N|||#
+#|for__StuART|#
+#|||||||||||||# rev 01092019
+#|||||||||||||#
+
+
+#pour lancer HEADER_PureData.pd, The central desktop
+sleep 1
+sudo killall pd alsa &
+sleep 3
+pd /home/pi/StuART/HEADER_PureData.pd &
+exit

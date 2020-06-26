@@ -1,0 +1,37 @@
+#!/bin/bash
+#|||||||||||#
+#|by_51M30N|#
+#|for__xxxx|#
+#|||||||||||#
+###################################################################
+#                                                                 #
+#  List_sequence "SHOW"  #
+#                                                                 #
+###################################################################
+# EXEMPLE SHOW=LGQ
+
+SHOW=LGQ-mod
+
+marge=0
+offset=0
+chemin="/home/pi/Documents/Cue/"$SHOW"/"
+echo "chemin = "$chemin
+ls $chemin"s*" > temp
+list=$(cat temp)
+
+echo $list[2]
+
+
+#for ((i=1 ; i<=$nombre ; i++)); do
+#	ls /home/pi/Documents/Cue/$SHOW/s$i/ > temp
+#	cp temp /home/pi/Documents/Cue/LGQ/LISTE #mais pourquoi
+#	echo "#N canvas  120 139 194 719 10;" > temp.pd
+#
+#for i in $(cat temp)
+#do
+#                echo "#X obj "$marge $offset" c "$i";" >> temp.pd
+#                let "offset = offset + 50"
+#done
+#cp temp.pd /home/pi/Documents/Cue/$SHOW/temp.pd
+exit
+

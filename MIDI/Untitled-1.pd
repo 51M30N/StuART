@@ -1,0 +1,3 @@
+#N canvas 1 85 450 300 10;
+#X obj 103 44 OSC/OSCsender;
+#X obj 103 79 OSC/OSCreceiver;

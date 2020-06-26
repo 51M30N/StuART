@@ -1,0 +1,980 @@
+#N canvas 461 275 581 300 10;
+#X msg 212 46 read -c /home/pi/Desktop/LGQNPP-Texte.txt;
+#X floatatom 128 161 5 0 0 0 - - -, f 5;
+#X msg 253 120 2;
+#X obj 117 90 text define -k TEXTE;
+#A set ﻿29 août 19 \; \; \; \; \; \; \; \; \; Le Garçon qui ne
+parlait plus[a] \; ________________ \; 1 Prologue \; \; \; (un slash
+- / - désigne le début de la réplique suivante) \; \; \; Elise au
+public \; Il était une fois un village balayé par le vent. \; \;
+\; Nadine \; D’ailleurs \, dans ce village \, les femmes qui veulent
+porter des robes ou des jupes doivent abandonner cette idée et porter
+des pantalons. Parce que je ne vous raconte pas comment ça tourne
+et ça tourbillonne. \; \; \; Elise \; En revanche \, on va quand même
+vous raconter quelque chose. \; \; \; Nadine \; Mais pas n’importe
+quoi. \; \; \; Paul \; On va vous raconter une histoire. \; \; \; Elise
+\; L’histoire du garçon qui ne parlait plus. \; \; \; Nadine \;
+Ne nous demandez pas quand ça se passe \, on n’en sait rien. \;
+\; \; Paul \; Ou on a oublié \; \; \; Elise \; Bon. Ce garçon \,
+donc \, celui dont on parle et qui ne parlait plus \, ne parle pas.
+Plus. Regardez \, il est là. \; \; \; Paul \; C’est lui \, là.
+Les cheveux au vent. Les cheveux dans les yeux. \; \; \; Nadine \;
+Là ! Vous voyez ? C’est lui. \; \; \; ________________ \; \; \;
+Paul \; On peut dire qu’il a une tête bien à lui. C’est sa tête.
+Sa tête de Rödd. \; \; \; Nadine \; Ah oui \, « Rödd » \, c’est
+son nom. Son prénom. ça vient de loin. \; \; \; Elise \; Oui \, dans
+cette histoire \, vous allez voir \, les gens ont des prénoms que
+vous n’avez jamais entendus. C’est comme ça. \; \; \; Paul \;
+Il ne parle plus parce qu’il lui est arrivé un truc horrible. \;
+\; \; On voit une branche attraper Rödd et le faire engloutir dans
+l’arbre \; Sons de brouillard \; Cris \, éclairs. \; Rödd ressort
+de l’arbre \, les yeux vides. \; \; \; Nadine \; Vous avez vu ? C’est
+horrible hein ? \; \; \; Elise \; Le lendemain soir \, alors que tout
+le monde le croyait perdu pour toujours \; \; \; Nadine \; Rödd était
+réapparu. Comme ça. Il avait toqué à la porte de chez lui \, son
+père avait ouvert \, avait crié : [b] \; \; \; \; \; Paul \; Oh mon
+Dieu! Rödd! \; \; \; Elise \; son père \, bouleversé par le retour
+de son fils \, l’avait embrassé lui avait fait à manger et l’avait
+couché. \; \; \; Nadine \; Mais le lendemain matin... \; \; \; Le
+père de Rödd \; Rödd ? Viens prendre ton petit-déjeuner \; \; \;
+Elise \; Rödd ne répond rien. \; \; \; Le père de Rödd \; Rödd
+?? Tu vas être en retard. Viens ! \; \; \; Nadine \; Mais Rödd a
+très bien entendu. Il est en train de s’habiller. Sauf qu’il ne
+répond pas à son père. \; \; \; Le père de Rödd \; inquiet Rödd?
+\; \; \; Elise \; Rödd entre dans la cuisine \, s’assoit à table
+et commence à tartiner une tranche de pain. \; \; \; Nadine \; Le
+père de Rödd ne comprend pas \; \; \; Le père de Rödd \; Rödd
+? Tu ne te sens pas bien ? \; \; \; Nadine \; Et au moment où il voulut
+lui mettre la main sur le front pour voir s’il n’avait pas de fièvre
+\, le père de Rödd vit les yeux de son fils se lever vers lui. \;
+\; \; Elise \; Et c’est là qu’il comprit que son fils avait changé.
+\; \; \; Paul \; C’est depuis ce temps que Rödd ne parle plus. Nous
+\, on sait pourquoi. Mais \, dans le village \, personne le sait. \;
+\; \; Nadine \; Personne \, personne.Même pas ses amis. \; \; \; Elise
+\; Attends. Il va falloir qu’on présente un peu le village \, la
+forêt \, l’Arbre de la Sagesse… \; \; \; Nadine \; Oui. Et puis
+aussi l’école et puis Mira \, Zélie \, Canard. Et Ovide. \; \;
+\; Elise \; Ah bah tiens. Ovide. Un autre garçon. Il parle \, lui.
+Le voilà. \; \; \; Paul \; Avec sa mère \; \; \; Nadine \; C’est
+le soir. Tout le monde dort dans le village. \; \; \; Elise \; Sauf
+Ovide et sa mère \, qui portent chacun une valise. \; \; \; \; \;
+________________ \; 2 L’arrivée d’Ovide \; \; \; \; \; Ovide \;
+Maman ? \; \; \; Mère d’Ovide \; Oui \, mon chéri ? \; \; \; Ovide
+\; M’appelle pas comme ça. Je m’appelle Ovide. \; \; \; Mère
+d’Ovide \; Oui \, mais tu es aussi mon chéri. \; \; \; Ovide \;
+Pff \; \; \; (…) \; \; \; Mère d’Ovide \; Qu’est-ce que tu voulais
+me dire ? \; \; \; Ovide \; Pourquoi c’est moche \, ici ? \; \; \;
+Mère d’Ovide \; Ce n’est pas laid \; \; \; Ovide \; Si \, c’est
+moche. Je le vois dans tes yeux que tu trouves ça moche. \; \; \;
+Mère d’Ovide \; Mais pas du tout \; \; \; Ovide \; C’est moche.
+Je veux pas vivre ici. \; \; \; Mère d’Ovide \; C’est un endroit
+qui va nous faire du bien. Je t’ai déjà expliqué. Il est tard
+\, je suis fatiguée \, je ne trouve pas l’adresse \, / il commence
+à faire froid \; Ovide \; C’est pas de ma faute ! \; \; \; Mère
+d’Ovide \; Qui t’a parlé de faute ? \; \; \; Ovide \; Toi ! \;
+\; \; Mère d’Ovide \; Ovide. Ça suffit. Tu vas avoir dix ans. Pas
+trois. Tu es capable de comprendre que ton attitude a besoin de changer.
+Je suis fatiguée. \; \; \; Ovide \; Pas moi \; \; \; Mère d’Ovide
+\; Ne commence pas s’il te plaît. J’ai suffisamment à faire comme
+ça. \; \; \; Ovide \; Si on était restés à la maison \, tu n’aurais
+pas suffisamment à faire comme ça. \; \; \; Mère d’Ovide \; Stop.
+C’est ici \, la maison \, maintenant \; \; \; Ovide \; C’est nul.
+C’est moche. Je suis sûr que les gens sont tous des bouseux débiles.
+C’est pas ici la maison. \; \; \; Mère d’Ovide \; Non mais c’est
+vraiment ici. Regarde. C’est notre nouvelle maison. \; \; \; Ovide
+\; Elle / est moche \; \; \; Mère d’Ovide \; Elle est moche \, je
+sais. N’empêche que tu vas te dépêcher d’y entrer et de te coucher
+parce qu’il est tard. \; \; \; Elise \; Effectivement \, il est déjà
+21h30 \; \; \; Paul \; Ah bon ? \; \; \; Elise \; Non mais dans l’histoire
+\; \; \; Paul \; Ah oui je comprends mieux parce que / ça fait vraiment
+pas longtemps qu’on a commencé \; \; \; Nadine \; Et nous nous retrouvons
+le lendemain matin. La mère d’Ovide se rend à la mairie. \; \;
+\; ________________ \; 3 La rue \; \; \; \; \; Nadine \; Et \, en s’arrêtant
+devant la pâtisserie \, elle a faim. Elle sort son porte-monnaie de
+son sac mais il lui échappe des mains. Arrivent deux personnes qui
+se jettent dessus. Alors que deux secondes avant \, la rue était quasiment
+déserte \; \; \; Monsieur Mirepoix \; Ouh la ouh la ma petite dame
+\; \; \; Madame Charleville \; Ouh lala ouh lala ! \; \; \; La mère
+d’Ovide \; Hein ? quoi ? \; \; \; Madame Charleville \; C’est bien
+un porte-monnaie ? \; \; \; Monsieur Mirepoix \; C’est à vous c’est
+le vôtre ? \; \; \; La mère d’Ovide \; Ah oui. J’allais le ramasser
+merci. \; \; \; Monsieur Mirepoix \; Je suis tellement content de vous
+avoir permis de le retrouver \; \; \; Madame Charleville \; Et moi
+tellement heureuse que vous ne l’ayez pas perdu \; \; \; La mère
+d’Ovide \; Euh oui. Merci \; \; \; Madame Charleville \; Oooooh vraiment
+\, je m’en serais voulue à mort si je n’avais pas vu ce joli porte-monnaie
+tomber \; \; \; ________________ \; \; \; Monsieur Mirepoix \; Eh beh
+oui \, c’est comme moi. Parce que ça aurait signifié que cette
+charmante dame l’aurait perdu \; \; \; Madame Charleville \; ça
+aurait été tellement triste ! \; \; \; La mère d’Ovide \; En tout
+cas merci beaucoup. Je vais y aller. \; \; \; Madame Charleville \;
+Mais de rien \, chère madame. A votre service. \; \; \; Monsieur Mirepoix
+\; Vous êtes nouvelle \, n’est-ce pas ? Parce que vous savez que
+vous n’avez pas besoin de porte-monnaie ici \; \; \; Madame Charleville
+\; Mais oui. Puisque vous n’aurez plus besoin de monnaie ! \; \;
+\; Monsieur Mirepoix \; Tout est gratuit ! \; Vous verrez \, vous vous
+sentirez bien \, ici. Tout le monde est très gentil. \; Moi \, personnellement
+\, c’est bien simple \, j’aime tout le monde ici \; \; \; Madame
+Charleville \; Moi aussi. Plus que moi-même \; \; \; La mère d’Ovide
+\; Bien bien… la mairie \, c’est bien par ici ? \; \; \; Madame
+Charleville et Monsieur Mirepoix \; Mais oui mais oui \; \; \; La mère
+d’Ovide s’en va \; \; \; Monsieur Mirepoix \; N’est-elle pas
+charmante ? \; \; \; Madame Charleville \; Charmante \; \; \; Monsieur
+Mirepoix \; On a tellement de chance d’habiter ici ! \; \; \; Madame
+Charleville \; Oh oui ! \; \; \; Monsieur Mirepoix \; Bien. Passez
+le bonjour à monsieur Charleville \; \; \; Madame Charleville \; Et
+vous à madame Mirepoix. Dites-lui que je lui apporterai une tranche
+de cake. J’en ai pris hier à l’épicerie \, justement ! \; \;
+\; Monsieur Mirepoix \; Oh mais quelle charmante attention ! Du cake
+! Et elle qui comptait vous apporter quelques cookies-soja qu’elle
+a récupérés hier à l’épicerie ! \; \; \; Madame Charleville
+\; Oooooh ! Mais qu’elle est charmante \, madame votre épouse !
+\; \; \; Monsieur Mirepoix \; J’y pense \, madame Charleville \,
+et si nous organisions un petit goûter dimanche prochain ? Goûter
+auquel nous pourrions inviter notre nouvelle et charmante concitoyenne
+? \; \; \; Madame Charleville \; Oh \, monsieur Mirepoix \, vous avez
+toujours de si belles idées ! \; ________________ \; \; \; 4 La salle
+de réception de la mairie \; \; \; Le maire \; Un peu de silence !
+\; \; \; L’employé \; Oui \, du silence \, du silence ! \; \; \;
+Le maire \; Mes chers amis. Et mes chèr-eu z’ami-eu. Bienvenue !
+Bienvenue dans notre beau village ! Vous êtes chaque année plus nombreuses
+et plus nombreux à nous rejoindre. A nous rejoindre et à vivre avec
+nous cette belle utopie. \; \; \; L’employé \; Bon. Ce mois-ci \,
+ils ne sont pas très nombreux. Il n’y a que cette dame. \; \; \;
+Le maire \; Ah oui. C’est vrai. Bienvenue \, chère madame \, donc
+\; \; \; La mère d’Ovide \; Merci \; \; \; L’employé \; Vous
+n’êtes pas nombreuse \, mais on est très content de vous voir !
+\; \; \; Le maire \; Merci à vous d’avoir choisi notre beau village.
+\; \; \; L’employé \; Vous verrez \, vous y serez bien. \; \; \;
+Le maire \; Très bien \, même. \; \; \; La mère d’Ovide \; J’en
+suis certaine \; \; \; Le maire \; Mais oui. Ici \, dans notre beau
+village \, plus besoin de travailler \, vous le savez. \; \; \; ________________
+\; \; \; La mère d’Ovide \; Oui \; \; \; Le maire \; Plus besoin
+de se faire du souci. Ici \, tout est gratuit. En contrepartie \, vous
+participez à la vie de la communauté \, bien entendu. Aux fêtes
+\, qui sont nombreuses. Il y a aussi les permanences à l’école.
+Les activités pour les anciens. Bref. Et plus de souci à vous faire
+pour vos enfants. Vous verrez \, ici \, tout ira très bien. Tout.
+\; Vous n’omettrez pas de passer au bureau 212 \, n’est-ce pas?
+Mon collègue procédera à votre enregistrement en bonne et due forme.
+Et vous expliquera les derniers détails \; Bon ! Allez ! Trêve de
+discours \, de bavardage et de bla-bla. Passons aux choses sérieuses
+! Le buffet ! Le buffet de l’amitié ! \; \; \; Madame Charleville
+à la mère d’Ovide \; Oh ! Comme on se retrouve ! Un petit four
+? \; \; \; La mère d’Ovide \; Ah oui. Re-bonjour \; \; \; Monsieur
+Mirepoix \; Pas un four-four \, hein ? Un petit four. Il pouffe. \;
+\; \; Madame Charleville interloquée \; Monsieur Mirepoix ? \; \;
+\; Monsieur Mirepoix à madame Charleville \; Eh bien mais oui. Il
+mime. Un petit four. Il pouffe très fort. Qui se mange ! \; \; \;
+Madame Charleville riant \; Aaaah ! Mais oui. Oh ! Monsieur Mirepoix
+\; \; \; Mirepoix à la mère d’Ovide \; Oui. J’aime beaucoup rire.
+Il faut rire \, dans la vie \, non ? Ici \, on aime beaucoup rire.
+(…) Il faut rire \, dans la vie \, non ? \; \; \; La mère d’Ovide
+\; Oui oui \; \; \; Madame Charleville à la mère d’Ovide \; Un
+petit four ? \; ________________ \; 5 L’école \; \; \; \; \; Sonnerie
+d’école \; \; \; Paul \; On est où là ? Je suis un peu perdu \,
+moi \; \; \; Nadine \; A l’école. Pendant que sa mère est à la
+mairie \, Ovide est à l’école \; \; \; La maîtresse \; Bonjour
+mon petit chéri ! Alors \, c’est toi \, le nouveau ? \; \; \; Ovide
+\; Euh. Oui. \; \; \; La maîtresse \; Et comment tu t’appelles déjà
+? Homide ? \; \; \; Ovide \; Non. Ovide. \; \; \; La maîtresse \;
+Ah oui. O-Vide. Bien. Et moi \, tu peux m’appeler maîtresse. MAI-TRE-SSE.
+Maîtresse. \; \; \; Ovide \; C’est ça. \; \; \; La maîtresse \;
+Tiens. Va t’asseoir au dernier rang \, à côté de Rödd. (…)
+Allez. Va t’asseoir mon petit chéri. \; \; \; Nadine \; Elle a l’air
+vraiment gentille \, cette maîtresse. Ovide se retrouve à côté
+de Rödd \, le garçon qui ne parlait plus. \; \; \; Ovide (à Rödd)
+\; Salut. \; \; \; ________________ \; \; \; Rödd \; … \; \; \;
+Ovide(à Rödd) \; Bah salut. \; \; \; Zélie \; Il va pas te répondre.
+\; \; \; Ovide \; Quoi ? \; \; \; Mira \; Il va pas te répondre. \;
+\; \; Ovide \; Et pourquoi ? \; \; \; Mira \; Parce qu’il parle plus.
+\; \; \; Ovide \; Ah bon. \; \; \; Mira \; Ouais. \; \; \; Ovide \;
+Il est muet. \; \; \; Mira \; Ben on sait pas trop s’il est muet-muet.
+En tout cas \, il parle plus. \; \; \; Ovide \; Ah ouais ? Et vous
+faites comment pour communiquer \, alors ? \; \; \; Mira \; Bah. Il
+a plus très envie de communiquer \, en fait. \; \; \; Ovide \; Il
+fait quoi alors ? \; \; \; Mira \; Il reste là \, avec nous. Il nous
+suit mais il ne dit rien. Enfin \, il n’a rien envie de nous dire
+en tout cas. Et la plupart du temps il disparaît parce qu’il poursuit
+un papillon ou un chat. Il adore les animaux. \; \; \; La maîtresse
+\; Mes petits chéris du fond ! Allons-allons ! On arrête les gazouillis.
+Et on écoute la leçon… \; \; \; Mira \; Pardon \, maîtresse. \;
+\; \; Zélie \; Je suis désolée \, je n’aurais vraiment pas dû
+bavarder avec mon voisin \; \; \; La maîtresse \; Allons allons \,
+ça ira pour cette fois. Vous vouliez faire connaissance avec votre
+nouveau camarade. C’est bien normal. Il est tellement choupinou.
+\; \; \; Ovide \; « Choupinou » ? \; \; \; La maîtresse \; Alors
+alors \, on se re-concentre et on écoute \; \; \; Ovide \; J’ai
+pas envie \; \; \; La maîtresse \; Pardon ? Mais. Euh. \; \; \; Ovide
+\; J’ai pas envie. Vous êtes sourde ? \; \; \; Les autres élèves
+choqués \; Ooooooh ! \; \; \; Ovide \; Entre le muet et la sourde
+\, merci ! C’est la classe des handicapés \, ici ? \; \; \; ________________
+\; \; \; La maîtresse \; M’enfin mais euh mon petit chéri. Personne
+n’est handicapé \, ici. Et on ne dit pas de mal des handicapés.
+\; \; \; Ovide \; Eh oh. Je suis pas votre petit chéri d’accord
+? \; \; \; La maîtresse \; Mais je ne. Euh. (…) Monsieur le directeur
+?? \; \; \; La maîtresse s’enfuit de la classe en hurlant \; \;
+\; Mira \; T’es fou ? \; \; \; Ovide \; Ben quoi ? Elle est complètement
+débile \, celle-là \, non ? \; \; \; Mira \; Mais arrête ! \; \;
+\; Canard \; Tu veux te faire avaler à la Grande Réunion \, demain
+? \; \; \; Ovide \; La quoi ? \; \; \; Zélie \; La Grande Réunion
+! \; \; \; Ovide \; Allez ! Maintenant qu’elle est partie \, c’est
+l’heure de la récré ! aux autres élèves Récrééééééé !!!
+\; \; \; Nadine \; Pendant ce temps-là \, à la mairie \, la mère
+d’Ovide est dans le bureau 212 Le bureau 212 \, c’est une toute
+petite pièce qui a un tout petit bureau \, une toute petite chaise
+et un tout petit employé. \; \; \; \; \; ________________ \; 6 La
+mairie \; \; \; \; \; L’employé \; Alors. Où habitez-vous \, ma
+petite dame ? \; \; \; La mère d’Ovide \; Sentier du Laurier. Au
+numéro 1 \; \; \; L’employé \; Laurier ? Je ne connais pas. Enfin.
+Je connais le laurier mais dans mon gigot. Pas dans un sentier. il
+rit très fort \; \; \; La mère d’Ovide \; … \; \; \; L’employé
+se calmant \, très sérieux \; Je plaisante. Je détends l’atmosphère.
+Je connais le sentier du Laurier \, bien entendu. (…) Donc. Nous
+disons au numéro 1 du sentier du Laurier. Laissez-moi vous retrouver
+dans mes tablettes. On l’entend chuchoter pour lui \, comme s’il
+compulsait un dictionnaire (…) Ah voilà. Vous voilà ! Enfin. «
+Vous voilà » \, façon de parler. Vous n’êtes pas dans mon petit
+cahier puisque vous êtes devant moi ! il rit très fort \; \; \; La
+mère d’Ovide \; … \; \; \; L’employé se calmant \, très sérieux
+\; Donc. Un fils de dix ans. Ovide \, c’est bien ça. \; \; \; La
+mère d’Ovide \; Ovide \, oui Bientôt 10 ans. \; \; \; L’employé
+\; Et pas de mari \, c’est bien ça? \; \; \; La mère d’Ovide
+\; Voilà. Je vis seule. Avec mon fils. \; \; \; L’employé \; Qu’est-ce
+que c’est triste ! J’imagine que dans ces conditions \, élever
+un enfant \, de surcroît difficile \, doit être compliqué. \; \;
+\; \; \; La mère d’Ovide \; On m’a dit qu’ici \, l’Arbre de
+la Sagesse peut faire des miracles \; \; \; L’employé \; Je vais
+maintenant vous faire signer votre contrat de citoyenneté. Voilà
+vous pourrez lire les différents articles stipulant elle parle très
+vite et certains mots échappent de son gromelo “épicerie \, Participation-rétribution
+\, Grande Réunion \, entraide \, solidarité \, arbre de la Sagesse”
+Et voilà. Vous pouvez signer ici. \; \; \; La mère d’Ovide \; Je
+n’ai pas bien compris en quoi consiste la Grande Réunion mensuelle.
+\; \; \; L’employé \; La Réunion a lieu une fois par mois. \; \;
+\; La mère d’Ovide \; Oui. Mensuelle \, donc. \; \; \; L’employé
+\; Lors de cette Réunion \, l’Arbre de la Sagesse peut décider
+de remettre quiconque dans le droit chemin \; \; \; La mère d’Ovide
+\; Le droit chemin \; \; \; L’employé \; Oui. D’où l’importance
+des petits papiers \; \; \; La mère d’Ovide \; Les petits papiers
+\; \; \; L’employé \; Oh ça n’arrive que très très rarement.
+C’est si vous voyez quelque chose d’étrange \, une personne ou
+un voisin qui \, je ne sais pas moi \, prend quelque chose qui n’est
+pas à lui \, ou jette des détritus où il ne faut pas ou \, pire
+–mais grands dieux ça n’arrive jamais dans notre beau village-
+agresse quelqu’un d’autre \, vous écrivez ce que vous avez vu
+sur un petit papier \, vous le déposez dans la fente de l’Arbre
+de la Sagesse et tout rentrera dans l’ordre ! \; \; \; ________________
+\; \; \; La mère d’Ovide \; Ah oui. \; \; \; \; \; L’employé
+\; Oui. L’Arbre de la Sagesse veille sur nous. Mais vous verrez ça
+demain lors de la Grande Réunion. Tous les habitants de notre beau
+village doivent y assister. \; Très bien. Je vous prierai de signer
+ici. La mère d’Ovide signe. Et ici. La mère d’Ovide signe. Merci
+merci ! Alors on se voit demain soir ! Bonne journée ma petite dame
+\; \; \; Nadine \; Et la mère d’Ovide rentre au 1 \, sentier du
+Laurier. Arrive la toute toute petite secrétaire \, qui était cachée
+dans le tout tout petit tiroir du tout petit bureau. \; \; \; La secrétaire
+pleure \; \; \; L’employé \; Allons allons. Que se passe-t-il ?
+\; \; \; La secrétaire \; Quelle tristesse ! Cette pauvre femme toute
+seule avec son enfant ! \; \; \; L’employé \; Mais enfin. Ne vous
+mettez pas dans cet état. Vous savez bien que tout va s’arranger
+pour elle. Comme pour tout le monde ici \; \; \; La secrétaire \;
+Je sais mais. En attendant. C’est trop triste ! \; \; \; L’employé
+\; Calmez-vous. Allez. Et si \, pour vous changer les idées \, vous
+alliez me préparer un petit sandwich ? \; \; \; La secrétaire \;
+Oh oui ! Quelle bonne idée ! Un petit sandwich ! \; \; \; L’employé
+\; Pas trop gros \, le petit sandwich \, hein ? \; \; \; La secrétaire
+\; Oui oui. Un petit petit sandwich ! \; \; \; L’employé \; Oui
+voilà. Merci ! \; \; \; La secrétaire sort \; \; \; L’employé
+\; Hmm. J’ai tellement hâte de manger mon petit sandwich ! \; \;
+\; ________________ \; 7 L’école \; \; \; \; \; Ovide \; C’était
+quoi cette cantine ? \; \; \; Mira \; Ben c’est une cantine \; \;
+\; Ovide \; Non mais dans mon ancienne cantine \, on n’avait que
+des quenelles et des épinards en boîte \; \; \; Zélie \; Des quoi
+? \; \; \; Canard \; Nous on a des frites. Tous les jours \; \; \;
+Paul \; Excusez-moi mais je m’y perds un peu \, là. Qui est qui
+? \; \; \; Nadine \; Alors. Oui. On fait les présentations. Elle \,
+c’est Mira. Elle a 8 ans et c’est la chef \; \; \; Mira \; J’ai
+8 ans et demi et je suis pas la chef. \; \; \; Nadine \; Elle \, c’est
+Zélie \, elle a… elle a… \; \; \; Zélie \; 7 ans et demi \; \;
+\; Nadine \; Voilà. Et… et… elle aime les crêpes. \; \; \; Zélie
+\; Et le basket. Et j’adore chanter ! \; \; \; ________________ \;
+\; \; Mira (Nadine?) \; Oui mais tu vas pas chanter maintenant. Merci.
+\; \; \; Nadine \; Lui \, c’est Canard. Il a 9 ans. Et il s’appelle
+Canard parce que. Parce que. Je sais plus pourquoi tiens. \; \; \;
+Elise à Canard \; Pourquoi tu t’appelles Canard ? \; \; \; Canard
+\; Ah bah tiens je me souviens plus non plus. \; \; \; Nadine \; Bon.
+Ben c’est Canard. \; \; \; Canard \; Et moi je sais voir dans le
+noir ! \; \; \; Nadine \; Euh oui mais là on s’en fiche un peu \,
+non ? \; \; \; Canard \; Ben je sais pas. C’est quand même pas tout
+le monde qui est tic-tac-lope. \; \; \; Mira \; Et moi je suis magicienne
+\; \; \; Nadine \; Bon alors tout le monde va sortir son incroyable
+talent \; \; \; Mira \; Non mais attends. A Ovide. Regarde. \; \; \;
+Elle sort une balle de ping-pong de la poche. Elle la montre entre
+deux doigts. Elle l’avale. Montre qu’elle n’a plus rien dans
+la main. Puis elle fait sortir la balle de son oreille. Ouvre la bouche
+pour montrer qu’elle est vide. \; \; \; Ovide \; Okay. Et moi je
+sais sauter à cloche-pied. \; \; \; ________________ \; \; \; Nadine
+à Ovide \; Bon et tu viens d’où \, alors ? \; \; \; Ovide \; Pas
+d’ici \; \; \; Zélie \; C’est sûr. Sinon t’aurais pas parlé
+comme ça à la maîtresse. \; \; \; Ovide \; Ah bon ? Parce qu’ici
+personne ne lui a jamais parlé comme ça ? \; \; \; Nadine \; Certainement
+pas ! \; \; \; Mira \; On n’est pas fou \; \; \; Zélie \; Ni zinzin
+\; \; \; Nadine \; Ça veut dire la même chose \; \; \; Ovide \; Et
+pourquoi ? \; \; \; Mira \; Pourquoi quoi ? \; \; \; Ovide \; Pourquoi
+vous parlez jamais mal à cette débile de maîtresse ? \; \; \; Canard
+à Ovide \; Chuuuut \; \; \; Mira à Ovide \; Arrête \; \; \; Ovide
+\; Elle est complètement nulle \, cette maîtresse. Elle nous prend
+pour des maternelles \; \; \; Canard parlant un peu trop fort \; Moi
+je l’aime beaucoup ! \; \; \; Zélie parlant un peu trop fort \;
+On l’adore ! \; \; \; Mira parlant un peu trop fort \; Oh oui ! \;
+\; \; Ovide \; Mais qu’est-ce que vous avez \, tous ? Vous êtes
+trop bizarres \; \; \; Mira \, Zélie et Canard. Ils se rapprochent
+d’Ovide et parlent tout doucement. Rödd reste à l’écart. \;
+\; \; Canard à Rödd \; Rödd ! \; \; \; Rödd se retourne vers Canard
+\; \; \; Canard \; Viens ! \; \; \; Mira à Ovide \; Tes parents t’ont
+pas encore parlé de l’Arbre de la Sagesse ? \; \; \; Ovide \; L’Arbre
+de la Sagesse ? Ah non. Et j’ai pas des parents. J’ai juste une
+mère. \; \; \; Canard \; Et elle t’a rien dit \, ta mère ? \; \;
+\; Ovide \; Bon. C’est bon \, là. Qu’est-ce qu’elle aurait dû
+me dire ? \; \; \; Zélie \; Tu sais pas ce qui se passe ici \, tous
+les mois ? \; \; \; Ovide \; C’est la fête de la vache ? \; \; \;
+________________ \; \; \; Canard \; Rödd \, il est pas devenu comme
+ça par hasard \; \; \; Ovide \; Ecoutez les gars \; \; \; Zélie \;
+Et les filles \; \; \; Ovide \; Vous avez l’air sympas \, hein ?
+Mais franchement je comprends rien à vos histoires de gamins. Désignant
+Rödd Lui \, il parle pas parce qu’il est débile. Vous \, vous êtes
+sages juste pour avoir des frites et cette école \, elle est complètement
+nulle. Donc \, si ça vous dérange pas \, je vais aller manger ma
+glace tout seul. Salut. A plus. \; \; \; (…) \; \; \; Elise \; J’espère
+qu’il ne va rien lui arriver demain soir \; \; \; Paul \; Lors de
+la Grande Réunion ? \; \; \; Nadine \; Meuh non. Il n’a pas été
+horrible-horrible \; \; \; Elise \; Ben. D’ici à ce que la maîtresse
+aille glisser un petit papier dans l’Arbre… \; \; \; Paul \; La
+journée passe et on se retrouve le soir \, au 1 sentier du laurier
+Hmm. Ça sent bon. ça sent vraiment bon. Regardez. Ici c’est la
+cuisine et Ovide et sa mère son attablés. Il y a un plat d’endives
+braisées tout chaud. \; \; \; \; \; ________________ \; \; \; 8 Chez
+Ovide \; \; \; \; \; Ovide \; Pourquoi t’as fait des endives ? \;
+\; \; La maman d’Ovide \; Eh bien. Mais. C’est bon \, les endives.
+T’adores ça d’habitude. \; \; \; Ovide \; Moui. \; \; \; La maman
+d’Ovide \; Qu’est-ce qu’il y a ? ça va pas ? \; \; \; Ovide
+\; Si. \; \; \; La maman d’Ovide \; Tu sais \, c’est normal. On
+vient à peine d’arriver. Il faut le temps que tu te fasses des
+amis. Et moi aussi \, d’ailleurs. Que j’aille mieux. Et que je
+me fasse des amis. \; \; \; Ovide \; J’ai des amis \, ça va \,
+c’est bon \; \; \; La maman d’Ovide \; Ah. (...) Tant mieux. (...)
+On va être bien \, ici. Tout le monde est très gentil. \; \; Ovide
+\; Tu trouves ? \; \; \; La maman d’Ovide \; Oh oui. \; \; \; Ovide
+\; Tu penses que je vais arrêter de faire n’importe quoi et de
+te rendre folle ? \; \; \; La maman d’Ovide \; Pardon ? \; \; \;
+________________ \; \; \; Ovide \; Par exemple \, là \, si je prends
+une endive et que je la fais tourner et que je l’envoie se coller
+sur le mur \, il se passe quoi ? \; \; \; La maman d’Ovide \; Il
+se passe. Il se passe que tu peux aller directement dans ta chambre.
+Il se passe que tu ne vas pas manger. Que tu vas dormir le ventre vide
+et que si tu me refais hurler ou pleurer ou casser des meubles \, je
+sortirai de la maison avant que tout cela n’arrive. \; \; \; Ovide
+\; J'en veux plus \, de toute façon. T'es une menteuse \; \; \; La
+maman d’Ovide \; Va te coucher. \; \; \; Ovide \; Menteuse ! Tu voudrais
+que je meure ! \; \; \; La maman d’Ovide essayant de se contenir
+\; Je. \; \; \; Paul \; Et là \, la mère d’Ovide se met à hurler
+et pleurer et casser des meubles. \; \; \; Nadine \; Alors Ovide va
+se coucher et se retrouve dans son lit. Les yeux grands ouverts \,
+à guetter le moment où le sommeil va lui tomber dessus. \; \; \;
+\; \; ________________ \; \; \; 9 Chez Rödd \; \; \; \; \; Le papa
+de Rödd \; Mange \; \; \; Rödd \; ... \; \; \; Le papa de Rödd
+\; Eh bien. Mais. C’est bon \, les endives. T’adores ça d’habitude.
+\; \; \; Rödd \; ... \; \; \; Le papa de Rödd \; Qu’est-ce qu’il
+y a ? ça va pas ? \; \; \; Rödd \; ... \; \; \; Le papa de Rödd
+\; Il paraît qu’il y a un nouvel élève à l’école. \;
+\; \; Rödd \; ... \; \; \; Le papa de Rödd \; Il est gentil ? Vous
+allez être amis ? Rödd joue avec une endive Ne joue pas avec la
+nourriture. Rödd continue Bon. Si tu n’as plus faim \, tu peux aller
+te coucher. \; \; \; Nadine \; Et Rödd se retrouve dans son lit.
+Les yeux grands ouverts \, à se souvenir du moment où il s’est
+échappé de l’Arbre de la sagesse \; \; \; \; \; ________________
+\; 10 La Grande Réunion \; \; \; \; \; Nadine au public \; Bon. Maintenant
+\, imaginez et regardez \; \; \; Paul \; Mais surtout : imaginez. Une
+forêt. Une grande et épaisse forêt. Et au milieu \, une clairière.
+\; \; \; Elise \; Tout le village est là \; \; \; Nadine \; Tout le
+monde tremble \; \; \; Elise \; Ils ne tremblent pas parce qu’ils
+ont froid mais parce qu’ils ont très peur \; \; \; Nadine \; Oui.
+Ça se voit à leurs grands yeux un peu mouillés \; \; \; Le maire
+emphatique \; Mes chers amis \, nous revoilà. Vous revoilà. Et donc
+\, oui \, nous revoilà. Comme chaque mois \, comme chaque premier
+mardi du mois \, vous grelottez \, chers concitoyens et chères concitoyennes.
+C’est parce vous savez ce qui vous attend. Vous savez que \, parmi
+vous \, certains vont être choisis. Celles et ceux qui ne se seront
+pas bien comportés ce mois-ci. L’arbr-eu de la Sagess-eu voit tout.
+L’arbr-eu de la Sagess-eu a décidé. L’arbr-eu de la Sagess-eu
+a choisi. emphatique L’arbre de la Sagesse est le grand tout \, le
+garant de notre paix \, de notre paix sociale \, de notre bien vivre
+ensemble. \; \; \; Les manifestants hurlant \, off \; C’est scandaleux
+! \; \; \; Elise \; Qu’est-ce que c’est ? \; \; \; Nadine \; C’est
+un petit groupe d’habitants qui se détache de la foule \; \; \;
+Elise \; Ils ne tremblent pas \, eux ? \; \; \; Nadine \; Non. Ils
+sont très énervés \; \; \; La petite secrétaire \; Ah non ! Pas
+eux ! \; \; \; Le maire \; Qui parle ? \; \; La petite secrétaire
+\; C’est moi. \; \; \; Le maire \; Ah oui. Je ne vous voyais pas
+\; \; \; La petite secrétaire \; C’est parce que je suis toute petite
+\; \; \; Les manifestants scandant \, off \; Re-fu-sons la dictature
+de l’arbre ! Re-fu-sons la dictature de l’arbre ! \; \; \; La petite
+secrétaire \; Rooo. Mais je ne comprends pas. On avait réussi à
+s’en débarrasser. Des mois qu’on n’en avait pas vus. Ce qu’ils
+peuvent m’agacer ! \; \; \; Les manifestants scandant \, off \; Re-trou-vons
+notre liberté ! Re-trou-vons notre liberté ! \; \; \; Le maire \;
+Mes amis \, mes amis \, calmez-vous \, enfin. Retrouver notre liberté
+? Mais c’est justement ce que nous faisons. \; \; \; Les manifestants
+hurlant \, off \; Non. Vous nous envoyez à l’abattoir ! \; \; \;
+Le maire \; Personne n’est envoyé à l’abattoir. Certains sont
+même sauvés.[c] C’est l’arbre de la Sagesse qui décide. \; \;
+\; Les manifestants hurlant \, off \; Arbre de la Sagesse mes fesses
+! Abattons-le ! A bas la dictature! \; \; \; La petite secrétaire
+se transformant en dragon \; Ça suffit !!!!!! STOOOOOP !!!! Si vous
+ne voulez pas être choisis par l’Arbre de la Sagesse \, taisez-vous
+! \; \; \; Les manifestants hurlant \, off \; On s’en fout ! On préfère
+mourir que subir ! \; \; \; La petite secrétaire \; Qu’ils sont
+sots \, mais qu’ils sont sots \, mon Dieu comme ils sont sots ! \;
+\; \; Le maire emphatique \; Attention ! L’Arbre de la Sagesse va
+choisir ! Ses branches se déploient ! Le vent se lève ! il fait le
+bruit du vent Le brouillard sort de l’Arbre et se répand. Regardez
+les branches s’étendre ! Elles se déploient et se dirigent… vers…
+Ah-Ah!! On vous l’avait dit! \; \; \; La petite secrétaire \; Je
+vous avais prévenus! \; \; \; Le maire \; Là ! L’arbre a choisi
+ces manifestants insupportables ! Fauteurs de trouble ! Casseurs de
+société ! Les manifestants hurlent Vous pouvez nous insultez \, ça
+ne changera rien ! \; Et voilà. On ne les entend plus \, ils ont été
+engloutis. Les branches sont revenues et nos disparus ont disparu.
+Les branches ne bougent plus. La Grande Réunion est terminée ! \;
+\; \; La petite secrétaire \; Oui. Voilà. Rentrez chez vous ! N’oubliez
+pas de passer à l’épicerie chercher votre gâteau du dimanche !
+\; \; \; Monsieur Mirepoix aperçoit la mère d’Ovide \; \; \; Monsieur
+Mirepoix à la mère d’Ovide \; Oooh ! Chère Madame ! Décidément
+! On se suit partout ! il rit. \; \; \; Madame Charleville apercevant
+Ovide \, aux côtés de la mère d’Ovide \; C’est votre fils ?
+\; \; \; ________________ \; \; \; La mère d’Ovide \; Dis bonjour
+\, Ovide \; \; \; Ovide ne dit rien \; \; \; La mère d’Ovide \;
+Ovide ! Enfin ! \; \; \; Ovide ne dit rien \; \; \; Madame Charleville
+\; Laissez laissez. Dans quelque temps \, il ne fera plus sa tête
+de mule \, ne vous inquiétez pas \; \; \; Monsieur Mirepoix à la
+mère d’Ovide \; Alors \, chère madame \, cette Grande Réunion
+\, n’était-ce pas merveilleux ? \; \; \; La mère d’Ovide \; Oui
+oui. Mais. Euh. Qu’arrive-t-il aux personnes qui sont. Euh. Qui sont.
+\; \; \; Monsieur Mirepoix \; Englouties par l’Arbre de la Sagesse
+? \; \; \; La mère d’Ovide \; Oui \; \; \; Madame Charleville \;
+Ils gagnent un Paradis \; \; \; Monsieur Mirepoix \; Un monde meilleur
+pour eux \; \; \; La mère d’Ovide \; Ils n’en ressortent jamais
+? Je veux dire \, de l’arbre ? \; \; \; Monsieur Mirepoix \; Eh non
+\; \; \; Madame Charleville \; Jamais ! \; \; \; ________________ \;
+\; \; Monsieur Mirepoix \; Sauf… \; \; \; La mère d’Ovide \; Sauf
+? \; \; \; Madame Charleville \; Une fois. C’est arrivé. \; \; \;
+Monsieur Mirepoix \; Oui. C’est vrai. Une fois. On ne sait pas pourquoi.
+Le petit Rödd. Un sale gamin. Insupportable \; \; \; Madame Charleville
+\; Il avait été choisi par l’Arbre de la Sagesse. Dieu merci !
+Les rues allaient retrouver un peu de calme ! \; \; \; Monsieur Mirepoix
+\; Mais le lendemain soir \, il toquait à la porte de chez lui \;
+\; \; La mère d’Ovide \; Sans explication ? \; \; \; Madame Charleville
+\; Eh non \; \; \; Monsieur Mirepoix \; Mais au moins \, depuis \,
+il ne parle plus \; \; \; La mère d’Ovide \; Ah oui \; \; \; Monsieur
+Mirepoix \; Eh oui. Les rues sont plus calmes \; \; \; La mère d’Ovide
+\; Bien. Merci pour ces renseignements \, en tout cas. J’ai été
+enchantée de vous connaître. Je ne suis plus très sûre de rester
+ici \, finalement \; \; \; Nadine \; Et la mère d’Ovide sert la
+main de son fils et tous les deux s’en vont très vite \, s’enfuient
+presque. \; \; \; Madame Charleville \; Ah. On devrait peut-être lui
+dire \; \; \; Monsieur Mirepoix \; Non \, madame Charleville. Ce n’est
+pas à nous. Elle se rendra bien compte toute seul qu’il lui est
+impossible de partir désormais \; \; \; Madame CharlevillemEt ce serait
+tellement dommage de rater notre goûter de dimanche \; \; \; Monsieur
+Mirepoix \; Tellement dommage. Et tellement triste \; \; \; Madame
+Charleville \; Tellement \; \; \; ________________ \; 11 Chez Ovide[d]
+\; \; \; \; \; \; \; Elise \; Ovide et sa mère traversent le village
+à toute allure. Ils rentrent chez eux et s’enferment à triple tour.
+\; \; \; La mère d’Ovide \; Range tes affaires. Dépêche toi. On
+s’en va d’ici \; \; \; Ovide \; Déjà ? \; \; \; La mère d’Ovide
+\; Oui. Déjà. Je me suis trompée. \; \; \; Ovide \; Tu pensais vraiment
+que j’allais avoir de meilleures notes grâce à un arbre débile
+? \; \; \; La mère d’Ovide \; Ce n’est pas une question de notes
+! Et puis je n’étais pas au courant. Pas au courant de tout \; \;
+\; Ovide \; Je t’avais dit qu’il ne fallait pas venir ici. T’es
+nulle \; \; \; La mère d’Ovide \; Tu arrêtes de me parler comme
+ça ! Tu arrêtes ! Je n’en peux plus ! Si tu continues \, on reste
+et je ne te donne pas deux jours avant de te faire transformer en racine
+\; \; \; Ovide \; C’est tous les mois \; \; \; La mère d’Ovide
+\; Stop. Finis ta valise. On s’en va \; \; \; Ovide \; Je l’avais
+à peine défaite. Je suis prêt \; \; \; (…) \; \; \; Elise \; C’est
+la nuit noire. Ovide et sa mère sortent de la maison. Sur la pointe
+des pieds. \; \; \; Nadine \; Ils font attention à ne pas faire rouler
+leurs valises pour ne pas réveiller tout le monde \; \; \; Paul \;
+Ils regagnent la Grand Rue \, atteignent le bois \; \; \; Nadine \;
+Ils aperçoivent bientôt la route principale. Celle par laquelle ils
+sont arrivés deux jours avant. \; \; \; Elise \; Mais soudain. On
+entend un énorme coup de tonnerre \; \; \; Paul \; De la fumée ou
+du brouillard inonde la route \; \; \; Nadine \; De terribles craquements
+se font entendre \; \; \; Elise \; Ovide et sa mère se sentent attrapés
+par le cou et décollent du sol \; \; \; Paul \; Ils se débattent
+mais rien n’y fait \; \; \; Nadine \; Ils hurlent mais ça ne sert
+à rien \; \; \; Elise \; Et ils se retrouvent au milieu de la clairière
+\, sous l’Arbre de la Sagesse \, dont les branches reprennent immédiatement
+leur place \; \; \; La petite secrétaire \; Ah ah !!! Vous avez cru
+pouvoir partir ? \; \; \; La mère d’Ovide \; Vous n’avez pas le
+droit ! Je veux partir \; \; \; ________________ \; \; \; Ovide \;
+Moi aussi ! \; \; \; La petite secrétaire elle sort de sa poche un
+papier et l’agite sous le nez de la mère d’Ovide \; Vous n’avez
+pas signé ce papier \, à votre arrivée ? \; \; \; La mère d’Ovide
+\; Euh. Si \; \; \; La petite secrétaire \; Eh bien je vous enjoins
+à relire les toutes toutes petites lignes de la fin. Elles disent
+« La concitoyenne s’engage à contribuer éternellement –donc
+même au-delà de sa vie terrestre- au bonheur et à la vie commune
+de notre beau village ». En d’autres termes : interdiction de partir
+! No way ! Forbidden ! Faites demi-tour dès que possible ! \; \; \;
+La mère d’Ovide \; Je (…) \; \; \; La petite secrétaire agacée
+\; Eh voilà. C’est toujours comme ça. Après la révolte vient
+l’abattement. Très gentille Allez allez allez. Ça va s’arranger.
+Dans quelques jours \, vous rirez d’avoir voulu partir. \; \; \;
+Ovide \; Je vais le cramer \, votre arbre \; \; \; La petite secrétaire
+\; Dis donc \, toi. Premièrement tu apprendras que quiconque s’approche
+avec une flamme \, une scie ou même juste une mauvaise intention se
+fait automatiquement avaler et deuxièmement tu vas me faire le plaisir
+d’aller de te laver la bouche avec du savon et de l’eau de Javel
+\, si tu ne veux pas faire partie de la prochaine fournée lors de
+la Grande Réunion du mois prochain \; \; \; Elise \; Et ovide et sa
+mère rentrent au 1 sentier du laurier \; ________________ \; 12 A
+l’entrée de l’école \; \; \; \; \; Nadine \; Le lendemain matin
+\, à l’école \, les enfants sautent sur Ovide \; \; \; Paul \;
+Ils l’attaquent ? \; \; \; Elise \; Non. Ils le bombardent de questions
+\; \; \; Canard \; C’est vrai c’est vrai ? \; \; \; Zélie \; En
+vrai en vrai ? \; \; \; Canard \; Non mais dis nous dis nous \; \;
+\; Zélie \; Oh oui oh oui \; \; \; Mira \; Non mais attendez laissez-le
+parler \; \; \; Ovide \; Et c’est pas la peine de tout répéter
+deux fois. J’entends pas mieux \; \; \; Canard \; Non mais c’est
+vrai que t’as essayé de partir ? \; \; \; Zélie \; En vrai ? \;
+\; \; Ovide \; Mais comment vous pouvez rester ici ? \; \; \; Canard
+très fort \; C’est vraiment super d’habiter là ! \; \; \; Zélie
+très fort \; On adoooore ! \; \; \; Mira bas \; C’est horrible.
+Mais tu veux qu’on fasse quoi ? T’as bien vu ce qui se passe quand
+on cherche à s’en aller \; \; \; Canard bas \; Ou que quelqu’un
+fait quelque chose qu’il ne faut pas faire \; \; \; Zélie bas \;
+Tous les mois \, à chaque Grande Réunion \, j’ai peur d’être
+choisie \; \; \; Canard bas \; T’inquiète. T’es super sage \,
+toi \; \; \; Zélie bas \; Ben y a pas longtemps \, j’ai un peu dit
+à Liloo-Corinne qu’elle m’énervait \; \; \; Canard bas \; Oui
+mais bon c’était qu’une fois \; \; \; Zélie bas \; Oui \; \;
+\; Ovide \; Bon. Vous voyez que c’est pas possible de vivre ici !
+Faut dégommer cet arbre ! \; \; \; Canard bas \; Chuuuut ! (…) ça
+fait des siècles et des siècles que c’est comme ça. On peut rien
+faire \; \; \; Ovide \; Comment tu le sais ? T’étais ici \, toi
+\, y a des siècles et des siècles ? \; \; \; Canard \; C’est ce
+qu’on dit \; \; \; ________________ \; \; \; Ovide \; Moi \, je crois
+que ce que je vois. (…) Rödd ? Il est où \, Rödd ? Rödd se tourne
+vers Ovide C’était comment \, dans l’Arbre ? \; \; \; Zélie \;
+Mais. Il peut / pas te répondre \; \; \; Ovide \; C’est à Rödd
+que je parle. Alors ? Rödd ? \; \; \; Rödd se cache les yeux \; \;
+\; Ovide \; Ça faisait peur ? \; \; \; Rödd regarde Ovide et se cache
+les oreilles \; \; \; Ovide \; Y avait du bruit ? \; \; \; Rödd regarde
+Ovide et se cache la bouche \; \; \; Ovide \; Et t’as perdu la voix
+\; \; \; Zélie \; Je suis sûre qu’il est pas muet. C’est juste
+qu’il parle plus \; \; \; Mira \; Y a pas que la voix qu’il a perdu
+\, tu vois bien. Il est plus du tout comme avant \; \; \; Canard \;
+Il te ressemblait beaucoup \, d’ailleurs \; \; \; Zélie \; A parler
+fort et dire plein de bêtises \; \; \; Canard \; Et en faire \, aussi
+\; \; \; Ovide \; C’est comme ça qu’on va l’avoir \; \; \; Zélie
+\; Qui? \; \; \; Ovide \; L’Arbre de la Sagesse \; \; \; Canard bas
+\; Mais on peut à peine l’approcher ! \; \; \; Ovide \; Je sais.
+C’est pour ça qu’on va tous se faire avaler lors de la prochaine
+Grande Réunion \; \; \; Zélie \; Hein ?? \; \; \; Canard \; Mais
+ça va pas ? T’es complètement zinzin \; \; \; Mira \; Attendez
+attendez. C’est quoi ton plan ? \; \; \; Ovide \; C’est simple.
+Si Rödd s’en est sorti \, c’est vous qui l’avez dit \, c’est
+parce qu’il était comme moi. « Il parlait fort ». Et qu’il avait
+pas peur. Peur de pas grand’chose. Donc on va y aller tous ensemble.
+Comme ça on n’aura pas peur et si Rödd tout seul a failli anéantir
+l’Arbre \, eh ben à nous tous on y arrivera très bien ! \; \; \;
+(…) \; \; \; Ovide \; Alors ? \; \; \; Mira \; J’en suis \; \;
+\; Ovide \; Et vous ? \; \; \; Zélie \; Non. C’est trop dangereux
+\; \; \; Canard \; J’ai trop peur \; \; \; Ovide \; Vous en avez
+pas marre de vivre comme ça ? De pas pouvoir dire à une copine quand
+elle vous énerve ? De jamais pouvoir dire de gros mots de temps en
+temps ? Que vos parents soient tout le temps tout le temps anormalement
+gentils avec vous ? \; \; \; Canard \; C’est pas désagréable \;
+\; \; Zélie \; C’est normal \; \; \; Ovide \; Tout ça c’est juste
+pour avoir des frites et des glaces et des cadeaux et je sais pas quoi.
+Mais je vous assure que c’est beaucoup mieux quand les frites c’est
+pas tous les jours. Que les cadeaux \, tu en profites mieux quand des
+fois tu en es privé. \; \; \; Canard et Zélie se regardent \; \;
+\; Ovide \; Vous pourrez aller où vous voulez. Vous ne vivrez pas
+ici pour toujours \; \; \; Canard et Zélie hésitent. Rödd s’approche
+d’eux et fait semblant de mourir. Puis se relève. Puis fais comme
+s’il s’enfuyait.[e] \; \; \; Canard \; Je crois qu’il a raison
+\, Zélie \; \; \; Zélie \; Je crois qu’il a raison \, Canard \;
+\; \; Mira \; Bon et donc qu’est-ce qu’on doit faire d’ici la
+prochaine grande réunion ? \; \; \; Ovide \; N’importe quoi \; \;
+\; Mira \; Quoi ? J’ai dit une bêtise ? \; \; \; Ovide \; Non. N’importe
+quoi. On doit faire n’importe quoi \; \; \; Canard \; Ah oui j’ai
+compris. Pour être punis \; \; \; Ovide \; Exact \; \; \; Zélie \;
+Mais nos parents vont être supers inquiets. Faudrait les prévenir
+\; \; \; Ovide \; Non ! Pas un mot aux parents ! ça reste entièrement
+secret \, d’accord \; \; \; Tout le monde acquiesce \; \; \; Canard
+\; Et qu’est-ce que je vais bien trouver comme bêtise à faire \,
+moi ? \; \; \; Ovide \; T’inquiète. Tu verras. Ça vient tout seul
+\; \; \; \; \; \; \; \; \; ________________ \; 13 La préparation \;
+\; \; \; \; Nadine \; Pendant un mois \, les enfants \, menés par
+Ovide \, s’en donnent à cœur joie \; \; \; ***** \; \; \; La maîtresse
+\; Alors mon petit chéri \, combien font 1+1? \; \; \; Ovide \; Hein
+? \; \; \; La maîtresse \; Non \, mon petit choupinou. Ça ne fait
+pas 1 \; \; \; Ovide \; Un ! \; \; \; La maîtresse \; Eh bien mais
+non. Réfléchis. Il y a déjà un 1 Donc avec un autre 1… \; \;
+\; Ovide \; Un ? \; \; \; La maîtresse \; Mais \; \; \; Ovide \; Un
+! Un ! \; \; \; La maîtresse \; Euh. Hurlant et pleurant Monsieur
+le directeeeeeuuuuuur ! \; \; \; ***** \; \; \; Maman de Canard \;
+Canard \, mon chéri \, viens manger \; \; \; ________________ \; \;
+\; Canard \; Prrrt \; \; \; Maman de Canard \; Mais. Canard ! \; \;
+\; Canard \; Prrrt \; \; \; Papa de Canard \; Non mais arrête ça
+et viens manger \; \; \; Canard \; Prrrt \; \; \; Maman de Canard \;
+Ça suffit maintenant ! \; \; \; Canard \; Prrrt \; \; \; Papa de Canard
+\; Ecoute. Si tu continues \; \; \; Canard \; Prrrt \; \; \; Papa de
+Canard \; Tu vas pouvoir aller te coucher \; \; \; Canard \; Prrrt
+\; \; \; Papa de Canard \; Sans manger \; \; \; Canard \; Prt prt prt
+\; \; \; ***** \; \; \; ________________ \; \; \; Madame Charleville
+\; Chère madame \, je suis désolée de vous le dire \, mais votre
+fils m’a traitée de vieille bique \, hier \; \; \; Monsieur Mirepoix
+\; J’étais là \; \; \; Madame Charleville \; Il a rajouté que
+je sentais le fromage. J’en suis toute chamboulée \; \; \; La mère
+d’Ovide \; Je suis désolée. Je vais lui parler \; \; \; Madame
+Charleville \; Le fromage. J’en suis toute chamboulée \; \; \; Monsieur
+Mirepoix \; Faites attention \, chère madame. Faites attention. Si
+vous ne voulez pas perdre votre fils… \; \; \; ***** \; \; \; On
+voit Rödd à l’école. La maîtresse est debout en train d’avaler
+des anti-dépresseurs. \; Rödd se glisse derrière sa chaise et la
+lui enlève \; Quand elle s’assoit \, elle tombe et hurle \; \; \;
+La maîtresse \; Hurlant et pleurant Monsieur le directeeeeeuuuuuur
+! \; \; \; ***** \; \; Zélie \; Non mais là c’est vraiment très
+méchant \; \; \; Mira \; Bah oui mais tu veux être choisie la semaine
+prochaine ou pas? \; \; \; Zélie \; Non. Enfin \, si! \; \; \; Mira
+\; Alors vas-y \; \; \; Zélie \; Mais elle va avoir mal \; \; \; Mira
+\; Pfff. C’est un insecte. Une mouche \; \; \; Zélie \; Mais l’Arbre
+de la sagesse n’aime pas qu’on fasse mal à la nature \; \; \;
+Mira \; Justement \; \; \; Zélie \; J’ai peur \; \; \; Mira \; Allez.
+A 3 1 \, 2… 3! \; \; \; Elles écrasent chacune un insecte \; \;
+\; ***** \; \; \; Ovide \; Eh ! Vous savez pas ce que j’ai fait ?
+\; \; \; Zélie \; Non ? Quoi quoi ? \; \; \; Mira \; Quoi ? \; \;
+\; Ovide rigole \; \; \; Canard \; Bas vas-y \, dis ! \; \; \; Ovide
+\; J’ai fait caca dans une enveloppe et je l’ai mise dans l’Arbre
+! \; \; \; Tous dégoûtés et riant à la fois \; Aaaaaaaah ! \; \;
+\; Ovide se marre \; \; \; Ovide \; Vous êtes prêts pour demain ?
+\; \; \; Zélie \; J’ai peur \; \; \; Canard \; Moi aussi \; \; \;
+Ovide \; Bon. Vous êtes prêts. \; \; \; Mira \; Oui ! \; \; \; Ovide
+\; Et pas de gaffe \, hein ? Vous dites rien à vos parents \; \; \;
+Canard \; On peut même pas leur dire au-revoir ? \; \; \; Tous le
+regardent \; \; \; Canard \; On peut même pas leur dire au-revoir.
+\; \; \; \; \; ________________ \; 14 La dernière Grande Réunion
+\; \; \; \; \; Le maire \; Mes chers amis \, vous revoilà. Nous revoilà
+! Un mois a passé. Un mois fait de moments joyeux \, de moments tristes.
+De moments de vie \, en somme. Car notre beau village est ainsi fait.
+Il est fait de bonheurs et de drames. C’est des rires et des larmes.
+C’est la vie. Et aujourd’hui \, c’est ce qui nous réunit également.
+C’est la garantie que ces moments existeront toujours \, paisiblement.
+\; \; \; La petite secrétaire \; Je ne vois pas de manifestants. Que
+je suis soulagée \, que je suis soulagée! \; \; \; Le maire \; Qui
+parle? \; \; \; La petite secrétaire énervée \; Mais c’est moi!
+\; \; \; Le maire \; Ah oui \; \; \; Nadine \; La mère d’Ovide tient
+fermement la main de son fils. \; \; \; Elise \; Ovide \, lui \, n’a
+pas peur. Il regarde Mira \, Zélie et Canard. Canard \, s’il avait
+un bec \, le claquerait de trouille. \; \; \; Le maire \; Mais il est
+l’heure. C’est l’heure du choix \, c’est l’heure de l’Arbre
+de la Sagesse. Notre bien-aimé Arbre de la Sagesse ! \; \; \; Elise
+\; Dans l’assistance \, tout le monde retient son souffle. Ovide
+est impatient. Canard est immobile \, comme statufié. Mira et Zélie
+se tiennent la main. Rödd \, lui \, regarde le brouillard sortir de
+l’arbre avec des yeux qui semblent s’agrandir. \; \; \; ________________
+\; \; \; Le maire \; L’Arbre de la Sagesse va choisir ! Le vent !
+Les éclairs et le brouillard ! Pas un bruit parmi nous… Attention!
+Trois branches se dressent \, semblent chercher leur proie parmi la
+foule transie... et fondent sur ces trois enfants. \; \; \; Elise \;
+Mira \, Zélie et Ovide sont attrapés \; \; \; La petite secrétaire
+\; Bien fait ! \; \; \; La mère d’Ovide \; Ovide !! \; \; \; Elise
+\; Mais les branches ont jetés les trois enfants à l’intérieur
+de l’Arbre \; \; \; Canard \; Bah et moi ? Ouh ouh ! Je suis le vilain
+Canard ! Prrrrt ! Prrrrt ! \; \; \; Le maire \; Des éclairs fusent
+! Attention ! Protégez-vous les yeux ! Attention ! Est-ce fini? Non!
+Une dernière branche s’étire et va choisir… cet enfant ! \; \;
+\; La petite secrétaire soulagée \; Ah ben quand même! Celui qui
+faisait des bruits inconvenants ! Mais ! Qu’est-ce que c’est que
+ça ? Le muet s’accroche à lui ! Mais! ça n’est pas permis !
+\; \; \; Le maire \; Et les voilà avalés tous les deux ! il fait
+des bruits de tonnerre. Silence. Et voilà. Les branches sont revenues
+et nos disparus ont disparu. L’Arbre a choisi. Un instant. Attendons
+un peu. Est-ce bien terminé? Silence… \; \; \; La petite secrétaire
+\; Les branches ne bougent plus. La Grande Réunion est terminée !
+\; \; \; Nadine \; Et le noir et l’obscurité se referment sur les
+enfants et leurs parents en larmes \; ________________ \; 15 La première
+épreuve \; \; \; \; \; Dans le noir \; \; \; Elise \; A l’intérieur
+\, c’est tout noir \; \; \; Paul \; Ça sent l’humus et la pluie
+\; \; \; Nadine \; On entend ça \; \; \; On entend des gouttes tomber
+\; \; \; Nadine \; Et ça aussi \; \; \; On entend des craquements
+de branche \; \; \; Elise \; On entend aussi Canard \; \; \; Canard
+\; J’ai peeeuuuur \; \; \; Ovide \; C’est normal. Tout le monde
+va bien ? Zélie \, t’es là ? \; \; \; Zélie \; Oui oui. Moi aussi
+j’ai peur \; \; \; Mira \; Je suis là ! \; \; \; Canard \; Moi aussi
+\; \; \; Ovide \; Oui \, Canard. On t’a déjà entendu \; \; \; Mira
+\; Bon. Mais chuuuut ! \; \; \; Ovide \; Arrêtez de crier ! \; \;
+\; Canard sursautant \; Ah! Je suis attaqué ! Je suis attaqué !!
+Ah non ! C’est Rödd \; \; \; Zélie sursautant \; Mais aï-eu !
+\; \; \; Une voix d’outre tombe \; Avanceeeeeez ! Avanceeeeeez !
+\; \; \; Canard \; Qu’est-ce que c’est? Qui c’est qui parle?
+\; \; \; Ovide \; Bougez pas ! \; \; \; Une voix d’outre tombe \;
+Avanceeeeeez ou vous allez mourir \; \; \; Ovide \; Non ! Non ! Restez
+là ! \; \; \; Zélie \; J’ai peur ! \; \; \; Canard \; J’ai peur
+j’ai peur aussi. Vous êtes où ? \; \; \; Mira \; Mais tu vois dans
+le noir \, Canard ! \; \; \; Canard \; Oui mais là j’ai les yeux
+fermés ! \; \; \; Ovide \; Ouvre les ! \; \; \; Zélie \; Mais oui
+! Ouvre les ! \; \; \; Une voix d’outre tombe \; Noooooon. Garde
+les fermééééééés \; \; \; Ovide \; Canard! \; \; \; Canard \;
+Mais j’ai peur ! \; \; \; Mira \; Allez. A 3 ! \; \; \; Ovide \;
+1…. 2…. \; \; \; Canard \; 3 ! \; \; \; (…) \; \; \; Mira \;
+Alors ? \; \; \; Canard \; Bah. Y a rien. \; \; \; Ovide \; Comment
+ça \, y a rien ? y a personne ? \; \; \; Canard \; Non. Rien ni personne.
+A part vous et un trou. Et une porte. \; \; \; Ovide \; Une porte ?
+\; \; \; Mira \; Guide-nous par là-bas \; \; \; Canard \; Vers la
+porte ? \; \; \; Ovide \; Ben oui. Pas vers le trou ! \; \; \; Canard
+\; Ok. Tenez-vous la main \; \; \; Zélie \; Mais nous on se voit pas
+! \; \; \; Canard \; Ah oui. Attendez. Je vous aide. Toi \, tu donnes
+la main à elle. Toi \, tu la tiens déjà. Toi tu tiens lui. Toi \,
+lui. Et moi \, toi. C’est bon ? Suivez-vous bien \, hein ? \; \;
+\; Zélie \; Rödd \, tu me tiens bien \, hein ? \; \; \; Elise \;
+Et c’est comme ça que les cinq enfants ouvrent la porte \; \; \;
+\; \; ________________ \; \; \; [16. La deuxième épreuve] \; \; \;
+Paul \; Et se retrouvent dans une salle toute bleue. \; \; Nadine \;
+Au centre de la salle \, un homme est assis sur une chaise. \; \; Elise
+\; Un homme qu’ils ne connaissent pas. Qu’on n’a jamais vu \;
+\; Nadine \; Devant lui \, une grande fosse d’où sort un peu de
+fumée inquiétante \; \; Elise \; Derrière \, une autre porte \;
+\; L’homme \; N’approchez pas ! \; \; Ovide \; On n’a pas peur
+de vous \; \; Canard bas \; Moi \, un peu quand même… \; \; L’homme
+\; Sautez dans la fosse ou je serai obligé de vous anéantir \; \;
+Mira \; Ah oui et avec quoi ? Vous avez juste une vieille chaise en
+bois \; \; Ovide \; Exactement. Alors on va faire le tour et on va
+vous laisser continuer à méditer \; \; \; Les enfants commencent
+à le contourner. \; \; \; L’homme \; Restez où vous êtes \; \;
+\; Zélie \; Essaie de nous arrêter \; \; \; L’homme \; Je ne peux
+pas me lever \; \; \; Zélie rigole \; \; \; L’homme \; Mais je peux
+faire ça! \; \; Mais l’homme déploie plusieurs bras et attrape
+Ovide \, Rödd \, Canard et Zélie. \; \; Mira \; Lâchez-les ! \;
+\; L’homme \; Certainement pas. Et je vais également t’attraper
+toi et ensuite \, jeter tout ça dans la fosse ! \; \; Mira \; Attendez
+! Y a un problème ! Vous avez pas perdu une clef ? \; \; L’homme
+\; Quoi une clef ? Quelle clef ? \; \; Mira \; Bah. La clef de la porte
+\; \; L’homme \; Je. \; \; Elise \; L’homme se retourne vers la
+porte \; \; L’homme \; Où est ma clef ?? \; \; Mira \; Justement.
+C’est ce que je vous demande \; \; ________________ \; \; \; L’homme
+\; C’est toi qui l'a prise ? \; \; Mira \; Bah. J’ai pas bougé
+de là \; \; L’homme \; Raaaahh ! Mais qu’est-ce que c’est que
+ça !! \; \; Mira \; Attendez. Je crois que je la vois \; \; L’homme
+\; Hein ? Où ça où ça ? \; \; Mira \; Vous permettez que je m’approche
+? \; \; L’homme \; Où elle est ? \; \; Mira \; Derrière votre oreille.
+Regardez \; \; Mira sort la clef de l’oreille de l’homme \; \;
+L’homme \; Mais comment c’est possible ? \; \; Mira \; Je ne sais
+pas. C’est une clef qui aime faire des blagues. Regardez. Maintenant
+\, elle se cache dans mon oreille à moi \; \; Mira rentre la clef
+dans son oreille et montre qu’elle n’a plus rien dans la main \;
+\; L’homme \; Mais c’est de la sorcellerie \; \; Mira \; Non. De
+la magie \; \; ________________ \; \; \; L’homme \; Et elle est où
+\, maintenant ? \; \; Mira \; Oh ! Je crois qu’elle est juste ici.
+Au bord de la fosse \; \; L’homme pose alors Ovide \, Zélie \, Rödd
+et Canard et se penche vers la fosse \; \; Mira \; Maintenant ! \;
+\; Les cinq enfants poussent l’homme dans la fosse qui tombe en hurlant
+\; \; Canard \; Bra. Bravo Mira. Je comprenais pas ce que tu faisais
+\; \; Mira \; Bah. Moi non plus. J’avoue que j’ai un peu improvisé
+\; \; Ovide \; Mais comment t’as fait ? \; \; Mira \; Ah ! Un tour
+de magie \, ça ne s’explique pas. En attendant \, j’ai la clef
+de la porte ! \; \; \; Zélie \; Regardez ce qu’a trouvé Rödd \;
+\; \; Les enfants se retournent. Rödd tient des ficelles qui pendaient
+du plafond et sombrent dans la fosse. En tirant dessus \, il en fait
+remonter l’homme \, qui s’avère être un pantin de bois[f][g][h]
+\; \; \; Ovide \; C’est quoi \, ce truc \; \; \; Zélie \; Une marionnette?
+\; \; \; Mira \; Mais c’est complètement débile \; \; \; ________________
+\; \; \; Canard \; Regardez. Derrière la porte \; \; \; Elise \; Canard
+tient la porte ouverte et les enfants entrent dans ce qui ressemble
+à une grande salle de contrôle \; ________________ \; \; \; 17 La
+salle de contrôle \; \; \; \; \; Le maire et la petite secrétaire
+sont assis face à un mur d’écrans et parlent dans des micros \;
+\; Le maire dans un micro \; Ho hisse ! Ho hisse ! \; \; La petite
+secrétaire dans un micro \; Plus vite ! espèce de fainéants ! \;
+\; Le maire dans un micro \; Allez ! du nerf ! encore d \; ouze mille
+éclairs et vingt cinq milles charlottes aux fraises ! \; \; \; [Elise
+\; Le maire et la toute petite secrétaire sont assis devant une multitude
+d’écrans et parlent dans des micros] \; \; Mira \; Monsieur le Maire
+? \; \; La petite secrétaire se retournant \; Ah !! Mais qu’est-ce
+qu’ils font là \, ceux-là ? \; \; Nadine \; Sur les écrans \,
+on voit différents endroits du village \; \; Paul \; En fait \, on
+voit carrément tout le village \; \; Nadine \; Toutes les rues \;
+\; Else \; L’épicerie \, la cour de l’école \; \; Nadine \; Et
+même l’intérieur des maisons \; \; Mira \; Mais qu’est-ce que
+vous faites ? \; \; La petite secrétaire au maire \; Je les neutralise
+? \; \; Le maire \; Attendez attendez \; \; Ovide \; Qu’est-ce que
+c’est que ça ? \; \; La petite secrétaire \; Ça \, mon petit ami
+\, c’est un fusil à seringue. Avec ça \, je peux à la fois te
+faire une prise de sang et t’inoculer le poison de mon choix \; \;
+Canard \; J’aime pas les prises de sang ! J’ai peur des piqûres
+\; \; La petite secrétaire \; Tu vas apprendre à aimer \, c’est
+moi qui te le dis !! \; \; Le maire \; à la petite secrétaire Attendez.
+Je veux comprendre. aux enfants Comment avez-vous fait pour entrer
+ici ? Après la Grande Réunion \, vous auriez dû atterrir là-bas
+\; \; Elise \; Le maire montre un écran de surveillance sur lequel
+on voit une foule de gens \, des enfants et des adultes \, des hommes
+et des femmes \, qui semblent travailler dans une immense usine à
+gâteaux \; \; Nadine \; Ils ont la même tête que Rödd. C’est
+à dire : éteinte. \; \; La petite secrétaire \; Je sais comment
+ils sont arrivés jusqu’ici ! C’est grace au muet ! Je vous avais
+dit qu’on aurait dû le choisir à nouveau à la Grande Réunion
+suivante \; \; Le maire \; Mais ne dites pas de bêtises. Rödd n’a
+jamais vu notre centre opérationnel. aux enfants Comment avez vous
+déjoué nos pièges ? \; \; Ovide \; C’est vous qui l’avez rendu
+comme ça ? \; \; Mira \; C’est vous qui manipulez l’arbre ? \;
+\; Zélie \; Oh ! y a l’ancienne épicière sur la télé ! elle
+fait un cake ! \; \; La petite secrétaire \; Mais chut ! Je ne supporte
+pas les enfants comme eux. A jacasser tout le temps \, poser des questions
+idiotes et faire des remarques stupides ! \; \; Canard \; On n’est
+pas stupides \; \; La petite secrétaire \; Vous êtes insupportables
+! Votre place devrait être avec les autres \, à fabriquer des gâteaux
+pour la communauté ! \; \; Zélie \; Quoi ? C’est les personnes
+disparues qui nous font à manger ? \; \; La petite secrétaire \;
+Qu’est-ce que vous croyez ? Que la nourriture sort de mon nez ? \;
+\; Le maire \; Calmons-nous calmons-nous. \; \; Ovide \; Mais alors
+\, l’Arbre de la Sagesse \, c’est pas un vrai arbre ? \; \; Le
+maire \; Ils ne sont pas si stupides que ça \, finalement \; \; Zélie
+\; Et c’est vous qui décidez de tout \, en fait ? \; \; Le maire
+\; Eh oui. Je suis le maire \, après tout \; \; ________________ \;
+\; \; La petite secrétaire fière \; Et moi la secrétaire de mairie
+! \; \; Ovide \; Mais pourquoi vous faites ça ? \; \; Le maire tranquille
+et souriant \; Pour faire respecter l’ordre et la tranquillité de
+notre beau village \; \; La petite secrétaire \; Et ça fonctionne
+très bien comme ça depuis des lustres \; \; Le maire \; Des lustres
+et des siècles ! \; \; La petite secrétaire \; Allez maintenant ça
+suffit \, on les pique ! \; \; Canard \; Nooon \; \; Le maire \; Il
+y a deux cents ans \, quand ma sœur et moi avons trouvé refuge dans
+cet arbre \, c’était pour nous protéger des autres. Et c’est
+ensemble \, tous les deux \, que nous avons créé ce merveilleux endroit
+\, ce beau village \, afin d’y conserver intactes les valeurs d’entraide
+\, de respect et d’autorité donc le monde manque cruellement. C’est
+pour cela que vous allez devoir rejoindre les autres. \; \; \; Ovide
+\; Vous êtes complètement tarés ! \; \; Zélie \; Vous êtes frères
+et sœurs ? \; \; Canard \; Vous avez 200 ans ? \; \; La petite secrétaire
+\; Taisez-vous ! Taisez-vous ! Minables morpions ! C’est vous \,
+les tarés \, les parasites et les inutiles ! Des déchets d’êtres
+humains qui empêchez les autres de vivre tranquillement ! Il faut
+vous piquer tout de suite afin que vous ne deveniez encore pires en
+grandissant ! Venez prendre votre piqûre ou je vous tue ! \; \; Canard
+\; On devrait peut-être réfléchir. Elle fait peur \, quand même.
+Je préfère être piqué que mourir. \; \; Mira \; On réfléchit
+mais on dit non ! \; \; Ovide \; Non ! \; \; Le maire \; Obéissez
+! \; \; Zélie \; Non ! On n’obéit pas à des ordres débiles !
+Allez \, Canard. Dis « non » \, toi aussi \; \; Canard \; Non ! (…)
+surpris et riant Ah ah ! J’ai dit non ! Non non non et non ! \; \;
+La petite secrétaire pousse un cri de rage \; \; Nadine \; Et c’est
+alors qu’arrive ce qui devait arriver \; \; Elise \; Ce qu’on attendait
+tous qui devait arriver \; \; Paul \; Ce qui devait arriver arrive
+\, donc \; \; Elise \; Rödd ouvre la bouche \; \; Paul \; Un hurlement
+en sort \; \; Nadine \; Un cri de colère et de rage contenues depuis
+très longtemps \; \; Nadine \, Elise et Paul hurlent \; \; Paul \;
+Le maire et la petite secrétaire sont projetés sur les écrans de
+contrôle qui se fissurent \; \; Elise \; Dans la panique \, ils appuient
+sur tous les boutons \, déclenchant mille et un mécanismes \; \;
+Paul \; Dans l’usine \, ça lance des fléchettes empoisonnées dans
+tous les sens \; \; Nadine \; Les ouvriers-cuisiniers sont piqués
+de toute part et \, miracle \, il redeviennent normaux et courent dans
+tous les sens \, à la recherche de la sortie \; \; Elise \; Dans un
+énorme fracas \, un gros craquement \, l’Arbre s’ouvre en deux
+et la lumière du jour entre dans la salle de contrôle et l’usine
+souterraine ravagées. Les prisonniers s’échappent. \; \; Paul \;
+Le maire et la petite secrétaire \, qui n’avaient jamais entendu
+un cri de désobéissance aussi fort \, sont couchés sur le dos \,
+immobiles \; \; Rödd \; Attention ! Peut-être qu’ils sont pas morts
+! \; \; Mira \; Rödd ! Non seulement tu sais crier \, mais tu peux
+re-parler \; \; Canard \; Comment ça se fait ? \; \; Rödd \; Je sais
+pas. C’est comme si une lumière éteinte s’était allumée de
+ma tête \, en entendant toutes les conneries / que ces deux \; \;
+Zélie choquée \; Ooooooh \; \; Canard riant \; Ah bah c’est sûr
+qu’on a retrouvé le Rödd d’avant ! \; \; Mira \; Mais comment
+t’avais pu sortir de l’Arbre ? \; \; Rödd \; Je me souviens plus
+bien. Je crois que \, pendant que je fabriquais les gâteaux \, j’avais
+vu un rat en piquer un bout et je l’ai suivi. Et je me suis retrouvé
+dehors. \; \; Le maire \; Grgn grzzzz gngn gnhh \; \; La petite secrétaire
+\; Gnégnégné mémémémé grz grz \; \; Ovide \; Qu’est-ce qu’ils
+racontent ? \; \; Canard dégoûté \; Aaaaah. Mais regardez leurs
+têtes \; \; Paul \; Le maire et la petite secrétaire sont devenus
+un vieillard tout sec et une vieillarde toute plate \; \; Nadine \;
+Pratiquement sans peau \; \; Elise \; Entre le squelette et la momie
+\; \; Canard \; Berk ! \; \; Ovide \; Venez. On s’en va \, maintenant.
+Ils vont se dessécher tous seuls. \; \; ________________ \; \; \;
+18 Épilogue \; \; \; Paul \; Bon ben alors là \, c’est fini \;
+\; Elise \; Oui \, on peut dire que c’est fini parce qu’on peut
+considérer que tout rentre dans l’ordre \; \; Nadine \; Enfin \,
+non. Justement. Pas vraiment \; \; Elise \; Comment ça ? \; \; Nadine
+\; Bah. La fin \, c’est justement qu’on en sort \, de l’ordre
+\; \; Elise \; Ah oui bien sûr \; \; Paul \; Dorénavant \, dans ce
+village \, les gens font ce qu’ils veulent \; \; Nadine \; Du moment
+qu’ils n’empêchent pas les autres de faire ce qu’ils veulent
+aussi \; \; Paul \; Et aussi \, ils pensent ce qu’ils veulent \;
+\; Nadine \; Du moment qu’ils ne forcent pas les autres à penser
+comme eux \; \; Elise \; Et puis encore \, ils mangent ce qu’ils
+veulent \, comme ils veulent \, quand ils veulent \; \; Nadine \; Du
+moment / qu’ils \; \; ________________ \; \; \; Elise \; Oui je crois
+qu’on a saisi l’idée \; \; Paul \; L’arbre est coupé en deux
+: les deux parties de son tronc sont dorénavant deux toboggans \;
+\; Elise \; Zélie s’y amuse souvent. D’ailleurs elle devra championne
+de toboggan \, plus tard \; \; Nadine \; Ça existe ? \; \; Elise \;
+Dans ce village \, oui \, ça existe \; \; Paul \; L’usine de gâteaux
+a été transformée en école spéciale : on y enseigne à la fois
+la philosophie[i][j] et la danse \; \; \; Elise \; L’une s’apprenant
+mieux par la pratique de l’autre \; \; Nadine \; Devenu adulte \,
+plus tard \, Canard y sera professeur \; \; Elise \; La salle de contrôle
+est devenue une salle de cinéma \; \; Paul \; Rödd y passe tout son
+temps libre \, plus tard \, bien plus tard \, ce seront ses films qu’on
+projettera[k][l][m] \; \; Elise au public \; Et Mira et Ovide ? \;
+\; Paul \; Je parie qu’ils sont mariés \; \; Elise \; Ah non pas
+du tout. Ils ne sont même pas amoureux \; \; Paul \; Oh bah je suis
+déçu \; \; Nadine \; Ils iront faire leurs études ailleurs \, dans
+une autre ville. Voilà. \; \; Paul \; Et c’est tout ? \; \; Elise
+\; Non. Un jour \, ils reviennent \, et ils deviennent maire et mairesse
+du village \; \; Nadine \; C’est possible \, ça \, qu’ils soient
+deux ? \; \; Elise \; Dans ce village \, oui \, c’est possible \;
+\; Paul \; Et dans le village \, est-ce qu’on peut dire que les gens
+sont heureux ? \; \; Nadine \; Moui. Enfin. On peut pas vraiment dire
+qu’ils sont heureux \; \; Elise cherchant \; On devrait plutôt dire...
+\; \; Nadine \; Oui \, tu as raison \, c’est pas « heureux » \,
+le mot \; \; (…) \; \; Paul \; Ça serait pas plutôt : « libres
+» ? \; \; Nadine \; Ah oui c’est ça. (…) Ce qui fait ce que si
+une autre histoire devait s’y dérouler \, on dirait \; \; Elise
+\; Il était une fois un village balayé par le vent \; \; Nadine \;
+Par le vent \; \; Paul \; De la liberté \; \; \; \; \; \; \; \; \;
+\; \; \; \; \; \; \; \; \; \; \; \; \; [a]ah oui c'est vrai. j'avais
+oublié le titre :/ \; [b]tu as vu cette propo ? \; [c]Attention warning
+alerte SAUVÉ \; [d]J'ai une idée! (C'est pour pas oublier demain...j'effacerai)
+\; [e]on peut essayer autre chose au plateau ? \; [f]va falloir utiliser
+la caisse à outils magiques \, là \, non? \; [g]elle est pas magique
+elle est numérique ! \; [h]c'est presque pareil \; [i]j'aimerai bien
+préciser : "Une école où on apprend à penser" \; ?? \; [j]voeu
+exaucé \; [k]des documentaires animaliers ? inutile de préciser hein
+\, c'est juste pour moi \, pour savoir ! \; [l]non. des films de boule
+\; [m]dans lesquels jouent Zélie;
+#X obj 128 139 text search TEXTE;
+#X obj 117 230 text define -k SCENE;
+#A set;
+#X obj 297 174 text get TEXTE;
+#X obj 267 230 text set SCENE;
+#X msg 416 194 1e+06;
+#X msg 311 133 line \$1;
+#X msg 51 210 clear;
+#X obj 128 180 t f b;
+#X connect 0 0 3 0;
+#X connect 1 0 11 0;
+#X connect 1 0 9 0;
+#X connect 2 0 4 0;
+#X connect 4 0 1 0;
+#X connect 6 0 7 0;
+#X connect 8 0 7 1;
+#X connect 9 0 6 0;
+#X connect 10 0 5 0;
+#X connect 11 1 10 0;

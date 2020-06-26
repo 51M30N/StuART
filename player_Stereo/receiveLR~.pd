@@ -1,0 +1,33 @@
+#N canvas 210 127 975 464 10;
+#X obj 87 39 receive~ Left-\$1;
+#X obj 89 151 outlet~;
+#X obj 105 74 inlet~;
+#X obj 88 121 +~;
+#X obj 239 151 outlet~;
+#X obj 255 74 inlet~;
+#X obj 238 121 +~;
+#X obj 237 39 receive~ Right-\$1;
+#X obj 756 126 *~;
+#X obj 796 126 *~;
+#X obj 676 126 *~;
+#X obj 716 126 *~;
+#X obj 576 126 *~;
+#X obj 616 126 *~;
+#X obj 399 44 vsl 15 128 0 1 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 0 1;
+#X obj 420 44 vsl 15 128 0 1 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 0 1;
+#X obj 379 44 vsl 15 128 0 1 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 0 1;
+#X connect 0 0 3 0;
+#X connect 2 0 3 1;
+#X connect 3 0 1 0;
+#X connect 5 0 6 1;
+#X connect 6 0 4 0;
+#X connect 7 0 6 0;
+#X connect 14 0 10 1;
+#X connect 14 0 11 1;
+#X connect 15 0 8 1;
+#X connect 15 0 9 1;
+#X connect 16 0 12 1;
+#X connect 16 0 13 1;

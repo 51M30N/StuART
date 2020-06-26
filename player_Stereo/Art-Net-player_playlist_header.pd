@@ -1,0 +1,9 @@
+#N canvas 443 250 745 264 10;
+#X obj 202 100 Art-Net-player_playlist_header2;
+#X obj 303 100 Art-Net-player_playlist_header3;
+#X text 101 76 editShowNames;
+#X text 197 75 load/store playlist;
+#X symbolatom 202 209 80 0 0 0 PLAYLIST_name - -;
+#X obj 101 100 Art-Net-player_playlist_header1;
+#X connect 0 0 4 0;
+#X coords 0 -1 1 1 600 100 1 100 100;

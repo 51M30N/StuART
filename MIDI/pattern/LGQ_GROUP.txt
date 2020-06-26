@@ -1,0 +1,39 @@
+7 control level_SELECT_master
+
+22 control pattern-LGQ
+23 control time_SELECT_master
+
+32 tcontrol LGQ 1
+33 tcontrol LGQ 2
+34 tcontrol LGQ 3
+35 tcontrol LGQ 4
+
+36
+37
+38 tcontrol SELECT-GROUP-LGQ
+39 tcontrol level_255_SELECT_master
+
+40 tcontrol midi_pattern 8audioremote
+
+
+48 tcontrol LGQ 5
+49 tcontrol LGQ 6
+50 tcontrol LGQ 7
+51 tcontrol LGQ 8
+
+52
+53
+54 tcontrol OPEN-GROUP-LGQ
+55 tcontrol level_128_SELECT_master
+
+
+64 tcontrol LGQ 9
+65 tcontrol LGQ 10
+66 tcontrol LGQ 11
+67 tcontrol LGQ 12
+
+68
+69
+70 tcontrol CLEAR-GROUP-LGQ
+
+71 tcontrol level_0_SELECT_master

@@ -1,0 +1,30 @@
+#N canvas 811 475 872 316 10;
+#X obj 345 130 spigot;
+#X obj 516 115 tgl 15 1 empty empty TOGGLE_GPIO 17 7 0 10 -258113 -4034
+-1 1 1;
+#X obj 800 294 print WTF;
+#X obj 78 100 OSCreceiver \$1 \$2;
+#X obj 731 29 inlet;
+#X text 631 159 /set_gpio "value" "adress";
+#X text 75 46 /home/pi/Documents/SCRIPT/OSC_to_GPIO "in-port", f 66
+;
+#X text 75 75 OSC_to_GPIO $in-port;
+#X msg 345 195 gpio mode \$1 out;
+#X obj 345 158 osc/routeOSC /mode_out_gpio /write_gpio;
+#X obj 345 230 ggee/shell;
+#X msg 731 49 /mode_out_gpio 21;
+#X msg 731 69 /write_gpio 21 1;
+#X msg 731 89 /write_gpio 21 0;
+#X msg 480 194 gpio write \$1 \$2;
+#X connect 0 0 9 0;
+#X connect 1 0 0 1;
+#X connect 3 0 0 0;
+#X connect 4 0 0 0;
+#X connect 8 0 10 0;
+#X connect 9 0 8 0;
+#X connect 9 1 14 0;
+#X connect 11 0 0 0;
+#X connect 12 0 0 0;
+#X connect 13 0 0 0;
+#X connect 14 0 10 0;
+#X coords 0 -1 1 1 200 30 1 400 100;

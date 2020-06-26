@@ -1,0 +1,134 @@
+#N canvas 879 93 960 935 10;
+#X msg 530 90 clear;
+#X obj 511 9 bng 15 250 50 0 empty clear-\$0 clear-\$0 17 7 0 10 -261682
+-1 -1;
+#X msg 580 90 click;
+#X obj 580 69 bng 15 250 50 0 empty open-\$0 open-\$0 17 7 0 10 -204786
+-1 -1;
+#X obj 305 80 loadbang;
+#X obj 305 103 t b b;
+#X obj 511 29 t b b b;
+#X obj 101 101 cnv 15 98 98 empty \$0-cnv PLAYLIST 2 8 0 14 -233017
+-159808 0;
+#X obj 103 161 bng 18 250 50 0 empty empty + 5 10 0 15 -1 -1 -203904
+;
+#X obj 122 161 bng 18 250 50 0 empty empty _ 5 3 0 15 -1 -1 -203904
+;
+#X obj 103 130 bng 15 250 50 0 open-\$0 empty open-list 17 7 0 10 -204786
+-1 -1;
+#X obj 103 115 bng 15 250 50 0 clear-\$0 empty clear-list 17 7 0 10
+-261682 -1 -1;
+#X obj 103 180 bng 18 250 50 0 STORE-\$0 STORE-label-\$0 STORE 20 9
+0 10 -232576 -1 -1;
+#X obj 692 64 prepend \$0;
+#X obj 692 42 bng 15 250 50 0 empty raz-\$0 raz-\$0 17 7 0 10 -191407
+-1 -1;
+#X obj 103 267 + 1;
+#X obj 103 293 moses 0;
+#X msg 49 293 float 0;
+#X obj 103 243 f;
+#X obj 130 243 f;
+#X obj 130 267 - 1;
+#X msg 95 714 clear;
+#X symbolatom 189 437 10 0 0 0 #SHOW_from_SHOW_master SHOW -;
+#X obj 180 482 prepend;
+#X obj 530 111 text define PLAYLIST;
+#X obj 150 414 r playlist;
+#X obj 150 871 s PLAYLIST;
+#X obj 150 774 prepend read;
+#X obj 150 647 ggee/shell;
+#X msg 150 624 ls \$1;
+#X obj 180 505 t a a;
+#X obj 180 528 list;
+#X symbolatom 373 459 10 0 0 0 #SHOW_from_SHOW_master SHOW -;
+#X obj 150 558 makefilename;
+#X symbolatom 400 565 50 0 0 0 - - -;
+#X obj 150 477 int;
+#X obj 150 670 symbol;
+#X obj 265 670 symbol;
+#X obj 265 774 prepend write;
+#X obj 292 831 list trim;
+#X obj 292 851 print -n;
+#X msg 692 90 \; STORE-label-\$1 label STORE \; \$1-cnv label PLAYLIST
+;
+#X obj 265 649 bng 15 250 50 0 empty STORE-\$0 STORE-\$0 20 9 0 10
+-159808 -1 -1;
+#X msg 309 349 \; STORE-label-\$1 label STORE-\$2;
+#X obj 309 309 prepend \$0;
+#X obj 179 180 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+1;
+#X obj 150 796 t a a b;
+#X obj 232 164 r indic;
+#X obj 169 352 s playlist;
+#X msg 142 373 \; indic 0;
+#X msg 189 830 \; indic 1;
+#X obj 265 797 t a a b;
+#X msg 400 542 set /home/pi/StuART/PLAYLIST/TRACKS-list-\$1-%i;
+#X obj 373 481 t b a;
+#X obj 373 510 bng 15 250 50 0 init-\$0 empty init-\$0 17 7 0 10 -261234
+-1 -1;
+#X obj 154 37 bng 15 250 50 0 empty init-\$0 init-\$0 17 7 0 10 -261234
+-1 -1;
+#X obj 142 323 t b f f f b;
+#X obj 234 339 bng 15 250 50 0 clear-\$0 empty clear-\$0 17 7 0 10
+-261682 -1 -1;
+#X obj 150 581 t a a a a;
+#X obj 724 895 outlet;
+#X connect 0 0 24 0;
+#X connect 1 0 6 0;
+#X connect 2 0 24 0;
+#X connect 3 0 2 0;
+#X connect 4 0 5 0;
+#X connect 6 1 0 0;
+#X connect 8 0 18 0;
+#X connect 9 0 19 0;
+#X connect 13 0 41 0;
+#X connect 14 0 13 0;
+#X connect 15 0 16 0;
+#X connect 16 0 17 0;
+#X connect 16 1 44 0;
+#X connect 16 1 56 0;
+#X connect 17 0 16 0;
+#X connect 18 0 15 0;
+#X connect 19 0 20 0;
+#X connect 20 0 16 0;
+#X connect 21 0 26 0;
+#X connect 22 0 23 1;
+#X connect 23 0 30 0;
+#X connect 25 0 23 0;
+#X connect 25 0 35 0;
+#X connect 27 0 46 0;
+#X connect 28 0 36 0;
+#X connect 29 0 28 0;
+#X connect 30 0 31 0;
+#X connect 32 0 53 0;
+#X connect 33 0 58 0;
+#X connect 35 0 33 0;
+#X connect 36 0 27 0;
+#X connect 37 0 38 0;
+#X connect 38 0 51 0;
+#X connect 39 0 40 0;
+#X connect 42 0 37 0;
+#X connect 44 0 43 0;
+#X connect 46 0 26 0;
+#X connect 46 1 39 0;
+#X connect 46 2 50 0;
+#X connect 47 0 45 0;
+#X connect 51 0 26 0;
+#X connect 51 1 39 0;
+#X connect 51 2 50 0;
+#X connect 52 0 33 0;
+#X connect 52 0 34 0;
+#X connect 53 0 54 0;
+#X connect 53 1 52 0;
+#X connect 55 0 9 0;
+#X connect 56 0 49 0;
+#X connect 56 1 48 0;
+#X connect 56 2 18 1;
+#X connect 56 3 19 1;
+#X connect 56 4 57 0;
+#X connect 58 0 29 0;
+#X connect 58 1 36 1;
+#X connect 58 2 37 1;
+#X connect 58 3 59 0;
+#X coords 0 -1 1 1 100 100 2 100 100;

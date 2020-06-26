@@ -1,0 +1,7 @@
+#!/bin/bash
+#exemple de polo
+#ce script est censé creer un fichier martyr en ajoutant une adresse IP en argument à une abstraction puredata existante
+echo "#N canvas 99 342 468 63 10;" > configure.pd
+echo "#X obj 20 22 /home/pi/Documents/global/REMOTE_FFM $1;" >> configure.pd
+pd -open configure.pd
+

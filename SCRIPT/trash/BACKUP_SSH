@@ -1,0 +1,10 @@
+#!/bin/bash
+#deprecated use RSYNC
+#fait une copie complete du repertoire de travail  vesr la cible
+chemin=$(pwd)
+#echo $
+echo "IP cible"
+read
+echo "$Copie en cours vers pi@$REPLY:$chemin/"
+scp -r $chemin/* pi@$REPLY:$chemin/
+exit

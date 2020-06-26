@@ -1,0 +1,15 @@
+#N canvas 666 452 377 293 10;
+#X obj 86 23 inlet;
+#X obj 86 127 text get Hex2Dec_table 2;
+#X obj 86 150 cycle 2;
+#X obj 86 211 list tosymbol;
+#X obj 86 234 outlet;
+#X msg 271 134 set 0;
+#X obj 86 46 t f b;
+#X connect 0 0 6 0;
+#X connect 1 0 2 0;
+#X connect 2 0 3 0;
+#X connect 3 0 4 0;
+#X connect 5 0 2 0;
+#X connect 6 0 1 0;
+#X connect 6 1 5 0;

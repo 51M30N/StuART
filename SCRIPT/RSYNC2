@@ -1,0 +1,39 @@
+#!/bin/bash
+#|||||||||||#
+#|by_51M30N|#
+#|for__xxxx|#
+#|||||||||||#
+# synchonise le repertoire ou le repertoire cible sur l'IP_cible
+######################################################
+#                                                    #
+#  RSYNC "IP" "chemin"                               #
+#  RSYNC "IP" #chemin=$(pwd)                         #
+#                                                    #
+######################################################
+
+#test de l'argument chemin
+    if [ $2 ]
+    then
+        chemin=$2
+    else
+        chemin=$(pwd)
+    fi
+    echo "chemin=$chemin"
+
+#test de l'argument IP
+    if [ $1 ]
+    then
+        IP=$1
+    else
+        echo "IP cible :"
+        read
+        IP=$REPLY
+    fi
+    echo "IP=$IP"
+
+#et hop on copie tout ça vers la cible
+    echo "Copie vers pi@$IP:$chemin/"
+    rsync -u -v -r -l $chemin/* pi@$IP:$chemin 
+    rsync -u -v -r -L -K $chemin/* pi@$IP:$chemin 
+
+exit

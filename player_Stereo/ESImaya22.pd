@@ -1,0 +1,13 @@
+#N canvas 707 349 450 300 10;
+#X obj 132 64 receiveLR~ 1;
+#X obj 132 94 receiveLR~ 2;
+#X obj 132 124 receiveLR~ 3;
+#X obj 132 154 dac~ 1 2 3 4;
+#X connect 0 0 1 0;
+#X connect 0 1 1 1;
+#X connect 1 0 2 0;
+#X connect 1 1 2 1;
+#X connect 2 0 3 0;
+#X connect 2 0 3 2;
+#X connect 2 1 3 1;
+#X connect 2 1 3 3;

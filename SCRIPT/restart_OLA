@@ -1,0 +1,22 @@
+#!/bin/bash
+#|||||||||||||#
+#|by_51M30N|||#
+#|for__StuART|#
+#|||||||||||||# rev 01092019
+#|||||||||||||#
+
+
+#no comment
+######################################################
+#                                                    #
+#  restart_OLA                                       #
+#                                                    #
+######################################################
+
+#
+  sleep 1
+  sudo killall olad &
+  sleep 2
+  olad service start &
+# olad service restart # a comparer
+exit

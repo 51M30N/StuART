@@ -1,0 +1,31 @@
+#N canvas 1 85 680 358 10;
+#X obj 100 151 cnv 15 400 60 empty empty GPIO 20 12 0 14 -203904 -258113
+0;
+#X obj 102 70 cyclone/prepend /write_gpio;
+#X obj 102 16 r write_gpio;
+#X msg 102 46 \$2 \$1;
+#X obj 372 21 inlet;
+#X obj 392 108 spigot;
+#X obj 431 90 tgl 15 0 empty GPIO-XBee_\$0 GPIO-XBee_\$0 17 7 0 10
+-203904 -159808 -1 0 1;
+#X obj 102 106 spigot;
+#X obj 141 89 tgl 15 0 empty GPIO-OSC_\$0 GPIO-OSC_\$0 17 7 0 10 -203904
+-159808 -1 0 1;
+#X obj 102 125 cyclone/prepend /write_gpio;
+#X obj 392 127 send write_GPIO;
+#X obj 421 177 tgl 15 1 GPIO-XBee_\$0 GPIO-XBee GPIO-XBee 17 7 0 10
+-203904 -159808 -1 0 1;
+#X obj 421 192 tgl 15 1 GPIO-OSC_\$0 GPIO-OSC GPIO-OSC 17 7 0 10 -203904
+-159808 -1 0 1;
+#X obj 102 177 OSC/OSCsender 127.0.0.1 6000 GPIO-osc;
+#X connect 1 0 7 0;
+#X connect 2 0 5 0;
+#X connect 2 0 3 0;
+#X connect 3 0 1 0;
+#X connect 4 0 13 1;
+#X connect 5 0 10 0;
+#X connect 6 0 5 1;
+#X connect 7 0 9 0;
+#X connect 8 0 7 1;
+#X connect 9 0 13 0;
+#X coords 0 -1 1 1 401 61 1 100 150;

@@ -1,0 +1,9 @@
+#N canvas 8 60 800 400 10;
+#X obj 70 20 faderdmx 1 1fader D;
+#X obj 130 20 faderdmx 2 2fader D;
+#X obj 190 20 faderdmx 3 3fader D;
+#X obj 250 20 faderdmx 4 4fader D;
+#X obj 310 20 faderdmx 5 5fader D;
+#X obj 370 20 faderdmx 6 6fader D;
+#X obj 430 20 faderdmx 7 7fader D;
+#X obj 490 20 faderdmx 8 8fader D;

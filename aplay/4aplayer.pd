@@ -1,0 +1,21 @@
+#N canvas 579 205 934 597 10;
+#X obj 100 100 cnv 15 799 199 empty empty 4aplay 20 12 2 12 -204800
+-66577 0;
+#X msg 368 412 \; toggle_rec_aplay-1- \$1 \; toggle_out_aplay-1- \$2
+\; OUT-PLAYER-1- \$3 \; toggle_rec_aplay-2- \$1 \; toggle_out_aplay-2-
+\$2 \; OUT-PLAYER-2- \$3 \; toggle_rec_aplay-3- \$1 \; toggle_out_aplay-3-
+\$2 \; OUT-PLAYER-3- \$3 \; toggle_rec_aplay-4- \$1 \; toggle_out_aplay-4-
+\$2 \; OUT-PLAYER-4- \$3 \;, f 35;
+#X msg 673 353 set \, add;
+#X msg 368 329 add2 toggle_rec_aplay-\$1- \, adddollar 1 \, add \,
+add2 toggle_out_aplay-\$1- \, adddollar 2 \, add \, add2 OUT-PLAYER-\$1-
+\, adddollar 3 \, add, f 34;
+#X msg 368 308 1 \, 2 \, 3 \, 4;
+#X obj 100 167 aplay 2 0;
+#X obj 100 208 aplay 3 0;
+#X obj 100 249 aplay 4 0;
+#X obj 100 126 aplay 1 0;
+#X connect 2 0 1 0;
+#X connect 3 0 1 0;
+#X connect 4 0 3 0;
+#X coords 0 -1 1 1 800 200 1 100 100;

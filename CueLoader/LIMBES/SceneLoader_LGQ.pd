@@ -1,0 +1,369 @@
+#N canvas 0 84 1680 966 10;
+#X obj 8 8 cnv 15 1665 950 empty empty empty 20 12 0 14 -86853 -66577
+0;
+#X obj 1228 20 HEADER_StuART;
+#N canvas 0 84 1680 966 nanokorg 0;
+#X obj 19 101 cnv 15 800 1200 empty empty nanokorg 20 12 0 14 -261234
+-66577 0;
+#X obj 25 138 r midi;
+#X msg 25 155 \$2 \$1;
+#X obj 525 655 bng 15 250 50 0 go_1 empty go_1 17 7 0 10 -4034 -1 -1
+;
+#X obj 623 587 bng 15 250 50 0 Open_Cue empty Open_Cue 17 7 0 10 -257985
+-1 -1;
+#X obj 549 638 bng 15 250 50 0 +go+_1 empty +go+_1 17 7 0 10 -204786
+-1 -1;
+#X obj 574 620 bng 15 250 50 0 -go-_1 empty -go-_1 17 7 0 10 -204800
+-1 -1;
+#X obj 887 424 bng 15 250 50 0 Store_pst-1 empty Store_pst-1 17 7 0
+10 -258113 -4034 -1;
+#X obj 906 443 bng 15 250 50 0 Store_pst-2 empty Store_pst-2 17 7 0
+10 -258113 -4034 -1;
+#X obj 927 461 bng 15 250 50 0 Store_pst-3 empty Store_pst-3 17 7 0
+10 -258113 -4034 -1;
+#X obj 946 481 bng 15 250 50 0 Store_pst-4 empty Store_pst-4 17 7 0
+10 -258113 -4034 -1;
+#X obj 25 172 route 0 1 2 3 4 5 6 7 16 17 18 19 20 21 22 23;
+#X obj 25 486 route 44 43 42 41 13 14 15 58 59;
+#X obj 25 671 route 32 33 34 35 36 37 38 39;
+#X obj 25 836 route 48 49 50 51 52 53 54 55;
+#X obj 25 1001 route 64 65 66 67 68 69 70 71;
+#X obj 71 138 r midi-repatch;
+#X obj 173 138 r midi-\$0;
+#X text 781 179 KNOBS;
+#X text 774 335 FADERS;
+#X text 738 503 COMMAND_BTN;
+#X text 760 685 EXEC_BTN;
+#X text 760 850 EXEC_BTN;
+#X text 760 1015 EXEC_BTN;
+#X obj 20 20 cnv 15 999 60 empty empty nanokorg 20 12 0 14 -261234
+-66577 0;
+#X msg 238 84 line 0 \, auto;
+#X obj 238 118 s midi-repatch;
+#X obj 238 49 bng 15 250 50 0 empty patch_midi\$0 patch_midi\$0 17
+7 0 10 -262144 -1 -1;
+#X obj 317 194 MIDI/assign;
+#X obj 25 469 MIDI/assign;
+#X obj 123 586 MIDI/assign;
+#X obj 44 452 MIDI/assign;
+#X obj 196 535 MIDI/assign;
+#X obj 122 384 MIDI/assign;
+#X obj 220 279 MIDI/assign;
+#X obj 25 654 MIDI/assign;
+#X obj 83 418 MIDI/assign;
+#X obj 50 967 MIDI/assign;
+#X obj 25 984 MIDI/assign;
+#X obj 175 1047 MIDI/assign;
+#X obj 100 768 MIDI/assign;
+#X obj 200 865 MIDI/assign;
+#X obj 298 211 MIDI/assign;
+#X obj 278 228 MIDI/assign;
+#X obj 259 245 MIDI/assign;
+#X obj 239 262 MIDI/assign;
+#X obj 200 296 MIDI/assign;
+#X obj 161 350 MIDI/assign;
+#X obj 181 313 MIDI/assign;
+#X obj 142 367 MIDI/assign;
+#X obj 103 401 MIDI/assign;
+#X obj 64 435 MIDI/assign;
+#X obj 221 518 MIDI/assign;
+#X obj 172 552 MIDI/assign;
+#X obj 147 569 MIDI/assign;
+#X obj 98 603 MIDI/assign;
+#X obj 74 620 MIDI/assign;
+#X obj 49 637 MIDI/assign;
+#X obj 200 700 MIDI/assign;
+#X obj 175 717 MIDI/assign;
+#X obj 150 734 MIDI/assign;
+#X obj 125 751 MIDI/assign;
+#X obj 75 785 MIDI/assign;
+#X obj 50 802 MIDI/assign;
+#X obj 25 819 MIDI/assign;
+#X obj 175 882 MIDI/assign;
+#X obj 150 899 MIDI/assign;
+#X obj 125 916 MIDI/assign;
+#X obj 100 933 MIDI/assign;
+#X obj 75 950 MIDI/assign;
+#X obj 200 1030 MIDI/assign;
+#X obj 150 1064 MIDI/assign;
+#X obj 125 1081 MIDI/assign;
+#X obj 100 1098 MIDI/assign;
+#X obj 75 1115 MIDI/assign;
+#X obj 50 1132 MIDI/assign;
+#X obj 25 1149 MIDI/assign;
+#X msg 927 136 click;
+#X obj 927 115 bng 15 250 50 0 empty OPEN_MIDI-patcher\$0 OPEN_MIDI-patcher\$0
+17 7 0 10 -4034 -1 -1;
+#X obj 866 151 text define -k MIDI-patcher;
+#A set 0 fader face \; 1 fader contre \; 2 fader dec2 \; 3 fader dec3
+\; 4 \; 5 \; 6 fader out_master_level1 \; 7 fader out_master_level2
+\; \; 13 tcontrol Open_Cue \; 14 tcontrol previous_scene_list \; 15
+tcontrol next_scene_list \; \; 16 control tracking_Cue_List \; 17 \;
+18 \; 19 \; 20 fader S_WDMX2 \; 21 fader S_WDMX1 \; 22 control globaltimeM
+\; 23 \; \; 44 tcontrol go_1 \; 43 tcontrol +go+_1 \; 42 tcontrol -go-_1
+\; 41 \; 40 \; 58 cue F_fade_out_1s \; 59 cue F_noir \; \; 32 repatch
+R-L-strip 23 \; 33 repatch R-F-strip 23 \; 34 \; 35 \; 36 repatch petite_secretaire
+23 \; 37 repatch Rodd-entend_pas 23 \; 38 repatch Rodd_parle_pas 23
+\; 39 repatch Rodd_voie_pas 23 \; \; 48 repatch G-L-strip 23 \; 49
+repatch G-F-strip 23 \; 50 repatch CW-J-strip 23 \; 51 repatch L_platine_Ovide
+23 \; 52 repatch CW-C-strip 23 \; 53 repatch WW-J-strip 23 \; 54 repatch
+Pin-MAISON 23 \; 55 repatch WW-C-strip 23 \; \; 64 repatch B-L-strip
+23 \; 65 repatch B-F-strip 23 \; 66 \; 67 repatch CW-F-strip 23 \;
+68 repatch RODD 23 \; 69 repatch Pin-bosq2 23 \; 70 repatch WW-F-strip
+23 \; 71 repatch Pin-bosq1 23 \;;
+#X obj 36 61 bng 15 250 50 0 OPEN_MIDI-patcher\$0 OPEN_MIDI-patcher
+OPEN_MIDI-patcher 17 7 0 10 -4034 -1 -1;
+#X msg 1075 93 base_LGQ;
+#X obj 1075 114 symbol;
+#X msg 1075 137 write -c ../MIDI/pattern/\$1.txt;
+#X msg 1335 55 base_LGQ;
+#X obj 1315 76 symbol;
+#X msg 889 135 clear;
+#X msg 1315 137 read -c ../MIDI/pattern/\$1.txt;
+#X msg 1085 73 base_StuART;
+#X msg 1346 35 base_StuART;
+#X msg 1105 53 temp;
+#X msg 1365 13 temp;
+#X obj 1315 97 t b a;
+#X obj 1315 118 s patch_midi\$0;
+#X obj 415 25 bng 15 250 50 0 empty empty load_temp 17 7 0 10 -262144
+-1 -1;
+#X obj 415 40 bng 15 250 50 0 empty empty load_base_StuART 17 7 0 10
+-262144 -1 -1;
+#X obj 415 55 bng 15 250 50 0 empty empty load_base_LQG 17 7 0 10 -262144
+-1 -1;
+#X obj 1450 59 r midi_pattern;
+#X msg 1454 31 \; midi_pattern base_LGQ;
+#X obj 238 101 text sequence MIDI-patcher;
+#X connect 1 0 2 0;
+#X connect 2 0 11 0;
+#X connect 11 0 29 0;
+#X connect 11 1 31 0;
+#X connect 11 2 51 0;
+#X connect 11 3 36 0;
+#X connect 11 4 50 0;
+#X connect 11 5 33 0;
+#X connect 11 6 49 0;
+#X connect 11 7 47 0;
+#X connect 11 8 48 0;
+#X connect 11 9 46 0;
+#X connect 11 10 34 0;
+#X connect 11 11 45 0;
+#X connect 11 12 44 0;
+#X connect 11 13 43 0;
+#X connect 11 14 42 0;
+#X connect 11 15 28 0;
+#X connect 11 16 12 0;
+#X connect 12 0 35 0;
+#X connect 12 1 57 0;
+#X connect 12 2 56 0;
+#X connect 12 3 55 0;
+#X connect 12 4 30 0;
+#X connect 12 5 54 0;
+#X connect 12 6 53 0;
+#X connect 12 7 32 0;
+#X connect 12 8 52 0;
+#X connect 12 9 13 0;
+#X connect 13 0 64 0;
+#X connect 13 1 63 0;
+#X connect 13 2 62 0;
+#X connect 13 3 40 0;
+#X connect 13 4 61 0;
+#X connect 13 5 60 0;
+#X connect 13 6 59 0;
+#X connect 13 7 58 0;
+#X connect 13 8 14 0;
+#X connect 14 0 38 0;
+#X connect 14 1 37 0;
+#X connect 14 2 69 0;
+#X connect 14 3 68 0;
+#X connect 14 4 67 0;
+#X connect 14 5 66 0;
+#X connect 14 6 65 0;
+#X connect 14 7 41 0;
+#X connect 14 8 15 0;
+#X connect 15 0 76 0;
+#X connect 15 1 75 0;
+#X connect 15 2 74 0;
+#X connect 15 3 73 0;
+#X connect 15 4 72 0;
+#X connect 15 5 71 0;
+#X connect 15 6 39 0;
+#X connect 15 7 70 0;
+#X connect 16 0 11 0;
+#X connect 17 0 11 0;
+#X connect 25 0 99 0;
+#X connect 27 0 25 0;
+#X connect 77 0 79 0;
+#X connect 78 0 77 0;
+#X connect 81 0 82 0;
+#X connect 82 0 83 0;
+#X connect 83 0 79 0;
+#X connect 84 0 85 0;
+#X connect 85 0 92 0;
+#X connect 86 0 79 0;
+#X connect 87 0 79 0;
+#X connect 88 0 82 0;
+#X connect 89 0 85 0;
+#X connect 90 0 82 0;
+#X connect 91 0 85 0;
+#X connect 92 0 93 0;
+#X connect 92 1 87 0;
+#X connect 94 0 91 0;
+#X connect 95 0 89 0;
+#X connect 96 0 84 0;
+#X connect 97 0 85 0;
+#X connect 99 0 26 0;
+#X coords 0 -1 1 1 1000 60 1 20 20;
+#X restore 19 230 pd nanokorg;
+#X obj 717 311 cnv 15 200 60 empty empty empty 20 12 0 14 -204786 -66577
+0;
+#X msg 720 336 face patch 22 \, contre patch 16;
+#X obj 720 352 s to_control;
+#X obj 919 311 cnv 15 100 60 empty empty empty 20 12 0 14 -260097 -66577
+0;
+#N canvas 1 60 1665 966 Cue 0;
+#X obj 201 2 cnv 15 2000 2000 empty empty empty 20 12 0 14 -4032 -66577
+0;
+#X obj 1 2 cnv 15 200 2000 empty empty empty 20 12 0 14 -4034 -66577
+0;
+#X restore 921 354 pd Cue;
+#N canvas 1 75 1126 471 LISTE 0;
+#X obj 305 71 r CHEMIN;
+#X msg 305 233 read \$1;
+#X obj 305 206 makefilename;
+#X obj 305 115 t b s;
+#X msg 337 138 set \$1;
+#X obj 305 159 symbol CUE;
+#X obj 305 181 symbol;
+#X msg 160 261 read \$1;
+#X obj 160 234 makefilename;
+#X obj 160 169 symbol;
+#X obj 170 143 symbol MISE;
+#X msg 5 290 Cue_name;
+#X obj 160 314 unpack s f f s;
+#X text 69 42 ~/StuART/Cue/MISE est un fichier obligatoire;
+#X obj 160 191 t s b;
+#X symbolatom 160 356 10 0 0 0 - - -;
+#X obj 66 375 prepend;
+#X floatatom 305 300 5 0 0 0 - - -;
+#X msg 320 256 length;
+#X obj 137 119 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 137 87 until;
+#X text 23 13 objectif : lister les cues dans l'ordre des Next à partir
+de MISE, f 68;
+#X obj 199 438 print WTF;
+#X msg 889 258 clear;
+#X obj 834 172 ggee/shell;
+#X obj 834 63 r SHOW;
+#X obj 834 105 symbol;
+#X obj 834 85 t a b;
+#X msg 834 258 add \$1;
+#X obj 834 224 symbol;
+#X msg 658 258 write \$1;
+#X obj 626 142 prepend;
+#X obj 626 163 symbol;
+#X obj 901 211 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X msg 774 258 read \$1;
+#X obj 978 275 qlist;
+#X obj 834 125 makefilename /home/pi/StuART/Cue/%s/;
+#X msg 689 321 clear;
+#X msg 626 321 read \$1;
+#X obj 626 184 makefilename %sliste;
+#X obj 626 206 t a a;
+#X obj 522 368 text define -k liste_des_Cues;
+#A set F_fade_out_1s \; F_noir \; NO_SERVICE \; s0_mise \; __s0_noir_killaudio
+\; __s10_la_grande_reunion \; __s11_chez_ovide2 \; __s12_entree_de_lecole
+\; __s13_la_preparation \; __s14_la_derniere_grande_reunion \; __s16_ladeuxiemeepreuve
+\; __s17_la_salle_de_controle \; __s18_epilogue \; s1_arbres \; __s1_prologue
+\; s1_themegarçonguitare \; s1_themegarçonguitareCUT \; s1_vent \;
+__s2_arrivee_dOvide \; __s3_la_rue \; __s4_reception_mairie \; s4_son_buffet
+\; s4_son_maire \; __s5_ecole \; __s6_la_mairie \; __s7_l_ecole2 \;
+__s8_chez_Ovide \; __s9_chez_rodd \; SERVICE \;;
+#X msg 834 150 ls -I "liste" -I "LISTE" \$1;
+#X text 719 38 Liste TOUS les cues dans le repertoire $SHOW;
+#X obj 522 165 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 522 201 prepend;
+#X msg 522 268 write \$1;
+#X obj 522 223 symbol;
+#X obj 770 399 text define -k LAN;
+#A set ID Client Name MAC Address Assigned IP Lease Time \; 1 nanokontrol2
+B8-27-EB-90-D6-F5 192.168.1.112 Permanent \; 2 DMX B8-27-EB-5C-D3-AD
+192.168.1.102 Permanent \; 3 SALON2 B8-27-EB-E5-BA-7D 192.168.1.106
+Permanent \; 4 FFM B8-27-EB-BD-CB-07 192.168.1.109 Permanent \; 5 god
+B8-27-EB-E6-81-81 192.168.1.103 Permanent \; 6 raspberrypi B8-27-EB-04-CF-3A
+192.168.1.101 Permanent \; 7 SALON2 B8-27-EB-B0-EF-28 192.168.1.110
+Permanent \; 8 LAPTOP-63II0H0U 7C-76-35-E9-A0-1B 192.168.1.100 Permanent
+\; 9 FFM B8-27-EB-E8-9E-52 192.168.1.108 Permanent \; 10 pivm 08-00-27-21-30-99
+192.168.1.114 35:17:21 \; 11 buster DC-A6-32-00-E3-03 192.168.1.117
+36:12:19 \;;
+#X msg 770 361 read -c ../_SALON/LAN;
+#X obj 305 278 cyclone/coll;
+#C restore;
+#X obj 160 293 cyclone/coll;
+#C restore;
+#X connect 1 0 50 0;
+#X connect 2 0 1 0;
+#X connect 3 0 5 0;
+#X connect 3 0 10 0;
+#X connect 3 1 4 0;
+#X connect 4 0 2 0;
+#X connect 4 0 8 0;
+#X connect 5 0 6 0;
+#X connect 6 0 2 0;
+#X connect 7 0 51 0;
+#X connect 8 0 7 0;
+#X connect 9 0 14 0;
+#X connect 10 0 9 0;
+#X connect 11 0 51 0;
+#X connect 12 0 15 0;
+#X connect 14 0 8 0;
+#X connect 15 0 16 1;
+#X connect 15 0 22 0;
+#X connect 16 0 9 0;
+#X connect 17 0 20 0;
+#X connect 18 0 50 0;
+#X connect 19 0 16 0;
+#X connect 20 0 19 0;
+#X connect 23 0 35 0;
+#X connect 24 0 29 0;
+#X connect 24 1 33 0;
+#X connect 26 0 36 0;
+#X connect 27 0 26 0;
+#X connect 27 1 23 0;
+#X connect 28 0 35 0;
+#X connect 29 0 28 0;
+#X connect 30 0 35 0;
+#X connect 31 0 32 0;
+#X connect 32 0 39 0;
+#X connect 33 0 31 0;
+#X connect 34 0 35 0;
+#X connect 36 0 42 0;
+#X connect 36 0 31 1;
+#X connect 37 0 41 0;
+#X connect 38 0 41 0;
+#X connect 39 0 40 0;
+#X connect 39 0 45 1;
+#X connect 40 0 38 0;
+#X connect 40 1 30 0;
+#X connect 42 0 24 0;
+#X connect 44 0 45 0;
+#X connect 45 0 47 0;
+#X connect 46 0 41 0;
+#X connect 47 0 46 0;
+#X connect 49 0 48 0;
+#X connect 50 0 17 0;
+#X connect 51 0 12 0;
+#X connect 51 2 11 0;
+#X restore 921 338 pd LISTE;
+#X obj 1123 12 _LGQ/_LGQ_host_header;
+#X obj 18 291 _LGQ/_LGQtalkie;
+#X obj 1128 691 _LGQ/_LGQaudio;
+#X obj 18 391 _LGQ/_LGQ_Cues;
+#X obj 17 17 CueLoader/SceneLoader_V3;
+#X obj 540 1357;
+#X obj 18 691 _LGQ/_LGQdmx;
+#X connect 4 0 5 0;

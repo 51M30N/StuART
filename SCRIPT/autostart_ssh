@@ -1,0 +1,13 @@
+#!/bin/bash
+#|||||||||||||#
+#|by_51M30N|||#
+#|for__StuART|#
+#|||||||||||||# rev 02092019
+#|||||||||||||#
+
+	for IP in $*
+	do
+		echo "open pi@$IP"
+		lxterminal -e ssh -X pi@$IP
+	done
+

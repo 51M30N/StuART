@@ -1,0 +1,982 @@
+#N canvas 0 74 1920 1006 10;
+#X obj 100 30 cnv 15 799 29 empty cnv_LGQ_host_header SHOW==SALON 24
+8 1 12 -260818 -241291 0;
+#X obj 474 96 loadbang;
+#X obj 474 160 ggee/shell;
+#X msg 474 138 hostname;
+#X obj 101 294 send;
+#X obj 101 106 symbol;
+#X text 323 78 charge le le nom de la machine et bang la config de
+communication, f 68;
+#X obj 474 117 delay 4000;
+#X obj 450 104 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 918 10 r SHOW;
+#X obj 918 26 symbol;
+#X obj 501 201 print ******************************HOSTNAME******************************
+, f 81;
+#X obj 100 10 cnv 15 799 19 empty empty HEADER_host 5 8 2 10 -204800
+-66577 0;
+#X obj 403 1404 cnv 15 600 500 empty empty empty 20 12 0 14 -233017
+-66577 0;
+#X msg 572 1697 set-dmx;
+#X msg 572 1617 audio;
+#X msg 572 1677 f-dmx;
+#X msg 572 1557 midi;
+#X msg 572 1577 goto;
+#X msg 572 1597 InCue;
+#X msg 572 1637 aplay;
+#X msg 572 1657 f-SELECT;
+#X obj 572 1744 pack s f f f f f;
+#X obj 684 1555 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1
+0 1;
+#X obj 756 1555 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1
+0 1;
+#X obj 826 1555 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1
+0 1;
+#X obj 873 1555 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1
+0 1;
+#X obj 927 1555 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1
+0 1;
+#X obj 549 1531 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 779 1777 r GLOBAL_TO_CONTROL;
+#X obj 779 1804 list;
+#X msg 779 1830 \; \$1_TO_CONTROL \$2 \$3 \$4 \$5 \$6;
+#X msg 561 1407 set \, add;
+#X obj 572 1777 cyclone/prepend GLOBAL_TO_CONTROL;
+#X obj 572 1808 cyclone/prepend add;
+#X text 568 1542 $_TO_CONTROL \$1LocalM \$2OSC_CTRLM \$3OSC_EXECM \$4XbeeM
+\$5PrintM, f 69;
+#X msg 561 1423 \;;
+#X msg 411 1423 \; f-SELECT_Local \$1 \; f-SELECT_OSC_CTRL \$2 \; f-SELECT_OSC_EXEC
+\$3 \; f-SELECT_Xbee \$4 \; f-SELECT_Print \$5 \; aplay_Local \$1 \;
+aplay_OSC_CTRL \$2 \; aplay_OSC_EXEC \$3 \; aplay_Xbee \$4 \; aplay_Print
+\$5 \; set-dmx_Local \$1 \; set-dmx_OSC_CTRL \$2 \; set-dmx_OSC_EXEC
+\$3 \; set-dmx_Xbee \$4 \; set-dmx_Print \$5 \; f-dmx_Local \$1 \;
+f-dmx_OSC_CTRL \$2 \; f-dmx_OSC_EXEC \$3 \; f-dmx_Xbee \$4 \; f-dmx_Print
+\$5 \; midi_Local \$1 \; midi_OSC_CTRL \$2 \; midi_OSC_EXEC \$3 \;
+midi_Xbee \$4 \; midi_Print \$5 \; InCue_Local \$1 \; InCue_OSC_CTRL
+\$2 \; InCue_OSC_EXEC \$3 \; InCue_Xbee \$4 \; InCue_Print \$5 \; goto_Local
+\$1 \; goto_OSC_CTRL \$2 \; goto_OSC_EXEC \$3 \; goto_Xbee \$4 \; goto_Print
+\$5 \; audio_Local \$1 \; audio_OSC_CTRL \$2 \; audio_OSC_EXEC \$3
+\; audio_Xbee \$4 \; audio_Print \$5 \;;
+#X text 410 1406 init HEADER_StuART;
+#X obj 157 497 cnv 15 1500 20 empty empty empty 20 12 0 14 -228856
+-66577 0;
+#X obj 157 518 cnv 15 1500 20 empty empty empty 20 12 0 14 -191407
+-66577 0;
+#X obj 157 539 cnv 15 1500 20 empty empty empty 20 12 0 14 -233017
+-66577 0;
+#X obj 157 559 cnv 15 1500 20 empty empty empty 20 12 0 14 -191407
+-66577 0;
+#X obj 157 579 cnv 15 1500 20 empty empty empty 20 12 0 14 -233017
+-66577 0;
+#X obj 157 598 cnv 15 1500 20 empty empty empty 20 12 0 14 -191407
+-66577 0;
+#X obj 157 617 cnv 15 1500 20 empty empty empty 20 12 0 14 -233017
+-66577 0;
+#X obj 157 637 cnv 15 1500 20 empty empty empty 20 12 0 14 -191407
+-66577 0;
+#X obj 157 658 cnv 15 1500 20 empty empty empty 20 12 0 14 -233017
+-66577 0;
+#X obj 143 484 bng 15 250 50 0 empty pivm pivm 34 23 0 10 -262144 -1
+-1;
+#X obj 143 504 bng 15 250 50 0 empty LGQaudio LGQaudio 34 23 0 10 -262144
+-1 -1;
+#X obj 143 524 bng 15 250 50 0 empty LGQdmx LGQdmx 34 23 0 10 -262144
+-1 -1;
+#X obj 144 544 bng 15 250 50 0 empty LGQtalkie LGQtalkie 34 23 0 10
+-262144 -1 -1;
+#X obj 669 856 cnv 15 200 200 empty empty empty 20 12 0 14 -232576
+-66577 0;
+#X text 689 861 init COMPORT;
+#X obj 1011 856 cnv 15 150 200 empty empty empty 20 12 0 14 -261234
+-66577 0;
+#X obj 508 1057 cnv 15 250 200 empty empty empty 20 12 0 14 -204786
+-66577 0;
+#X obj 1092 1056 cnv 15 200 200 empty empty empty 20 12 0 14 -262130
+-66577 0;
+#X text 512 1062 init dmx;
+#X text 1110 1060 init audio;
+#X obj 770 1056 cnv 15 250 200 empty empty empty 20 12 0 14 -204800
+-66577 0;
+#X text 775 1134 init aplay;
+#X obj 247 856 cnv 15 280 200 empty empty empty 20 12 0 14 -260097
+-66577 0;
+#X obj 319 899 list;
+#X msg 403 1266 \; GLOBAL_TO_CONTROL aplay 0 0 0 0 0 \; GLOBAL_TO_CONTROL
+f-SELECT 0 0 0 0 0 \; GLOBAL_TO_CONTROL InCue 0 0 0 0 0 \; GLOBAL_TO_CONTROL
+goto 0 0 0 0 0 \; GLOBAL_TO_CONTROL midi 0 0 0 0 0 \; GLOBAL_TO_CONTROL
+f-dmx 0 0 0 0 0 \; GLOBAL_TO_CONTROL audio 0 0 0 0 0 \; GLOBAL_TO_CONTROL
+set-dmx 0 0 0 0 0 \;;
+#X msg 618 1071 \; Live_ModeM \$1 \; toggle_out_faderdmxM \$2 \; toggle_rec_faderdmxM
+\$3 \; COLOR_FADERM \$4 \;;
+#X msg 582 1131 \; spigot-label \$1 \; pattern-stage1 \$2 \;;
+#X msg 809 1153 1 1 0 1 \, 2 1 0 1 \, 3 1 0 1;
+#X msg 781 1166 \; toggle_rec_aplay-\$1- \$2 \; toggle_out_aplay-\$1-
+\$3 \; OUT-PLAYER-\$1- \$4 \;, f 25;
+#X msg 1101 882 1 20 128;
+#X msg 677 982 \; RECONNECT-com 1 \;;
+#X msg 800 866 0 0 1 1 0;
+#X msg 697 880 \; print_serial_info \$1 \; print_serial_in \$2 \; toggle_in
+\$3 \; toggle_out \$4 \; CLOSE-com 1 \; com_in \$5 \;;
+#X text 1016 863 init MIDI;
+#X obj 299 637 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 561 617 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 677 617 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X msg 618 597 1 1 0 0;
+#X msg 582 597 1 1;
+#X msg 697 597 0 0 1 1 0;
+#X obj 677 597 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X msg 1104 597 1 128 128 128;
+#X msg 1024 597 1 20 128;
+#X msg 697 557 0 0 1 1 0;
+#X obj 677 557 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X msg 618 537 1 1 0 0;
+#X msg 582 537 1 1;
+#X obj 561 537 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X msg 697 517 0 0 1 1 0;
+#X obj 677 517 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X msg 1104 517 1 128 128 128;
+#X msg 582 497 1 1;
+#X obj 299 617 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 299 597 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 299 557 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 299 537 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 299 517 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 299 497 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X msg 618 497 1 1 1 1;
+#X msg 1104 497 0 0 0 0;
+#X msg 1104 537 0 0 0 0;
+#X msg 1104 557 0 0 0 0;
+#X obj 144 564 bng 15 250 50 0 empty FFM FFM 34 23 0 10 -262144 -1
+-1;
+#X obj 144 584 bng 15 250 50 0 empty god god 34 23 0 10 -262144 -1
+-1;
+#X obj 144 604 bng 15 250 50 0 empty Pi4 Pi4 34 23 0 10 -262144 -1
+-1;
+#X obj 144 624 bng 15 250 50 0 empty BROADCAST BROADCAST 34 23 0 10
+-262144 -1 -1;
+#X msg 582 577 1 1;
+#X msg 697 577 0 0 1 1 0;
+#X obj 677 577 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X msg 1104 577 1 128 128 128;
+#X msg 1014 577 1 20 128;
+#X obj 299 577 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 144 644 bng 15 250 50 0 empty LOCAL_MOD LOCAL_MOD 34 23 0 10
+-258699 -33289 -258699;
+#X msg 329 92 pivm;
+#X msg 329 108 LGQaudio;
+#X msg 329 124 LGQdmx;
+#X msg 329 140 LGQtalkie;
+#X obj 102 401 symbol;
+#X obj 107 43 bng 15 250 50 0 empty PPRESET PRESET==LOCAL_MOD 17 9
+1 12 -260818 -24198 -241291;
+#X obj 175 158 \$0;
+#X obj 199 13 r bang-\$0;
+#X obj 148 179 pack s f;
+#X obj 101 130 t b a a s b;
+#X obj 474 181 t a a;
+#X msg 46 2097 \; GLOBAL_TO_CONTROL midi 1 0 0 0 0 \; GLOBAL_TO_CONTROL
+f-SELECT 1 0 0 0 0 \; GLOBAL_TO_CONTROL aplay 1 0 0 0 0 \; GLOBAL_TO_CONTROL
+InCue 1 0 0 0 0 \; GLOBAL_TO_CONTROL goto 1 0 0 0 0 \; GLOBAL_TO_CONTROL
+f-dmx 1 0 0 0 0 \; GLOBAL_TO_CONTROL audio 1 0 0 0 0 \; GLOBAL_TO_CONTROL
+set-dmx 1 0 0 0 0 \;;
+#X msg 330 220 LOCAL_MOD;
+#X msg 329 877 192.168.1.255 192.168.1.255 LGQ;
+#X msg 259 477 SHOW;
+#X msg 259 497 LGQ;
+#X msg 259 517 LGQ;
+#X msg 259 537 LGQ;
+#X msg 259 557 LGQ;
+#X obj 259 1002 symbol;
+#X msg 319 919 \; TO_CTRL connect \$1 9998 \; TO_EXEC connect \$2 9997
+\;;
+#X msg 319 477 ______IP_CTRL ______IP_EXEC;
+#X msg 329 204 BROADCAST;
+#X msg 259 1022 \; SHOW \$1 \;;
+#X msg 102 421 \; \$1 color 0 22 22 \;;
+#X obj 101 85 r PRESET;
+#X obj 329 356 s PRESET;
+#X msg 329 156 FFM;
+#X obj 319 30 bng 15 250 50 0 empty empty LGQaudio 17 7 0 10 -166441
+-258699 -262144;
+#X obj 269 30 bng 15 250 50 0 empty empty pivm 17 7 0 10 -166441 -258699
+-262144;
+#X obj 319 45 bng 15 250 50 0 empty empty LGQdmx 17 7 0 10 -166441
+-258699 -262144;
+#X obj 387 29 bng 15 250 50 0 empty empty LGQtalkie 17 7 0 10 -166441
+-258699 -262144;
+#X obj 759 29 bng 15 250 50 0 empty empty BROADCAST 17 7 0 10 -99865
+-262144 -1;
+#X obj 759 45 bng 15 250 50 0 empty empty LOCAL_MOD 17 7 0 10 -99865
+-262144 -1;
+#X msg 329 172 god;
+#X obj 269 45 bng 15 250 50 0 empty empty god 17 7 0 10 -166441 -258699
+-262144;
+#X obj 387 45 bng 15 250 50 0 empty empty FFM 17 7 0 10 -166441 -258699
+-4160;
+#X obj 841 0 r CCOLLOR;
+#X msg 1104 617 0 0 0 0;
+#X msg 148 205 \; bang-\$2 color 14 16 15 \; bang-\$2 label PRESET==\$1
+\;;
+#X msg 918 42 \; cnv_LGQ_host_header label SHOW==\$1 \; cnv_LGQ_host_header
+color 14 16 15 \;;
+#X obj 549 124 bng 15 250 50 0 empty host host 17 7 0 10 -228856 -1
+-1;
+#X obj 837 45 bng 15 250 50 0 empty empty host 17 7 0 10 -228856 -1
+-1;
+#X msg 1104 1083 \; pd dsp \$1 \; out_master_level1 \$2 \; out_master_level2
+\$3 \; out_master_level3 \$4 \;;
+#X msg 299 959 \; LOG-STATE 1 \; t-LOG_OUT 1 \;;
+#X obj 759 145 s TO_OSC_EXEC;
+#X msg 42 2014 \; GLOBAL_TO_CONTROL aplay 0 0 1 0 0 \; GLOBAL_TO_CONTROL
+InCue 0 0 1 0 0 \; GLOBAL_TO_CONTROL f-dmx 0 0 1 0 0 \; GLOBAL_TO_CONTROL
+audio 0 0 1 0 0 \;;
+#X msg 837 90 /to_control host 1;
+#X msg 759 112 /to_control LOCAL_MOD 1;
+#X obj 157 678 cnv 15 1500 20 empty empty empty 20 12 0 14 -191407
+-66577 0;
+#X obj 157 699 cnv 15 1500 20 empty empty empty 20 12 0 14 -233017
+-66577 0;
+#X obj 157 719 cnv 15 1500 20 empty empty empty 20 12 0 14 -191407
+-66577 0;
+#X obj 157 739 cnv 15 1500 20 empty empty empty 20 12 0 14 -233017
+-66577 0;
+#X obj 157 758 cnv 15 1500 20 empty empty empty 20 12 0 14 -191407
+-66577 0;
+#X obj 157 777 cnv 15 1500 20 empty empty empty 20 12 0 14 -233017
+-66577 0;
+#X obj 157 797 cnv 15 1500 20 empty empty empty 20 12 0 14 -191407
+-66577 0;
+#X obj 143 664 bng 15 250 50 0 empty 47B4N 47B4N 34 23 0 10 -262144
+-1 -1;
+#X obj 144 684 bng 15 250 50 0 empty OVLE OVLE 34 23 0 10 -262144 -1
+-1;
+#X obj 144 704 bng 15 250 50 0 empty mode-12 mode-12 34 23 0 10 -262144
+-1 -1;
+#X obj 144 724 bng 15 250 50 0 empty FFM-Pi4remote FFM-Pi4remote 34
+23 0 10 -262144 -1 -1;
+#X obj 144 744 bng 15 250 50 0 empty mode-14 mode-14 34 23 0 10 -262144
+-1 -1;
+#X obj 144 764 bng 15 250 50 0 empty pivm_SALON pivm_SALON 34 23 0
+10 -258699 -33289 -258699;
+#X obj 181 887 bng 15 250 50 0 empty SALON22 SALON22 34 23 0 10 -262144
+-1 -1;
+#X obj 561 797 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X msg 697 797 0 0 1 1 0;
+#X obj 677 797 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X msg 1014 797 1 20 128;
+#X msg 582 777 1 1;
+#X msg 697 777 0 0 1 1 0;
+#X obj 677 777 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X msg 1014 777 1 20 128;
+#X msg 697 737 0 0 1 1 0;
+#X obj 677 737 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X msg 582 717 1 1;
+#X obj 561 717 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X msg 582 677 1 1;
+#X msg 1014 677 1 20 128;
+#X obj 299 797 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 299 777 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 299 737 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 299 717 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 299 697 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 299 677 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X msg 1104 677 0 0 0 0;
+#X msg 1104 717 0 0 0 0;
+#X msg 582 757 1 1;
+#X msg 697 757 0 0 1 1 0;
+#X obj 677 757 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X msg 1014 757 1 20 128;
+#X obj 299 757 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X msg 259 757 SHOW;
+#X msg 1104 797 0 0 0 0;
+#X msg 582 737 1 1;
+#X msg 582 697 1 1;
+#X msg 697 717 0 0 1 1 0;
+#X obj 677 717 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 677 677 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X msg 1014 737 1 20 128;
+#X msg 1014 717 1 20 128;
+#X msg 1014 697 1 20 128;
+#X obj 561 697 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 561 757 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 561 677 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 561 737 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X msg 259 717 SHOW;
+#X msg 319 717 127.0.0.1 127.0.0.1;
+#X msg 319 757 127.0.0.1 127.0.0.1;
+#X msg 1104 697 0 0 0 0;
+#X msg 1104 757 0 0 0 0;
+#X msg 1104 777 0 0 0 0;
+#X msg 618 757 0 0 0 0;
+#X msg 618 717 0 0 0 0;
+#X msg 582 797 1 1;
+#X msg 329 268 mode-12;
+#X msg 329 300 mode-14;
+#X text 747 1406 comment;
+#X text 210 2344 SALON22;
+#X msg 329 332 SALON22;
+#X msg 329 316 pivm_SALON;
+#X obj 677 45 bng 15 250 50 0 empty empty pivm_SALON 17 7 0 10 -261682
+-260097 -1;
+#X msg 319 777 192.168.1.100 192.168.1.100;
+#X text 237 2209 pivmSALON;
+#X obj 677 30 bng 15 250 50 0 empty empty SALON22 17 7 0 10 -261682
+-260097 -1;
+#X msg 259 777 SALON;
+#X msg 259 797 SALON;
+#X msg 1217 383 \; CCOLLOR color 1 13 \$1;
+#X obj 31 10 r CCOLLORR;
+#X msg 83 450 \; CCOLLORR color 0 22 22 \;;
+#X obj 87 335 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X msg 781 497 1 1 1 0 \, 2 1 1 0 \, 3 1 1 0 \, 4 1 1 0;
+#X msg 781 557 1 0 1 1 \, 2 0 1 1 \, 3 0 1 1 \, 4 0 1 1;
+#X msg 781 577 1 1 0 1 \, 2 1 0 1 \, 3 1 0 1 \, 4 1 0 1;
+#X msg 781 597 1 1 0 1 \, 2 1 0 1 \, 3 1 0 1 \, 4 1 0 1;
+#X msg 781 717 1 0 0 0 \, 2 0 0 0 \, 3 0 0 0 \, 4 0 0 0;
+#X msg 781 737 1 0 0 0 \, 2 0 0 0 \, 3 0 0 0 \, 4 0 0 0;
+#X msg 781 757 1 0 0 0 \, 2 0 0 0 \, 3 0 0 0 \, 4 0 0 0;
+#X msg 781 777 1 0 0 0 \, 2 0 0 0 \, 3 0 0 0 \, 4 0 0 0;
+#X msg 781 797 1 0 0 0 \, 2 0 0 0 \, 3 0 0 0 \, 4 0 0 0;
+#X msg 1224 717 0 0 0 0;
+#X msg 1224 697 0 0 0 0;
+#X msg 1224 757 0 0 0 0;
+#X obj 1208 855 cnv 15 200 200 empty empty init_gpio 20 12 2 14 -203904
+-66577 0;
+#X obj 1224 903 list;
+#X msg 1224 927 \; toggle_rec_gpio_\$1 \$2 \; toggle_out_gpio_\$1 \$3
+\; OUT_gpio_\$1 \$4 \; init_gpio_\$1 \$5 \;, f 23;
+#X msg 1234 882 12V 1 1 1 1 \, 24V 0 0 0 0;
+#X msg 1224 797 12V 1 1 1 1;
+#X msg 1224 777 12V 1 1 0 0;
+#X msg 319 797 192.168.1.100 192.168.1.100;
+#X msg 572 1717 gpio;
+#X msg 50 2226 \; GLOBAL_TO_CONTROL midi 1 0 0 0 0 \; GLOBAL_TO_CONTROL
+f-SELECT 1 0 0 0 0 \; GLOBAL_TO_CONTROL aplay 1 0 1 0 0 \; GLOBAL_TO_CONTROL
+InCue 1 0 0 0 0 \; GLOBAL_TO_CONTROL goto 1 0 1 0 0 \; GLOBAL_TO_CONTROL
+f-dmx 1 0 1 0 0 \; GLOBAL_TO_CONTROL audio 1 0 1 0 0 \; GLOBAL_TO_CONTROL
+set-dmx 1 0 0 0 0 \; GLOBAL_TO_CONTROL gpio 1 0 1 0 0 \;;
+#X msg 330 2133 \; GLOBAL_TO_CONTROL midi 1 0 0 0 0 \; GLOBAL_TO_CONTROL
+f-SELECT 1 0 0 0 0 \; GLOBAL_TO_CONTROL aplay 1 0 0 0 0 \; GLOBAL_TO_CONTROL
+InCue 1 0 0 0 0 \; GLOBAL_TO_CONTROL goto 1 0 0 0 0 \; GLOBAL_TO_CONTROL
+f-dmx 1 0 0 0 0 \; GLOBAL_TO_CONTROL audio 1 0 0 0 0 \; GLOBAL_TO_CONTROL
+set-dmx 1 0 0 0 0 \; GLOBAL_TO_CONTROL gpio 1 0 0 0 0 \;;
+#X obj 3 563 cnv 15 100 200 empty empty init_ 20 12 2 14 -228856 -66577
+0;
+#X msg 4 597 \; OPEN_deroule 1;
+#X msg 4 624 \; OPEN_Cue_List 1;
+#X msg 4 651 \; OPEN_LOG_OUT 1;
+#X msg 4 678 \; OPEN_STATE 1;
+#X msg 4 705 \; OPEN_universe 1;
+#X msg 561 1169 \; restart_ola 1 \;;
+#X msg 516 497 0 0 0;
+#X msg 516 537 1 1 0;
+#X msg 516 577 0 0 0;
+#X msg 516 597 0 0 0;
+#X msg 516 677 0 0 0;
+#X msg 516 717 0 0 0;
+#X msg 516 757 0 0 0;
+#X msg 516 777 0 0 1;
+#X msg 516 797 1 1 1;
+#X msg 516 1197 \; TOGGLE_DMX \$1 \; print-OSC_config \$2 \; dmx_universe-\$3
+connect 127.0.0.1 7770 \;;
+#X msg 116 247 \; \$1 color 13 12 13;
+#X msg 618 777 1 1 1 1;
+#X msg 618 797 1 1 1 1;
+#X msg 113 1474 \; GLOBAL_TO_CONTROL midi 0 0 0 0 0 \; GLOBAL_TO_CONTROL
+goto 1 0 0 0 0 \; GLOBAL_TO_CONTROL InCue 1 0 0 0 0 \; GLOBAL_TO_CONTROL
+audio 0 0 0 0 0 \; GLOBAL_TO_CONTROL aplay 0 0 0 0 0 \; GLOBAL_TO_CONTROL
+f-SELECT 1 0 0 0 0 \; GLOBAL_TO_CONTROL f-dmx 1 0 0 0 0 \; GLOBAL_TO_CONTROL
+set-dmx 1 0 0 0 0 \;;
+#X msg 330 189 Pi4;
+#X obj 467 45 bng 15 250 50 0 empty empty Pi4 17 7 0 10 -166441 -258699
+-66577;
+#X msg 361 437 set 192.168.0.100 192.168.0.255;
+#X obj 467 29 bng 15 250 50 0 empty empty 47B4N 17 7 0 10 -166441 -258699
+-66577;
+#X msg 329 236 47B4N;
+#X msg 319 677 192.168.0.100 192.168.0.255;
+#X msg 618 677 1 1 1 1;
+#X msg 781 617 1 1 1 0 \, 2 1 1 0 \, 3 1 1 0 \, 4 1 1 0;
+#X msg 781 677 1 1 1 0 \, 2 1 1 0 \, 3 1 1 0 \, 4 1 1 0;
+#X msg 618 617 1 1 1 1;
+#X msg 582 617 1 1;
+#X msg 516 617 0 0 0;
+#X msg 259 597 LGQ;
+#X msg 258 618 LGQ;
+#X msg 259 677 LGQ;
+#X msg 1224 557 LED_PS 1 1 1 1 \, go_1 0 0 1 1;
+#X msg 272 1095 \; GLOBAL_TO_CONTROL midi 0 0 0 0 0 \; GLOBAL_TO_CONTROL
+goto 0 0 1 1 0 \; GLOBAL_TO_CONTROL InCue 1 0 0 0 0 \; GLOBAL_TO_CONTROL
+audio 0 0 1 0 0 \; GLOBAL_TO_CONTROL aplay 0 0 0 1 0 \; GLOBAL_TO_CONTROL
+f-SELECT 0 0 0 0 0 \; GLOBAL_TO_CONTROL f-dmx 0 0 1 0 0 \; GLOBAL_TO_CONTROL
+set-dmx 0 0 0 0 0 \; GLOBAL_TO_CONTROL gpio 0 0 0 1 0 \;;
+#X msg 107 1627 \; GLOBAL_TO_CONTROL midi 0 0 0 0 0 \; GLOBAL_TO_CONTROL
+goto 0 0 0 1 0 \; GLOBAL_TO_CONTROL InCue 1 0 0 0 0 \; GLOBAL_TO_CONTROL
+audio 0 0 0 0 0 \; GLOBAL_TO_CONTROL aplay 1 0 0 0 0 \; GLOBAL_TO_CONTROL
+f-SELECT 0 0 0 0 0 \; GLOBAL_TO_CONTROL f-dmx 0 0 0 0 0 \; GLOBAL_TO_CONTROL
+set-dmx 0 0 0 0 0 \; GLOBAL_TO_CONTROL gpio 1 0 0 0 0 \;;
+#X msg 1025 956 \; MIDI_CONNECT-\$1 \$2 \$3 \; midi_pattern 8audioremote
+;
+#X msg 1014 896 \; MIDI_CONNECT-\$1 \$2 \$3 \; midi_pattern base_StuART
+\; midi_pattern base_LGQ \;;
+#X msg 1224 497 LED_PS 1 1 0 0 \, go_1 0 0 1 0;
+#X msg 1224 617 LED_PS 1 1 0 0 \, go_1 0 0 0 0;
+#X msg 259 697 OVE;
+#X obj 517 45 bng 15 250 50 0 empty empty OVLE 17 7 0 10 -166441 -258699
+-66577;
+#X msg 7 938 \; GLOBAL_TO_CONTROL midi 1 0 0 0 0 \; GLOBAL_TO_CONTROL
+f-SELECT 1 0 0 0 0 \; GLOBAL_TO_CONTROL aplay 1 0 0 0 0 \; GLOBAL_TO_CONTROL
+InCue 1 0 0 0 0 \; GLOBAL_TO_CONTROL goto 1 0 0 0 0 \; GLOBAL_TO_CONTROL
+f-dmx 1 0 0 0 0 \; GLOBAL_TO_CONTROL audio 1 0 0 0 0 \; GLOBAL_TO_CONTROL
+set-dmx 1 0 0 0 0 \; GLOBAL_TO_CONTROL gpio 1 0 0 0 0 \;;
+#X msg 618 697 1 1 1 1;
+#X msg 516 697 1 1 0;
+#X msg 389 252 OVLE;
+#X msg 697 697 0 0 1 1 15;
+#X msg 1014 996 \; MIDI_CONNECT-\$1 \$2 \$3 \; midi_pattern base_StuART
+\; midi_pattern OVE_GROUP \;;
+#X msg 319 697 192.168.0.255 192.168.0.255;
+#X msg 319 557 192.168.1.100 192.168.1.255;
+#X msg 319 597 192.168.1.100 192.168.1.255;
+#X msg 319 497 192.168.1.100 192.168.1.255;
+#X msg 1014 497 1 24 128;
+#X msg 1034 617 1 24 128;
+#X msg 259 577 FFM;
+#X msg 329 284 FFM-Pi4remote;
+#X msg 618 737 1 1 0 1;
+#X msg 1224 737 FONT 1 1 1 1;
+#X obj 517 29 bng 15 250 50 0 empty empty FFM-Pi4remote 17 7 0 10 -191407
+-258113 -4160;
+#X msg 577 223 \; GLOBAL_TO_CONTROL midi 1 0 0 0 0 \; GLOBAL_TO_CONTROL
+goto 0 0 1 0 0 \; GLOBAL_TO_CONTROL InCue 1 0 0 0 0 \; GLOBAL_TO_CONTROL
+audio 0 0 1 0 0 \; GLOBAL_TO_CONTROL aplay 1 0 0 0 0 \; GLOBAL_TO_CONTROL
+f-SELECT 1 0 0 0 0 \; GLOBAL_TO_CONTROL f-dmx 1 0 0 0 0 \; GLOBAL_TO_CONTROL
+set-dmx 1 0 0 0 0 \; GLOBAL_TO_CONTROL gpio 0 0 1 0 0 \;;
+#X msg 827 223 \; GLOBAL_TO_CONTROL midi 1 0 0 0 0 \; GLOBAL_TO_CONTROL
+goto 0 1 0 0 0 \; GLOBAL_TO_CONTROL InCue 1 0 0 0 0 \; GLOBAL_TO_CONTROL
+audio 0 1 0 0 0 \; GLOBAL_TO_CONTROL aplay 0 1 0 0 0 \; GLOBAL_TO_CONTROL
+f-SELECT 1 0 0 0 0 \; GLOBAL_TO_CONTROL f-dmx 1 0 0 0 0 \; GLOBAL_TO_CONTROL
+set-dmx 1 0 0 0 0 \; GLOBAL_TO_CONTROL gpio 0 1 0 0 0 \;;
+#X msg 319 577 169.254.0.2 169.254.255.255;
+#X msg 319 737 169.254.0.1 169.254.255.255;
+#X msg 102 379 cnv_LGQ_host_header \, pivm \, LGQaudio \, LGQdmx \,
+LGQtalkie \, FFM \, god \, Pi4 \, BROADCAST \, LOCAL_MOD \, 47B4N \,
+OVLE \, mode-12 \, FFM-Pi4remote \, mode-14 \, pivm_SALON \, SALON22
+, f 169;
+#X msg 243 401 cnv_LGQ_host_header \, PPRESET;
+#X obj 243 424 symbol;
+#X msg 243 446 \; \$1 label;
+#X msg 259 737 FFM;
+#X obj 1412 1056 cnv 15 200 200 empty empty empty 20 12 0 14 -262130
+-66577 0;
+#X msg 1424 1083 \; TOGGLE_Video \$1 \;;
+#X text 1430 1060 init Video;
+#X msg 1424 577 1;
+#X msg 1424 737 0;
+#X obj 474 234 route Pi4;
+#X msg 1104 737 0 0 0 0;
+#X msg 516 737 1 1 0;
+#X msg 618 577 1 1 0 0;
+#X msg 1224 577 FONT 1 1 1 1;
+#X msg 1464 953 \; TOGGLE_DSP \$1 \;;
+#X msg 1464 577 1;
+#X msg 1464 737 0;
+#X msg 36 1096 \; GLOBAL_TO_CONTROL midi 1 0 0 0 0 \; GLOBAL_TO_CONTROL
+goto 0 1 0 0 0 \; GLOBAL_TO_CONTROL InCue 1 0 0 0 0 \; GLOBAL_TO_CONTROL
+audio 0 1 0 0 0 \; GLOBAL_TO_CONTROL aplay 0 1 0 0 0 \; GLOBAL_TO_CONTROL
+f-SELECT 1 0 0 0 0 \; GLOBAL_TO_CONTROL f-dmx 0 1 0 0 0 \; GLOBAL_TO_CONTROL
+set-dmx 1 0 0 0 0 \; GLOBAL_TO_CONTROL gpio 0 1 0 0 0 \;;
+#X msg 319 517 192.168.0.100 192.168.0.255;
+#X msg 319 537 192.168.0.100 192.168.0.255;
+#X msg 319 637 192.168.0.100 192.168.0.255;
+#X msg 319 617 192.168.0.100 192.168.0.255;
+#X connect 1 0 7 0;
+#X connect 2 0 122 0;
+#X connect 3 0 2 0;
+#X connect 5 0 121 0;
+#X connect 7 0 3 0;
+#X connect 8 0 7 0;
+#X connect 9 0 10 0;
+#X connect 10 0 152 0;
+#X connect 14 0 22 0;
+#X connect 15 0 22 0;
+#X connect 16 0 22 0;
+#X connect 17 0 22 0;
+#X connect 18 0 22 0;
+#X connect 19 0 22 0;
+#X connect 20 0 22 0;
+#X connect 21 0 22 0;
+#X connect 22 0 33 0;
+#X connect 23 0 22 1;
+#X connect 24 0 22 2;
+#X connect 25 0 22 3;
+#X connect 26 0 22 4;
+#X connect 27 0 22 5;
+#X connect 28 0 17 0;
+#X connect 28 0 21 0;
+#X connect 28 0 20 0;
+#X connect 28 0 19 0;
+#X connect 28 0 18 0;
+#X connect 28 0 16 0;
+#X connect 28 0 15 0;
+#X connect 28 0 14 0;
+#X connect 28 0 260 0;
+#X connect 29 0 30 0;
+#X connect 30 0 31 0;
+#X connect 32 0 36 0;
+#X connect 33 0 34 0;
+#X connect 34 0 36 0;
+#X connect 48 0 317 0;
+#X connect 48 0 98 0;
+#X connect 48 0 270 0;
+#X connect 48 0 97 0;
+#X connect 48 0 96 0;
+#X connect 48 0 318 0;
+#X connect 48 0 90 0;
+#X connect 48 0 347 0;
+#X connect 48 0 241 0;
+#X connect 48 0 127 0;
+#X connect 48 0 304 0;
+#X connect 49 0 348 0;
+#X connect 49 0 95 0;
+#X connect 49 0 89 0;
+#X connect 49 0 88 0;
+#X connect 49 0 87 0;
+#X connect 49 0 300 0;
+#X connect 49 0 128 0;
+#X connect 50 0 349 0;
+#X connect 50 0 94 0;
+#X connect 50 0 99 0;
+#X connect 50 0 86 0;
+#X connect 50 0 271 0;
+#X connect 50 0 85 0;
+#X connect 50 0 84 0;
+#X connect 50 0 283 0;
+#X connect 50 0 129 0;
+#X connect 51 0 315 0;
+#X connect 51 0 93 0;
+#X connect 51 0 100 0;
+#X connect 51 0 242 0;
+#X connect 51 0 83 0;
+#X connect 51 0 82 0;
+#X connect 51 0 301 0;
+#X connect 51 0 130 0;
+#X connect 51 0 299 0;
+#X connect 62 0 132 0;
+#X connect 66 0 67 0;
+#X connect 68 0 303 0;
+#X connect 70 0 71 0;
+#X connect 73 0 156 0;
+#X connect 74 0 269 0;
+#X connect 75 0 69 0;
+#X connect 76 0 64 0;
+#X connect 77 0 65 0;
+#X connect 78 0 71 0;
+#X connect 79 0 69 0;
+#X connect 80 0 155 0;
+#X connect 81 0 302 0;
+#X connect 82 0 71 0;
+#X connect 83 0 69 0;
+#X connect 84 0 64 0;
+#X connect 85 0 65 0;
+#X connect 86 0 269 0;
+#X connect 87 0 71 0;
+#X connect 88 0 69 0;
+#X connect 89 0 155 0;
+#X connect 90 0 65 0;
+#X connect 91 0 156 0;
+#X connect 92 0 156 0;
+#X connect 93 0 156 0;
+#X connect 94 0 156 0;
+#X connect 95 0 156 0;
+#X connect 96 0 156 0;
+#X connect 97 0 64 0;
+#X connect 98 0 155 0;
+#X connect 99 0 155 0;
+#X connect 100 0 155 0;
+#X connect 101 0 110 0;
+#X connect 101 0 327 0;
+#X connect 101 0 109 0;
+#X connect 101 0 108 0;
+#X connect 101 0 243 0;
+#X connect 101 0 107 0;
+#X connect 101 0 106 0;
+#X connect 101 0 272 0;
+#X connect 101 0 105 0;
+#X connect 101 0 342 0;
+#X connect 101 0 320 0;
+#X connect 101 0 343 0;
+#X connect 101 0 325 0;
+#X connect 101 0 337 0;
+#X connect 101 0 345 0;
+#X connect 102 0 92 0;
+#X connect 102 0 316 0;
+#X connect 102 0 81 0;
+#X connect 102 0 80 0;
+#X connect 102 0 244 0;
+#X connect 102 0 79 0;
+#X connect 102 0 78 0;
+#X connect 102 0 273 0;
+#X connect 102 0 77 0;
+#X connect 102 0 76 0;
+#X connect 102 0 296 0;
+#X connect 102 0 347 0;
+#X connect 103 0 351 0;
+#X connect 103 0 91 0;
+#X connect 103 0 319 0;
+#X connect 103 0 150 0;
+#X connect 103 0 291 0;
+#X connect 103 0 75 0;
+#X connect 103 0 74 0;
+#X connect 103 0 295 0;
+#X connect 103 0 294 0;
+#X connect 103 0 293 0;
+#X connect 103 0 297 0;
+#X connect 103 0 347 0;
+#X connect 103 0 305 0;
+#X connect 104 0 158 0;
+#X connect 104 0 73 0;
+#X connect 104 0 350 0;
+#X connect 105 0 65 0;
+#X connect 106 0 71 0;
+#X connect 107 0 69 0;
+#X connect 108 0 155 0;
+#X connect 109 0 303 0;
+#X connect 110 0 156 0;
+#X connect 111 0 123 0;
+#X connect 112 0 138 0;
+#X connect 113 0 138 0;
+#X connect 114 0 138 0;
+#X connect 115 0 138 0;
+#X connect 116 0 136 0;
+#X connect 118 0 120 1;
+#X connect 119 0 117 0;
+#X connect 120 0 151 0;
+#X connect 121 0 4 0;
+#X connect 121 1 280 0;
+#X connect 121 2 4 1;
+#X connect 121 3 120 0;
+#X connect 121 4 118 0;
+#X connect 122 0 339 0;
+#X connect 122 1 11 0;
+#X connect 124 0 138 0;
+#X connect 125 0 62 0;
+#X connect 127 0 131 0;
+#X connect 128 0 131 0;
+#X connect 129 0 131 0;
+#X connect 130 0 131 0;
+#X connect 131 0 135 0;
+#X connect 134 0 138 0;
+#X connect 137 0 5 0;
+#X connect 139 0 138 0;
+#X connect 140 0 113 0;
+#X connect 141 0 112 0;
+#X connect 142 0 114 0;
+#X connect 143 0 115 0;
+#X connect 145 0 160 0;
+#X connect 145 0 124 0;
+#X connect 146 0 138 0;
+#X connect 147 0 146 0;
+#X connect 148 0 139 0;
+#X connect 149 0 148 0;
+#X connect 149 0 147 0;
+#X connect 149 0 143 0;
+#X connect 149 0 142 0;
+#X connect 149 0 141 0;
+#X connect 149 0 140 0;
+#X connect 149 0 307 0;
+#X connect 149 0 287 0;
+#X connect 149 0 285 0;
+#X connect 150 0 155 0;
+#X connect 153 0 3 0;
+#X connect 154 0 159 0;
+#X connect 154 0 153 0;
+#X connect 159 0 157 0;
+#X connect 160 0 157 0;
+#X connect 168 0 298 0;
+#X connect 168 0 290 0;
+#X connect 168 0 292 0;
+#X connect 168 0 289 0;
+#X connect 168 0 214 0;
+#X connect 168 0 208 0;
+#X connect 168 0 195 0;
+#X connect 168 0 274 0;
+#X connect 168 0 194 0;
+#X connect 168 0 188 0;
+#X connect 168 0 187 0;
+#X connect 168 0 347 0;
+#X connect 169 0 306 0;
+#X connect 169 0 309 0;
+#X connect 169 0 219 0;
+#X connect 169 0 314 0;
+#X connect 169 0 212 0;
+#X connect 169 0 211 0;
+#X connect 169 0 310 0;
+#X connect 169 0 205 0;
+#X connect 169 0 193 0;
+#X connect 169 0 312 0;
+#X connect 169 0 308 0;
+#X connect 169 0 251 0;
+#X connect 170 0 192 0;
+#X connect 170 0 223 0;
+#X connect 170 0 275 0;
+#X connect 170 0 245 0;
+#X connect 170 0 217 0;
+#X connect 170 0 216 0;
+#X connect 170 0 210 0;
+#X connect 170 0 207 0;
+#X connect 170 0 206 0;
+#X connect 170 0 196 0;
+#X connect 170 0 186 0;
+#X connect 170 0 185 0;
+#X connect 170 0 250 0;
+#X connect 171 0 333 0;
+#X connect 171 0 322 0;
+#X connect 171 0 341 0;
+#X connect 171 0 246 0;
+#X connect 171 0 328 0;
+#X connect 171 0 215 0;
+#X connect 171 0 209 0;
+#X connect 171 0 204 0;
+#X connect 171 0 340 0;
+#X connect 171 0 191 0;
+#X connect 171 0 184 0;
+#X connect 171 0 183 0;
+#X connect 171 0 323 0;
+#X connect 171 0 326 0;
+#X connect 171 0 338 0;
+#X connect 171 0 346 0;
+#X connect 172 0 202 0;
+#X connect 172 0 222 0;
+#X connect 172 0 220 0;
+#X connect 172 0 247 0;
+#X connect 172 0 218 0;
+#X connect 172 0 213 0;
+#X connect 172 0 276 0;
+#X connect 172 0 201 0;
+#X connect 172 0 200 0;
+#X connect 172 0 199 0;
+#X connect 172 0 198 0;
+#X connect 172 0 197 0;
+#X connect 172 0 252 0;
+#X connect 173 0 235 0;
+#X connect 173 0 281 0;
+#X connect 173 0 221 0;
+#X connect 173 0 248 0;
+#X connect 173 0 232 0;
+#X connect 173 0 277 0;
+#X connect 173 0 190 0;
+#X connect 173 0 182 0;
+#X connect 173 0 181 0;
+#X connect 173 0 180 0;
+#X connect 173 0 179 0;
+#X connect 173 0 261 0;
+#X connect 173 0 258 0;
+#X connect 174 0 236 0;
+#X connect 174 0 224 0;
+#X connect 174 0 259 0;
+#X connect 174 0 203 0;
+#X connect 174 0 249 0;
+#X connect 174 0 282 0;
+#X connect 174 0 278 0;
+#X connect 174 0 189 0;
+#X connect 174 0 178 0;
+#X connect 174 0 177 0;
+#X connect 174 0 176 0;
+#X connect 174 0 175 0;
+#X connect 174 0 262 0;
+#X connect 174 0 257 0;
+#X connect 174 0 268 0;
+#X connect 175 0 269 0;
+#X connect 176 0 71 0;
+#X connect 177 0 69 0;
+#X connect 178 0 303 0;
+#X connect 179 0 65 0;
+#X connect 180 0 71 0;
+#X connect 181 0 69 0;
+#X connect 182 0 303 0;
+#X connect 183 0 71 0;
+#X connect 184 0 69 0;
+#X connect 185 0 65 0;
+#X connect 186 0 269 0;
+#X connect 187 0 65 0;
+#X connect 188 0 303 0;
+#X connect 189 0 156 0;
+#X connect 190 0 156 0;
+#X connect 191 0 156 0;
+#X connect 192 0 156 0;
+#X connect 193 0 156 0;
+#X connect 194 0 156 0;
+#X connect 195 0 155 0;
+#X connect 196 0 155 0;
+#X connect 197 0 65 0;
+#X connect 198 0 71 0;
+#X connect 199 0 69 0;
+#X connect 200 0 303 0;
+#X connect 201 0 156 0;
+#X connect 202 0 131 0;
+#X connect 203 0 155 0;
+#X connect 204 0 65 0;
+#X connect 205 0 65 0;
+#X connect 206 0 71 0;
+#X connect 207 0 69 0;
+#X connect 208 0 69 0;
+#X connect 209 0 303 0;
+#X connect 210 0 303 0;
+#X connect 211 0 313 0;
+#X connect 212 0 269 0;
+#X connect 213 0 269 0;
+#X connect 214 0 269 0;
+#X connect 215 0 269 0;
+#X connect 216 0 131 0;
+#X connect 217 0 62 0;
+#X connect 218 0 62 0;
+#X connect 219 0 155 0;
+#X connect 220 0 155 0;
+#X connect 221 0 155 0;
+#X connect 222 0 64 0;
+#X connect 223 0 64 0;
+#X connect 224 0 65 0;
+#X connect 225 0 138 0;
+#X connect 226 0 138 0;
+#X connect 229 0 138 0;
+#X connect 230 0 138 0;
+#X connect 231 0 230 0;
+#X connect 232 0 62 0;
+#X connect 234 0 229 0;
+#X connect 235 0 131 0;
+#X connect 236 0 131 0;
+#X connect 238 0 117 0;
+#X connect 240 0 329 0;
+#X connect 240 0 239 0;
+#X connect 240 0 330 0;
+#X connect 241 0 67 0;
+#X connect 242 0 67 0;
+#X connect 243 0 67 0;
+#X connect 244 0 67 0;
+#X connect 245 0 67 0;
+#X connect 246 0 67 0;
+#X connect 247 0 67 0;
+#X connect 248 0 67 0;
+#X connect 249 0 67 0;
+#X connect 250 0 254 0;
+#X connect 251 0 254 0;
+#X connect 252 0 254 0;
+#X connect 254 0 255 0;
+#X connect 256 0 254 0;
+#X connect 257 0 254 0;
+#X connect 258 0 254 0;
+#X connect 259 0 62 0;
+#X connect 260 0 22 0;
+#X connect 270 0 279 0;
+#X connect 271 0 279 0;
+#X connect 272 0 279 0;
+#X connect 273 0 279 0;
+#X connect 274 0 279 0;
+#X connect 275 0 279 0;
+#X connect 276 0 279 0;
+#X connect 277 0 279 0;
+#X connect 278 0 279 0;
+#X connect 280 0 4 0;
+#X connect 281 0 64 0;
+#X connect 282 0 64 0;
+#X connect 284 0 138 0;
+#X connect 285 0 284 0;
+#X connect 286 0 349 0;
+#X connect 286 0 317 0;
+#X connect 286 0 350 0;
+#X connect 286 0 348 0;
+#X connect 286 0 315 0;
+#X connect 286 0 327 0;
+#X connect 286 0 316 0;
+#X connect 286 0 351 0;
+#X connect 287 0 288 0;
+#X connect 288 0 138 0;
+#X connect 289 0 62 0;
+#X connect 290 0 64 0;
+#X connect 291 0 67 0;
+#X connect 292 0 67 0;
+#X connect 293 0 64 0;
+#X connect 294 0 65 0;
+#X connect 295 0 279 0;
+#X connect 296 0 131 0;
+#X connect 297 0 131 0;
+#X connect 298 0 131 0;
+#X connect 299 0 254 0;
+#X connect 305 0 254 0;
+#X connect 306 0 131 0;
+#X connect 307 0 311 0;
+#X connect 309 0 64 0;
+#X connect 310 0 279 0;
+#X connect 311 0 138 0;
+#X connect 312 0 71 0;
+#X connect 314 0 62 0;
+#X connect 315 0 62 0;
+#X connect 316 0 62 0;
+#X connect 317 0 62 0;
+#X connect 318 0 303 0;
+#X connect 319 0 303 0;
+#X connect 320 0 131 0;
+#X connect 321 0 138 0;
+#X connect 322 0 64 0;
+#X connect 323 0 254 0;
+#X connect 324 0 321 0;
+#X connect 327 0 62 0;
+#X connect 328 0 62 0;
+#X connect 329 0 116 0;
+#X connect 330 0 331 0;
+#X connect 331 0 332 0;
+#X connect 333 0 131 0;
+#X connect 337 0 335 0;
+#X connect 338 0 335 0;
+#X connect 339 1 138 0;
+#X connect 340 0 155 0;
+#X connect 341 0 279 0;
+#X connect 342 0 64 0;
+#X connect 343 0 254 0;
+#X connect 345 0 344 0;
+#X connect 346 0 344 0;
+#X connect 348 0 62 0;
+#X connect 349 0 62 0;
+#X connect 350 0 62 0;
+#X connect 351 0 62 0;
+#X coords 0 -1 1 1 800 50 1 100 10;

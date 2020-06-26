@@ -1,0 +1,28 @@
+#!/bin/bash
+
+#init
+chemin="/home/pi/Documents/"
+echo "chemin" $chemin
+
+#lecture du pointeur numerotation
+num=$(cat $chemin"Backup_xxxx/numerotation")
+#generation du chemin de l'archive
+num=$chemin"Backup_xxxx/Backup_xxxx"$num.tar
+
+#archivage des dossier
+	tar -cvf $num $chemin"CueLoader/"
+	tar -cvf $num $chemin"DMX/"
+	tar -cvf $num $chemin"MIDI/"
+	tar -cvf $num $chemin"OSC/"
+	tar -cvf $num $chemin"player_Stereo/"
+	tar -cvf $num $chemin"SCRIPT/"
+
+        echo "Save in "$chemin"Backup_xxxx/Backup_xxxx"$num".tar"
+
+#recharge numerotation et numerotation++
+	num=$(cat $chemin"Backup_xxxx/numerotation")
+	let "num= $num + 1"
+	echo $num > $chemin"Backup_xxxx/numerotation"
+
+
+exit

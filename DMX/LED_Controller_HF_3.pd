@@ -1,0 +1,15 @@
+#N	canvas	242	194	784	445	10;											
+#X	obj	1	1	cnv	15	749	420	empty	empty	LED_Controller_HF_A	20	12	0	14	-204786	-66577	0;
+#X	obj	21	26	faderdmx	152	OvideA1	D;										
+#X	obj	81	26	faderdmx	153	BoutiqueA2	D;										
+#X	obj	141	26	faderdmx	154	ManifA3	D;										
+#X	obj	201	26	faderdmx	155	ManifA4	D;										
+#X	obj	261	26	faderdmx	156	ManifA5	D;										
+#X	obj	321	26	faderdmx	157	LED_Controller_HF_A6	D;										
+#X	obj	381	26	faderdmx	158	LED_Controller_HF_A7	D;										
+#X	obj	441	26	faderdmx	159	LED_Controller_HF_A8	D;										
+#X	obj	501	26	faderdmx	160	LED_Controller_HF_D9	D;										
+#X	obj	561	26	faderdmx	161	LED_Controller_HF_A10	D;										
+#X	obj	621	26	faderdmx	162	LED_Controller_HF_A11	D;										
+#X	obj	681	26	faderdmx	163	LED_Controller_HF_A12	D;										
+#X	coords	0	445	1	444	750	420	0;									

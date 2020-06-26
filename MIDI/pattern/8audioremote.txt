@@ -1,0 +1,46 @@
+0 control level_player_remote-1
+1 control level_player_remote-2
+2 control level_player_remote-3
+3 control level_player_remote-4
+4 control level_player_remote-5
+5 control level_player_remote-6
+6 control level_player_remote-7
+7 control level_player_remote-8
+
+16 control time_player_remote-1
+17 control time_player_remote-2
+18 control time_player_remote-3
+19 control time_player_remote-4
+20 control time_player_remote-5
+21 control time_player_remote-6
+22 control time_player_remote-7
+23 control time_player_remote-8
+
+32 tcontrol PLAY_player-1
+33 tcontrol PLAY_player-2
+34 tcontrol PLAY_player-3
+35 tcontrol PLAY_player-4
+36 tcontrol PLAY_player-5
+37 tcontrol PLAY_player-6
+38 tcontrol PLAY_player-7
+39 tcontrol PLAY_player-8
+
+48 tcontrol set_player-1
+49 tcontrol set_player-2
+50 tcontrol set_player-3
+51 tcontrol set_player-4
+52 tcontrol set_player-5
+53 tcontrol set_player-6
+54 tcontrol set_player-7
+55 tcontrol set_player-8
+
+64 tcontrol set_player_remote-1
+65 tcontrol set_player_remote-2
+66 tcontrol set_player_remote-3
+67 tcontrol set_player_remote-4
+68 tcontrol set_player_remote-5
+69 tcontrol set_player_remote-6
+70 tcontrol set_player_remote-7
+71 tcontrol set_player_remote-8
+
+40 tcontrol midi_pattern LGQ_GROUP

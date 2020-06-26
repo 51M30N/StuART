@@ -1,0 +1,5 @@
+#!/bin/bash
+#by polo
+#pour ajouter une chaine de caractere apres une chaine de de caractere de maniere recursive
+# sudo ./create_remotes 12circuitsdmxpd.pd faderdmx
+sed -e s/$2/$2_remote/ $1 > ${1:0:-3}remote.pd

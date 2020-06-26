@@ -1,0 +1,61 @@
+#N canvas 130 234 848 512 10;
+#X obj 101 119 cnv 15 198 80 empty empty empty 20 12 0 14 -128992 -191407
+0;
+#N canvas 900 345 797 458 (subpatch) 0;
+#X array Universe-\$0 512 float 0;
+#X coords 0 255 511 0 200 64 2 0 0;
+#X restore 100 119 graph;
+#X obj 368 353 array set Universe-\$0;
+#X obj 100 217 bng 15 250 50 0 empty raz raz 17 7 0 10 -191407 -1 -1
+;
+#X obj 100 243 prepend \$0;
+#X obj 368 246 tgl 15 0 empty \$0-View \$0-View 17 7 0 10 -1 -4034
+-1 0 1;
+#X obj 540 219 prepend \$0;
+#X obj 101 184 tgl 15 0 \$0-View View-display-dmx View-Output 17 7
+0 10 -1 -4034 -4034 0 1;
+#X obj 101 101 cnv 15 198 18 empty \$0-cnv-universe \$0-cnv-universe
+20 8 0 14 -128992 -4034 0;
+#X obj 540 59 loadbang;
+#X obj 395 412 prepend set;
+#X obj 395 392 spigot;
+#X obj 116 379 tgl 15 0 empty empty View 17 7 0 10 -1 -4032 -1 0 1
+;
+#X obj 540 82 \$1;
+#X msg 540 244 \; \$1-cnv-universe label Universe-M\$2 \; Universe-\$1
+const 0;
+#X obj 99 75 array define -yrange 0 255 -pix 512 255 Universe-M\$1
+512;
+#X obj 368 266 metro 50;
+#X obj 368 303 array get Universe-M\$1;
+#X obj 368 326 t a a;
+#X msg 115 428;
+#X obj 567 188 s Merge-M\$1;
+#X text 112 16 [Merged_Universe \$1];
+#X obj 587 135 delay 2000;
+#X msg 100 266 \; \$1-cnv-universe label #0-cnv-universe \; Universe-\$1
+const 0;
+#X obj 284 184 bng 15 250 50 0 empty empty empty 17 7 0 10 -1 -4034
+-1;
+#X obj 369 117 inlet;
+#X obj 587 158 \$1;
+#X obj 540 105 t f f;
+#X connect 3 0 4 0;
+#X connect 4 0 23 0;
+#X connect 5 0 16 0;
+#X connect 6 0 14 0;
+#X connect 9 0 13 0;
+#X connect 10 0 19 0;
+#X connect 11 0 10 0;
+#X connect 12 0 11 1;
+#X connect 13 0 27 0;
+#X connect 16 0 17 0;
+#X connect 17 0 18 0;
+#X connect 18 0 2 0;
+#X connect 18 1 11 0;
+#X connect 22 0 26 0;
+#X connect 25 0 24 0;
+#X connect 26 0 20 0;
+#X connect 27 0 6 0;
+#X connect 27 1 20 0;
+#X coords 0 -1 1 1 200 100 1 100 100;

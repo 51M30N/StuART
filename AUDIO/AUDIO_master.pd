@@ -1,0 +1,12 @@
+#N canvas 177 387 652 258 10;
+#X obj 100 100 cnv 15 400 25 empty empty AUDIO_master 20 12 2 14 -204786
+-66577 0;
+#X obj 360 105 bng 15 250 50 0 Store_pst empty Store_pst 17 7 0 10
+-258113 -4034 -1;
+#X obj 294 104 bng 15 250 50 0 SET_pst empty SET_pst 17 7 0 10 -4160
+-258113 -1;
+#X msg 427 166 \; pd dsp \$1;
+#X obj 440 105 tgl 15 0 empty empty dsp 17 7 0 10 -262144 -1 -1 0 1
+;
+#X connect 4 0 3 0;
+#X coords 0 -1 1 1 400 25 2 100 100;

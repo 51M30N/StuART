@@ -1,0 +1,40 @@
+#!/bin/bash
+#|||||||||||#
+#|by_51M30N|#
+#|for__xxxx|#
+#|||||||||||#
+#ouvre le port OSC "$port" et print ce qui y entre
+######################################################
+#                                                    #
+#  OSCreceiver_printer "port"                        #
+#                                                    #
+######################################################
+
+#initialisation des variables
+  chemin="/home/pi/Documents/OSC/"
+  fichier="OSC_to_OLA_printer.pd"
+
+#test de l'argument port
+    if [ $1 ]
+    then
+        port=$1
+    else
+        echo "port :"
+        read
+        port=$REPLY
+    fi
+
+#ecriture du patch puredata
+  echo "#N canvas 983 290 450 279 10;" > temp.pd
+  echo "#X obj 123 131 print in_port_"$port";" >> temp.pd
+  echo "#X obj 123 61 OSCreceiver "$port $fichier";" >> temp.pd
+  echo "#X connect 1 0 0 0;" >> temp.pd
+  echo "#X connect 1 1 0 0;" >> temp.pd
+
+#Copie du fichier généré vers le repertoire de travail  et ouverture
+  chemin=$chemin"temp_"$fichier
+  echo "OPEN : "$chemin
+  sudo cp temp.pd $chemin
+  pd -nogui -open $chemin &
+
+exit

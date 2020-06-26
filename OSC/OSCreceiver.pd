@@ -1,0 +1,73 @@
+#N canvas 728 234 696 487 10;
+#X obj 0 0 cnv 15 199 29 empty cnv_\$0 ip_/_source 2 5 0 10 -204786
+-4160 0;
+#X obj 287 240 outlet;
+#X obj 482 41 loadbang;
+#X obj 39 168 spigot;
+#X obj 18 16 tgl 10 0 empty empty empty 12 5 0 8 -13381 -4034 -1 0
+1;
+#X obj 40 116 spigot;
+#X obj 6 16 tgl 10 0 empty empty empty 17 7 0 10 -13381 -4034 -1 0
+1;
+#X obj 29 88 netreceive -u -b \$1;
+#X text 306 1 [OSCreceiver "Port" "Name"];
+#X obj 29 141 osc/unpackOSC;
+#X obj 29 226 osc/routeOSC /SOURCE;
+#X msg 135 450 FROM Pi4 7773 192.168.1.102 \; FROM Pi4 7773 192.168.1.102
+\; FROM Pi4 0 192.168.1.102 \; FROM Pi4 0 192.168.1.102 \;;
+#X msg 135 413 set;
+#X obj 135 389 loadbang;
+#X obj 29 450 outlet;
+#X obj 29 339 cyclone/prepend FROM;
+#X obj 42 363 cyclone/prepend add;
+#X obj 492 355 inlet;
+#X msg 46 56 listen \$1;
+#X obj 65 279 prepend \$0;
+#X msg 65 256 \$2/\$1;
+#X msg 65 300 \; cnv_\$1 label \$2;
+#X symbolatom 78 13 20 0 0 0 - - -;
+#X obj 509 322 symbol \$2;
+#X obj 519 295 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 512 389 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 482 425 float \$1;
+#X floatatom 46 13 5 0 0 0 - - -;
+#X msg 502 372 8888;
+#X obj 482 262 t b b;
+#X obj 284 56 prepend open port;
+#X obj 314 130 print OSCreceiver HEX_\$2;
+#X obj 284 182 print OSCreceiver Ascii_\$2;
+#X connect 2 0 29 0;
+#X connect 3 0 32 0;
+#X connect 4 0 3 1;
+#X connect 5 0 31 0;
+#X connect 6 0 5 1;
+#X connect 7 0 5 0;
+#X connect 7 0 9 0;
+#X connect 9 0 3 0;
+#X connect 9 0 10 0;
+#X connect 10 0 15 0;
+#X connect 10 0 20 0;
+#X connect 10 1 14 0;
+#X connect 12 0 11 0;
+#X connect 12 0 14 0;
+#X connect 13 0 12 0;
+#X connect 15 0 16 0;
+#X connect 15 0 1 0;
+#X connect 16 0 11 0;
+#X connect 17 0 26 0;
+#X connect 18 0 7 0;
+#X connect 19 0 21 0;
+#X connect 20 0 19 0;
+#X connect 23 0 22 0;
+#X connect 24 0 23 0;
+#X connect 25 0 26 0;
+#X connect 26 0 27 0;
+#X connect 27 0 18 0;
+#X connect 27 0 30 0;
+#X connect 28 0 26 0;
+#X connect 29 0 26 0;
+#X connect 29 1 23 0;
+#X connect 30 0 32 0;
+#X coords 0 -1 1 1 200 30 2 0 0;

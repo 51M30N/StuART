@@ -1,0 +1,4 @@
+#N canvas 8 60 450 300 10;
+#X obj 102 118 bng 20 250 50 0 Store_pst empty Store_pst 20 10 0 10
+-258113 -4034 -1;
+#X coords 0 -1 1 1 85 40 1 100 100;

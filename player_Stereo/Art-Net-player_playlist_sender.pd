@@ -1,0 +1,107 @@
+#N canvas 838 76 778 902 10;
+#X symbolatom 284 209 10 0 0 0 #SHOW_from_SHOW_master SHOW -;
+#X msg 284 232 set /home/pi/StuART/PLAYLIST/TRACKS-list-\$1-%i;
+#X obj 194 248 makefilename;
+#X obj 160 161 change;
+#X obj 160 138 r playlist-change;
+#X obj 194 311 prepend read;
+#X floatatom 128 193 5 0 0 0 - - -;
+#X msg 160 367 line 0 \, auto;
+#X obj 177 414 prepend;
+#X obj 160 184 t b b f b;
+#X msg 346 318 clear;
+#X obj 194 334 text define playlist-\$0;
+#X obj 160 391 text sequence playlist-\$0;
+#X obj 177 434 prepend 1;
+#X obj 307 434 prepend 0;
+#X obj 307 414 prepend;
+#X obj 160 464 prepend send;
+#X msg 278 490 send test;
+#X msg 348 490 disconnect;
+#X obj 194 271 t a a a;
+#X text 270 138 $playlist-change from At-Net-player;
+#X obj 101 114 tgl 15 0 empty \$0-toogle 1003-toggle 17 7 0 10 -1 -1
+-1 1 1;
+#X obj 160 669 cycle 2;
+#X obj 160 695 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 199 695 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 160 529 route 0;
+#X obj 160 572 bang;
+#X obj 4 533 loadbang;
+#X obj 451 349 prepend \$0;
+#X obj 451 302 bng 15 250 50 0 empty raz raz 17 7 0 10 -191407 -1 -1
+;
+#X obj 451 322 t b b;
+#X obj 320 625 prepend \$0;
+#X msg 451 372 \; \$1-toogle label \$1-toggle \; \$1-toogle color 22
+22 22;
+#X msg 320 648 \; \$1-toogle label CLOSED \; \$1-toogle color 13 13
+22;
+#X obj 160 803 prepend \$0 \$1;
+#X obj 199 720 prepend \$0 \$1;
+#X obj 420 490 r to-netsend-\$0;
+#X obj 320 607 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X msg 199 594 stop;
+#X msg 160 646 1;
+#X obj 4 556 del 2000;
+#X obj 160 620 metro 4000;
+#X obj 320 545 prepend \$0 \$1;
+#X msg 199 743 \; to-netsend-\$1 disconnect \, connect 127.0.0.1 \$2
+\; \$1-toogle label localhost-\$2 \;;
+#X msg 160 826 \; to-netsend-\$1 disconnect \, connect 255.255.255.255
+\$2 \; \$1-toogle label broadcast-\$2 \;;
+#X msg 320 568 \; \$1-toogle color 16 16 22;
+#X obj 520 448 r to-netsend-Art-Net-player;
+#X obj 160 506 netsend -u;
+#X connect 0 0 1 0;
+#X connect 1 0 2 0;
+#X connect 2 0 19 0;
+#X connect 3 0 6 0;
+#X connect 3 0 9 0;
+#X connect 4 0 3 0;
+#X connect 5 0 11 0;
+#X connect 7 0 12 0;
+#X connect 8 0 13 0;
+#X connect 9 0 7 0;
+#X connect 9 1 8 0;
+#X connect 9 2 2 0;
+#X connect 9 3 10 0;
+#X connect 10 0 11 0;
+#X connect 12 1 15 0;
+#X connect 15 0 14 0;
+#X connect 16 0 47 0;
+#X connect 17 0 47 0;
+#X connect 18 0 47 0;
+#X connect 19 0 5 0;
+#X connect 19 1 8 1;
+#X connect 19 2 15 1;
+#X connect 22 0 23 0;
+#X connect 22 1 24 0;
+#X connect 23 0 34 0;
+#X connect 24 0 35 0;
+#X connect 25 0 26 0;
+#X connect 25 0 31 0;
+#X connect 25 1 38 0;
+#X connect 25 1 42 0;
+#X connect 26 0 41 0;
+#X connect 27 0 40 0;
+#X connect 28 0 32 0;
+#X connect 29 0 30 0;
+#X connect 30 0 28 0;
+#X connect 31 0 33 0;
+#X connect 34 0 44 0;
+#X connect 35 0 43 0;
+#X connect 36 0 47 0;
+#X connect 37 0 31 0;
+#X connect 38 0 41 0;
+#X connect 39 0 22 0;
+#X connect 40 0 26 0;
+#X connect 41 0 39 0;
+#X connect 42 0 45 0;
+#X connect 46 0 16 0;
+#X connect 47 0 21 0;
+#X connect 47 0 25 0;
+#X coords 0 -1 1 1 85 30 1 100 100;

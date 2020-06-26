@@ -1,0 +1,51 @@
+0 fader lat_jar
+1 fader lat_cour
+2 fader PAR_jar
+3 fader Dec_baignoire
+4 fader poisson_douche
+5 fader tourne_d_douche
+6 fader gobo_robinet
+7 control level_SELECT_master
+
+16 fader SALLE
+17 fader escalier
+18 fader Dim_Nicols1
+19 fader Dim_Nicols2
+21 control tracking_Cue_List
+22 control pattern-OVE
+23 control time_SELECT_master
+
+32 tcontrol OVE 1
+33 tcontrol OVE 2
+34 tcontrol OVE 3
+35 tcontrol OVE 4
+
+36
+37
+38 tcontrol SELECT-GROUP-OVE
+39 tcontrol level_255_SELECT_master
+
+40 tcontrol midi_pattern 8audioremote
+
+
+48 tcontrol OVE 5
+49 tcontrol OVE 6
+50 tcontrol OVE 7
+51 tcontrol OVE 8
+
+52
+53
+54 tcontrol OPEN-GROUP-OVE
+55 tcontrol level_128_SELECT_master
+
+
+64 tcontrol OVE 9
+65 tcontrol OVE 10
+66 tcontrol OVE 11
+67 tcontrol OVE 12
+
+68
+69
+70 tcontrol CLEAR-GROUP-OVE
+
+71 tcontrol level_0_SELECT_master

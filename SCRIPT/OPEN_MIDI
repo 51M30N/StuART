@@ -1,0 +1,78 @@
+#!/bin/bash
+#|||||||||||||#
+#|by_51M30N|||#
+#|for__StuART|#
+#|||||||||||||# rev 01092019
+#|||||||||||||#
+
+######################################################
+#                                                    #
+#  OPEN_MIDI "IP" "port" "midi_input" "midi_output"  #
+#                                                    #
+######################################################
+
+#init variables
+  chemin="/home/pi/StuART/MIDI/"
+  fichier="MIDI.pd"
+
+#test de l'argument IP
+    if [ $1 ]
+    then
+        IP=$1
+    else
+        echo "IP :"
+        read
+        IP=$REPLY
+    fi
+
+#test de l'argument port
+    if [ $2 ]
+    then
+        port=$2
+    else
+        echo "port :"
+        read
+        port=$REPLY
+    fi
+
+#test de l'argument midi in device
+    if [ $3 ]
+    then
+        midi_input=$3
+    else
+        aconnect -li
+        echo "midi_input :"
+        read
+        midi_input=$REPLY
+    fi
+
+#test de l'argument midi out device
+    if [ $4 ]
+    then
+        midi_output=$4
+    else
+        aconnect -lo
+        echo "midi_output :"
+        read
+        midi_output=$REPLY
+    fi
+
+#ecriture du patch Puredata
+	echo "#N canvas 308 249 824 622 10;" > temp.pd
+	echo "#X obj 4 20 cnv 15 800 600 empty empty empty 20 12 0 14 -162280 -66577 0;" >> temp.pd
+	echo "#X msg 12 495, f 88;" >> temp.pd
+	echo "#X obj 13 452 OSC/OSCsender "$IP $port $fichier";" >> temp.pd
+	echo "#X obj 13 36 MIDI/MIDI "$midi_input $midi_output";" >> temp.pd
+	echo "#X connect 3 0 1 0;" >> temp.pd
+	echo "#X connect 3 1 2 0;" >> temp.pd
+	echo "#X coords 0 622 1 621 85 60 0;" >> temp.pd
+
+#copie et ouverture du fichier généré
+  chemin=$chemin"temp_"$fichier
+  cp temp.pd $chemin
+  pd  -nogui -alsamidi -midiindev 1 -midioutdev 1  -open $chemin &
+
+#clean
+  rm temp.pd
+
+exit

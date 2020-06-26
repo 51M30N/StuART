@@ -1,0 +1,106 @@
+#N canvas 650 270 896 621 10;
+#X obj 100 100 cnv 15 98 49 empty cnv_\$0 to_control_midi 2 5 1 10
+-261682 -13330 0;
+#X obj 500 110 r to_control_\$1;
+#X obj 361 336 spigot;
+#X obj 394 302 tgl 15 0 empty \$1_OSC_CTRL-\$0 \$1_OSC_CTRL-\$0 17
+7 0 10 -86277 -261234 -1 0 1;
+#X obj 103 138 tgl 10 0 \$1_OSC_EXEC-\$0 \$1_OSC_EXEC OSC_EXEC 12 6
+0 8 -86277 -261234 -1 0 1;
+#X obj 317 243 spigot;
+#X obj 350 219 tgl 15 0 empty \$1_Local-\$0 \$1_Local-\$0 17 7 0 10
+-86277 -261234 -1 0 1;
+#X obj 103 114 tgl 10 0 \$1_Local-\$0 \$1_Local Local 12 6 0 8 -86277
+-261234 -1 0 1;
+#X obj 517 467 spigot;
+#X obj 550 443 tgl 15 0 empty \$1_Xbee-\$0 \$1_Xbee-\$0 17 7 0 10 -86277
+-261234 -1 0 1;
+#X obj 165 138 tgl 10 0 \$1_Xbee-\$0 \$1_Xbee Xbee 12 6 0 8 -86277
+-261234 -1 0 1;
+#X obj 16 10 loadbang;
+#X obj 16 31 symbol \$1;
+#X obj 16 73 s cnv_\$0;
+#X obj 124 18 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 673 506 tgl 10 0 empty Print-\$0 Print 11 5 0 10 -128992 -262130
+-1 0 1;
+#X obj 640 522 spigot;
+#X obj 185 113 tgl 10 0 Print-\$0 \$1_Print Print -22 6 1 8 -128992
+-262130 -1 0 1;
+#X obj 500 131 prepend /\$1;
+#X msg 16 52 label to_control_\$1;
+#X obj 13 266 cnv 15 200 300 empty empty empty 20 12 0 14 -261682 -66577
+0;
+#X msg 19 454 \; midi_Local \$1 \; midi_OSC_CTRL \$2 \; midi_OSC_EXEC
+\$3 \; midi_Xbee \$4 \; midi_Print \$5 \;;
+#X msg 100 403 set \, add;
+#X obj 19 310 symbol \$1;
+#X obj 19 275 bng 15 250 50 1 empty Edit_local_command Edit_local_command
+17 7 0 10 -257985 -1 -1;
+#X obj 19 399 prepend;
+#X obj 19 344 t b a b;
+#X obj 115 547 s local_command;
+#X msg 19 423 add2 \$1_\$2 \, adddollar \$3 \, add;
+#X obj 102 83 tgl 10 0 empty LocalM LocalM 12 6 0 8 -86277 -261234
+-1 0 1;
+#X obj 248 83 tgl 10 0 empty XbeeM XbeeM 12 6 0 8 -86277 -261234 -1
+0 1;
+#X obj 148 80 tgl 10 0 empty PrintM PrintM 12 8 0 7 -128992 -262130
+-1 0 1;
+#X obj 517 488 s TO_CONTROL_Xbee;
+#X obj 640 543 print RECEIVE_to_control_\$1;
+#X obj 423 418 spigot;
+#X obj 456 394 tgl 15 0 empty \$1_OSC_EXEC-\$0 \$1_OSC_EXEC-\$0 17
+7 0 10 -86277 -261234 -1 0 1;
+#X obj 103 126 tgl 10 0 \$1_OSC_CTRL-\$0 \$1_OSC_CTRL OSC_CTRL 12 6
+0 8 -86277 -261234 -1 0 1;
+#X obj 174 56 tgl 10 0 empty OSC_EXECM OSC_EXECM 12 6 0 8 -86277 -261234
+-1 0 1;
+#X obj 232 55 tgl 10 0 empty OSC_CTRLM OSC_CTRLM 12 6 0 8 -86277 -261234
+-1 0 1;
+#X obj 423 439 s TO_OSC_EXEC;
+#X obj 317 264 s TO_CONTROL_Local;
+#X obj 361 357 s TO_OSC_CTRL;
+#X obj 151 480 r \$1_TO_CONTROL;
+#X text 151 459 \$1_TO_CONTROL \$1Local \$2OSC \$3Xbee;
+#X msg 19 377 Local 1 \, OSC_CTRL 2 \, OSC_EXEC 3 \, Xbee 4 \, Print
+5;
+#X obj 499 183 t a a a a a;
+#X connect 1 0 18 0;
+#X connect 2 0 41 0;
+#X connect 3 0 2 1;
+#X connect 5 0 40 0;
+#X connect 6 0 5 1;
+#X connect 8 0 32 0;
+#X connect 9 0 8 1;
+#X connect 11 0 12 0;
+#X connect 12 0 19 0;
+#X connect 14 0 12 0;
+#X connect 15 0 16 1;
+#X connect 16 0 33 0;
+#X connect 18 0 45 0;
+#X connect 19 0 13 0;
+#X connect 22 0 21 0;
+#X connect 23 0 26 0;
+#X connect 24 0 23 0;
+#X connect 25 0 28 0;
+#X connect 26 0 44 0;
+#X connect 26 1 25 1;
+#X connect 26 2 22 0;
+#X connect 28 0 21 0;
+#X connect 28 0 27 0;
+#X connect 29 0 7 0;
+#X connect 30 0 10 0;
+#X connect 31 0 17 0;
+#X connect 34 0 39 0;
+#X connect 35 0 34 1;
+#X connect 37 0 4 0;
+#X connect 38 0 36 0;
+#X connect 42 0 21 0;
+#X connect 44 0 25 0;
+#X connect 45 0 5 0;
+#X connect 45 1 2 0;
+#X connect 45 2 34 0;
+#X connect 45 3 8 0;
+#X connect 45 4 16 0;
+#X coords 0 -1 1 1 99 50 2 100 100;

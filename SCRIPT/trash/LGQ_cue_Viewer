@@ -1,0 +1,20 @@
+#!/bin/bash
+
+marge=1
+offset=1
+ii=0
+ls -t /home/pi/StuART/Cue/LGQ/ > temp
+cp temp /home/pi/StuART/Cue/LGQ/LISTE
+echo "#N canvas  120 139 194 719 10;" > temp.pd
+echo "-1, list_of_cue_name;" > CUE
+for i in $(tac temp)
+do
+                echo "#X obj "$marge $offset" c "$i";" >> temp.pd
+		echo $ii", "$i";" >> CUE
+                let "offset = offset + 50"
+		let "ii = ii + 1"
+done
+cp temp.pd /home/pi/StuART/temp.pd
+cp CUE /home/pi/StuART/CUE
+rm temp.pd CUE
+exit

@@ -1,0 +1,15 @@
+#N	canvas	242	194	784	445	10;											
+#X	obj	1	1	cnv	15	749	420	empty	empty	LED_Controller_HF_Jardin	20	12	0	14	-204786	-66577	0;
+#X	obj	21	26	faderdmx	128	R-J-strip	D;										
+#X	obj	81	26	faderdmx	129	G-J-strip	D;										
+#X	obj	141	26	faderdmx	130	B-J-strip	D;										
+#X	obj	201	26	faderdmx	131	WW-J-strip	D;										
+#X	obj	261	26	faderdmx	132	CW-J-strip	D;										
+#X	obj	321	26	faderdmx	133	OvideMere1	D;										
+#X	obj	381	26	faderdmx	134	R-F-strip	D;										
+#X	obj	441	26	faderdmx	135	G-F-strip	D;										
+#X	obj	501	26	faderdmx	136	B-F-strip	D;										
+#X	obj	561	26	faderdmx	137	Pin-bosq1	D;										
+#X	obj	621	26	faderdmx	138	Pin-Lat1	D;										
+#X	obj	681	26	faderdmx	139	Pin-CP1	D;										
+#X	coords	0	445	1	444	750	420	0;									

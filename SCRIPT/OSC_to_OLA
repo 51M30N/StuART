@@ -1,0 +1,50 @@
+#!/bin/bash
+#test de l'argument port
+#|||||||||||||#
+#|by_51M30N|||#
+#|for__StuART|#
+#|||||||||||||# rev 01092019
+#|||||||||||||#
+
+#Ouvre un port OSC et cible OLA 127.0.0.1:7770/universe-name
+######################################################
+#                                                    #
+#  OSC_to_OLA "input_port" "universe-name"           #
+#                                                    #
+######################################################
+
+#init des variables
+chemin="StuART/OSC/"
+fichier="OSC_to_OLA.pd"
+#test de l'argument port
+    if [ $1 ]
+    then
+        port=$1
+    else
+        echo "input_port :"
+        read
+        port=$REPLY
+    fi
+
+#test de l'argument universe
+    if [ $2 ]
+    then
+        universe=$2
+    else
+        echo "universe :"
+        read
+        universe=$REPLY
+    fi
+
+#ecriture du patch puredata
+	echo "#N canvas 271 164 434 73 10;" > temp.pd
+	echo "#X obj 219 32 OSC_to_OLA $port $universe;" >> temp.pd
+
+#Copie et ouverture du fichier généré
+	chemin=$chemin"temp_"$fichier
+	cp temp.pd $chemin
+	rm temp.pd
+	echo "OPEN : "$chemin
+	pd -open $chemin
+
+exit

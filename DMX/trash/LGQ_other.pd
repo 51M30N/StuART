@@ -1,0 +1,15 @@
+#N	canvas	242	194	784	445	10;											
+#X	obj	1	1	cnv	15	749	420	empty	empty	other	20	12	0	14	-204786	-66577	0;
+#X	obj	21	26	faderdmx	248	petite_secretaire	D;										
+#X	obj	81	26	faderdmx	249	face	D;										
+#X	obj	141	26	faderdmx	250	contre	D;										
+#X	obj	201	26	faderdmx	251	Pin-Maison	D;										
+#X	obj	261	26	faderdmx	252	Pin-face	D;										
+#X	obj	321	26	faderdmx	253	other7	D;										
+#X	obj	381	26	faderdmx	254	other8	D;										
+#X	obj	441	26	faderdmx	255	other9	D;										
+#X	obj	501	26	faderdmx	256	other10	D;										
+#X	obj	561	26	faderdmx	257	other11	D;										
+#X	obj	621	26	faderdmx	258	other12	D;										
+#X	obj	681	26	faderdmx	259	other13	D;										
+#X	coords	0	445	1	444	750	420	0;									

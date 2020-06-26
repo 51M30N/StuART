@@ -1,0 +1,1510 @@
+#N canvas 0 74 1920 1006 12;
+#N canvas 135 486 1358 656 testing_packets 0;
+#X msg 779 -197 65 114 116 45 78 101 116 0 0 80 0 14 8 0 0 0 2 0 1
+2 3 4 5 6 7 8 9 10 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0;
+#X text 867 -228 512 channels;
+#X msg 286 -210 65 114 116 45 78 101 116 0 0 80 0 14 8 0 0 0 0 8 10
+20 30 40 50 60 70 80;
+#X text 423 -248 8 channels;
+#X obj 666 296 outlet;
+#X msg 177 -66 65 114 116 45 78 101 116 0 0 33 192 168 1 30 54 25 0
+0 0 0 4 48 0 210 112 100 83 116 117 65 82 84 45 78 111 100 101 0 0
+0 0 0 0 0 83 116 117 65 82 84 45 78 111 100 101 45 66 121 53 49 77
+51 48 78 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 35 48 48 48 49 32 91 49 93 32 112 100
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 4 192 192 192 192 0 8 0 8 128
+128 128 128 0 1 2 3 0 1 2 3 0 0 0 0 0 0 0 0 0 0 0 0 0 192 168 1 30
+1 8 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0;
+#X text 188 -93 OpPollReply;
+#X msg 524 167 65 114 116 45 78 101 116 0 0 32 0 14 2 0;
+#X text 522 144 OpPoll;
+#X obj 779 83 list length;
+#X floatatom 779 108 5 0 0 0 - - -;
+#X msg 877 136 0 1 2 3 4 5 6 7 8 9 10 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0;
+#X connect 0 0 4 0;
+#X connect 0 0 9 0;
+#X connect 2 0 4 0;
+#X connect 5 0 4 0;
+#X connect 7 0 4 0;
+#X connect 9 0 10 0;
+#X connect 11 0 9 0;
+#X restore 1398 15 pd testing_packets;
+#N canvas 134 175 1334 930 HEADER_ARTNET 0;
+#X obj 4 10 cnv 15 100 60 empty empty empty 20 12 0 14 -233017 -66577
+0;
+#X msg 453 222 0 14;
+#X msg 453 278 0;
+#X msg 453 116 65 114 116 45 78 101 116 0;
+#X text 347 275 physical 0x00;
+#X text 339 251 sequence 0-256;
+#X msg 453 252 0;
+#X text 318 223 ProtVersion (14):;
+#X text 732 114 char ID[8] \; //"Art-Net"UInt16 OpCode \; // See Doc.
+Table 1 - OpCodes eg. 0x5000 OpOutput / OpDmxUInt16 version \; //
+0x0e00 (aka 14)UInt8 seq \; // monotonic counterUInt8 physical \;
+// 0x00UInt8 subUni \; // low universe (0-255)UInt8 net \; // high
+universe (not used)UInt16 length \; // data length (2 - 512)uint8_t
+data[512] \; // universe data, f 83;
+#X text 267 117 Art-Net DMX packet format;
+#X text 342 559 length (2-512);
+#X msg 733 75 http://www.artisticlicence.com/WebSiteMaster/User%20Guides/art-net.pdf
+;
+#X text 723 50 +info:;
+#X obj 453 141 list tosymbol;
+#X symbolatom 453 166 10 0 0 0 - - -;
+#X obj 453 45 list fromsymbol;
+#X obj 453 90 prepend set;
+#X obj 453 24 symbol;
+#X floatatom 453 360 5 2 512 0 lenght_(2-512) - -;
+#X obj 453 384 t a a;
+#X floatatom 453 484 5 0 0 0 - - -;
+#X obj 453 459 div 256;
+#X floatatom 485 434 5 0 0 0 - - -;
+#X obj 485 409 mod 256;
+#X obj 453 508 pack;
+#X obj 453 533 prepend set;
+#X msg 453 558 2 0;
+#X obj 112 744 prepend add2;
+#X obj 111 825 outlet;
+#X obj 11 640 vsl 15 128 0 127 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 0 1;
+#X floatatom 594 281 5 0 511 0 universe - -;
+#X obj 594 333 +;
+#X floatatom 678 302 5 0 127 0 Net - -;
+#X obj 665 335 * 256;
+#X text 382 332 Net 0-127;
+#X obj 94 299 div 16;
+#X obj 104 334 mod 16;
+#X obj 94 364 pack;
+#X obj 94 389 prepend set;
+#X msg 94 414 5 0;
+#X obj 94 274 t a a;
+#X obj 94 244 float;
+#X floatatom 209 263 5 0 0 0 - - -;
+#X msg 94 219 80;
+#X msg 553 197 0 80;
+#X text 25 199 ArtPoll(0x2000:30) \, ArtPollReply(0x2100:31) \, DMX(0x5000:80)
+;
+#X msg 453 197 0 30;
+#X msg 503 197 0 31;
+#X msg 603 197 0 129;
+#X msg 453 0 Art-Net;
+#X obj 453 69 list append 0;
+#X text 820 340 Bit 15 | Bits 14 - 8 | Bits 7 - 4 | Bits 3 - 0 0 |
+Net(0-127) | Sub-Net(0-15) | Universe(0-15);
+#X msg 388 646 set;
+#X msg 453 305 2;
+#X msg 453 331 2;
+#X msg 111 769 65 114 116 45 78 101 116 0 0 80 0 14 0 0 2 2 2 0, f
+90;
+#X text 343 305 Universe 0 255;
+#X connect 1 0 27 0;
+#X connect 2 0 27 0;
+#X connect 3 0 13 0;
+#X connect 3 0 27 0;
+#X connect 6 0 27 0;
+#X connect 13 0 14 0;
+#X connect 15 0 50 0;
+#X connect 16 0 3 0;
+#X connect 17 0 15 0;
+#X connect 18 0 19 0;
+#X connect 19 0 21 0;
+#X connect 19 1 23 0;
+#X connect 20 0 24 0;
+#X connect 21 0 20 0;
+#X connect 22 0 24 1;
+#X connect 23 0 22 0;
+#X connect 24 0 25 0;
+#X connect 25 0 26 0;
+#X connect 26 0 27 0;
+#X connect 27 0 55 0;
+#X connect 29 0 55 0;
+#X connect 30 0 31 0;
+#X connect 32 0 33 0;
+#X connect 33 0 31 1;
+#X connect 35 0 37 0;
+#X connect 36 0 37 1;
+#X connect 37 0 38 0;
+#X connect 38 0 39 0;
+#X connect 40 0 35 0;
+#X connect 40 1 36 0;
+#X connect 41 0 40 0;
+#X connect 43 0 41 0;
+#X connect 43 0 42 0;
+#X connect 44 0 27 0;
+#X connect 46 0 27 0;
+#X connect 47 0 27 0;
+#X connect 49 0 17 0;
+#X connect 50 0 16 0;
+#X connect 52 0 55 0;
+#X connect 53 0 27 0;
+#X connect 54 0 27 0;
+#X connect 55 0 28 0;
+#X coords 0 -1 1 1 85 60 1 100 100;
+#X restore 1396 119 pd HEADER_ARTNET;
+#N canvas 167 114 1587 884 OpPollReply 0;
+#X obj 37 37 inlet;
+#X obj 57 62 list split 4;
+#X obj 786 46 prepend \$0;
+#X obj 786 29 bng 15 250 50 0 empty raz raz 17 7 0 10 -228856 -1 -1
+;
+#X obj 500 123 cnv 15 200 16 empty \$0-cnv_ip \$0-cnv_ip 5 7 0 14 -233017
+-66577 0;
+#X obj 57 2117 prepend \$0;
+#X msg 57 2141 \; \$1-cnv_ip label IP=\$2.\$3.\$4.\$5;
+#X obj 97 89 list split 2;
+#X obj 500 143 cnv 15 200 16 empty \$0-cnv_port \$0-cnv_port 5 7 0
+14 -233017 -66577 0;
+#X msg 786 68 \; \$1-cnv_ip label #0-cnv_ip \; \$1-cnv_port label #0-cnv_port
+;
+#X obj 97 2048 prepend \$0;
+#X obj 97 2019 +;
+#X msg 97 2072 \; \$1-cnv_port label port=\$2;
+#X obj 136 2001 * 256;
+#X obj 417 1463 list tosymbol;
+#X obj 461 1393 list tosymbol;
+#X obj 417 346 list split 18;
+#X obj 461 372 list split 64;
+#X obj 461 1427 print OpPollReply_LongName;
+#X obj 417 1497 print OpPollReply_ShortName;
+#X obj 505 1333 list tosymbol;
+#X obj 505 402 list split 64;
+#X obj 505 1361 print OpPollReply_NodeReport;
+#X obj 549 432 list split 2;
+#X obj 589 462 list split 4;
+#X obj 589 1195 print OpPollReply-PortTypes;
+#X obj 669 522 list split 4;
+#X obj 629 492 list split 4;
+#X obj 629 1159 print OpPollReply-GoodInput;
+#X obj 669 1125 print OpPollReply-GoodOutput;
+#X obj 749 582 list split 4;
+#X obj 709 552 list split 4;
+#X obj 709 1089 print OpPollReply-SwIn;
+#X obj 749 1055 print OpPollReply-SwOut;
+#X obj 869 682 list split 6;
+#X obj 869 941 print OpPollReply-MacAdress;
+#X obj 909 712 list split 4;
+#X obj 909 916 print OpPollReply-BindIp;
+#X obj 949 742 list split 1;
+#X obj 989 772 list split 1;
+#X obj 949 891 print OpPollReply-BindIndex;
+#X obj 989 866 print OpPollReply-Status2;
+#X obj 1029 836 print OpPollReply-Filler;
+#X obj 137 115 list split 2;
+#X obj 97 1974 unpack;
+#X obj 137 1924 +;
+#X obj 137 1897 * 256;
+#X obj 137 1869 unpack;
+#X obj 137 1949 print OpPollReply_VersInfo_Firmware;
+#X obj 177 146 list split 1;
+#X obj 217 180 list split 1;
+#X obj 177 1829 print OpPollReply_NetSwitch_NET;
+#X obj 217 1799 print OpPollReply_NetSwitch_SubNET;
+#X obj 257 1734 +;
+#X obj 257 1707 * 256;
+#X obj 257 1679 unpack;
+#X obj 297 248 list split 1;
+#X obj 257 1759 print OpPollReply_Oem;
+#X obj 257 218 list split 2;
+#X obj 297 1649 print OpPollReply-UBEA_Version;
+#X obj 337 288 list split 1;
+#X obj 337 1619 print OpPollReply-Status1;
+#X obj 377 1560 list tosymbol;
+#X msg 377 1529 \$2 \$1;
+#X obj 377 1589 print OpPollReply-ESTA_manufacturer;
+#X obj 549 1282 +;
+#X obj 549 1257 * 256;
+#X obj 549 1231 unpack;
+#X obj 549 1305 print OpPollReply-NumPorts;
+#X obj 377 314 list split 2;
+#X obj 371 2106 print OpPollReply_Port;
+#X obj 332 2136 print OpPollReply_IP;
+#X obj 789 622 list split 6;
+#X obj 829 652 list split 1;
+#X obj 789 1021 print OpPollReply-SwVideo_SwMacro_SwRemote_3*Spare
+;
+#X obj 829 991 print OpPollReply_Style;
+#X msg 600 219 192 168 1 30 54 25 0 0 0 0 4 48 0 210 112 100 83 116
+117 65 82 84 45 78 111 100 101 0 0 0 0 0 0 0 83 116 117 65 82 84 45
+78 111 100 101 45 66 121 53 49 77 51 48 78 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 35
+48 48 48 49 32 91 49 93 32 79 76 65 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 4 192 192 192 192 8 8 8 8 0 0 0 0 0 1 2 3 0 1 2 3 0 0 0 0 0 0 0
+0 0 0 0 0 0 192 168 1 30 1 8 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0;
+#X connect 0 0 1 0;
+#X connect 1 0 5 0;
+#X connect 1 0 71 0;
+#X connect 1 1 7 0;
+#X connect 2 0 9 0;
+#X connect 3 0 2 0;
+#X connect 5 0 6 0;
+#X connect 7 0 44 0;
+#X connect 7 1 43 0;
+#X connect 10 0 12 0;
+#X connect 11 0 10 0;
+#X connect 11 0 70 0;
+#X connect 13 0 11 1;
+#X connect 14 0 19 0;
+#X connect 15 0 18 0;
+#X connect 16 0 14 0;
+#X connect 16 1 17 0;
+#X connect 17 0 15 0;
+#X connect 17 1 21 0;
+#X connect 20 0 22 0;
+#X connect 21 0 20 0;
+#X connect 21 1 23 0;
+#X connect 23 0 67 0;
+#X connect 23 1 24 0;
+#X connect 24 0 25 0;
+#X connect 24 1 27 0;
+#X connect 26 0 29 0;
+#X connect 26 1 31 0;
+#X connect 27 0 28 0;
+#X connect 27 1 26 0;
+#X connect 30 0 33 0;
+#X connect 30 1 72 0;
+#X connect 31 0 32 0;
+#X connect 31 1 30 0;
+#X connect 34 0 35 0;
+#X connect 34 1 36 0;
+#X connect 36 0 37 0;
+#X connect 36 1 38 0;
+#X connect 38 0 40 0;
+#X connect 38 1 39 0;
+#X connect 39 0 41 0;
+#X connect 39 1 42 0;
+#X connect 43 0 47 0;
+#X connect 43 1 49 0;
+#X connect 44 0 11 0;
+#X connect 44 1 13 0;
+#X connect 45 0 48 0;
+#X connect 46 0 45 0;
+#X connect 47 0 46 0;
+#X connect 47 1 45 1;
+#X connect 49 0 51 0;
+#X connect 49 1 50 0;
+#X connect 50 0 52 0;
+#X connect 50 1 58 0;
+#X connect 53 0 57 0;
+#X connect 54 0 53 0;
+#X connect 55 0 54 0;
+#X connect 55 1 53 1;
+#X connect 56 0 59 0;
+#X connect 56 1 60 0;
+#X connect 58 0 55 0;
+#X connect 58 1 56 0;
+#X connect 60 0 61 0;
+#X connect 60 1 69 0;
+#X connect 62 0 64 0;
+#X connect 63 0 62 0;
+#X connect 65 0 68 0;
+#X connect 66 0 65 0;
+#X connect 67 0 66 0;
+#X connect 67 1 65 1;
+#X connect 69 0 63 0;
+#X connect 69 1 16 0;
+#X connect 72 0 74 0;
+#X connect 72 1 73 0;
+#X connect 73 0 75 0;
+#X connect 73 1 34 0;
+#X connect 76 0 1 0;
+#X coords 0 -1 1 1 200 60 1 500 100;
+#X restore 1321 192 pd OpPollReply;
+#N canvas 57 125 1845 955 send_OpPollReply 0;
+#X msg 260 185 0 33;
+#X text 152 186 Opcode 0x2100;
+#X msg -430 485 65 114 116 45 78 101 116 0 0 33 192 168 1 30 54 25
+0 0 0 2 4 49 0 210 112 100 83 116 117 65 82 84 45 78 111 100 101 0
+0 0 0 0 0 0 83 116 117 65 82 84 45 78 111 100 101 45 66 121 53 49 77
+51 48 78 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 35 48 48 48 49 32 91 49 93 32 112 100
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 4 192 192 192 192 8 8 8 8 128
+128 128 128 1 2 3 4 0 1 2 3 0 0 0 0 0 0 0 0 0 0 0 0 0 192 168 1 30
+1 8 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0;
+#X text 173 124 Art_Net0x0;
+#X text 232 216 IP;
+#X text 170 246 port 0x6465;
+#X msg 260 245 54 25;
+#X msg 260 275 0 0;
+#X text 128 276 VersInfo_Firmware;
+#X text 156 306 NetSwitch_NET;
+#X text 135 336 NetSwitch_SubNET;
+#X msg 260 365 4 49;
+#X text 164 396 UBEA_version;
+#X msg 260 395 0;
+#X text 199 426 Status1;
+#X msg 260 425 210;
+#X msg 260 455 112 100;
+#X text 220 456 ESTA;
+#X msg 480 412 pd;
+#X msg 260 485 83 116 117 65 82 84 45 78 111 100 101 0 0 0 0 0 0 0
+;
+#X text 185 486 ShortName;
+#X text 192 524 LongName;
+#X msg 260 577 35 48 48 48 49 32 91 49 93 32 112 100 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0;
+#X text 178 588 NodeReport;
+#X text 192 636 NumPorts;
+#X msg 260 638 0 4;
+#X text 185 666 PortTypes;
+#X text 185 696 GoodInput;
+#X text 178 726 GoodOutput;
+#X text 185 877 MacAdress;
+#X msg 260 876 0 0 0 0 0 0;
+#X text 206 906 BindIp;
+#X text 185 937 BindIndex;
+#X text 199 966 Status2;
+#X text 206 996 Filler;
+#X msg 260 995 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+;
+#X obj 35 1288 prepend set;
+#X obj 35 1262 t a a;
+#X obj 35 1234 list prepend;
+#X obj -550 43 t b b b b b b b b b b b b b b b b b b b b b b b b b
+b b b b b b b b b b b b b b b b b b b b b b b b b b b b b b b b b b
+b b b b b, f 120;
+#X obj 330 30 bng 15 250 50 0 empty Updade-\$0 Updade-\$0 17 7 0 10
+-204786 -1 -1;
+#X obj 180 1271 list length;
+#X floatatom 180 1295 5 0 0 0 - - -;
+#X obj -476 1063 outlet;
+#X obj -476 1005 prepend send;
+#X obj -476 791 inlet;
+#N canvas 234 181 814 638 IP 0;
+#X obj 71 10 loadbang;
+#X obj 208 107 bng 15 250 50 0 empty empty Reload 17 7 0 10 -262144
+-1 -1;
+#X msg 103 135 hostname -I;
+#X obj 103 160 ggee/shell;
+#X obj 103 215 list fromsymbol;
+#X obj 103 185 symbol;
+#X obj 103 425 list tosymbol;
+#X obj 103 240 list split 1;
+#X obj 128 370 list;
+#X obj 103 398 list;
+#X obj 143 265 list;
+#X obj 128 345 list append;
+#X obj 103 293 route 46;
+#X obj 103 318 bang;
+#X obj 184 300 del;
+#X obj 103 506 list;
+#X obj 103 481 list append;
+#X obj 103 105 t b b;
+#X obj 41 613 outlet;
+#X obj 27 10 inlet;
+#X obj 41 533 list;
+#X obj 71 52 t b b;
+#X obj 41 77 del 500;
+#X msg 41 572 set \, add2 \$1 \$2 \$3 \$4;
+#X obj 103 450 f;
+#X obj 256 551 prepend \$0;
+#X obj 274 296 prepend \$0;
+#X obj 274 279 bng 15 250 50 0 empty raz raz 17 7 0 10 -228856 -1 -1
+;
+#X obj 275 105 cnv 15 270 20 empty IP-lbl_\$0 IP=192.168.1.30 2 10
+0 10 -233017 -66577 0;
+#X msg 274 318 \; IP-lbl_\$1 label IP-lbl_#0;
+#X msg 256 589 \; IP-lbl_\$1 label IP=\$2.\$3.\$4.\$5;
+#X connect 0 0 1 0;
+#X connect 1 0 21 0;
+#X connect 2 0 3 0;
+#X connect 3 0 5 0;
+#X connect 4 0 7 0;
+#X connect 5 0 4 0;
+#X connect 6 0 24 0;
+#X connect 7 0 12 0;
+#X connect 7 1 10 0;
+#X connect 7 2 14 0;
+#X connect 8 0 9 1;
+#X connect 8 0 11 1;
+#X connect 9 0 6 0;
+#X connect 10 0 7 0;
+#X connect 11 0 8 0;
+#X connect 12 0 13 0;
+#X connect 12 1 11 0;
+#X connect 13 0 9 0;
+#X connect 13 0 11 1;
+#X connect 14 0 13 0;
+#X connect 15 0 16 1;
+#X connect 15 0 20 1;
+#X connect 16 0 15 0;
+#X connect 17 0 2 0;
+#X connect 17 1 16 1;
+#X connect 19 0 21 0;
+#X connect 20 0 23 0;
+#X connect 20 0 25 0;
+#X connect 21 0 22 0;
+#X connect 21 1 17 0;
+#X connect 22 0 20 0;
+#X connect 23 0 18 0;
+#X connect 24 0 16 0;
+#X connect 25 0 30 0;
+#X connect 26 0 29 0;
+#X connect 27 0 26 0;
+#X coords 0 -1 1 1 350 30 2 200 100;
+#X restore 901 187 pd IP;
+#N canvas 110 145 450 300 ESTA 0;
+#X obj 37 37 inlet;
+#X obj 37 212 outlet;
+#X obj 37 119 list fromsymbol;
+#X obj 37 142 prepend set;
+#X obj 37 97 symbol;
+#X connect 0 0 4 0;
+#X connect 2 0 3 0;
+#X connect 3 0 1 0;
+#X connect 4 0 2 0;
+#X restore 480 437 pd ESTA;
+#N canvas 916 182 725 437 Short-Name 0;
+#X obj 73 97 list fromsymbol;
+#X obj 73 356 prepend set;
+#X obj 73 69 symbol;
+#X obj 73 142 list length;
+#X floatatom 73 166 5 0 0 0 - - -;
+#X obj 73 212 abs;
+#X floatatom 73 236 5 0 0 0 - - -;
+#X obj 73 259 until;
+#X obj 73 283 + 0;
+#X obj 73 120 t a a;
+#X obj 73 330 t a a;
+#X obj 73 306 list prepend;
+#X obj 73 188 - 18;
+#X obj 73 381 outlet;
+#X obj 11 47 inlet;
+#X obj 275 186 prepend \$0;
+#X symbolatom 275 105 25 0 0 0 Short-Name - -;
+#X obj 73 14 loadbang;
+#X obj 274 296 prepend \$0;
+#X obj 274 279 bng 15 250 50 0 empty raz raz 17 7 0 10 -228856 -1 -1
+;
+#X msg 274 318 \; short-name-lbl_\$1 label short-name-lbl_#0;
+#X obj 275 105 cnv 15 270 20 empty short-name-lbl_\$0 StuART-Node 2
+10 0 10 -233017 -66577 0;
+#X msg 275 224 \; short-name-lbl_\$1 label \$2;
+#X msg 73 42 StuART-Node;
+#X connect 0 0 9 0;
+#X connect 1 0 13 0;
+#X connect 2 0 0 0;
+#X connect 3 0 4 0;
+#X connect 4 0 12 0;
+#X connect 5 0 6 0;
+#X connect 6 0 7 0;
+#X connect 7 0 8 0;
+#X connect 8 0 11 0;
+#X connect 9 0 3 0;
+#X connect 9 1 11 1;
+#X connect 10 0 1 0;
+#X connect 10 1 11 1;
+#X connect 11 0 10 0;
+#X connect 12 0 5 0;
+#X connect 14 0 2 0;
+#X connect 15 0 22 0;
+#X connect 16 0 15 0;
+#X connect 17 0 23 0;
+#X connect 18 0 20 0;
+#X connect 19 0 18 0;
+#X connect 23 0 15 0;
+#X connect 23 0 2 0;
+#X coords 0 -1 1 1 350 30 2 200 100;
+#X restore 901 277 pd Short-Name;
+#N canvas 0 110 972 647 NodeReport 0;
+#X obj 120 516 outlet;
+#X obj 91 24 inlet;
+#X obj 120 480 prepend set;
+#X obj 120 254 list length;
+#X floatatom 120 278 5 0 0 0 - - -;
+#X obj 120 324 abs;
+#X floatatom 120 348 5 0 0 0 - - -;
+#X obj 120 371 until;
+#X obj 120 395 + 0;
+#X obj 120 232 t a a;
+#X obj 120 442 t a a;
+#X obj 120 418 list prepend;
+#X obj 120 300 - 64;
+#X obj 201 122 list fromsymbol;
+#X msg 271 60 set 0;
+#X obj 201 188 list;
+#X obj 201 144 list append 32;
+#X obj 201 166 list prepend;
+#X obj 201 78 cycle 3;
+#X obj 247 100 list fromsymbol;
+#X msg 201 20 #0001 [1] pd;
+#X obj 201 42 t a b b;
+#X obj 120 210 list prepend;
+#X text 392 61 La baie est un rapport textuel de l'Ã©tat de fonctionnement
+ou des erreurs de fonctionnement du nÅud. Il est principalement
+destinÃ© aux donnÃ©es Â«d'ingÃ©nierieÂ» plutÃ´t qu'aux
+donnÃ©es Â«d'utilisateur finalÂ». Le champ est formatÃ© comme
+suit: Â«#xxxx [yyyy ..] zzzzzâ¦Â» xxxx est un code d'Ã©tat
+hexadÃ©cimal tel que dÃ©fini dans le tableau 3 yyyy est un compteur
+dÃ©cimal qui s'incrÃ©mente Ã  chaque fois que le nÅud envoie
+un ArtPollResponse. Cela permet au contrÃ´leur de surveiller les
+changements d'Ã©vÃ©nements dans le nÅud. zzzz est une chaÃ®ne
+de texte anglaise dÃ©finissant le statut. Il s'agit d'un champ de
+longueur fixe \, bien que la chaÃ®ne qu'il contient peut Ãªtre
+plus courte que le champ.;
+#X obj 396 37 text define -k NodeReport-\$0;
+#A set Code Mnemonic Description \; 0x0000 RcDebug Booted in debug
+mode (Only used in development) \; 0x0001 RcPowerOk Power On Tests
+successful \; 0x0002 RcPowerFail Hardware tests failed at Power On
+\; 0x0003 RcSocketWr1 Last UDP from Node failed due to truncated length
+Most likely caused by a collision. \; 0x0004 RcParseFail Unable to
+identify last UDP transmission. CheckOpCode and packet length. \; 0x0005
+RcUdpFail Unable to open Udp Socket in last transmission attempt \;
+0x0006 RcShNameOk Confirms that Short Name programming via ArtAddress
+\, was successful. \; 0x0007 RcLoNameOk Confirms that Long Name programming
+via ArtAddress \, was successful. \; 0x0008 RcDmxError DMX512 receive
+errors detected. \; 0x0009 RcDmxUdpFull Ran out of internal DMX transmit
+buffers. \; 0x000a RcDmxRxFull Ran out of internal DMX Rx buffers.
+\; 0x000b RcSwitchErr Rx Universe switches conflict. \; 0x000c RcConfigErr
+Product configuration does not match firmware. \; 0x000d RcDmxShort
+DMX output short detected. See GoodOutput field. \; 0x000e RcFirmwareFail
+Last attempt to upload new firmware failed. \; 0x000f RcUserFail User
+changed switch settings when address locked by remote programming.
+User changes ignored. \; 0x0010 RcFactoryRes Factory reset has occurred.
+\;;
+#X connect 1 0 21 0;
+#X connect 2 0 0 0;
+#X connect 3 0 4 0;
+#X connect 4 0 12 0;
+#X connect 5 0 6 0;
+#X connect 6 0 7 0;
+#X connect 7 0 8 0;
+#X connect 8 0 11 0;
+#X connect 9 0 3 0;
+#X connect 9 1 11 1;
+#X connect 10 0 2 0;
+#X connect 10 1 11 1;
+#X connect 11 0 10 0;
+#X connect 12 0 5 0;
+#X connect 13 0 16 0;
+#X connect 14 0 18 0;
+#X connect 15 0 17 1;
+#X connect 15 0 22 1;
+#X connect 16 0 17 0;
+#X connect 17 0 15 0;
+#X connect 18 0 13 0;
+#X connect 18 1 13 0;
+#X connect 18 2 19 0;
+#X connect 19 0 22 0;
+#X connect 20 0 21 0;
+#X connect 21 0 18 0;
+#X connect 21 1 17 1;
+#X connect 21 2 14 0;
+#X connect 22 0 9 0;
+#X restore 780 559 pd NodeReport;
+#X msg 260 846 0;
+#X msg 260 816 0 0 0 0 0 0;
+#N canvas 0 50 450 300 Art-Net0x00 0;
+#X obj 260 76 list fromsymbol;
+#X obj 260 131 prepend set;
+#X obj 260 55 symbol;
+#X msg 260 31 Art-Net;
+#X obj 260 100 list append 0;
+#X obj 260 2 inlet;
+#X obj 260 156 outlet;
+#X connect 0 0 4 0;
+#X connect 1 0 6 0;
+#X connect 2 0 0 0;
+#X connect 3 0 2 0;
+#X connect 4 0 1 0;
+#X connect 5 0 3 0;
+#X restore 456 126 pd Art-Net0x00;
+#X obj 456 103 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X msg 260 125 65 114 116 45 78 101 116 0;
+#X text 213 847 Style;
+#X text 24 817 SwVideo_SwMacro_SwRemote_3*Spare;
+#X obj -7 1249 bng 15 250 50 0 empty empty raz 17 7 0 10 -191407 -1
+-1;
+#X obj -476 950 list;
+#X msg 260 215 192 168 1 30;
+#X msg 260 905 192 168 1 30;
+#X text -534 124 Le paquet ArtPoll est utilisÃ© pour dÃ©couvrir
+la prÃ©sence d'autres contrÃ´leurs \, nÅuds et serveurs multimÃ©dias.
+Le paquet ArtPoll n'est envoyÃ© que par un contrÃ´leur. Les contrÃ´leurs
+et les nÅuds rÃ©pondent au paquet. Un contrÃ´leur diffuse un
+paquet ArtPoll Ã  l'adresse IP 2.255.255.255 (masque de sous-rÃ©seau
+255.0.0.0) sur le port UDP 0x1936 \, il s'agit de l'adresse de diffusion
+dirigÃ©e. Le contrÃ´leur peut supposer un dÃ©lai maximum de 3
+secondes entre l'envoi d'ArtPoll et la rÃ©ception de tous les paquets
+ArtPollReply. Si le contrÃ´leur ne reÃ§oit pas de rÃ©ponse dans
+ce dÃ©lai \, il doit considÃ©rer que le nÅud a Ã©tÃ© dÃ©connectÃ©.
+Le contrÃ´leur qui diffuse un ArtPoll doit Ã©galement rÃ©pondre
+Ã  son propre message (Ã  l'adresse de diffusion dirigÃ©e) avec
+un ArtPollReply. Cela garantit que tous les autres contrÃ´leurs Ã©coutant
+le rÃ©seau dÃ©tecteront tous les appareils sans que tous les contrÃ´leurs
+connectÃ©s au rÃ©seau aient besoin d'envoyer des paquets ArtPoll.
+Art-Net exige que tous les contrÃ´leurs diffusent un ArtPoll toutes
+les 2 \, 5 Ã  3 secondes. Cela garantit que tous les pÃ©riphÃ©riques
+rÃ©seau peuvent facilement dÃ©tecter une dÃ©connexion.;
+#N canvas 59 136 893 583 Swin 0;
+#X text 32 32 Les bits 3-0 de l'adresse de port 15 bits pour chacun
+des 4 ports d'entrÃ©e possibles sont codÃ©s dans le quartet bas
+;
+#X restore 380 756 pd Swin;
+#N canvas 0 50 893 583 Swout 0;
+#X text 12 44 Les bits 3-0 de l'adresse de port 15 bits pour chacun
+des 4 ports de sortie possibles sont codÃ©s dans le quartet bas.
+;
+#X restore 380 785 pd Swout;
+#N canvas 0 50 450 300 Style 0;
+#X text 138 86 The Style code defines the equipment style of the device.
+See Table 4 for current Style codes.;
+#X obj 156 38 text define -k style-\$0;
+#A set Code Mnemonic Description \; 0x00 StNode A DMX to / from Art-Net
+device \; 0x01 StController A lighting console. \; 0x02 StMedia A Media
+Server. \; 0x03 StRoute A network routing device. \; 0x04 StBackup
+A backup device. \; 0x05 StConfig A configuration or diagnostic tool.
+\; 0x06 StVisual A visualiser. \;;
+#X restore 296 846 pd Style;
+#N canvas 0 50 822 300 NumPort 0;
+#X text 43 39 Octet haut du mot dÃ©crivant le nombre de ports d'entrÃ©e
+ou de sortie. L'octet Ã©levÃ© est destinÃ© Ã  une expansion
+future et est actuellement zÃ©ro.;
+#X text 57 111 Octet de poids faible du mot dÃ©crivant le nombre
+de ports d'entrÃ©e ou de sortie. Si le nombre d'entrÃ©es n'est
+pas Ã©gal au nombre de sorties \, la plus grande valeur est prise.
+ZÃ©ro est une valeur lÃ©gale si aucun port d'entrÃ©e ou de sortie
+n'est implÃ©mentÃ©. La valeur maximale est de 4 nÅuds peuvent
+ignorer ce champ car les informations sont implicites dans PortTypes
+[].;
+#X restore 297 638 pd NumPort;
+#N canvas 670 374 576 564 Status1 0;
+#X text 78 51 - Registre d'Ã©tat gÃ©nÃ©ral contenant les champs
+de bits comme suit. 7-6 Ãtat de l'indicateur. 0 Ãtat de l'indicateur
+inconnu. 1 Indicateurs en mode de localisation / identification. 10
+indicateurs en mode silencieux. 11 Indicateurs en mode normal. 5-4
+AutoritÃ© de programmation d'adresse de port 0 AutoritÃ© de programmation
+d'adresse de port inconnue. 1 Toutes les adresses de port dÃ©finies
+par les commandes du panneau avant. 10 Tout ou partie de l'adresse
+de port programmÃ©e par rÃ©seau ou navigateur Web 11 Non utilisÃ©.
+3 Non implÃ©mentÃ© \, transmettre Ã  zÃ©ro \, les rÃ©cepteurs
+ne testent pas. 2 0 = dÃ©marrage normal du firmware (Ã  partir
+du flash). Les nÅuds qui ne prennent pas en charge le double dÃ©marrage
+\, dÃ©sactivez ce champ Ã  zÃ©ro. 1 = dÃ©marrÃ© Ã  partir
+de la ROM. 1 0 = pas capable de gestion des pÃ©riphÃ©riques Ã 
+distance (RDM). 1 = Capable de gestion des pÃ©riphÃ©riques Ã 
+distance (RDM). 0 0 = UBEA absent ou corrompu 1 = UBEA prÃ©sent;
+#X obj 235 357 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+128;
+#X obj 255 357 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+64;
+#X obj 275 357 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+32;
+#X obj 295 357 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+16;
+#X obj 315 357 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+8;
+#X obj 335 357 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+4;
+#X obj 355 357 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+2;
+#X obj 375 357 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 235 324 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X connect 9 0 1 0;
+#X restore 338 424 pd Status1;
+#N canvas 279 175 635 300 UBEA 0;
+#X text 20 38 Ce champ contient la version du micrologiciel de la zone
+d'extension du bios utilisateur (UBEA). Si l'UBEA n'est pas programmÃ©
+\, ce champ contient zÃ©ro.;
+#X restore 338 395 pd UBEA;
+#N canvas 0 50 568 300 Oem 0;
+#X text 40 75 Octet de poids faible de la valeur OEM. Le mot OEM dÃ©crit
+le fournisseur d'Ã©quipement et l'ensemble de fonctionnalitÃ©s
+disponibles. Le bit 15 haut indique des fonctionnalitÃ©s Ã©tendues
+disponibles. Les codes enregistrÃ©s actuels sont dÃ©finis dans
+le tableau 2;
+#X restore 338 367 pd Oem;
+#X text 190 756 SwIn 0-255;
+#X text 183 786 SwOut 0-255;
+#X msg 260 335 0;
+#X msg 260 725 128 128 128 128;
+#X msg 260 305 0;
+#N canvas 280 303 543 300 NET 0;
+#X obj 202 108 hradio 15 1 0 16 empty empty empty 0 -8 0 10 -262144
+-1 -1 0;
+#X floatatom 174 106 3 0 15 0 NET - -;
+#X obj 174 130 prepend set;
+#X obj 174 155 outlet;
+#X text 87 200 Les bits 14 Ã  8 de l'adresse de port 15 bits sont
+codÃ©s dans les 7 bits infÃ©rieurs de ce champ. Ceci est utilisÃ©
+en combinaison avec SubSwitch et SwIn [] ou SwOut [] pour produire
+l'adresse complÃ¨te de l'univers.;
+#X obj 228 48 bng 15 250 50 0 empty raz raz 17 7 0 10 -191407 -1 -1
+;
+#X obj 228 68 + 0;
+#X connect 0 0 1 0;
+#X connect 1 0 2 0;
+#X connect 2 0 3 0;
+#X connect 5 0 6 0;
+#X connect 6 0 0 0;
+#X coords 0 -1 1 1 350 30 2 100 100;
+#X restore 901 217 pd NET;
+#N canvas 280 303 543 300 Sub-NET 0;
+#X obj 202 108 hradio 15 1 0 16 empty empty empty 0 -8 0 10 -262144
+-1 -1 0;
+#X floatatom 174 106 3 0 15 0 Sub-NET - -;
+#X obj 174 130 prepend set;
+#X obj 174 155 outlet;
+#X text 73 30 Les bits 7 Ã  4 de l'adresse de port 15 bits sont codÃ©s
+dans les 4 bits infÃ©rieurs de ce champ. Ceci est utilisÃ© en combinaison
+avec NetSwitch et SwIn [] ou SwOut [] pour produire l'adresse complÃ¨te
+de l'univers.;
+#X obj 295 145 bng 15 250 50 0 empty raz raz 17 7 0 10 -191407 -1 -1
+;
+#X obj 295 165 + 0;
+#X connect 0 0 1 0;
+#X connect 1 0 2 0;
+#X connect 2 0 3 0;
+#X connect 5 0 6 0;
+#X connect 6 0 0 0;
+#X coords 0 -1 1 1 350 30 2 100 100;
+#X restore 901 247 pd Sub-NET;
+#X obj 798 38 bng 15 250 50 0 raz empty raz 17 7 0 10 -228856 -1 -1
+;
+#X msg 260 515 83 116 117 65 82 84 45 78 111 100 101 45 66 121 53 49
+77 51 48 78 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0;
+#X msg 260 965 8;
+#X msg 260 665 192 192 192 192;
+#X msg 260 695 8 8 8 8;
+#N canvas 297 331 725 437 long-Name 0;
+#X obj 73 97 list fromsymbol;
+#X obj 73 356 prepend set;
+#X obj 73 76 symbol;
+#X obj 73 142 list length;
+#X floatatom 73 166 5 0 0 0 - - -;
+#X obj 73 212 abs;
+#X floatatom 73 236 5 0 0 0 - - -;
+#X obj 73 259 until;
+#X obj 73 283 + 0;
+#X obj 73 120 t a a;
+#X obj 73 330 t a a;
+#X obj 73 306 list prepend;
+#X obj 73 381 outlet;
+#X obj 11 57 inlet;
+#X obj 275 186 prepend \$0;
+#X symbolatom 275 105 25 0 0 0 Long-Name - -;
+#X obj 73 24 loadbang;
+#X obj 274 296 prepend \$0;
+#X obj 274 279 bng 15 250 50 0 empty raz raz 17 7 0 10 -228856 -1 -1
+;
+#X msg 274 318 \; long-name-lbl_\$1 label long-name-lbl_#0;
+#X msg 73 52 StuART-Node-By51M30N;
+#X obj 275 105 cnv 15 270 20 empty long-name-lbl_\$0 StuART-Node-By51M30N
+2 10 0 10 -233017 -66577 0;
+#X msg 275 224 \; long-name-lbl_\$1 label \$2;
+#X obj 73 188 - 64;
+#X connect 0 0 9 0;
+#X connect 1 0 12 0;
+#X connect 2 0 0 0;
+#X connect 3 0 4 0;
+#X connect 4 0 23 0;
+#X connect 5 0 6 0;
+#X connect 6 0 7 0;
+#X connect 7 0 8 0;
+#X connect 8 0 11 0;
+#X connect 9 0 3 0;
+#X connect 9 1 11 1;
+#X connect 10 0 1 0;
+#X connect 10 1 11 1;
+#X connect 11 0 10 0;
+#X connect 13 0 2 0;
+#X connect 14 0 22 0;
+#X connect 15 0 14 0;
+#X connect 15 0 2 0;
+#X connect 16 0 20 0;
+#X connect 17 0 19 0;
+#X connect 18 0 17 0;
+#X connect 20 0 2 0;
+#X connect 20 0 14 0;
+#X connect 23 0 5 0;
+#X coords 0 -1 1 1 350 30 2 200 100;
+#X restore 901 307 pd long-Name;
+#X msg 780 536 #0001 [1] pd;
+#X msg 260 936 1;
+#X msg 261 785 0 1 2 3;
+#X msg 262 756 1 2 3 4;
+#X text 197 366 Oem àc31;
+#X obj 909 167 bng 15 250 50 0 Updade-\$0 empty Updade-OpPollReply_Data
+17 7 0 10 -204786 -1 -1;
+#X msg 260 155 0 14;
+#X connect 0 0 38 0;
+#X connect 6 0 38 0;
+#X connect 7 0 38 0;
+#X connect 11 0 38 0;
+#X connect 13 0 38 0;
+#X connect 15 0 38 0;
+#X connect 16 0 38 0;
+#X connect 18 0 47 0;
+#X connect 19 0 38 0;
+#X connect 22 0 38 0;
+#X connect 25 0 38 0;
+#X connect 30 0 38 0;
+#X connect 35 0 38 0;
+#X connect 36 0 2 0;
+#X connect 37 0 36 0;
+#X connect 37 0 58 1;
+#X connect 37 1 38 1;
+#X connect 38 0 37 0;
+#X connect 38 0 41 0;
+#X connect 39 27 35 0;
+#X connect 39 28 78 0;
+#X connect 39 29 83 0;
+#X connect 39 30 60 0;
+#X connect 39 31 30 0;
+#X connect 39 32 50 0;
+#X connect 39 37 51 0;
+#X connect 39 38 84 0;
+#X connect 39 39 85 0;
+#X connect 39 40 72 0;
+#X connect 39 41 80 0;
+#X connect 39 42 79 0;
+#X connect 39 43 25 0;
+#X connect 39 44 22 0;
+#X connect 39 46 77 0;
+#X connect 39 48 19 0;
+#X connect 39 50 16 0;
+#X connect 39 51 15 0;
+#X connect 39 52 13 0;
+#X connect 39 53 11 0;
+#X connect 39 54 71 0;
+#X connect 39 55 73 0;
+#X connect 39 56 7 0;
+#X connect 39 57 6 0;
+#X connect 39 58 59 0;
+#X connect 39 60 0 0;
+#X connect 39 61 54 0;
+#X connect 39 62 88 0;
+#X connect 39 63 57 0;
+#X connect 40 0 39 0;
+#X connect 41 0 42 0;
+#X connect 44 0 43 0;
+#X connect 45 0 58 0;
+#X connect 46 0 59 0;
+#X connect 46 0 60 0;
+#X connect 47 0 16 0;
+#X connect 48 0 19 0;
+#X connect 49 0 22 0;
+#X connect 50 0 38 0;
+#X connect 51 0 38 0;
+#X connect 52 0 54 0;
+#X connect 53 0 52 0;
+#X connect 54 0 38 0;
+#X connect 57 0 37 0;
+#X connect 58 0 44 0;
+#X connect 59 0 38 0;
+#X connect 60 0 38 0;
+#X connect 71 0 38 0;
+#X connect 72 0 38 0;
+#X connect 73 0 38 0;
+#X connect 74 0 73 0;
+#X connect 75 0 71 0;
+#X connect 77 0 38 0;
+#X connect 78 0 38 0;
+#X connect 79 0 38 0;
+#X connect 80 0 38 0;
+#X connect 81 0 77 0;
+#X connect 82 0 49 0;
+#X connect 83 0 38 0;
+#X connect 84 0 38 0;
+#X connect 85 0 38 0;
+#X connect 88 0 38 0;
+#X coords 0 -1 1 1 200 60 1 500 100;
+#X restore 1398 49 pd send_OpPollReply;
+#X obj 1321 162 spigot;
+#X obj 1360 145 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1
+0 1;
+#X text 29 8 Les paquets ArtDmx doivent Ãªtre unicast aux abonnÃ©s
+de l'univers spÃ©cifique contenu dans le paquet ArtDmx. L'appareil
+Ã©metteur doit rÃ©guliÃ¨rement ArtPoll le rÃ©seau pour dÃ©tecter
+tout changement dans les appareils qui sont abonnÃ©s. Les nÅuds
+abonnÃ©s rÃ©pertorieront l'univers d'abonnement dans ArtPollRhness.
+AbonnÃ© signifie tous les univers rÃ©pertoriÃ©s dans le tableau
+Swin ou Swout. S'il n'y a pas d'abonnÃ©s Ã  un univers que l'Ã©metteur
+souhaite envoyer \, alors l'ArtDmx ne doit pas Ãªtre diffusÃ©.
+Si le nombre d'abonnÃ©s Ã  l'univers dÃ©passe 40 pour un univers
+donnÃ© \, le dispositif Ã©metteur peut diffuser.;
+#X obj 39 709 OpPollReply_decoder 0;
+#X obj 240 709 OpPollReply_decoder 1;
+#X obj 441 709 OpPollReply_decoder 2;
+#X obj 642 709 OpPollReply_decoder 3;
+#X obj 39 468 OpPollReply_sender;
+#X obj 39 1110 OpPollReply_decoder 4;
+#X obj 240 1110 OpPollReply_decoder 5;
+#X obj 39 408 Art-Net-Receiver;
+#X obj 859 238 text define -k Hex2Dec_table;
+#A set 0 0 48 0 0 0 0 \; 1 1 49 1 0 0 0 \; 2 2 50 0 1 0 0 \; 3 3 51
+1 1 0 0 \; 4 4 52 0 0 1 0 \; 5 5 53 1 0 1 0 \; 6 6 54 0 1 1 0 \; 7
+7 55 1 1 1 0 \; 8 8 56 0 0 0 1 \; 9 9 57 1 0 0 1 \; 10 A 65 0 1 0 1
+\; 11 B 66 1 1 0 1 \; 12 C 67 0 0 1 1 \; 13 D 68 1 0 1 1 \; 14 E 69
+0 1 1 1 \; 15 F 70 1 1 1 1 \;;
+#X msg 859 213 read /home/pi/StuART/convert/Hex2Dec_table;
+#N canvas -274 213 1920 1006 OpOutput/OpDmx 0;
+#X obj -170 -44 inlet;
+#X obj -395 914 prepend set;
+#X obj -395 -51 list split 2;
+#X obj -355 864 prepend set;
+#X msg -355 889 0 3;
+#X obj -275 85 list split 1;
+#X floatatom -275 191 5 0 0 0 - - -;
+#X obj -235 115 list split 2;
+#X obj -235 144 prepend set;
+#X obj -195 297 prepend set;
+#X text -360 940 ProtVersion (14):;
+#X text -233 193 Net 0-127;
+#X text -200 11 Universe 0 511;
+#X obj -315 9 route 0 1 2 3;
+#X msg -395 939 0 14;
+#X msg -235 169 0 0;
+#X text -206 170 length (2-512);
+#X obj -45 85 list split 1;
+#X floatatom -45 191 5 0 0 0 - - -;
+#X obj -5 115 list split 2;
+#X obj -5 144 prepend set;
+#X obj 35 297 prepend set;
+#X msg -195 602 0 0 0 144 0 133 0 4 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0;
+#X text -3 193 Net 0-127;
+#X msg -5 169 2 0;
+#X text 24 170 length (2-512);
+#X obj 165 85 list split 1;
+#X floatatom 165 191 5 0 0 0 - - -;
+#X obj 205 115 list split 2;
+#X obj 205 144 prepend set;
+#X obj 245 297 prepend set;
+#X msg 245 322 0 0 0 144 0 133 0 4 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0;
+#X text 207 193 Net 0-127;
+#X msg 205 169 2 0;
+#X text 234 170 length (2-512);
+#X obj 385 85 list split 1;
+#X floatatom 385 191 5 0 0 0 - - -;
+#X obj 425 115 list split 2;
+#X obj 425 144 prepend set;
+#X obj 465 297 prepend set;
+#X msg 245 602 0 0 0 144 0 133 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0;
+#X text 427 193 Net 0-127;
+#X msg 425 169 2 0;
+#X text 454 170 length (2-512);
+#X msg -195 322 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0;
+#X obj 714 183 array set universe-1;
+#X obj 953 87 array define -yrange 0 255 -pix 512 255 universe-1 512
+;
+#X obj 953 117 array define -yrange 0 255 -pix 512 255 universe-2 512
+;
+#X obj 714 212 array set universe-2;
+#X obj 953 437 array get universe-2;
+#X obj 797 437 array get universe-1;
+#X obj 796 261 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 1038 340 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 1038 360 + 1;
+#X obj 1078 340 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 1078 360 + 0;
+#X msg 856 317 stop;
+#X obj 880 350 + 0;
+#X obj 797 373 counter 0 511;
+#X obj 797 483 max;
+#X obj 714 124 array set universe-3;
+#X obj 714 151 array set universe-4;
+#X obj 953 177 array define -yrange 0 255 -pix 512 255 universe-3 512
+;
+#X obj 953 147 array define -yrange 0 255 -pix 512 255 universe-4 512
+;
+#X obj 1107 483 max;
+#X obj 797 398 t f f f f f;
+#X obj 1107 437 array get universe-3;
+#X obj 1263 437 array get universe-4;
+#X obj 797 517 max;
+#X obj 1212 568 array get merge;
+#X obj 1212 593 prepend set;
+#X obj 796 349 metro 0.01;
+#X obj 1210 521 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1
+0 1;
+#X obj -355 -16 list split 2;
+#X text -315 890 sequence 0-256physical The physical input port from
+which DMX512 data was input. This field is for information only. Use
+Universe for data routing., f 169;
+#X obj -355 772 spigot;
+#X obj -316 755 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1
+0 1;
+#X obj -395 822 spigot;
+#X obj -356 805 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1
+0 1;
+#X obj 61 -64 list split 1;
+#X obj 61 -39 cycle 4;
+#X floatatom 61 47 5 0 0 0 - - -;
+#X floatatom 76 27 5 0 0 0 - - -;
+#X floatatom 91 7 5 0 0 0 - - -;
+#X floatatom 107 -13 5 0 0 0 - - -;
+#X obj 796 281 t b b b b b;
+#X obj 1129 309 gate;
+#X obj -105 252 switch 4;
+#X obj 1212 540 metro 50;
+#X msg 1212 618 0 0 0 41 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 52 52 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 178 0 0 0 0 0 0 0 0 93
+0 0 140 0 0 0 0 138 0 141 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 255 255 0 0 0 0 0 77
+0 234 255 255 255 0 0 0 0 77 0 0 255 255 0 0 0 0 0 77 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 51 0 0
+0 0 0 0 255 0 0 0 176 0 0 0 0 0 255 0 0 0 176 0 0 0 0 0 255 0 0 0 176
+199 0 0 0 0 0 0 0 0 0 241 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+;
+#X obj 953 207 array define -yrange 0 255 -pix 512 255 meerge 512;
+#X obj 797 558 array set meerge;
+#X connect 0 0 2 0;
+#X connect 1 0 14 0;
+#X connect 2 0 77 0;
+#X connect 2 1 73 0;
+#X connect 3 0 4 0;
+#X connect 5 0 6 0;
+#X connect 5 1 7 0;
+#X connect 7 0 8 0;
+#X connect 7 1 9 0;
+#X connect 7 1 45 0;
+#X connect 8 0 15 0;
+#X connect 9 0 44 0;
+#X connect 13 0 5 0;
+#X connect 13 1 17 0;
+#X connect 13 2 26 0;
+#X connect 13 3 35 0;
+#X connect 13 4 79 0;
+#X connect 17 0 18 0;
+#X connect 17 1 19 0;
+#X connect 19 0 20 0;
+#X connect 19 1 21 0;
+#X connect 19 1 48 0;
+#X connect 20 0 24 0;
+#X connect 21 0 22 0;
+#X connect 26 0 27 0;
+#X connect 26 1 28 0;
+#X connect 28 0 29 0;
+#X connect 28 1 30 0;
+#X connect 28 1 60 0;
+#X connect 29 0 33 0;
+#X connect 30 0 31 0;
+#X connect 35 0 36 0;
+#X connect 35 1 37 0;
+#X connect 37 0 38 0;
+#X connect 37 1 39 0;
+#X connect 37 1 61 0;
+#X connect 38 0 42 0;
+#X connect 39 0 40 0;
+#X connect 49 0 59 1;
+#X connect 50 0 59 0;
+#X connect 51 0 85 0;
+#X connect 52 0 53 0;
+#X connect 53 0 49 1;
+#X connect 53 0 50 1;
+#X connect 53 0 66 1;
+#X connect 53 0 67 1;
+#X connect 54 0 55 0;
+#X connect 55 0 49 0;
+#X connect 55 0 50 0;
+#X connect 55 0 66 0;
+#X connect 55 0 67 0;
+#X connect 56 0 71 0;
+#X connect 57 0 58 3;
+#X connect 58 0 65 0;
+#X connect 59 0 68 0;
+#X connect 64 0 68 1;
+#X connect 65 0 50 0;
+#X connect 65 1 49 0;
+#X connect 65 2 66 0;
+#X connect 65 3 67 0;
+#X connect 65 4 91 1;
+#X connect 66 0 64 0;
+#X connect 67 0 64 1;
+#X connect 68 0 91 0;
+#X connect 69 0 70 0;
+#X connect 70 0 89 0;
+#X connect 71 0 58 0;
+#X connect 72 0 88 0;
+#X connect 73 0 75 0;
+#X connect 73 1 13 0;
+#X connect 75 0 3 0;
+#X connect 76 0 75 1;
+#X connect 77 0 1 0;
+#X connect 78 0 77 1;
+#X connect 79 0 80 0;
+#X connect 80 0 81 0;
+#X connect 80 1 82 0;
+#X connect 80 2 83 0;
+#X connect 80 3 84 0;
+#X connect 85 0 71 0;
+#X connect 85 1 54 0;
+#X connect 85 2 52 0;
+#X connect 85 3 57 0;
+#X connect 85 4 56 0;
+#X connect 88 0 69 0;
+#X restore 906 273 pd OpOutput/OpDmx;
+#X obj 441 1110 OpPollReply_decoder 6;
+#X obj 642 1110 OpPollReply_decoder 7;
+#X obj 39 1511 OpPollReply_decoder 8;
+#X obj 240 1511 OpPollReply_decoder 9;
+#X obj 441 1511 OpPollReply_decoder 10;
+#X obj 642 1511 OpPollReply_decoder 11;
+#X obj 39 1910 OpPollReply_decoder 12;
+#X obj 240 1910 OpPollReply_decoder 13;
+#X obj 441 1910 OpPollReply_decoder 14;
+#X obj 642 1910 OpPollReply_decoder 15;
+#X obj 39 267 OpDmx_Universe-scanner;
+#X obj 39 206 OpDmx_decoder;
+#N canvas 441 139 1212 749 merge 0;
+#X obj 404 217 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 404 237 + 1;
+#X obj 234 217 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 234 237 + 0;
+#X msg 72 167 stop;
+#X obj 109 167 + 0;
+#X obj 63 250 counter 0 511;
+#X obj 63 450 max;
+#X obj 63 275 t f f f f f;
+#X obj 62 226 metro 0.01;
+#X obj 97 38 inlet;
+#X obj 44 31 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0 1
+;
+#X obj 62 58 t f b b b b;
+#X obj 297 38 hradio 15 1 0 8 empty empty empty 0 -8 0 10 -262144 -1
+-1 0;
+#X msg 297 58 symbol Universe-\$1;
+#X obj 63 384 array get Merge-1;
+#X obj 63 565 array set Merge-1;
+#X obj 802 213 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 802 233 + 1;
+#X obj 632 213 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 632 233 + 0;
+#X msg 470 163 stop;
+#X obj 507 163 + 0;
+#X obj 461 246 counter 0 511;
+#X obj 461 446 max;
+#X obj 461 271 t f f f f f;
+#X obj 460 222 metro 0.01;
+#X obj 495 34 inlet;
+#X obj 442 27 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 460 54 t f b b b b;
+#X obj 695 34 hradio 15 1 0 8 empty empty empty 0 -8 0 10 -262144 -1
+-1 1;
+#X msg 695 54 symbol Universe-\$1;
+#X obj 461 380 array get Merge-1;
+#X obj 461 561 array set Merge-1;
+#X obj 219 384 array get Universe-2;
+#X obj 617 380 array get Universe-0;
+#X connect 0 0 1 0;
+#X connect 1 0 15 1;
+#X connect 1 0 34 1;
+#X connect 2 0 3 0;
+#X connect 3 0 15 0;
+#X connect 3 0 34 0;
+#X connect 4 0 9 0;
+#X connect 5 0 6 3;
+#X connect 6 0 8 0;
+#X connect 7 0 16 0;
+#X connect 8 0 15 0;
+#X connect 8 1 34 0;
+#X connect 8 4 16 1;
+#X connect 9 0 6 0;
+#X connect 10 0 12 0;
+#X connect 11 0 12 0;
+#X connect 12 0 9 0;
+#X connect 12 1 2 0;
+#X connect 12 2 0 0;
+#X connect 12 3 5 0;
+#X connect 12 4 4 0;
+#X connect 13 0 14 0;
+#X connect 14 0 34 2;
+#X connect 15 0 7 0;
+#X connect 17 0 18 0;
+#X connect 18 0 32 1;
+#X connect 18 0 35 1;
+#X connect 19 0 20 0;
+#X connect 20 0 32 0;
+#X connect 20 0 35 0;
+#X connect 21 0 26 0;
+#X connect 22 0 23 3;
+#X connect 23 0 25 0;
+#X connect 24 0 33 0;
+#X connect 25 0 32 0;
+#X connect 25 1 35 0;
+#X connect 25 4 33 1;
+#X connect 26 0 23 0;
+#X connect 27 0 29 0;
+#X connect 28 0 29 0;
+#X connect 29 0 26 0;
+#X connect 29 1 19 0;
+#X connect 29 2 17 0;
+#X connect 29 3 22 0;
+#X connect 29 4 21 0;
+#X connect 30 0 31 0;
+#X connect 31 0 35 2;
+#X connect 32 0 24 0;
+#X connect 34 0 7 1;
+#X connect 35 0 24 1;
+#X restore 1244 125 pd merge;
+#X msg 1186 270 \; Merge-1 const 0;
+#X obj 240 206 OpDmx_Universe 0;
+#X obj 240 307 OpDmx_Universe 1;
+#X obj 642 206 OpDmx_Universe 32;
+#X obj 441 206 OpDmx_Universe 16;
+#X obj 906 297 Merger4universe 51 240 6 27 0;
+#X obj 642 307 OpDmx_Universe 33;
+#X obj 240 408 OpDmx_Universe 3;
+#X obj 240 509 OpDmx_Universe 4;
+#X obj 642 408 OpDmx_Universe 34;
+#X obj 642 509 OpDmx_Universe 35;
+#X obj 441 307 OpDmx_Universe 17;
+#X obj 441 408 OpDmx_Universe 18;
+#X obj 441 509 OpDmx_Universe 19;
+#X obj 956 108 Merge 0 33 M1;
+#X obj 1708 374 Merge M1 M2 M3;
+#X obj 1702 622 Merge M4 M5 M6;
+#X obj 1702 712 Merge M3 M6 M7;
+#X obj 1709 298 Merge 16 32 M2;
+#X obj 1702 471 Merge 32 0 M4;
+#X obj 1702 552 Merge 1 19 M5;
+#X text 1536 1355 /home/pi/Documents/SCRIPT/OSC_to_OLA "port" "universe-name"
+, f 66;
+#X msg 1769 1023 cat /etc/ola/ola-osc.conf;
+#X obj 1769 1045 ggee/shell;
+#X obj 1769 1067 print OLA;
+#X obj 1359 921 cnv 15 399 59 empty empty OSC_to_OLA_\$1_\$2 20 12
+1 14 -204786 -66577 0;
+#X obj 1401 954 bng 15 250 50 0 restart_ola\$0 restart_ola restart_ola
+17 7 0 10 -45076 -262144 -1;
+#X obj 1422 941 tgl 15 0 TOGGLE_DMX_\$0 TOGGLE_DMX TOGGLE_DMX 17 7
+0 10 -258113 -4034 -1 0 1;
+#X obj 1028 997 unpack;
+#X msg 1112 1098 const 0;
+#X obj 1030 1073 loadbang;
+#X msg 1516 866 sudo service olad restart;
+#X obj 1516 889 ggee/shell;
+#X obj 1260 1211 bng 15 250 50 0 empty TRIG_DMX TRIG_DMX 17 7 0 10
+-4160 -1 -1;
+#X obj 1260 1193 bng 15 250 50 0 TRIG_DMX empty TRIG_DMX 17 7 0 10
+-4160 -1 -1;
+#X obj 1030 1349 spigot;
+#X obj 1171 1334 tgl 15 0 empty TOGGLE_DMX_\$0 TOGGLE_DMX_\$0 17 7
+0 10 -258113 -4034 -1 0 1;
+#X obj 1466 851 bng 15 250 50 0 empty restart_ola\$0 restart_ola\$0
+17 7 0 10 -45076 -262144 -1;
+#X msg 1651 1194 16 0;
+#X msg 1651 1174 16 255;
+#X msg 1113 1120 resize 513;
+#X obj 1028 1023 array set DMX512-\$2;
+#X obj 1113 1142 array define DMX512-\$2;
+#X obj 1143 960 inlet;
+#X msg 1630 1256 \; array1 0;
+#X obj 1808 934 inlet;
+#X msg 1109 879 click;
+#X obj 1109 858 bng 15 250 50 0 empty OPEN_universe\$0 OPEN_universe\$0
+17 7 0 10 -4034 -1 -1;
+#X obj 1489 953 bng 15 250 50 0 OPEN_universe\$0 OPEN_universe OPEN_0
+17 7 0 10 -4034 -1 -1;
+#X obj 1028 950 r SET_DMX;
+#X obj 1629 1298 print WTF_OSC_to_OLA;
+#X obj 1633 929 bng 12 250 50 0 empty print-OSC_config print-OSC_config
+14 4 0 10 -191407 -1 -1;
+#X msg 1450 1072 \; TOGGLE_DMX 0 \; restart_ola \; print-OSC_config
+1 \; dmx_universe-0 connect 127.0.0.1 7770;
+#X msg 1367 892 \; OPEN_universe 1;
+#X obj 1053 1267 text set universe-\$0;
+#X obj 1048 893 text define -k universe-\$0;
+#A set 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 \;;
+#X obj 1632 1225 cyclone/prepend sendtyped /dmx/universe/\$2 ii;
+#X msg 1151 987 25 10;
+#X obj 1557 958 OSC/OSCsender 127.0.0.1 7770;
+#X obj 1030 1226 array get Universe-M7;
+#X obj 989 1119 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1
+0 1;
+#X obj 1030 1307 cyclone/prepend sendtyped /dmx/universe/0 b;
+#X obj 1030 1127 metro 20;
+#X obj 1012 463 metro 20;
+#X obj 1012 488 array get Universe-16;
+#X obj 1012 513 prepend set;
+#X msg 1012 538 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 133 133 133 133 0 0
+0 0 0 0 0 0 0 133 133 133 0 0 0 0 0 0 0 0 0 0 133 0 0 0 0 0 0 0 0 0
+0 133 133 133 0 0 0 0 0 0 0 0 0 133 133 133 133 0 0 0 0 0 0 0 0 0 40
+18 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 255 0 130 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0;
+#X obj 1023 435 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1
+0 1;
+#X obj 1181 391 Merged_Universe 1;
+#X floatatom 1012 843 5 0 0 0 - - -;
+#X obj 1012 818 list length;
+#X msg 863 32 connect 127 0 0 1;
+#X obj 672 62 OpDmx_encoder 0 0 1;
+#X msg 753 29 0 2 3;
+#X connect 4 0 2 0;
+#X connect 5 0 4 1;
+#X connect 16 0 15 0;
+#X connect 53 0 54 0;
+#X connect 54 0 55 0;
+#X connect 59 0 72 0;
+#X connect 59 1 72 1;
+#X connect 60 0 73 0;
+#X connect 61 0 71 0;
+#X connect 62 0 63 0;
+#X connect 64 0 90 0;
+#X connect 66 0 89 0;
+#X connect 67 0 66 1;
+#X connect 68 0 62 0;
+#X connect 69 0 87 0;
+#X connect 70 0 87 0;
+#X connect 71 0 73 0;
+#X connect 74 0 59 0;
+#X connect 77 0 86 0;
+#X connect 78 0 77 0;
+#X connect 80 0 59 0;
+#X connect 82 0 53 0;
+#X connect 88 0 59 0;
+#X connect 90 0 85 0;
+#X connect 90 0 92 0;
+#X connect 91 0 93 0;
+#X connect 92 0 66 0;
+#X connect 93 0 90 0;
+#X connect 94 0 95 0;
+#X connect 95 0 96 0;
+#X connect 96 0 97 0;
+#X connect 97 0 101 0;
+#X connect 97 0 103 0;
+#X connect 98 0 94 0;
+#X connect 101 0 100 0;
+#X connect 102 0 103 2;
+#X connect 104 0 103 1;

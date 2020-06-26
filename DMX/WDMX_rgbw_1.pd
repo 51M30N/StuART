@@ -1,0 +1,10 @@
+#N canvas 1 85 494 458 10;
+#X obj 11 6 cnv 15 399 420 empty empty WDMX_rgbw_1 20 12 0 14 -204786
+-66577 0;
+#X obj 31 31 faderdmx 256 D_WDMX1 D;
+#X obj 91 31 faderdmx 257 S_WDMX1 D;
+#X obj 151 31 faderdmx 258 Manifestant3 D;
+#X obj 211 31 faderdmx 259 4fader D;
+#X obj 271 31 faderdmx 260 5fader D;
+#X obj 331 31 faderdmx 261 RODD D;
+#X coords 0 458 1 457 400 420 0;

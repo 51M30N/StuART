@@ -1,0 +1,19 @@
+16 control level_aplay-1
+17 control level_aplay-2
+18 control level_aplay-3
+19 control level_aplay-4
+20 control level_aplay-5
+21 control level_aplay-6
+22 control level_aplay-7
+23 control level_aplay-8
+
+32 tcontrol open_aplay_remote-1
+33 tcontrol open_aplay_remote-2
+34 tcontrol open_aplay_remote-3
+35 tcontrol open_aplay_remote-4
+36 tcontrol open_aplay_remote-5
+37 tcontrol open_aplay_remote-6
+38 tcontrol open_aplay_remote-7
+39 tcontrol open_aplay_remote-8
+
+40 tcontrol midi_pattern 8audioremote

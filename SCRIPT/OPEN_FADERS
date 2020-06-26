@@ -1,0 +1,55 @@
+#!/bin/bash
+#|||||||||||||#
+#|by_51M30N|||#
+#|for__StuART|#
+#|||||||||||||# rev 01092019
+#|||||||||||||#
+
+######################################################
+#                                                    #
+#  OPEN_FADERS  "nombre_de_faders" "Adress_DMX"      #
+#                                                    #
+######################################################
+
+#init variables
+chemin="/home/pi/StuART/DMX/"
+fichier="faderdmx"
+base=10
+offset=60
+
+#test de l'argument nombre
+    if [ $1 ]
+    then
+        nombre=$1
+    else
+        echo "nombre de faders DMX:"
+        read
+        nombre=$REPLY
+    fi
+#test de l'argument adress
+    if [ $2 ]
+    then
+        adress=$2
+    else
+        echo "DMX : adresse de depart :"
+        read
+        adress=$REPLY
+    fi
+
+#ecriture du patch puredata
+  echo "#N canvas 8 60 800 400 10;" > temp.pd
+  #ecriture des faders
+    for ((i=1 ; i<=$nombre ; i++)); do
+      let "marge = i * offset + base"
+      echo "#X obj "$marge" 20 "$fichier $adress $adress"fader D;"
+      echo "#X obj "$marge" 20 "$fichier $adress $adress"fader D;" >> temp.pd
+      let "adress = adress +1"
+    done
+
+#copie de temp dans le repertoire de travail
+  cp temp.pd $chemin"temp_"$fichier".pd"
+#  pd  -open $chemin"temp_"$fichier".pd" &
+
+#clean
+  rm temp.pd
+exit

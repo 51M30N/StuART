@@ -1,0 +1,12 @@
+#N canvas -95 289 865 373 10;
+#X obj 0 0 cnv 15 799 319 empty empty 8_player_Stereo_remote 5 8 2
+14 -204800 -66577 0;
+#X obj 0 17 player_Stereo_remote 1 4 23 36;
+#X obj 100 17 player_Stereo_remote 2 5 23 37;
+#X obj 200 17 player_Stereo_remote 3 6 23 38;
+#X obj 300 17 player_Stereo_remote 4 7 23 39;
+#X obj 400 17 player_Stereo_remote 5;
+#X obj 500 17 player_Stereo_remote 6;
+#X obj 600 17 player_Stereo_remote 7;
+#X obj 700 17 player_Stereo/player_Stereo_remote 8;
+#X coords 0 -1 1 1 800 320 1 0 0;

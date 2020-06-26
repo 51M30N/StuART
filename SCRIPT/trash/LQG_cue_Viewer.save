@@ -1,0 +1,7 @@
+#!/bin/bash
+
+
+
+
+
+echo "#N canvas 99 342 468 63 10;" > temp.pd

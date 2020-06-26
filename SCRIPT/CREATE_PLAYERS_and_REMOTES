@@ -1,0 +1,129 @@
+#!/bin/bash
+#|||||||||||||#
+#|by_51M30N|||#
+#|for__StuART|#
+#|||||||||||||# rev01092019
+#|||||||||||||#
+
+####################################################################################
+#                                                                                   #
+#  CREATE_PLAYERS_and_REMOTES  "nombre_de_faders" "IP_cible" "outport"  "inport"     #
+#                                                                                   #
+####################################################################################
+
+#init variables
+chemin="/home/pi/StuART/player_Stereo/"
+fichier="player_Stereo_remote"
+base=0
+offset=100
+
+#################################################################################
+#test de l'argument nombre
+    if [ $1 ]
+    then
+        nombre=$1
+    else
+        echo "nombre de player :"
+        read
+        nombre=$REPLY
+    fi
+
+#test de l'argument IP
+    if [ $2 ]
+    then
+        IP=$2
+    else
+        echo "IP remote: (default = 127.0.0.1)"
+        read
+        IP=$REPLY
+    fi
+
+#test de l'argument port
+    if [ $3 ]
+    then
+        outport=$3
+    else
+        echo "port remote: (default = 8888)"
+        read
+        outport=$REPLY
+    fi
+
+#test de l'argument port
+    if [ $4 ]
+    then
+        inport=$4
+    else
+        echo "port entree: (default = 8889)"
+        read
+        inport=$REPLY
+    fi
+
+#################################################################################
+#ecriture du patch puredata pour les remotes
+  echo "#N canvas 8 60 800 400 10;" > temp.pd
+  #ecriture des faders
+    for ((i=1 ; i<=$nombre ; i++)); do
+      let "marge = i * offset + base"
+      echo "#X obj 10 "$marge $fichier $i";"
+      echo "#X obj 10 "$marge $fichier $i";" >> temp.pd
+    done
+
+    let "marge = i * offset + base"
+
+  #ecriture du sous patch sender
+    echo "#N canvas 519 60 957 384 sender 0;" >> temp.pd
+    echo "#X obj 100 30 r from_player_Stereo_remote;" >> temp.pd
+    echo "#X obj 100 100 OSC/OSCsender "$IP $inport "temp_"$fichier";" >> temp.pd
+    echo "#X obj 500 100 OSC/OSCreceiver "$outport "temp_"$fichier";" >> temp.pd
+    echo "#X obj 500 177 s to_player_Stereo_remote;" >> temp.pd
+    echo "#X connect 0 0 1 0;" >> temp.pd
+    echo "#X connect 2 0 3 0;" >> temp.pd
+    echo "#X coords 0 -1 1 1 750 30 2 100 100;" >> temp.pd
+    echo "#X restore 10 "$marge" pd sender;" >> temp.pd
+    echo "#X coords 0 -1 1 1 750 "$marge"  1 10 "$offset";" >> temp.pd
+
+#copie de temp dans le repertoire de travail
+  cp temp.pd $chemin"temp_"$fichier".pd"
+  pd  -open $chemin"temp_"$fichier".pd" &
+
+#################################################################################
+#RE_init variables pour creation des players
+fichier="player_Stereo"
+base=0
+offset=50
+
+#ecriture du patch puredata
+  echo "#N canvas 8 60 800 400 10;" > temp.pd
+  #ecriture des faders
+    for ((i=1 ; i<=$nombre ; i++)); do
+      let "marge = i * offset + base"
+      echo "#X obj 10 "$marge $fichier $i";"
+      echo "#X obj 10 "$marge $fichier $i";" >> temp.pd
+    done
+
+    let "marge = i * offset + base"
+
+  #ecriture du sous patch sender
+    echo "#N canvas 519 60 957 384 sender 0;" >> temp.pd
+    echo "#X obj 100 30 r from_player_Stereo;" >> temp.pd
+    echo "#X obj 100 100 OSC/OSCsender "$IP $outport "temp_"$fichier";" >> temp.pd
+    echo "#X obj 500 100 OSC/OSCreceiver "$inport "temp_"$fichier";" >> temp.pd
+    echo "#X obj 500 177 s to_player_Stereo;" >> temp.pd
+    echo "#X connect 0 0 1 0;" >> temp.pd
+    echo "#X connect 2 0 3 0;" >> temp.pd
+    echo "#X coords 0 -1 1 1 750 30 2 100 100;" >> temp.pd
+    echo "#X restore 10 "$marge" pd sender;" >> temp.pd
+    echo "#X coords 0 -1 1 1 750 "$marge"  1 10 "$offset";" >> temp.pd
+
+#copie de temp dans le repertoire de travail
+  cp temp.pd $chemin"temp_"$fichier".pd"
+  pd  -open $chemin"temp_"$fichier".pd" &
+
+#################################################################################
+
+#CLEAN
+  rm temp.pd
+
+
+exit
+

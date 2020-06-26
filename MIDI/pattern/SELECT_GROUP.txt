@@ -1,0 +1,40 @@
+7 control level_SELECT_master
+
+22 control pattern-GROUP1
+23 control time_SELECT_master
+
+40 tcontrol CLEAR-GROUP
+
+
+32 tcontrol GROUP1 1
+33 tcontrol GROUP1 2
+34 tcontrol GROUP1 3
+35 tcontrol GROUP1 4
+
+36 tcontrol SELECT-GROUP-R-strip
+37 tcontrol SELECT-GROUP-CW-strip
+38 tcontrol SELECT-GROUP-GROUP1
+39 tcontrol level_255_SELECT_master
+
+
+48 tcontrol GROUP1 5
+49 tcontrol GROUP1 6
+50 tcontrol GROUP1 7
+51 tcontrol GROUP1 8
+
+52 tcontrol SELECT-GROUP-G-strip
+53 tcontrol SELECT-GROUP-WW-strip
+54 tcontrol OPEN-GROUP-GROUP1
+55 tcontrol level_128_SELECT_master
+
+
+64 tcontrol GROUP1 9
+65 tcontrol GROUP1 10
+66 tcontrol GROUP1 11
+67 tcontrol GROUP1 12
+
+68 tcontrol SELECT-GROUP-B-strip
+69
+70 tcontrol CLEAR-GROUP-GROUP1
+
+71 tcontrol level_0_SELECT_master

@@ -1,0 +1,144 @@
+#N canvas 873 194 857 709 10;
+#X obj 101 101 cnv 15 298 98 empty empty SELECT_TRACK 2 8 0 14 -233017
+-2690 0;
+#X obj 190 343 counter;
+#X msg 105 327 inc;
+#X msg 131 327 dec;
+#X obj 229 321 - 1;
+#X obj 190 364 text get chemins;
+#X obj 229 301 text size chemins;
+#X obj 229 281 bng 15 250 50 0 empty \$0-chemins-change \$0-chemins-change
+17 7 0 10 -159808 -1 -1;
+#X symbolatom 142 162 42 0 0 0 - - -;
+#X obj 105 161 bng 18 250 50 0 empty empty + 5 10 0 15 -1 -1 -4034
+;
+#X obj 124 161 bng 18 250 50 0 empty empty _ 5 3 0 15 -1 -1 -4034;
+#X obj 105 180 bng 18 250 50 0 add_file-\$0 empty ADD_TRACK_from_folder
+20 9 0 10 -4034 -1 -1;
+#X obj 256 181 bng 15 250 50 0 add_folder_content-\$0 empty add_folder_content
+17 7 0 10 -4034 -1 -1;
+#X obj 256 115 bng 15 250 50 0 add_folder_directory-\$0 empty add_folder_directory
+17 7 0 10 -4032 -1 -1;
+#X obj 105 115 bng 15 250 50 0 clear_folder_directory-\$0 empty clear_folder_directory
+17 7 0 10 -261682 -1 -1;
+#N canvas 271 81 701 828 gestion_chemins 0;
+#X obj 115 26 inlet;
+#X obj 168 394 bng 15 250 50 1 empty empty init 17 7 0 10 -262144 -1
+-1;
+#X obj 315 223 openpanel;
+#X obj 315 180 bng 15 250 50 0 empty add_file-\$0 add_file-\$0 17 7
+0 10 -204786 -1 -1;
+#X obj 95 230 ggee/shell;
+#X msg 95 208 ls \$1;
+#X obj 95 252 list;
+#X obj 271 400 bng 15 250 50 0 empty init_folders_directory-\$0 init_folders_directory-\$0
+17 7 0 10 -261682 -1 -1;
+#X obj 76 483 ggee/shell;
+#X obj 76 506 list;
+#X obj 76 118 prepend;
+#X obj 76 100 bng 15 250 50 0 empty add_folder_directory-\$0 add_folder_directory-\$0
+17 7 0 10 -261682 -1 -1;
+#X obj 95 158 prepend;
+#X obj 95 140 bng 15 250 50 0 empty add_folder_content-\$0 add_folder_content-\$0
+17 7 0 10 -204786 -1 -1;
+#X obj 271 443 symbol;
+#X msg 271 420 /home/pi/Music/;
+#X msg 76 459 ls -d \$1*/;
+#X obj 76 527 makefilename %s;
+#X obj 115 68 t a a a;
+#X obj 315 200 prepend;
+#X obj 291 378 loadbang;
+#X obj 131 504 bng 15 250 50 0 \$0-chemins-change empty \$0-chemins-change
+17 7 0 10 -159808 -1 -1;
+#X obj 128 407 1e+10;
+#X obj 95 187 t a a;
+#X obj 95 361 route -1;
+#X obj 95 310 t a a;
+#X obj 95 287 makefilename;
+#X msg 222 203 set \$1%s;
+#X obj 179 294 makefilename %s;
+#X obj 95 384 prepend;
+#X msg 504 87 clear;
+#X obj 504 108 text define -k chemins;
+#A set /home/pi/Music/ONAVIO-LGQNPP/ \; /home/pi/Music/SAMPLES/ \;
+/home/pi/Music/TORTUE_RDP/ \;;
+#X obj 477 46 bng 15 250 50 0 empty clear_folder_directory-\$0 clear_folder_directory-\$0
+17 7 0 10 -261682 -1 -1;
+#X obj 477 66 t b b;
+#X obj 477 129 bng 15 250 50 0 init_folders_directory-\$0 empty init_folders_directory-\$0
+17 7 0 10 -261682 -1 -1;
+#X msg 554 87 click;
+#X obj 554 66 bng 15 250 50 0 empty open_folder_list-\$0 open_folder_list-\$0
+17 7 0 10 -204786 -1 -1;
+#X obj 95 336 text search PLAYLIST;
+#X obj 95 431 text set PLAYLIST;
+#X obj 149 639 bng 15 250 50 1 empty empty init 17 7 0 10 -262144 -1
+-1;
+#X obj 109 652 1e+10;
+#X obj 76 606 route -1;
+#X obj 76 555 t a a;
+#X obj 76 629 prepend;
+#X obj 76 676 text set chemins;
+#X obj 76 581 text search chemins;
+#X connect 0 0 18 0;
+#X connect 1 0 22 0;
+#X connect 2 0 28 0;
+#X connect 3 0 19 0;
+#X connect 4 0 6 0;
+#X connect 5 0 4 0;
+#X connect 6 0 26 0;
+#X connect 7 0 15 0;
+#X connect 8 0 9 0;
+#X connect 8 1 21 0;
+#X connect 9 0 17 0;
+#X connect 10 0 16 0;
+#X connect 11 0 10 0;
+#X connect 12 0 23 0;
+#X connect 13 0 12 0;
+#X connect 14 0 16 0;
+#X connect 15 0 14 0;
+#X connect 16 0 8 0;
+#X connect 17 0 42 0;
+#X connect 18 0 10 1;
+#X connect 18 1 12 1;
+#X connect 18 2 19 1;
+#X connect 19 0 2 0;
+#X connect 20 0 15 0;
+#X connect 22 0 38 1;
+#X connect 23 0 5 0;
+#X connect 23 1 27 0;
+#X connect 24 0 29 0;
+#X connect 25 0 37 0;
+#X connect 25 1 29 1;
+#X connect 26 0 25 0;
+#X connect 27 0 26 0;
+#X connect 28 0 25 0;
+#X connect 29 0 38 0;
+#X connect 30 0 31 0;
+#X connect 32 0 33 0;
+#X connect 33 0 34 0;
+#X connect 33 1 30 0;
+#X connect 35 0 31 0;
+#X connect 36 0 35 0;
+#X connect 37 0 24 0;
+#X connect 39 0 40 0;
+#X connect 40 0 44 1;
+#X connect 41 0 43 0;
+#X connect 42 0 45 0;
+#X connect 42 1 43 1;
+#X connect 43 0 44 0;
+#X connect 45 0 41 0;
+#X restore 142 209 pd gestion_chemins;
+#X obj 105 130 bng 15 250 50 0 open_folder_list-\$0 empty open_folder_list
+17 7 0 10 -204786 -1 -1;
+#X connect 1 0 5 0;
+#X connect 2 0 1 0;
+#X connect 3 0 1 0;
+#X connect 4 0 1 4;
+#X connect 5 0 8 0;
+#X connect 6 0 4 0;
+#X connect 7 0 6 0;
+#X connect 8 0 15 0;
+#X connect 9 0 2 0;
+#X connect 10 0 3 0;
+#X coords 0 -1 1 1 300 100 2 100 100;

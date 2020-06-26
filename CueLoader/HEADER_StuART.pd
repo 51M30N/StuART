@@ -1,0 +1,388 @@
+#N canvas 31 115 1680 966 10;
+#X obj 100 100 cnv 15 799 60 empty empty HEADER_StuART 5 8 2 10 -204800
+-66577 0;
+#X obj 100 117 XBEE/XBEE_box 1;
+#N canvas 8 92 1680 966 tocontrolcnv_COMPORT 1;
+#X obj 949 496 cnv 15 200 150 empty empty empty 20 12 0 14 -232576
+-66577 0;
+#X obj 1460 753 loadbang;
+#X obj 638 396 s LOAD_CUE;
+#X obj 1187 197 r XBEE-output;
+#X obj 700 373 ggee/shell;
+#X obj 749 349 s midi;
+#X obj 961 509 t b a b;
+#X msg 1000 536 set \, add;
+#X obj 980 556 cyclone/prepend add2;
+#X obj 703 783 cnv 15 350 150 empty empty empty 20 12 0 14 -233017
+-66577 0;
+#X floatatom 721 726 5 0 0 1 count - -;
+#X obj 721 698 value count;
+#X obj 804 698 + 1;
+#X obj 721 647 bng 15 250 50 0 empty empty raz_count 17 7 0 10 -262144
+-1 -1;
+#X floatatom 721 675 5 0 0 0 - - -;
+#X msg 910 893 -1;
+#X msg 910 860 clear;
+#X obj 721 550 loadbang;
+#X obj 910 837 bng 15 250 50 0 empty empty raz_deroule.text 17 7 0
+10 -262144 -1 -1;
+#X msg 721 892 0;
+#X obj 721 856 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 751 871 v count;
+#X obj 721 830 route 1;
+#X obj 807 871 - 1;
+#X obj 910 813 loadbang;
+#X msg 508 718 write \$1;
+#X msg 459 718 read \$1;
+#X msg 596 709 1e+06;
+#X obj 565 684 t a b;
+#X obj 647 695 loadbang;
+#X obj 565 665 list;
+#X floatatom 617 795 5 0 0 0 LOG_OUT_size LOG_OUT_size -;
+#X msg 961 608 \; S_WDMX1 0 0;
+#X obj 1237 711 loadbang;
+#X obj 1183 701 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X floatatom 1183 654 5 0 0 0 - - -;
+#X obj 1183 675 select -1;
+#X obj 1156 525 spigot;
+#X obj 1189 495 tgl 15 0 empty LOG-STATE\$0 LOG-STATE\$0 17 7 0 10
+-191407 -1 -1 1 1;
+#X obj 1156 562 t a a;
+#X obj 1183 608 symbol;
+#X obj 1156 584 list;
+#X obj 565 543 spigot;
+#X obj 598 515 tgl 15 1 empty LOG_OUT\$0 LOG_OUT\$0 17 7 0 10 -228856
+-1 -1 1 1;
+#X msg 1183 726 1024;
+#X text 727 787 efface la premiere ligne quand count > 30;
+#X obj 1166 949 print WTF;
+#X msg 741 593 clear;
+#X msg 790 607 click;
+#X obj 741 569 r go_1;
+#X obj 790 586 bng 15 250 50 0 empty OPEN_LOG_OUT\$0 OPEN_LOG_OUT\$0
+17 7 0 10 -4034 -1 -1;
+#X msg 1221 815 click;
+#X obj 1221 794 bng 15 250 50 0 empty OPEN_STATE\$0 OPEN_STATE\$0 17
+7 0 10 -4034 -1 -1;
+#X msg 1160 808 clear;
+#X obj 1028 586 outlet;
+#X msg 1363 846 write -c local_STATE;
+#X obj 1211 122 print WTF;
+#X obj 1014 351 s SET_DMX;
+#X obj 100 100 cnv 15 399 99 empty empty empty 20 12 0 14 -260097 -66577
+0;
+#X obj 328 103 tgl 15 0 LOG-STATE\$0 LOG-STATE LOG-STATE 17 7 0 10
+-191407 -1 -1 1 1;
+#X obj 408 103 tgl 15 1 LOG_OUT\$0 t-LOG_OUT LOG_OUT 17 7 0 10 -228856
+-1 -1 1 1;
+#X obj 408 118 bng 15 250 50 0 OPEN_LOG_OUT\$0 OPEN_LOG_OUT OPEN_LOG_OUT
+17 7 0 10 -4034 -1 -1;
+#X obj 328 118 bng 15 250 50 0 OPEN_STATE\$0 OPEN_STATE OPEN_STATE
+17 7 0 10 -4034 -1 -1;
+#X obj 1378 92 s XBEE-String_Input;
+#X obj 612 263 s to_control_InCue;
+#X obj 675 243 s to_control_audio;
+#X obj 729 223 s to_control_goto;
+#X obj 782 203 s to_control_midi;
+#X obj 826 183 s to_control_f-dmx;
+#X obj 874 162 s to_control_set-dmx;
+#X msg 791 332 124 0;
+#X obj 918 142 s to_control_aplay;
+#X obj 968 122 s to_control_f-SELECT;
+#X obj 1378 66 r TO_CONTROL_Xbee;
+#X obj 43 39 r TO_OSC_CTRL;
+#X obj 43 65 r TO_OSC_EXEC;
+#X obj 798 266 r TO_CONTROL_Local;
+#X obj 1058 82 print LOST_in_tocontrol_XBEE_9998;
+#X obj 1358 394 print LOST_in_tocontrol_9997;
+#X obj 300 138 OSC/OSCreceiver 9998 TO_CTRL;
+#X obj 300 169 OSC/OSCreceiver 9997 TO_EXEC;
+#X obj 100 169 OSC/OSCsender 127.0.0.1 9997 TO_EXEC;
+#X obj 100 138 OSC/OSCsender 127.0.0.1 9998 TO_CTRL;
+#X msg 101 221 \; TO_CTRL connect 127.0.0.1 9998 \; TO_EXEC connect
+127.0.0.1 9997 \; LOG-STATE 1 \; LOG_OUT 1;
+#X obj 1309 441 s GLOBAL_TO_CONTROL;
+#X obj 748 621 text define -k LOG_OUT-\$0;
+#A set player_1 /home/pi/Music/ONAVIO-LGQNPP/LGQNPP-arrivee-maire-un-tour-en-plus.wav
+0 0 -1 0 \; player_2 /home/pi/Music/ONAVIO-LGQNPP/LGQNPP-Arrivee_maire+voix.wav
+0 0 -1 0 \; player_3 /home/pi/Music/ONAVIO-LGQNPP/LGQNPP-Arrivée-maire.wav
+0 0 -1 0 \; player_4 /home/pi/Music/ONAVIO-LGQNPP/LGQNPP-DiscoursMaire1.wav
+0 0 -1 0 \; player_5 /home/pi/Music/ONAVIO-LGQNPP/LGQNPP-DiscoursMaire2.wav
+0 0 0 0 \; player_6 /home/pi/Music/ONAVIO-LGQNPP/LGQNPP-Tonnerre.wav
+0 0 0 0 \; player_7 /home/pi/Music/ONAVIO-LGQNPP/LGQNPP-Mes-fesses.wav
+0 0 0 0 \; Cue_name s10_red 100 0 a_remplir \; face 98 0 \; Pin-bosq1
+0 3000 \; Pin-bosq2 0 3000 \; R-F-strip 0 3000 \; R-L-strip 0 3000
+\; Manifestant2 0 2000 \; Manifestant1 0 2000 \; Manifestant3 0 2000
+\; WW-J-strip 0 1000 \; WW-F-strip 0 1000 \; WW-C-strip 0 1000 \; S_WDMX2
+0 0 \; S_WDMX1 0 0 \;;
+#X obj 565 733 text set LOG_OUT-\$0;
+#X msg 1460 796 read -c local_STATE-\$0;
+#X obj 1160 830 text define -k local_STATE-\$0;
+#A set SALLE 190 3000 \; Cue_name s10_red 100 0 a_remplir \; player_1
+/home/pi/Music/ONAVIO-LGQNPP/LGQNPP-arrivee-maire-un-tour-en-plus.wav
+0 0 -1 0 \; player_2 /home/pi/Music/ONAVIO-LGQNPP/LGQNPP-Arrivee_maire+voix.wav
+0 0 -1 0 \; player_3 /home/pi/Music/ONAVIO-LGQNPP/LGQNPP-Arrivée-maire.wav
+0 0 -1 0 \; player_4 /home/pi/Music/ONAVIO-LGQNPP/LGQNPP-DiscoursMaire1.wav
+0 0 -1 0 \; player_5 /home/pi/Music/ONAVIO-LGQNPP/LGQNPP-DiscoursMaire2.wav
+0 0 0 0 \; player_6 /home/pi/Music/ONAVIO-LGQNPP/LGQNPP-Tonnerre.wav
+0 0 0 0 \; player_7 /home/pi/Music/ONAVIO-LGQNPP/LGQNPP-Mes-fesses.wav
+0 0 0 0 \; face 98 0 \; Pin-bosq1 0 3000 \; Pin-bosq2 0 3000 \; R-F-strip
+0 3000 \; R-L-strip 0 3000 \; Manifestant2 0 2000 \; Manifestant1 0
+2000 \; Manifestant3 0 2000 \; WW-J-strip 0 1000 \; WW-F-strip 0 1000
+\; WW-C-strip 0 1000 \; S_WDMX2 0 0 \; S_WDMX1 0 0 \; service1 0 2000
+\; service2 0 2000 \; fader_G-F-strip 0 0 \; G-F-strip 0 0 \; fader_B-F-strip
+0 2000 \; fader_B-J-strip 0 2000 \; B-F-strip 0 2000 \; B-J-strip 0
+2000 \; fader_R-J-strip 0 2000 \; fader_R-F-strip 0 2000 \; fader_R-C-strip
+0 2000 \; R-J-strip 0 2000 \; R-C-strip 0 2000 \; fader_Pin-CP1 255
+0 \; fader_Pin-CP2 255 0 \; Pin-CP1 0 2000 \; Pin-CP2 0 2000 \; fader_Pin-pere
+0 0 \; fader_Pin-mere 0 0 \; Pin-pere 0 2000 \; Pin-mere 0 0 \; BoutiqueE2
+0 0 \; ZelieE1 0 0 \; ManifB4 0 2000 \; ManifB5 0 2000 \; ManifE3 0
+0 \; BoutiqueA2 0 2000 \; ManifA3 0 2000 \; ManifA4 0 2000 \; G-C-strip
+0 0 \; fader_SALLE 158 2000 \; fader_service2 158 2000 \; SELECT-GROUP-LGQ
+1 \; CLEAR-GROUP-LGQ 1 \; level_0_SELECT_master 1 \; level_255_SELECT_master
+1 \; fader_service1 158 2000 \; time_SELECT_master 9 \; level_SELECT_master
+95 \; pattern-LGQ 0 \; fader_BoutiqueA2 0 0 \; fader_ManifA3 0 0 \;
+fader_OvideA1 0 0 \; fader_ManifA4 0 0 \; fader_ManifA5 0 0 \; fader_CanardB2
+0 0 \; fader_BoutiqueB3 0 0 \; fader_Rodd_voie_pas 0 2000 \; fader_ManifB4
+0 0 \; fader_ManifB5 0 0 \; fader_BoutiqueC2 0 0 \; fader_RODD_Warm
+0 0 \; fader_Rodd_parle_pas 0 2000 \; fader_BoutiqueC4 0 0 \; fader_ManifC5
+0 0 \; fader_MiraD2 0 0 \; fader_BoutiqueD3 0 0 \; fader_Rodd_entend_pas
+0 2000 \; fader_ManifD4 0 0 \; fader_ManifD5 0 0 \; fader_BoutiqueE2
+0 0 \; fader_ManifE3 0 0 \; fader_ZelieE1 0 0 \; fader_ManifE4 0 0
+\; fader_ManifE5 0 0 \; OvideA1 0 2000 \; ManifA5 0 2000 \; CanardB2
+0 2000 \; BoutiqueB3 0 2000 \; Rodd_voie_pas 0 2000 \; BoutiqueC2 0
+2000 \; RODD_Warm 0 0 \; Rodd_parle_pas 0 2000 \; ManifC5 0 2000 \;
+BoutiqueD3 0 0 \; Rodd_entend_pas 0 2000 \; ManifD4 0 0 \; ManifD5
+0 0 \; ManifE4 0 0 \; ManifE5 0 0 \; BoutiqueC4 0 2000 \; MiraD2 0
+0 \; level_128_SELECT_master 1 \; fader_CW-J-strip 0 2000 \; fader_CW-F-strip
+0 2000 \; fader_CW-C-strip 0 2000 \; CW-F-strip 0 0 \; CW-C-strip 0
+2000 \; CW-J-strip 0 2000 \; contre 0 2000 \; G-J-strip 0 0 \; OvideMere1
+0 2000 \; Pin-Lat1 0 2000 \; petite_secretaire 0 2000 \; D_WDMX2 0
+0 \; RODD 0 10000 \; D_WDMX1 0 0 \; Pin-Pere 0 0 \; Boutique2 0 0 \;
+Boutique5 0 1000 \; Rodd-entend_pas 0 1000 \; Boutique3 0 0 \; L_platine_Ovide
+0 1000 \; G-L-strip 0 0 \; B-L-strip 0 0 \; CW-L-strip 0 0 \; WW-L-strip
+0 0 \; B-C-strip 0 2000 \; OvideMere2 0 2000 \; Pin-face 0 2000 \;
+Pin-Lat2 0 2000 \; Pin-Maison 0 2000 \; RODD_Cold 0 2000 \; remote_player_1
+1 0 0 /home/pi/Music/ONAVIO-LGQNPP/LGQNPP-arrivee-maire-un-tour-en-plus.wav
+\; remote_player_2 0 387 10000 /home/pi/Music/ONAVIO-LGQNPP/1-LGQNPPThemegarconGuitareFort.wav
+\; Open_Cue 1 \; Garbre3 0 0 \; Garbre2 0 0 \; Garbre1 0 0 \; dec4
+0 0 \; dec1 0 0 \; Ovide 0 0 \; Rodd-parle_pas 0 0 \; Boutique1 0 0
+\; Rodd_entendpas 0 0 \; Pin-MAISON 0 0 \; dec3 0 6000 \; dec2 0 6000
+\; SELECT-GROUP-G-strip 1 \; LGQ 3 \; fader_G-C-strip 0 0 \; fader_G-J-strip
+0 0 \; LOAD_CUE F_noir \; player_8 symbl 0 1500 -1 0 \; +go+_1 1 \;
+-go-_1 1 \; tracking_Cue_List 0 \; go_1 1 \; fader_B-C-strip 0 2000
+\; fader_WW-J-strip 128 2000 \; fader_WW-F-strip 128 2000 \; fader_WW-C-strip
+128 2000 \; remote_player_5 0 685 3000 /home/pi/Music/ONAVIO-LGQNPP/LGQNPP-ENTREE-MAIRE_2.wav
+\; remote_player_7 0 555 10000 /home/pi/Music/ONAVIO-LGQNPP/s10_manif/10-manif-edit-arbre-fesses.wav
+\; remote_player_8 0 1024 0 /home/pi/Music/ONAVIO-LGQNPP/s10_manif/10-manif-edit-abattoir-2.wav
+\;;
+#X obj 1460 774 \$0;
+#X obj 1156 752 text set local_STATE-\$0;
+#X obj 771 916 text delete LOG_OUT-\$0;
+#X obj 1183 632 text search local_STATE-\$0;
+#X obj 562 52 osc/routeOSC /InCue /audio /goto /midi /f-dmx /set-dmx
+/aplay /f-SELECT /gpio, f 89;
+#X obj 988 102 s to_control_gpio;
+#X obj 721 808 >= 120;
+#X obj 562 16 r go-XBEE;
+#X obj 638 305 osc/routeOSC /goto /SHELL /midi /to_control /audio /f-dmx
+/set-dmx /InCue /aplay /f-SELECT /GLOBAL_TO_CONTROL /gpio /go-XBEE
+, f 136;
+#X obj 1388 339 cyclone/prepend /to_control;
+#X obj 1270 197 spigot;
+#X obj 1305 177 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1
+1 1;
+#X connect 1 0 89 0;
+#X connect 3 0 97 0;
+#X connect 6 0 32 0;
+#X connect 6 1 8 0;
+#X connect 6 1 37 0;
+#X connect 6 1 42 0;
+#X connect 6 2 7 0;
+#X connect 7 0 32 0;
+#X connect 7 0 54 0;
+#X connect 8 0 32 0;
+#X connect 8 0 54 0;
+#X connect 10 0 95 0;
+#X connect 11 0 12 0;
+#X connect 11 0 10 0;
+#X connect 12 0 11 0;
+#X connect 13 0 14 0;
+#X connect 14 0 11 0;
+#X connect 15 0 91 0;
+#X connect 16 0 15 0;
+#X connect 17 0 13 0;
+#X connect 18 0 16 0;
+#X connect 19 0 91 0;
+#X connect 20 0 21 0;
+#X connect 20 0 19 0;
+#X connect 21 0 23 0;
+#X connect 22 0 20 0;
+#X connect 23 0 21 0;
+#X connect 24 0 18 0;
+#X connect 25 0 86 0;
+#X connect 26 0 86 0;
+#X connect 27 0 86 1;
+#X connect 28 0 86 0;
+#X connect 28 1 11 0;
+#X connect 29 0 27 0;
+#X connect 30 0 28 0;
+#X connect 31 0 95 1;
+#X connect 33 0 44 0;
+#X connect 34 0 44 0;
+#X connect 35 0 36 0;
+#X connect 36 0 34 0;
+#X connect 36 1 90 1;
+#X connect 37 0 39 0;
+#X connect 38 0 37 1;
+#X connect 39 0 41 0;
+#X connect 39 1 40 0;
+#X connect 40 0 92 0;
+#X connect 41 0 90 0;
+#X connect 42 0 30 0;
+#X connect 43 0 42 1;
+#X connect 44 0 90 1;
+#X connect 47 0 13 0;
+#X connect 47 0 85 0;
+#X connect 48 0 85 0;
+#X connect 49 0 47 0;
+#X connect 50 0 48 0;
+#X connect 51 0 88 0;
+#X connect 52 0 51 0;
+#X connect 53 0 88 0;
+#X connect 70 0 5 0;
+#X connect 73 0 63 0;
+#X connect 73 0 99 0;
+#X connect 74 0 82 0;
+#X connect 75 0 81 0;
+#X connect 76 0 97 0;
+#X connect 79 0 93 0;
+#X connect 80 0 97 0;
+#X connect 89 0 87 0;
+#X connect 92 0 35 0;
+#X connect 93 0 64 0;
+#X connect 93 1 65 0;
+#X connect 93 2 66 0;
+#X connect 93 3 67 0;
+#X connect 93 4 68 0;
+#X connect 93 5 69 0;
+#X connect 93 6 71 0;
+#X connect 93 7 72 0;
+#X connect 93 8 94 0;
+#X connect 93 9 77 0;
+#X connect 95 0 22 0;
+#X connect 96 0 93 0;
+#X connect 97 0 2 0;
+#X connect 97 1 4 0;
+#X connect 97 2 5 0;
+#X connect 97 3 6 0;
+#X connect 97 4 6 0;
+#X connect 97 5 6 0;
+#X connect 97 6 57 0;
+#X connect 97 7 6 0;
+#X connect 97 8 6 0;
+#X connect 97 9 6 0;
+#X connect 97 10 6 0;
+#X connect 97 11 6 0;
+#X connect 97 12 98 0;
+#X connect 97 13 78 0;
+#X connect 98 0 97 0;
+#X connect 99 0 81 0;
+#X connect 100 0 99 1;
+#X coords 0 -1 1 1 400 100 1 100 100;
+#X restore 100 198 pd tocontrolcnv_COMPORT;
+#N canvas 473 176 851 775 MASTER_Receive_to_control 0;
+#X obj 99 305 cnv 15 400 400 empty empty empty 20 12 0 14 -261682 -66577
+0;
+#X obj 305 376 bng 15 250 50 0 Edit_local_command empty Edit_local_command
+17 7 0 10 -257985 -1 -1;
+#X obj 108 343 r local_command;
+#X msg 108 369 \; audio_Local \$1 \; audio_OSC_CTRL \$2 \; audio_OSC_EXEC
+\$3 \; audio_Xbee \$4 \; audio_Print \$5 \; goto_Local \$1 \; goto_OSC_CTRL
+\$2 \; goto_OSC_EXEC \$3 \; goto_Xbee \$4 \; goto_Print \$5 \; InCue_Local
+\$1 \; InCue_OSC_CTRL \$2 \; InCue_OSC_EXEC \$3 \; InCue_Xbee \$4 \;
+InCue_Print \$5 \; midi_Local \$1 \; midi_OSC_CTRL \$2 \; midi_OSC_EXEC
+\$3 \; midi_Xbee \$4 \; midi_Print \$5 \; f-dmx_Local \$1 \; f-dmx_OSC_CTRL
+\$2 \; f-dmx_OSC_EXEC \$3 \; f-dmx_Xbee \$4 \; f-dmx_Print \$5 \; set-dmx_Local
+\$1 \; set-dmx_OSC_CTRL \$2 \; set-dmx_OSC_EXEC \$3 \; set-dmx_Xbee
+\$4 \; set-dmx_Print \$5 \; aplay_Local \$1 \; aplay_OSC_CTRL \$2 \;
+aplay_OSC_EXEC \$3 \; aplay_Xbee \$4 \; aplay_Print \$5 \; f-SELECT_Local
+\$1 \; f-SELECT_OSC_CTRL \$2 \; f-SELECT_OSC_EXEC \$3 \; f-SELECT_Xbee
+\$4 \; f-SELECT_Print \$5 \; gpio_Local \$1 \; gpio_OSC_CTRL \$2 \;
+gpio_OSC_EXEC \$3 \; gpio_Xbee \$4 \; gpio_Print \$5 \; audio_Local
+\$1 \; audio_OSC_CTRL \$2 \; audio_OSC_EXEC \$3 \; audio_Xbee \$4 \;
+audio_Print \$5 \; goto_Local \$1 \; goto_OSC_CTRL \$2 \; goto_OSC_EXEC
+\$3 \; goto_Xbee \$4 \; goto_Print \$5 \; InCue_Local \$1 \; InCue_OSC_CTRL
+\$2 \; InCue_OSC_EXEC \$3 \; InCue_Xbee \$4 \; InCue_Print \$5 \; midi_Local
+\$1 \; midi_OSC_CTRL \$2 \; midi_OSC_EXEC \$3 \; midi_Xbee \$4 \; midi_Print
+\$5 \; f-dmx_Local \$1 \; f-dmx_OSC_CTRL \$2 \; f-dmx_OSC_EXEC \$3
+\; f-dmx_Xbee \$4 \; f-dmx_Print \$5 \; set-dmx_Local \$1 \; set-dmx_OSC_CTRL
+\$2 \; set-dmx_OSC_EXEC \$3 \; set-dmx_Xbee \$4 \; set-dmx_Print \$5
+\; aplay_Local \$1 \; aplay_OSC_CTRL \$2 \; aplay_OSC_EXEC \$3 \; aplay_Xbee
+\$4 \; aplay_Print \$5 \; f-SELECT_Local \$1 \; f-SELECT_OSC_CTRL \$2
+\; f-SELECT_OSC_EXEC \$3 \; f-SELECT_Xbee \$4 \; f-SELECT_Print \$5
+\; gpio_Local \$1 \; gpio_OSC_CTRL \$2 \; gpio_OSC_EXEC \$3 \; gpio_Xbee
+\$4 \; gpio_Print \$5 \; audio_Local \$1 \; audio_OSC_CTRL \$2 \; audio_OSC_EXEC
+\$3 \; audio_Xbee \$4 \; audio_Print \$5 \; goto_Local \$1 \; goto_OSC_CTRL
+\$2 \; goto_OSC_EXEC \$3 \; goto_Xbee \$4 \; goto_Print \$5 \; InCue_Local
+\$1 \; InCue_OSC_CTRL \$2 \; InCue_OSC_EXEC \$3 \; InCue_Xbee \$4 \;
+InCue_Print \$5 \; midi_Local \$1 \; midi_OSC_CTRL \$2 \; midi_OSC_EXEC
+\$3 \; midi_Xbee \$4 \; midi_Print \$5 \; f-dmx_Local \$1 \; f-dmx_OSC_CTRL
+\$2 \; f-dmx_OSC_EXEC \$3 \; f-dmx_Xbee \$4 \; f-dmx_Print \$5 \; set-dmx_Local
+\$1 \; set-dmx_OSC_CTRL \$2 \; set-dmx_OSC_EXEC \$3 \; set-dmx_Xbee
+\$4 \; set-dmx_Print \$5 \; aplay_Local \$1 \; aplay_OSC_CTRL \$2 \;
+aplay_OSC_EXEC \$3 \; aplay_Xbee \$4 \; aplay_Print \$5 \; f-SELECT_Local
+\$1 \; f-SELECT_OSC_CTRL \$2 \; f-SELECT_OSC_EXEC \$3 \; f-SELECT_Xbee
+\$4 \; f-SELECT_Print \$5 \; gpio_Local \$1 \; gpio_OSC_CTRL \$2 \;
+gpio_OSC_EXEC \$3 \; gpio_Xbee \$4 \; gpio_Print \$5 \; audio_Local
+\$1 \; audio_OSC_CTRL \$2 \; audio_OSC_EXEC \$3 \; audio_Xbee \$4 \;
+audio_Print \$5 \; goto_Local \$1 \; goto_OSC_CTRL \$2 \; goto_OSC_EXEC
+\$3 \; goto_Xbee \$4 \; goto_Print \$5 \; InCue_Local \$1 \; InCue_OSC_CTRL
+\$2 \; InCue_OSC_EXEC \$3 \; InCue_Xbee \$4 \; InCue_Print \$5 \; midi_Local
+\$1 \; midi_OSC_CTRL \$2 \; midi_OSC_EXEC \$3 \; midi_Xbee \$4 \; midi_Print
+\$5 \; f-dmx_Local \$1 \; f-dmx_OSC_CTRL \$2 \; f-dmx_OSC_EXEC \$3
+\; f-dmx_Xbee \$4 \; f-dmx_Print \$5 \; set-dmx_Local \$1 \; set-dmx_OSC_CTRL
+\$2 \; set-dmx_OSC_EXEC \$3 \; set-dmx_Xbee \$4 \; set-dmx_Print \$5
+\; aplay_Local \$1 \; aplay_OSC_CTRL \$2 \; aplay_OSC_EXEC \$3 \; aplay_Xbee
+\$4 \; aplay_Print \$5 \; f-SELECT_Local \$1 \; f-SELECT_OSC_CTRL \$2
+\; f-SELECT_OSC_EXEC \$3 \; f-SELECT_Xbee \$4 \; f-SELECT_Print \$5
+\; gpio_Local \$1 \; gpio_OSC_CTRL \$2 \; gpio_OSC_EXEC \$3 \; gpio_Xbee
+\$4 \; gpio_Print \$5 \;;
+#X msg 332 355 set \, add;
+#X obj 305 330 t b b;
+#X obj 108 317 bng 15 250 50 0 empty empty Edit_command 17 7 0 10 -257985
+-1 -1;
+#X obj 100 100 cnv 15 399 180 empty empty empty 4 6 0 8 -260097 -4160
+0;
+#X obj 301 113 Receive_to_control audio;
+#X obj 201 164 Receive_to_control goto;
+#X obj 201 215 Receive_to_control InCue;
+#X obj 201 113 Receive_to_control midi;
+#X obj 401 164 Receive_to_control f-dmx;
+#X obj 401 215 Receive_to_control set-dmx;
+#X obj 301 215 Receive_to_control aplay;
+#X obj 113 247 tgl 15 0 PrintM empty PrintM 20 8 0 7 -128992 -262130
+-1 0 1;
+#X obj 401 113 Receive_to_control f-SELECT;
+#X obj 301 164 Receive_to_control gpio;
+#X connect 2 0 3 0;
+#X connect 4 0 3 0;
+#X connect 5 0 1 0;
+#X connect 5 1 4 0;
+#X connect 6 0 5 0;
+#X coords 0 -1 1 1 400 181 1 100 100;
+#X restore 500 117 pd MASTER_Receive_to_control;
+#X obj 100 299 CueLoader/SEQUENCE 1;
+#X obj 100 400 CueLoader/SceneLoader_V2 LGQ;
+#X floatatom 666 600 5 0 0 0 tracking_Cue_List - tracking_Cue_List
+;
+#X obj 570 558 bng 15 250 50 0 next_scene_list empty next_scene_list
+17 7 0 10 -262144 -1 -1;
+#X obj 570 577 bng 15 250 50 0 previous_scene_list empty previous_scene_list
+17 7 0 10 -262144 -1 -1;
+#X obj 724 584 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X connect 9 0 6 0;
+#X coords 0 -1 1 1 800 380 1 100 100;

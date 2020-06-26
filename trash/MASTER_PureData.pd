@@ -1,0 +1,330 @@
+#N canvas 8 501 1638 530 10;
+#X obj 1 1 cnv 15 1240 3000 empty empty empty 20 12 0 14 -191407 -66577
+0;
+#X obj 20 19 cnv 15 700 1400 empty empty HELLO_WORLD! 20 12 2 14 -45076
+-262144 0;
+#X obj 124 950 cnv 15 500 120 empty empty SALON 20 12 0 14 -204800
+-258113 0;
+#X obj 124 445 cnv 15 500 100 empty empty AUDIO 20 12 0 14 -262130
+-258113 0;
+#X obj 124 344 cnv 15 500 100 empty empty DMX 20 12 0 14 -204800 -258113
+0;
+#X obj 124 546 cnv 15 500 100 empty empty OLA 20 12 0 14 -204800 -258113
+0;
+#X obj 124 647 cnv 15 500 100 empty empty GPIO 20 12 0 14 -262130 -258113
+0;
+#X obj 124 748 cnv 15 500 100 empty empty MIDI 20 12 0 14 -204800 -258113
+0;
+#X obj 124 1071 cnv 15 500 100 empty empty labl 20 12 0 14 -262130
+-258113 0;
+#X obj 124 849 cnv 15 500 100 empty empty XBEE 20 12 0 14 -262130 -258113
+0;
+#X obj 126 1207 cnv 15 100 60 empty empty empty 20 12 0 14 -233017
+-66577 0;
+#X obj 126 1216 cnv 15 100 60 empty empty empty 20 12 0 14 -233017
+-66577 0;
+#X obj 126 1216 cnv 15 100 60 empty empty empty 20 12 0 14 -233017
+-66577 0;
+#X obj 126 1216 cnv 15 100 60 empty empty empty 20 12 0 14 -233017
+-66577 0;
+#X obj 126 1216 cnv 15 100 60 empty empty empty 20 12 0 14 -233017
+-66577 0;
+#X obj 126 1216 cnv 15 100 60 empty empty empty 20 12 0 14 -233017
+-66577 0;
+#X obj 126 1216 cnv 15 100 60 empty empty empty 20 12 0 14 -233017
+-66577 0;
+#X obj 126 1216 cnv 15 100 60 empty empty empty 20 12 0 14 -233017
+-66577 0;
+#X obj 126 1216 cnv 15 100 60 empty empty empty 20 12 0 14 -233017
+-66577 0;
+#X obj 126 1216 cnv 15 100 60 empty empty empty 20 12 0 14 -233017
+-66577 0;
+#X obj 126 1216 cnv 15 100 60 empty empty empty 20 12 0 14 -233017
+-66577 0;
+#X obj 126 1216 cnv 15 100 60 empty empty empty 20 12 0 14 -233017
+-66577 0;
+#X obj 126 1216 cnv 15 100 60 empty empty empty 20 12 0 14 -233017
+-66577 0;
+#X obj 126 1216 cnv 15 100 60 empty empty empty 20 12 0 14 -233017
+-66577 0;
+#X obj 126 1216 cnv 15 100 60 empty empty empty 20 12 0 14 -233017
+-66577 0;
+#X obj 126 1216 cnv 15 100 60 empty empty empty 20 12 0 14 -233017
+-66577 0;
+#X obj 126 1216 cnv 15 100 60 empty empty empty 20 12 0 14 -233017
+-66577 0;
+#X obj 126 1216 cnv 15 100 60 empty empty empty 20 12 0 14 -233017
+-66577 0;
+#X obj 126 1216 cnv 15 100 60 empty empty empty 20 12 0 14 -233017
+-66577 0;
+#X obj 126 1216 cnv 15 100 60 empty empty empty 20 12 0 14 -233017
+-66577 0;
+#X obj 126 1216 cnv 15 100 60 empty empty empty 20 12 0 14 -233017
+-66577 0;
+#X obj 126 1216 cnv 15 100 60 empty empty empty 20 12 0 14 -233017
+-66577 0;
+#X obj 126 1216 cnv 15 100 60 empty empty empty 20 12 0 14 -233017
+-66577 0;
+#X obj 126 1216 cnv 15 100 60 empty empty empty 20 12 0 14 -233017
+-66577 0;
+#X obj 126 1216 cnv 15 100 60 empty empty empty 20 12 0 14 -233017
+-66577 0;
+#X obj 126 1216 cnv 15 100 60 empty empty empty 20 12 0 14 -233017
+-66577 0;
+#X obj 126 1216 cnv 15 100 60 empty empty empty 20 12 0 14 -233017
+-66577 0;
+#X obj 126 1216 cnv 15 100 60 empty empty empty 20 12 0 14 -233017
+-66577 0;
+#X obj 126 1216 cnv 15 100 60 empty empty empty 20 12 0 14 -233017
+-66577 0;
+#X obj 123 41 cnv 15 500 100 empty empty empty 20 12 0 14 -228856 -66577
+0;
+#X obj 124 244 cnv 15 500 100 empty empty COMMANDES 20 12 0 14 -262130
+-258113 0;
+#X msg 124 65 /home/pi/StuART/SCRIPT/restart_HEADER_PureData;
+#X msg 149 724 gpio write 21 0;
+#X msg 149 707 gpio write 21 1;
+#X msg 149 690 gpio mode 21 out;
+#X msg 123 320 pwd;
+#X msg 123 303 hostname;
+#X msg 123 286 hostname -I;
+#X msg 124 565 ./StuART/SCRIPT/restart_OLA;
+#X msg 124 482 pd ./StuART/player_Stereo/temp_player_Stereo.pd;
+#X msg 124 499 pd ./StuART/player_Stereo/temp_player_Stereo_remote.pd
+;
+#X msg 124 382 pd ./StuART/DMX/SALON_faderdmx.pd;
+#X obj 1026 898 print WTF;
+#X obj 26 661 send to_shell;
+#X msg 123 269 sudo reboot;
+#N canvas 1 163 1418 588 SELECT 0;
+#X obj 100 100 cnv 15 500 100 empty SELECT RESEAU 20 12 0 14 -99865
+-4032 0;
+#X text 81 358 FFM;
+#X obj 1105 169 symbol;
+#X symbolatom 100 186 50 0 0 0 - - -, f 50;
+#X text 196 276 localhost;
+#X text 164 304 SALON;
+#X text 129 335 god;
+#X obj 348 59 cyclone/prepend /SHELL;
+#X obj 937 22 r to_shell;
+#X obj 549 127 tgl 50 0 empty t_SELECT IP 5 25 0 10 -260818 -260818
+-44926 0 1;
+#X obj 550 228 route 0 1;
+#X obj 348 39 spigot 1;
+#X obj 401 16 tgl 15 0 empty spigot-ip empty 17 7 0 10 -262144 -1 -1
+0 1;
+#X obj 1158 16 tgl 15 0 empty spigot-local empty 17 7 0 10 -262144
+-1 -1 0 1;
+#X obj 1105 39 spigot 0;
+#X obj 643 139 r connect;
+#X obj 111 553 s connect;
+#X obj 111 130 bng 50 250 50 0 empty empty FFM 10 25 0 12 -260097 -1
+-4032;
+#X obj 171 130 bng 50 250 50 0 empty empty god 10 25 0 12 -260097 -1
+-4032;
+#X obj 231 130 bng 50 250 50 0 empty empty salon 10 25 0 12 -260097
+-1 -4032;
+#X obj 291 130 bng 50 250 50 0 empty empty teleco 10 25 0 12 -260097
+-1 -4032;
+#X msg 580 266 \; t_SELECT color 14 14 17 \; t_SELECT label IP \; spigot-local
+0 \; spigot-ip 1;
+#X msg 550 347 \; t_SELECT color 17 17 14 \; t_SELECT label LOCAL \;
+spigot-local 1 \; spigot-ip 0;
+#X obj 1105 63 ggee/shell;
+#X obj 360 130 bng 50 250 50 0 empty empty DMX 10 25 0 12 -260097 -1
+-4032;
+#X obj 420 130 bng 50 250 50 0 empty empty MOTOR 10 25 0 12 -260097
+-1 -4032;
+#X obj 480 130 bng 50 250 50 0 empty empty nano 10 25 0 12 -260097
+-1 -4032;
+#X obj 348 101 OSC/OSCsender 127.0.0.1 9999 MASTER;
+#X obj 110 217 t b b;
+#X obj 142 234 s a;
+#X obj 627 240 r a;
+#X obj 170 217 t b b;
+#X obj 202 234 s a;
+#X obj 230 217 t b b;
+#X obj 262 234 s a;
+#X obj 290 217 t b b;
+#X obj 322 234 s a;
+#X obj 360 217 t b b;
+#X obj 392 234 s a;
+#X obj 420 217 t b b;
+#X obj 452 234 s a;
+#X obj 480 217 t b b;
+#X obj 512 234 s a;
+#X msg 160 333 connect 192.168.1.120 9999;
+#X msg 111 356 connect 192.168.1.110 9999;
+#X msg 272 436 connect 192.168.1.104 9999;
+#X msg 268 274 connect 192.168.1.102 9999;
+#X msg 303 411 connect 192.168.1.101 9999;
+#X msg 210 303 connect 192.168.1.106 9999;
+#X obj 325 529 s a;
+#X obj 293 512 t a b;
+#X obj 293 487 r connectt;
+#X msg 337 383 connect 192.168.1.112 9999;
+#X connect 2 0 3 0;
+#X connect 7 0 27 0;
+#X connect 8 0 11 0;
+#X connect 8 0 14 0;
+#X connect 9 0 10 0;
+#X connect 10 0 22 0;
+#X connect 10 1 21 0;
+#X connect 11 0 7 0;
+#X connect 12 0 11 1;
+#X connect 13 0 14 1;
+#X connect 14 0 23 0;
+#X connect 15 0 27 1;
+#X connect 17 0 28 0;
+#X connect 18 0 31 0;
+#X connect 19 0 33 0;
+#X connect 20 0 35 0;
+#X connect 23 0 2 0;
+#X connect 24 0 37 0;
+#X connect 25 0 39 0;
+#X connect 26 0 41 0;
+#X connect 28 0 44 0;
+#X connect 28 1 29 0;
+#X connect 30 0 21 0;
+#X connect 31 0 43 0;
+#X connect 31 1 32 0;
+#X connect 33 0 48 0;
+#X connect 33 1 34 0;
+#X connect 35 0 46 0;
+#X connect 35 1 36 0;
+#X connect 37 0 45 0;
+#X connect 37 1 38 0;
+#X connect 39 0 47 0;
+#X connect 39 1 40 0;
+#X connect 41 0 52 0;
+#X connect 41 1 42 0;
+#X connect 43 0 16 0;
+#X connect 44 0 16 0;
+#X connect 45 0 16 0;
+#X connect 46 0 16 0;
+#X connect 47 0 16 0;
+#X connect 48 0 16 0;
+#X connect 50 0 16 0;
+#X connect 50 1 49 0;
+#X connect 51 0 50 0;
+#X connect 52 0 16 0;
+#X coords 0 -1 1 1 500 100 1 100 100;
+#X restore 124 143 pd SELECT;
+#X msg 124 770 ./StuART/SCRIPT/OPEN_MIDI 127.0.0.1 9000 20 128;
+#X msg 126 521 pd ./StuART/player_Stereo/AUDIO-TEST.pd;
+#X msg 124 819 pd ./StuART/MIDI/MIDI-TEST.pd;
+#X msg 124 669 ./StuART/SCRIPT/OSC_to_GPIO 6000;
+#X obj 620 2070 ggee/image ../Pictures/LGQ.gif;
+#X obj 413 2229 send to_shell;
+#X msg 142 415 faire un DMX-TEST.pd;
+#X msg 124 365 ./StuART/SCRIPT/OPEN_FADERS 24 192.168.1.104 8512;
+#X msg 124 582 ./StuART/SCRIPT/OSC_to_OLA 8512 1;
+#X msg 124 465 ./StuART/SCRIPT/CREATE_PLAYERS_and_REMOTES 7 127.0.0.1
+8888 8889, f 64;
+#X msg 124 499 pd ./StuART/player_Stereo/temp_player_Stereo_remote.pd
+;
+#X msg 124 790 ./StuART/SCRIPT/OPEN_MIDI 192.168.1.120 9000 20 128
+;
+#X msg 124 870 pd ./StuART/XBEE/XBEE_test.pd;
+#X obj 620 2483 image ../Pictures/ARTEPHILE.gif;
+#X msg 376 2347 ./StuART/SCRIPT/OSC_to_OLA 8512 1;
+#X msg 376 2369 ./StuART/SCRIPT/OPEN_FADERS 9 192.168.1.104 8512;
+#X msg 377 2408 pd ./StuART/player_Stereo/ARTEPHILE_player_Stereo_remote.pd
+;
+#X msg 379 2466 pd -alsa -audiodev 3 -outchannels 6 ./StuART/CueLoader/SceneLoader_ARTEPHILE.pd
+, f 82;
+#X msg 379 2494 pd -alsa -audiodev 3 -outchannels 6 /home/pi/StuART/CueLoader/SceneLoader_ARTEPHILE.pd
+, f 82;
+#X obj 335 2563 send to_shell;
+#N canvas 335 353 1014 240 SALON 0;
+#X obj 101 101 cnv 30 400 100 empty empty empty 20 12 0 14 -83269 -66577
+0;
+#X obj 100 100 cnv 15 397 97 empty empty empty 20 12 0 14 -257985 -66577
+0;
+#X msg 299 181 pd ./StuART/CueLoader/SceneLoader_SALON.pd;
+#X msg 299 147 ./StuART/SCRIPT/OSC_to_OLA 8512 1;
+#X msg 299 164 ./StuART/SCRIPT/OSC_to_GPIO 6000;
+#X msg 536 147 ./StuART/SCRIPT/OPEN_MIDI 192.168.1.106 9000 20 128
+;
+#X msg 511 127 connect 192.168.1.106 9999;
+#X obj 112 107 bng 20 250 50 0 empty empty Connect_SALON 20 10 2 20
+-260097 -1 -260097;
+#X obj 297 107 bng 20 250 50 0 empty empty Connect_NANO 20 10 2 20
+-260097 -1 -260097;
+#X msg 706 127 connect 192.168.1.112 9999;
+#X obj 122 127 bng 20 250 50 0 empty empty Run_OSCtoOLA 20 10 2 20
+-4034 -1 -13381;
+#X obj 122 147 bng 20 250 50 0 empty empty Run_OSCtoGPIO 20 10 2 20
+-4034 -1 -13381;
+#X obj 122 167 bng 20 250 50 0 empty empty Run_SceneLoader 20 10 2
+20 -4034 -1 -13381;
+#X obj 307 127 bng 20 250 50 0 empty empty Run_OPEN_MIDI 20 10 2 20
+-4034 -1 -13381;
+#X obj 299 216 send to_shell;
+#X obj 924 144 s connectt;
+#X connect 2 0 14 0;
+#X connect 3 0 14 0;
+#X connect 4 0 14 0;
+#X connect 5 0 14 0;
+#X connect 6 0 15 0;
+#X connect 7 0 6 0;
+#X connect 8 0 9 0;
+#X connect 9 0 15 0;
+#X connect 10 0 3 0;
+#X connect 11 0 4 0;
+#X connect 12 0 2 0;
+#X connect 13 0 5 0;
+#X coords 0 -1 1 1 401 101 1 100 100;
+#X restore 764 76 pd SALON;
+#X obj 620 1660 ggee/image ../Pictures/FFM.gif;
+#X obj 470 1826 send to_shell;
+#X msg 470 1564 /home/pi/Desktop/FFM;
+#X msg 470 1669 pd ./Documents/pd/Video_FFM.pd &;
+#X msg 470 1612 ./StuART/SCRIPT/OSC_to_OLA 8512 1;
+#X msg 470 1723 pd -alsamidi -midiindev 1 -midioutdev 1 ./StuART/player_Stereo/FFM_remote.pd
+&, f 79;
+#X msg 470 1686 pd -alsa -audiodev 3 -outchannels 6 ./StuART/player_Stereo/FFM_audio.pd
+&, f 75;
+#X msg 470 1741 ./StuART/SCRIPT/OPEN_MIDI 192.168.43.91 9000 20 128
+;
+#X text 420 1599 sur DMX;
+#X text 420 1646 sur FFM;
+#X text 420 1709 sur god;
+#X msg 470 1782 ./StuART/SCRIPT/OPEN_MIDI 192.168.43.91 9000 20 128
+;
+#X text 413 1769 sur nano;
+#X msg 379 2146 pd -alsa -audiodev 3 -outchannels 6 ./StuART/CueLoader/SceneLoader_LGQ.pd
+, f 82;
+#X msg 379 2106 pd ./StuART/CueLoader/SceneLoader_LGQ.pd, f 82;
+#X connect 41 0 53 0;
+#X connect 42 0 53 0;
+#X connect 43 0 53 0;
+#X connect 44 0 53 0;
+#X connect 45 0 53 0;
+#X connect 46 0 53 0;
+#X connect 47 0 53 0;
+#X connect 48 0 53 0;
+#X connect 49 0 53 0;
+#X connect 50 0 53 0;
+#X connect 51 0 53 0;
+#X connect 54 0 53 0;
+#X connect 56 0 53 0;
+#X connect 57 0 53 0;
+#X connect 58 0 53 0;
+#X connect 59 0 53 0;
+#X connect 63 0 53 0;
+#X connect 64 0 53 0;
+#X connect 65 0 53 0;
+#X connect 67 0 53 0;
+#X connect 68 0 53 0;
+#X connect 73 0 75 0;
+#X connect 74 0 75 0;
+#X connect 79 0 78 0;
+#X connect 80 0 78 0;
+#X connect 81 0 78 0;
+#X connect 82 0 78 0;
+#X connect 83 0 78 0;
+#X connect 84 0 78 0;
+#X connect 88 0 78 0;
+#X connect 90 0 61 0;
+#X connect 91 0 61 0;

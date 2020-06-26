@@ -1,0 +1,4 @@
+#!/bin/bash
+# cherche, dans les dossiers DMX et Cue et leurs sous-dossiers,
+# $1 et le remplace par $2. la recherche se limite aux fichiers .pd et .coll
+find ./DMX ./Cue -regex '.*\.\(pd\|coll\)$' -print | xargs sed -i -e s/$1/$2/;

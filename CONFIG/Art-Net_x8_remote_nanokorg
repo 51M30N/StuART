@@ -1,0 +1,4 @@
+MIDI_CONNECT-1 20 128;
+OpDmx_encoder_universe 0 1 0;
+OpDmx_encoder_IP_cible connect 169 254 27 247;
+SpeedLim 2;

@@ -1,0 +1,6 @@
+#N canvas 33 239 451 222 10;
+#X msg 18 24 red;
+#X msg 58 24 blue;
+#X obj 14 86 XBEE/XBEE_box 4;
+#X connect 0 0 2 2;
+#X connect 1 0 2 2;

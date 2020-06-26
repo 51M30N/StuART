@@ -1,0 +1,11 @@
+0 fader parjar
+1 fader parjar2
+2 fader parcour2
+3 fader parcour
+6 fader DIM1
+7 fader DIM2
+21 fader RED
+22 fader GREEN
+23 fader BLUE
+
+16 fader SALLE

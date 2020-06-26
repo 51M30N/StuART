@@ -1,0 +1,680 @@
+#N canvas 0 74 1920 1006 10;
+#X obj 101 401 cnv 15 198 178 empty empty empty 20 12 0 14 -233017
+-66577 0;
+#X msg 820 95 0 33;
+#X text 722 96 Opcode 0x2100;
+#X text 743 54 Art_Net0x0;
+#X text 792 116 IP;
+#X msg 820 145 54 25;
+#X msg 820 175 0 0;
+#X text 688 176 VersInfo_Firmware;
+#X text 716 206 NetSwitch_NET;
+#X text 695 236 NetSwitch_SubNET;
+#X text 724 296 UBEA_version;
+#X msg 820 295 0;
+#X text 759 326 Status1;
+#X msg 820 355 112 100;
+#X text 780 356 ESTA;
+#X msg 1260 313 pd;
+#X msg 820 385 83 116 117 65 82 84 45 78 111 100 101 0 0 0 0 0 0 0
+;
+#X text 745 386 ShortName;
+#X text 752 424 LongName;
+#X msg 820 467 35 48 48 48 49 32 91 49 93 32 112 100 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0;
+#X text 738 478 NodeReport;
+#X text 752 516 NumPorts;
+#X msg 820 518 0 4;
+#X text 745 546 PortTypes;
+#X text 745 576 GoodInput;
+#X text 738 606 GoodOutput;
+#X text 745 737 MacAdress;
+#X msg 820 736 0 0 0 0 0 0;
+#X text 766 757 BindIp;
+#X text 745 777 BindIndex;
+#X text 759 796 Status2;
+#X text 766 816 Filler;
+#X msg 820 815 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+;
+#X obj 639 905 prepend set;
+#X obj 639 879 t a a;
+#X obj 639 851 list prepend;
+#X obj 75 -59 t b b b b b b b b b b b b b b b b b b b b b b b b b b
+b b b b b b b b b b b b b b b b b b b b b b b b b b b b b b b b b b
+b b b b, f 120;
+#X obj 890 10 bng 15 250 50 0 empty Updade-\$0 Updade-\$0 17 7 0 10
+-204786 -1 -1;
+#X obj 964 895 list length;
+#X floatatom 964 919 5 0 0 0 - - -;
+#X obj 327 963 outlet;
+#X obj 328 348 inlet;
+#N canvas 595 208 814 638 IP 0;
+#X obj 71 10 loadbang;
+#X msg 103 135 hostname -I;
+#X obj 103 160 ggee/shell;
+#X obj 103 215 list fromsymbol;
+#X obj 103 185 symbol;
+#X obj 103 425 list tosymbol;
+#X obj 103 240 list split 1;
+#X obj 128 370 list;
+#X obj 103 398 list;
+#X obj 143 265 list;
+#X obj 128 345 list append;
+#X obj 103 293 route 46;
+#X obj 103 318 bang;
+#X obj 184 300 del;
+#X obj 103 506 list;
+#X obj 103 481 list append;
+#X obj 103 105 t b b;
+#X obj 41 613 outlet;
+#X obj 27 10 inlet;
+#X obj 41 533 list;
+#X obj 71 52 t b b;
+#X obj 41 77 del 500;
+#X msg 41 572 set \, add2 \$1 \$2 \$3 \$4;
+#X obj 103 450 f;
+#X obj 256 551 prepend \$0;
+#X obj 274 296 prepend \$0;
+#X obj 274 279 bng 15 250 50 0 empty raz raz 17 7 0 10 -228856 -1 -1
+;
+#X obj 201 101 cnv 15 198 18 empty IP-lbl_\$0 IP==169.254.237.167 2
+10 0 10 -233017 -66577 0;
+#X msg 274 318 \; IP-lbl_\$1 label IP-lbl_#0;
+#X obj 381 103 bng 15 500 50 0 empty empty Reload-IP -60 7 0 10 -204786
+-159808 -1;
+#X msg 256 589 \; IP-lbl_\$1 label IP==\$2.\$3.\$4.\$5;
+#X connect 0 0 29 0;
+#X connect 1 0 2 0;
+#X connect 2 0 4 0;
+#X connect 3 0 6 0;
+#X connect 4 0 3 0;
+#X connect 5 0 23 0;
+#X connect 6 0 11 0;
+#X connect 6 1 9 0;
+#X connect 6 2 13 0;
+#X connect 7 0 8 1;
+#X connect 7 0 10 1;
+#X connect 8 0 5 0;
+#X connect 9 0 6 0;
+#X connect 10 0 7 0;
+#X connect 11 0 12 0;
+#X connect 11 1 10 0;
+#X connect 12 0 8 0;
+#X connect 12 0 10 1;
+#X connect 13 0 12 0;
+#X connect 14 0 15 1;
+#X connect 14 0 19 1;
+#X connect 15 0 14 0;
+#X connect 16 0 1 0;
+#X connect 16 1 15 1;
+#X connect 18 0 20 0;
+#X connect 19 0 22 0;
+#X connect 19 0 24 0;
+#X connect 20 0 21 0;
+#X connect 20 1 16 0;
+#X connect 21 0 19 0;
+#X connect 22 0 17 0;
+#X connect 23 0 15 0;
+#X connect 24 0 30 0;
+#X connect 25 0 28 0;
+#X connect 26 0 25 0;
+#X connect 29 0 20 0;
+#X coords 0 -1 1 1 200 20 2 200 100;
+#X restore 100 418 pd IP;
+#N canvas 110 145 450 300 ESTA 0;
+#X obj 37 37 inlet;
+#X obj 37 212 outlet;
+#X obj 37 119 list fromsymbol;
+#X obj 37 142 prepend set;
+#X obj 37 97 symbol;
+#X connect 0 0 4 0;
+#X connect 2 0 3 0;
+#X connect 3 0 1 0;
+#X connect 4 0 2 0;
+#X restore 1260 338 pd ESTA;
+#N canvas 525 125 725 437 Short-Name 0;
+#X obj 73 97 list fromsymbol;
+#X obj 73 356 prepend set;
+#X obj 73 69 symbol;
+#X obj 73 142 list length;
+#X floatatom 73 166 5 0 0 0 - - -;
+#X obj 73 212 abs;
+#X floatatom 73 236 5 0 0 0 - - -;
+#X obj 73 259 until;
+#X obj 73 283 + 0;
+#X obj 73 120 t a a;
+#X obj 73 330 t a a;
+#X obj 73 306 list prepend;
+#X obj 73 188 - 18;
+#X obj 73 381 outlet;
+#X obj 11 47 inlet;
+#X obj 275 186 prepend \$0;
+#X symbolatom 202 102 25 0 0 0 - - -;
+#X obj 73 14 loadbang;
+#X obj 274 296 prepend \$0;
+#X obj 274 279 bng 15 250 50 0 empty raz raz 17 7 0 10 -228856 -1 -1
+;
+#X msg 274 318 \; short-name-lbl_\$1 label short-name-lbl_#0;
+#X msg 275 224 \; short-name-lbl_\$1 label \$2;
+#X msg 73 42 StuART-Node;
+#X obj 201 100 cnv 15 198 20 empty short-name-lbl_\$0 StuART-Node 2
+10 0 10 -233017 -159808 0;
+#X connect 0 0 9 0;
+#X connect 1 0 13 0;
+#X connect 2 0 0 0;
+#X connect 3 0 4 0;
+#X connect 4 0 12 0;
+#X connect 5 0 6 0;
+#X connect 6 0 7 0;
+#X connect 7 0 8 0;
+#X connect 8 0 11 0;
+#X connect 9 0 3 0;
+#X connect 9 1 11 1;
+#X connect 10 0 1 0;
+#X connect 10 1 11 1;
+#X connect 11 0 10 0;
+#X connect 12 0 5 0;
+#X connect 14 0 2 0;
+#X connect 15 0 21 0;
+#X connect 16 0 15 0;
+#X connect 17 0 22 0;
+#X connect 18 0 20 0;
+#X connect 19 0 18 0;
+#X connect 22 0 15 0;
+#X connect 22 0 2 0;
+#X coords 0 -1 1 1 200 20 2 200 100;
+#X restore 100 439 pd Short-Name;
+#N canvas 0 110 972 647 NodeReport 0;
+#X obj 120 516 outlet;
+#X obj 91 24 inlet;
+#X obj 120 480 prepend set;
+#X obj 120 254 list length;
+#X floatatom 120 278 5 0 0 0 - - -;
+#X obj 120 324 abs;
+#X floatatom 120 348 5 0 0 0 - - -;
+#X obj 120 371 until;
+#X obj 120 395 + 0;
+#X obj 120 232 t a a;
+#X obj 120 442 t a a;
+#X obj 120 418 list prepend;
+#X obj 120 300 - 64;
+#X obj 201 122 list fromsymbol;
+#X msg 271 60 set 0;
+#X obj 201 188 list;
+#X obj 201 144 list append 32;
+#X obj 201 166 list prepend;
+#X obj 201 78 cycle 3;
+#X obj 247 100 list fromsymbol;
+#X msg 201 20 #0001 [1] pd;
+#X obj 201 42 t a b b;
+#X obj 120 210 list prepend;
+#X text 392 61 La baie est un rapport textuel de l'Ã©tat de fonctionnement
+ou des erreurs de fonctionnement du nÅud. Il est principalement
+destinÃ© aux donnÃ©es Â«d'ingÃ©nierieÂ» plutÃ´t qu'aux
+donnÃ©es Â«d'utilisateur finalÂ». Le champ est formatÃ© comme
+suit: Â«#xxxx [yyyy ..] zzzzzâ¦Â» xxxx est un code d'Ã©tat
+hexadÃ©cimal tel que dÃ©fini dans le tableau 3 yyyy est un compteur
+dÃ©cimal qui s'incrÃ©mente Ã  chaque fois que le nÅud envoie
+un ArtPollResponse. Cela permet au contrÃ´leur de surveiller les
+changements d'Ã©vÃ©nements dans le nÅud. zzzz est une chaÃ®ne
+de texte anglaise dÃ©finissant le statut. Il s'agit d'un champ de
+longueur fixe \, bien que la chaÃ®ne qu'il contient peut Ãªtre
+plus courte que le champ.;
+#X obj 396 37 text define -k NodeReport-\$0;
+#A set Code Mnemonic Description \; 0x0000 RcDebug Booted in debug
+mode (Only used in development) \; 0x0001 RcPowerOk Power On Tests
+successful \; 0x0002 RcPowerFail Hardware tests failed at Power On
+\; 0x0003 RcSocketWr1 Last UDP from Node failed due to truncated length
+Most likely caused by a collision. \; 0x0004 RcParseFail Unable to
+identify last UDP transmission. CheckOpCode and packet length. \; 0x0005
+RcUdpFail Unable to open Udp Socket in last transmission attempt \;
+0x0006 RcShNameOk Confirms that Short Name programming via ArtAddress
+\, was successful. \; 0x0007 RcLoNameOk Confirms that Long Name programming
+via ArtAddress \, was successful. \; 0x0008 RcDmxError DMX512 receive
+errors detected. \; 0x0009 RcDmxUdpFull Ran out of internal DMX transmit
+buffers. \; 0x000a RcDmxRxFull Ran out of internal DMX Rx buffers.
+\; 0x000b RcSwitchErr Rx Universe switches conflict. \; 0x000c RcConfigErr
+Product configuration does not match firmware. \; 0x000d RcDmxShort
+DMX output short detected. See GoodOutput field. \; 0x000e RcFirmwareFail
+Last attempt to upload new firmware failed. \; 0x000f RcUserFail User
+changed switch settings when address locked by remote programming.
+User changes ignored. \; 0x0010 RcFactoryRes Factory reset has occurred.
+\;;
+#X connect 1 0 21 0;
+#X connect 2 0 0 0;
+#X connect 3 0 4 0;
+#X connect 4 0 12 0;
+#X connect 5 0 6 0;
+#X connect 6 0 7 0;
+#X connect 7 0 8 0;
+#X connect 8 0 11 0;
+#X connect 9 0 3 0;
+#X connect 9 1 11 1;
+#X connect 10 0 2 0;
+#X connect 10 1 11 1;
+#X connect 11 0 10 0;
+#X connect 12 0 5 0;
+#X connect 13 0 16 0;
+#X connect 14 0 18 0;
+#X connect 15 0 17 1;
+#X connect 15 0 22 1;
+#X connect 16 0 17 0;
+#X connect 17 0 15 0;
+#X connect 18 0 13 0;
+#X connect 18 1 13 0;
+#X connect 18 2 19 0;
+#X connect 19 0 22 0;
+#X connect 20 0 21 0;
+#X connect 21 0 18 0;
+#X connect 21 1 17 1;
+#X connect 21 2 14 0;
+#X connect 22 0 9 0;
+#X restore 1260 450 pd NodeReport;
+#X msg 820 716 0;
+#X msg 820 696 0 0 0 0 0 0;
+#N canvas 0 50 450 300 Art-Net0x00 0;
+#X obj 260 76 list fromsymbol;
+#X obj 260 131 prepend set;
+#X obj 260 55 symbol;
+#X msg 260 31 Art-Net;
+#X obj 260 100 list append 0;
+#X obj 260 2 inlet;
+#X obj 260 156 outlet;
+#X obj 203 15 loadbang;
+#X connect 0 0 4 0;
+#X connect 1 0 6 0;
+#X connect 2 0 0 0;
+#X connect 3 0 2 0;
+#X connect 4 0 1 0;
+#X connect 5 0 3 0;
+#X connect 7 0 3 0;
+#X restore 1226 39 pd Art-Net0x00;
+#X msg 820 55 65 114 116 45 78 101 116 0;
+#X text 773 717 Style;
+#X text 614 697 SwVideo_SwMacro_SwRemote_3*Spare;
+#X obj 587 866 bng 15 250 50 0 empty empty raz 17 7 0 10 -191407 -1
+-1;
+#X msg 820 115 169 254 237 167;
+#X msg 820 756 169 254 237 167;
+#X text 30 82 Le paquet ArtPoll est utilisÃ© pour dÃ©couvrir la
+prÃ©sence d'autres contrÃ´leurs \, nÅuds et serveurs multimÃ©dias.
+Le paquet ArtPoll n'est envoyÃ© que par un contrÃ´leur. Les contrÃ´leurs
+et les nÅuds rÃ©pondent au paquet. Un contrÃ´leur diffuse un
+paquet ArtPoll Ã  l'adresse IP 2.255.255.255 (masque de sous-rÃ©seau
+255.0.0.0) sur le port UDP 0x1936 \, il s'agit de l'adresse de diffusion
+dirigÃ©e. Le contrÃ´leur peut supposer un dÃ©lai maximum de 3
+secondes entre l'envoi d'ArtPoll et la rÃ©ception de tous les paquets
+ArtPollReply. Si le contrÃ´leur ne reÃ§oit pas de rÃ©ponse dans
+ce dÃ©lai \, il doit considÃ©rer que le nÅud a Ã©tÃ© dÃ©connectÃ©.
+Le contrÃ´leur qui diffuse un ArtPoll doit Ã©galement rÃ©pondre
+Ã  son propre message (Ã  l'adresse de diffusion dirigÃ©e) avec
+un ArtPollReply. Cela garantit que tous les autres contrÃ´leurs Ã©coutant
+le rÃ©seau dÃ©tecteront tous les appareils sans que tous les contrÃ´leurs
+connectÃ©s au rÃ©seau aient besoin d'envoyer des paquets ArtPoll.
+Art-Net exige que tous les contrÃ´leurs diffusent un ArtPoll toutes
+les 2 \, 5 Ã  3 secondes. Cela garantit que tous les pÃ©riphÃ©riques
+rÃ©seau peuvent facilement dÃ©tecter une dÃ©connexion.;
+#N canvas 59 136 893 583 Swin 0;
+#X text 32 32 Les bits 3-0 de l'adresse de port 15 bits pour chacun
+des 4 ports d'entrÃ©e possibles sont codÃ©s dans le quartet bas
+;
+#X restore 1230 656 pd Swin;
+#N canvas 0 50 893 583 Swout 0;
+#X text 12 44 Les bits 3-0 de l'adresse de port 15 bits pour chacun
+des 4 ports de sortie possibles sont codÃ©s dans le quartet bas.
+;
+#X restore 1230 685 pd Swout;
+#N canvas 0 50 450 300 Style 0;
+#X text 138 86 The Style code defines the equipment style of the device.
+See Table 4 for current Style codes.;
+#X obj 156 38 text define -k style-\$0;
+#A set Code Mnemonic Description \; 0x00 StNode A DMX to / from Art-Net
+device \; 0x01 StController A lighting console. \; 0x02 StMedia A Media
+Server. \; 0x03 StRoute A network routing device. \; 0x04 StBackup
+A backup device. \; 0x05 StConfig A configuration or diagnostic tool.
+\; 0x06 StVisual A visualiser. \;;
+#X restore 1230 716 pd Style;
+#N canvas 0 50 822 300 NumPort 0;
+#X text 43 39 Octet haut du mot dÃ©crivant le nombre de ports d'entrÃ©e
+ou de sortie. L'octet Ã©levÃ© est destinÃ© Ã  une expansion
+future et est actuellement zÃ©ro.;
+#X text 57 111 Octet de poids faible du mot dÃ©crivant le nombre
+de ports d'entrÃ©e ou de sortie. Si le nombre d'entrÃ©es n'est
+pas Ã©gal au nombre de sorties \, la plus grande valeur est prise.
+ZÃ©ro est une valeur lÃ©gale si aucun port d'entrÃ©e ou de sortie
+n'est implÃ©mentÃ©. La valeur maximale est de 4 nÅuds peuvent
+ignorer ce champ car les informations sont implicites dans PortTypes
+[].;
+#X restore 857 518 pd NumPort;
+#N canvas 670 374 576 564 Status1 0;
+#X text 78 51 - Registre d'Ã©tat gÃ©nÃ©ral contenant les champs
+de bits comme suit. 7-6 Ãtat de l'indicateur. 0 Ãtat de l'indicateur
+inconnu. 1 Indicateurs en mode de localisation / identification. 10
+indicateurs en mode silencieux. 11 Indicateurs en mode normal. 5-4
+AutoritÃ© de programmation d'adresse de port 0 AutoritÃ© de programmation
+d'adresse de port inconnue. 1 Toutes les adresses de port dÃ©finies
+par les commandes du panneau avant. 10 Tout ou partie de l'adresse
+de port programmÃ©e par rÃ©seau ou navigateur Web 11 Non utilisÃ©.
+3 Non implÃ©mentÃ© \, transmettre Ã  zÃ©ro \, les rÃ©cepteurs
+ne testent pas. 2 0 = dÃ©marrage normal du firmware (Ã  partir
+du flash). Les nÅuds qui ne prennent pas en charge le double dÃ©marrage
+\, dÃ©sactivez ce champ Ã  zÃ©ro. 1 = dÃ©marrÃ© Ã  partir
+de la ROM. 1 0 = pas capable de gestion des pÃ©riphÃ©riques Ã 
+distance (RDM). 1 = Capable de gestion des pÃ©riphÃ©riques Ã 
+distance (RDM). 0 0 = UBEA absent ou corrompu 1 = UBEA prÃ©sent;
+#X obj 235 357 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+128;
+#X obj 255 357 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+64;
+#X obj 275 357 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+32;
+#X obj 295 357 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+16;
+#X obj 315 357 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+8;
+#X obj 335 357 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+4;
+#X obj 355 357 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+2;
+#X obj 375 357 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 235 324 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X connect 9 0 1 0;
+#X restore 1178 324 pd Status1;
+#N canvas 279 175 635 300 UBEA 0;
+#X text 20 38 Ce champ contient la version du micrologiciel de la zone
+d'extension du bios utilisateur (UBEA). Si l'UBEA n'est pas programmÃ©
+\, ce champ contient zÃ©ro.;
+#X restore 1178 295 pd UBEA;
+#N canvas 0 50 568 300 Oem 0;
+#X text 40 75 Octet de poids faible de la valeur OEM. Le mot OEM dÃ©crit
+le fournisseur d'Ã©quipement et l'ensemble de fonctionnalitÃ©s
+disponibles. Le bit 15 haut indique des fonctionnalitÃ©s Ã©tendues
+disponibles. Les codes enregistrÃ©s actuels sont dÃ©finis dans
+le tableau 2;
+#X restore 1178 267 pd Oem;
+#X text 750 636 SwIn 0-255;
+#X text 743 666 SwOut 0-255;
+#X msg 820 235 0;
+#X msg 820 205 0;
+#N canvas 394 302 543 300 NET 0;
+#X obj 104 115 hradio 12 1 0 16 empty \$0-NET-Label NET_==_0 2 -6 0
+10 -262144 -1 -1 0;
+#X obj 104 166 prepend set;
+#X obj 104 191 outlet;
+#X text 87 220 Les bits 14 Ã  8 de l'adresse de port 15 bits sont
+codÃ©s dans les 7 bits infÃ©rieurs de ce champ. Ceci est utilisÃ©
+en combinaison avec SubSwitch et SwIn [] ou SwOut [] pour produire
+l'adresse complÃ¨te de l'univers.;
+#X obj 104 4 bng 15 250 50 0 empty raz raz 17 7 0 10 -191407 -1 -1
+;
+#X msg 104 53 \; \$1-NET-Label label \$1-NET-Label;
+#X obj 104 30 prepend \$0;
+#X obj 104 141 t f f;
+#X obj 187 157 prepend \$0;
+#X msg 187 180 \; \$1-NET-Label label NET_==_\$2;
+#X obj 43 33 loadbang;
+#X obj 43 56 + 0;
+#X connect 0 0 7 0;
+#X connect 1 0 2 0;
+#X connect 4 0 6 0;
+#X connect 6 0 5 0;
+#X connect 7 0 1 0;
+#X connect 7 1 8 0;
+#X connect 8 0 9 0;
+#X connect 10 0 11 0;
+#X connect 11 0 0 0;
+#X coords 0 -1 1 1 200 30 2 100 100;
+#X restore 100 481 pd NET;
+#N canvas 280 303 543 300 Sub-NET 0;
+#X text 92 218 Les bits 7 Ã  4 de l'adresse de port 15 bits sont
+codÃ©s dans les 4 bits infÃ©rieurs de ce champ. Ceci est utilisÃ©
+en combinaison avec NetSwitch et SwIn [] ou SwOut [] pour produire
+l'adresse complÃ¨te de l'univers.;
+#X obj 104 115 hradio 12 1 0 16 empty \$0-SubNET-Label SubNET_==_0
+2 -6 0 10 -262144 -1 -1 0;
+#X obj 104 166 prepend set;
+#X obj 104 191 outlet;
+#X obj 104 4 bng 15 250 50 0 empty raz raz 17 7 0 10 -191407 -1 -1
+;
+#X obj 104 30 prepend \$0;
+#X obj 104 141 t f f;
+#X obj 187 157 prepend \$0;
+#X msg 187 180 \; \$1-SubNET-Label label SubNET_==_\$2;
+#X msg 104 53 \; \$1-SubNET-Label label \$1-SubNET-Label;
+#X obj 43 33 loadbang;
+#X obj 43 56 + 0;
+#X connect 1 0 6 0;
+#X connect 2 0 3 0;
+#X connect 4 0 5 0;
+#X connect 5 0 9 0;
+#X connect 6 0 2 0;
+#X connect 6 1 7 0;
+#X connect 7 0 8 0;
+#X connect 10 0 11 0;
+#X connect 11 0 1 0;
+#X coords 0 -1 1 1 200 30 2 100 100;
+#X restore 100 511 pd Sub-NET;
+#X obj 890 29 bng 15 250 50 0 raz empty raz 17 7 0 10 -228856 -1 -1
+;
+#X msg 820 415 83 116 117 65 82 84 45 78 111 100 101 45 66 121 53 49
+77 51 48 78 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0;
+#X msg 820 545 192 192 192 192;
+#N canvas 1039 380 725 437 long-Name 0;
+#X obj 73 97 list fromsymbol;
+#X obj 73 356 prepend set;
+#X obj 73 76 symbol;
+#X obj 73 142 list length;
+#X floatatom 73 166 5 0 0 0 - - -;
+#X obj 73 212 abs;
+#X floatatom 73 236 5 0 0 0 - - -;
+#X obj 73 259 until;
+#X obj 73 283 + 0;
+#X obj 73 120 t a a;
+#X obj 73 330 t a a;
+#X obj 73 306 list prepend;
+#X obj 73 381 outlet;
+#X obj 11 57 inlet;
+#X obj 275 186 prepend \$0;
+#X symbolatom 202 101 25 0 0 0 - - -;
+#X obj 73 24 loadbang;
+#X obj 274 296 prepend \$0;
+#X obj 274 279 bng 15 250 50 0 empty raz raz 17 7 0 10 -228856 -1 -1
+;
+#X msg 274 318 \; long-name-lbl_\$1 label long-name-lbl_#0;
+#X msg 73 52 StuART-Node-By51M30N;
+#X msg 275 224 \; long-name-lbl_\$1 label \$2;
+#X obj 73 188 - 64;
+#X obj 201 100 cnv 15 198 20 empty long-name-lbl_\$0 StuART-Node-By51M30N
+2 10 0 8 -233017 -66577 0;
+#X connect 0 0 9 0;
+#X connect 1 0 12 0;
+#X connect 2 0 0 0;
+#X connect 3 0 4 0;
+#X connect 4 0 22 0;
+#X connect 5 0 6 0;
+#X connect 6 0 7 0;
+#X connect 7 0 8 0;
+#X connect 8 0 11 0;
+#X connect 9 0 3 0;
+#X connect 9 1 11 1;
+#X connect 10 0 1 0;
+#X connect 10 1 11 1;
+#X connect 11 0 10 0;
+#X connect 13 0 2 0;
+#X connect 14 0 21 0;
+#X connect 15 0 14 0;
+#X connect 15 0 2 0;
+#X connect 16 0 20 0;
+#X connect 17 0 19 0;
+#X connect 18 0 17 0;
+#X connect 20 0 2 0;
+#X connect 20 0 14 0;
+#X connect 22 0 5 0;
+#X coords 0 -1 1 1 200 20 2 200 100;
+#X restore 100 460 pd long-Name;
+#X msg 820 776 1;
+#X msg 821 665 0 1 2 3;
+#X obj 282 543 bng 15 250 50 0 Updade-\$0 empty Updade-OpPollReply_Data
+-140 7 0 10 -204786 -1 -1;
+#X obj 145 402 bng 15 250 50 0 empty empty Send_OpPollReply 17 7 0
+10 -159808 -257985 -1;
+#X msg 820 325 210;
+#X msg 820 795 8;
+#X msg 820 265 4 48;
+#X msg 822 636 0 1 2 3;
+#X text 717 266 Oem;
+#X msg 1260 427 #0001 [1] pd;
+#X msg 820 605 128 128 128 128;
+#X obj 327 895 list store;
+#X obj 831 -51 loadbang;
+#X obj 831 -28 del 1500;
+#X msg 820 575 0 8 0 8;
+#X obj 100 560 Art-Net-Send;
+#X obj 145 364 r Send_OpPollReply;
+#N canvas 524 223 581 438 Node_Registration_counter 1;
+#X obj 251 101 cnv 15 198 58 empty empty empty 20 12 0 14 -233017 -66577
+0;
+#X obj 15 21 r OpPollReply_to_decoder;
+#X obj 15 46 list split 4;
+#X obj 252 340 text define Node_Registration;
+#X obj 15 122 route -1;
+#X obj 15 227 text set Node_Registration;
+#X obj 15 71 t a a;
+#X msg 252 316 clear;
+#X obj 15 147 counter;
+#X obj 15 172 bang;
+#X obj 15 97 text search Node_Registration;
+#X obj 15 201 list;
+#X obj 220 134 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 252 104 bng 15 250 50 0 empty empty Open_Node__Registration_List
+17 7 0 10 -4034 -4032 -1;
+#X msg 360 296 click;
+#X floatatom 252 139 3 0 0 1 Node_Counter - -;
+#X obj 252 122 bng 15 250 50 0 empty empty Clear_Node_List 17 7 0 10
+-258113 -257985 -1;
+#X obj 220 270 t b b;
+#X obj 252 228 s Reload_OpPollReply_decoder;
+#X obj 65 274 print Connected IP;
+#X connect 1 0 2 0;
+#X connect 2 0 6 0;
+#X connect 4 0 8 0;
+#X connect 4 1 5 1;
+#X connect 6 0 10 0;
+#X connect 6 1 11 1;
+#X connect 7 0 3 0;
+#X connect 8 0 5 1;
+#X connect 8 0 9 0;
+#X connect 8 0 15 0;
+#X connect 9 0 11 0;
+#X connect 10 0 4 0;
+#X connect 11 0 5 0;
+#X connect 11 0 19 0;
+#X connect 12 0 8 3;
+#X connect 13 0 14 0;
+#X connect 14 0 3 0;
+#X connect 15 0 18 0;
+#X connect 16 0 17 0;
+#X connect 17 0 7 0;
+#X connect 17 1 12 0;
+#X coords 0 -1 1 1 200 60 2 250 100;
+#X restore 100 580 pd Node_Registration_counter;
+#X obj 1447 444 prepend set;
+#X msg 1447 468 65 114 116 45 78 101 116 0 0 33 192 168 1 30 54 25
+0 0 0 0 4 48 0 210 112 100 83 116 117 65 82 84 45 78 111 100 101 0
+0 0 0 0 0 0 83 116 117 65 82 84 45 78 111 100 101 45 66 121 53 49 77
+51 48 78 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 35 48 48 48 49 32 91 49 93 32 112 100
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 4 192 192 192 192 0 8 0 8 128
+128 128 128 0 1 2 3 0 1 2 3 0 0 0 0 0 0 0 0 0 0 0 0 0 192 168 1 30
+1 8 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0;
+#X text 730 146 port 0x1936;
+#X connect 1 0 35 0;
+#X connect 5 0 35 0;
+#X connect 6 0 35 0;
+#X connect 11 0 35 0;
+#X connect 13 0 35 0;
+#X connect 15 0 43 0;
+#X connect 16 0 35 0;
+#X connect 19 0 35 0;
+#X connect 22 0 35 0;
+#X connect 27 0 35 0;
+#X connect 32 0 35 0;
+#X connect 34 0 33 0;
+#X connect 34 0 84 1;
+#X connect 34 1 35 1;
+#X connect 34 1 38 0;
+#X connect 35 0 34 0;
+#X connect 36 27 32 0;
+#X connect 36 28 78 0;
+#X connect 36 29 73 0;
+#X connect 36 30 54 0;
+#X connect 36 31 27 0;
+#X connect 36 32 46 0;
+#X connect 36 37 47 0;
+#X connect 36 38 74 0;
+#X connect 36 39 80 0;
+#X connect 36 40 83 0;
+#X connect 36 41 87 0;
+#X connect 36 42 71 0;
+#X connect 36 43 22 0;
+#X connect 36 44 19 0;
+#X connect 36 46 70 0;
+#X connect 36 48 16 0;
+#X connect 36 50 13 0;
+#X connect 36 51 77 0;
+#X connect 36 52 11 0;
+#X connect 36 53 79 0;
+#X connect 36 54 65 0;
+#X connect 36 55 66 0;
+#X connect 36 56 6 0;
+#X connect 36 57 5 0;
+#X connect 36 58 53 0;
+#X connect 36 60 1 0;
+#X connect 36 62 49 0;
+#X connect 36 63 52 0;
+#X connect 37 0 36 0;
+#X connect 38 0 39 0;
+#X connect 41 0 76 0;
+#X connect 42 0 53 0;
+#X connect 42 0 54 0;
+#X connect 43 0 13 0;
+#X connect 44 0 16 0;
+#X connect 45 0 19 0;
+#X connect 46 0 35 0;
+#X connect 47 0 35 0;
+#X connect 48 0 49 0;
+#X connect 49 0 35 0;
+#X connect 52 0 34 0;
+#X connect 53 0 35 0;
+#X connect 54 0 35 0;
+#X connect 65 0 35 0;
+#X connect 66 0 35 0;
+#X connect 67 0 66 0;
+#X connect 68 0 65 0;
+#X connect 70 0 35 0;
+#X connect 71 0 35 0;
+#X connect 72 0 70 0;
+#X connect 73 0 35 0;
+#X connect 74 0 35 0;
+#X connect 76 0 84 0;
+#X connect 77 0 35 0;
+#X connect 78 0 35 0;
+#X connect 79 0 35 0;
+#X connect 80 0 35 0;
+#X connect 82 0 45 0;
+#X connect 83 0 35 0;
+#X connect 84 0 40 0;
+#X connect 84 0 88 0;
+#X connect 84 0 91 0;
+#X connect 85 0 86 0;
+#X connect 86 0 75 0;
+#X connect 87 0 35 0;
+#X connect 89 0 76 0;
+#X connect 91 0 92 0;
+#X coords 0 -1 1 1 200 240 2 100 400;

@@ -1,0 +1,291 @@
+#N canvas 141 121 1044 697 10;
+#X obj 101 101 cnv 15 198 58 empty empty Art-Net-Receiver 5 8 2 16
+-233017 -66577 0;
+#X obj 310 44 text define -k Table1_OpCodes;
+#A set dec dec1 dec0 hex1 hex2 OpName 0xFFFF def  \; 32 0 32 0 20
+OpPoll 0x2000 This is an ArtPoll packet no other data is contained
+in this UDP packet \; 33 0 33 0 21 OpPollReply 0x2100 This is an ArtPollReply
+Packet. It contains device status information \; 35 0 35 0 23 OpDiagData
+2300 Diagnostics and data logging packet \; 36 0 36 0 24 OpCommand
+0x2400 Used to send text based parameter commands \; 80 0 80 0 50 OpOutput/OpDmx
+0x5000 This is an ArtDmx data packet. It contains zero start code DMX512
+information for a single Universe. \; 81 0 81 0 51 OpNzs 0x5100 This
+is an ArtNzs data packet. It contains non-zero start code (except RDM)
+DMX512 information for a single Universe. \; 82 0 82 0 52 OpSync 0x5200
+This is an ArtSync data packet. It is used to force synchronous transfer
+of ArtDmx packets to a node’s output. \; 96 0 96 0 60 OpAddress 0x6000
+This is an ArtAddress packet. It contains remote programming information
+for a Node. \; 112 0 112 0 70 OpInput 0x7000 This is an ArtInput packet.
+It contains enable – disable data for DMX inputs. \; 128 0 128 0
+80 OpTodRequest 0x8000 This is an ArtTodRequest packet. It is used
+to request a Table of Devices (ToD) for RDM discovery. \; 129 0 129
+0 81 OpTodData 0x8100 This is an ArtTodData packet. It is used to send
+a Table of Devices (ToD) for RDM discovery. \; 130 0 130 0 82 OpTodControl
+0x8200 This is an ArtTodControl packet. It is used to send RDM discovery
+control messages. \; 131 0 131 0 83 OpRdm 0x8300 This is an ArtRdm
+packet. It is used to send all non discovery RDM messages. \; 132 0
+132 0 84 OpRdmSub 0x8400 This is an ArtRdmSub packet. It is used to
+send compressed RDM Sub-Device data. \; 4256 16 160 10 a0 OpVideoSetup
+0xa010 This is an ArtVideoSetup packet. It contains video screen setup
+information for nodes that implement the extended video features \;
+8352 32 160 20 a0 OpVideoPalette 0xa020 This is an ArtVideoPalette
+packet. It contains colour palette setup information for nodes that
+implement the extended video features. \; 16544 64 160 40 a0 OpVideoData
+0xa040 This is an ArtVideoData packet. It contains display data for
+nodes that implement the extended video features. \; 240 0 240 0 f0
+OpMacMaster 0xf000 This packet is deprecated. \; 241 0 241 0 f1 OpMacSlave
+0xf100 This packet is deprecated. \; 242 0 242 0 f2 OpFirmwareMaster
+0xf200 This is an ArtFirmwareMaster packet It is used to upload new
+firmware or firmware extensions to the Node. \; 243 0 243 0 f3 OpFirmwareReply
+0xf300 This is an ArtFirmwareReply packet. It is returned by the node
+to acknowledge receipt of an ArtFirmwareMaster packet or ArtFileTnMaster
+packet. \; 244 0 244 0 f4 OpFileTnMaster 0xf400 Uploads user file to
+node. \; 245 0 245 0 f5 OpFileFnMaster 0xf500 Downloads user file from
+node. \; 246 0 246 0 f6 OpFileFnReply 0xf600 Server to Node acknowledge
+for download packets. \; 248 0 248 0 f8 OpIpProg 0xf800 This is an
+ArtIpProg packet. It is used to reprogramme the IP address and Mask
+of the Node. \; 249 0 249 0 f9 OpIpProgReply 0xf900 This is an ArtIpProgReply
+packet. It is returned by the node to acknowledge receipt of an ArtIpProg
+packet. \; 2304 144 0 90 0 OpMedia 0x9000 This is an ArtMedia packet.
+It is Unicast by a Media Server and acted upon by a Controller. \;
+2320 145 0 91 0 OpMediaPatch 0x9100 This is an ArtMediaPatch packet.
+It is Unicast by a Controller and acted upon by a Media Server. \;
+2336 146 0 92 0 OpMediaControl 0x9200 This is an ArtMediaControl packet.
+It is Unicast by a Controller and acted upon by a Media Server. \;
+2352 147 0 93 0 OpMediaContrlReply 0x9300 This is an ArtMediaControlReply
+packet. It is Unicast by a Media Server and acted upon by a Controller.
+\; 2416 151 0 97 0 OpTimeCode 0x9700 This is an ArtTimeCode packet.
+It is used to transport time code over the network. \; 2432 152 0 98
+0 OpTimeSync 0x9800 Used to synchronise real time date and clock \;
+2448 153 0 99 0 OpTrigger 0x9900 Used to send trigger macros \; 2464
+154 0 9a 0 OpDirectory 0x9a00 Requests a node's file list \; 2480 155
+0 9b 0 OpDirectoryReply 0x9b00 Replies to OpDirectory with file list
+\;;
+#N canvas 564 195 969 642 OP_Code_reader 0;
+#X symbolatom 404 223 30 0 0 0 - - -;
+#N canvas 317 777 450 300 track 0;
+#X obj 144 249 outlet;
+#X obj 103 101 bng 18 250 50 0 empty empty + 5 10 0 15 -262144 -1 -1
+;
+#X obj 124 101 bng 18 250 50 0 empty empty - 5 10 0 15 -262144 -1 -1
+;
+#X floatatom 146 100 5 0 0 0 - - -;
+#X msg 86 39 dec;
+#X msg 85 15 inc;
+#X obj 144 63 counter 0;
+#X obj 258 84 loadbang;
+#X obj 258 109 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 234 36 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 258 133 text size Table1_OpCodes;
+#X obj 258 156 - 1;
+#X connect 1 0 5 0;
+#X connect 2 0 4 0;
+#X connect 3 0 0 0;
+#X connect 4 0 6 0;
+#X connect 5 0 6 0;
+#X connect 6 0 3 0;
+#X connect 7 0 8 0;
+#X connect 8 0 10 0;
+#X connect 9 0 6 3;
+#X connect 10 0 11 0;
+#X connect 11 0 6 4;
+#X coords 0 -1 1 1 85 20 2 100 100;
+#X restore 214 102 pd track;
+#X obj 101 124 cnv 15 198 16 empty \$0-cnv_opcode OpNzs_0x5100 5 7
+0 14 -233017 -66577 0;
+#X obj 214 389 prepend \$0;
+#X obj 76 491 prepend \$0;
+#X obj 76 474 bng 15 250 50 0 empty raz raz 17 7 0 10 -228856 -1 -1
+;
+#X obj 465 418 bng 15 250 50 0 empty empty Print_OpCode_definition
+17 7 0 10 -262144 -1 -1;
+#X obj 465 525 list split 7;
+#X obj 499 559 route list;
+#X obj 499 591 print opCode_Def;
+#X obj 414 280 prepend set;
+#X msg 414 305 0 51;
+#X obj 465 389 value OpCode_Dec-\$0;
+#X obj 465 439 value OpCode_Dec-\$0;
+#X msg 214 419 \; \$1-cnv_opcode label \$2_\$3 \;;
+#X obj 214 205 text get Table1_OpCodes 5;
+#X obj 214 230 text search Table1_OpCodes 5;
+#X obj 214 255 text get Table1_OpCodes 1 2;
+#X obj 414 255 text get Table1_OpCodes 3 2;
+#X obj 465 364 text get Table1_OpCodes 0;
+#X obj 214 334 text search Table1_OpCodes 1 2;
+#X obj 214 364 text get Table1_OpCodes 5 2;
+#X obj 465 470 text search Table1_OpCodes 0;
+#X obj 465 500 text get Table1_OpCodes;
+#X obj 34 364 text get Table1_OpCodes 1 2;
+#X obj 101 142 cnv 15 198 16 empty \$0-cnv_opcode2 0_81 5 7 0 14 -233017
+-66577 0;
+#X msg 76 513 \; \$1-cnv_opcode label #0-cnv_opcode \; \$1-cnv_opcode2
+label #0-cnv_opcode2;
+#X obj 34 399 prepend \$0;
+#X msg 34 429 \; \$1-cnv_opcode2 label \$2_\$3 \;;
+#X connect 1 0 15 0;
+#X connect 3 0 14 0;
+#X connect 4 0 26 0;
+#X connect 5 0 4 0;
+#X connect 6 0 13 0;
+#X connect 7 1 8 0;
+#X connect 8 0 9 0;
+#X connect 10 0 11 0;
+#X connect 13 0 22 0;
+#X connect 15 0 0 0;
+#X connect 15 0 16 0;
+#X connect 16 0 17 0;
+#X connect 16 0 18 0;
+#X connect 17 0 20 0;
+#X connect 18 0 10 0;
+#X connect 19 0 12 0;
+#X connect 20 0 19 0;
+#X connect 20 0 21 0;
+#X connect 20 0 24 0;
+#X connect 21 0 3 0;
+#X connect 22 0 23 0;
+#X connect 23 0 7 0;
+#X connect 24 0 27 0;
+#X connect 27 0 28 0;
+#X coords 0 -1 1 1 200 60 1 100 100;
+#X restore 310 100 pd OP_Code_reader;
+#X obj 310 72 text define -k Table4-StyleCode;
+#A set 0x00 StNode A DMX to / from Art-Net device \; 0x01 StController
+A lighting console. \; 0x02 StMedia A Media Server. \; 0x03 StRoute
+A network routing device. \; 0x04 StBackup A backup device. \; 0x05
+StConfig A configuration or diagnostic tool. \; 0x06 StVisual A visualiser.
+\; Code Mnemonic Description \;;
+#X obj 220 280 list split 8;
+#X obj 220 360 list split 2;
+#X obj 220 468 list store;
+#X msg 220 439 prepend \$1 \, bang \,;
+#X obj 220 493 route list;
+#X obj 580 649 print Other_OpCode;
+#X floatatom 73 297 5 0 0 0 - - -;
+#X obj 73 273 list length;
+#X obj 102 143 bng 11 50 10 0 empty empty OpDmx 13 6 0 10 -1 -4034
+-1;
+#N canvas 187 320 631 300 Art-Net0x00-match 0;
+#X obj 260 86 list fromsymbol;
+#X obj 260 141 prepend set;
+#X obj 260 55 symbol;
+#X msg 260 31 Art-Net;
+#X obj 260 110 list append 0;
+#X obj 260 2 loadbang;
+#X obj 260 166 match;
+#X obj 201 13 inlet;
+#X obj 260 191 bang;
+#X text 39 223 test ArtNet0x00 header;
+#X obj 260 216 outlet;
+#X connect 0 0 4 0;
+#X connect 1 0 6 0;
+#X connect 2 0 0 0;
+#X connect 3 0 2 0;
+#X connect 4 0 1 0;
+#X connect 5 0 3 0;
+#X connect 6 0 8 0;
+#X connect 7 0 6 0;
+#X connect 8 0 10 0;
+#X restore 220 306 pd Art-Net0x00-match;
+#X obj 220 331 list store;
+#X obj 324 617 s OpPollReply_to_decoder;
+#X obj 102 119 bng 11 50 10 0 empty empty OpPoll 13 6 0 10 -159808
+-257985 -1;
+#X obj 220 383 text search Table1_OpCodes 1 2;
+#X obj 220 410 text get Table1_OpCodes 5;
+#X obj 220 125 tgl 15 0 empty \$0-toogle-Art-Net-netreceive 1024-Art-Net-receive
+17 7 0 10 -1 -1 -1 6454 6454;
+#X msg 220 227 listen \$1;
+#X obj 521 93 prepend \$0;
+#X obj 521 46 bng 15 250 50 0 empty raz raz 17 7 0 10 -191407 -1 -1
+;
+#X obj 521 66 t b b;
+#X obj 697 222 route 0;
+#X obj 697 326 prepend \$0;
+#X msg 697 349 \; \$1-toogle-Art-Net-netreceive label CLOSED \; \$1-toogle-Art-Net-netreceive
+color 13 13 22;
+#X obj 736 254 prepend \$0;
+#X msg 736 277 \; \$1-toogle-Art-Net-netreceive label Port-\$2 \; \$1-toogle-Art-Net-netreceive
+color 16 16 22;
+#X obj 220 206 t f f;
+#X obj 220 257 netreceive -u -b;
+#X obj 220 45 loadbang;
+#X obj 220 72 del 3000;
+#X obj 374 546 t b a;
+#X obj 220 645 s Send_OpPollReply;
+#X obj 220 547 t b b;
+#X obj 102 131 bng 11 50 10 0 empty empty OpPollReply 13 6 0 10 -159808
+-257985 -1;
+#X obj 297 547 t b a;
+#X obj 580 547 list split 1;
+#X obj 557 574 list store;
+#X obj 164 144 bng 12 250 50 0 empty \$0-bangOtherOpCode empty 14 7
+0 10 -233017 -233017 -166441;
+#X obj 580 626 list trim;
+#X obj 580 597 t a a;
+#X msg 521 116 \; \$1-toogle-Art-Net-netreceive label \$1-Art-Net-receive
+\; \$1-toogle-Art-Net-netreceive color 22 22 22 \; \$1-bangOtherOpCode
+label;
+#X obj 697 613 prepend \$0;
+#X obj 697 539 prepend \$0;
+#X obj 557 523 t b b;
+#X msg 697 636 \; \$1-bangOtherOpCode label Print:\$2 \; \$1-bangOtherOpCode
+color 15 22 22;
+#X msg 697 562 \; \$1-bangOtherOpCode label Other-OpCode \; \$1-bangOtherOpCode
+color 10 10 1;
+#X obj 401 589 s OpDmx_IN;
+#X obj 220 570 speedlim 1000;
+#X obj 220 521 route OpPoll OpPollReply OpOutput/OpDmx /OpTodRequest
+;
+#X connect 4 0 13 0;
+#X connect 4 1 14 1;
+#X connect 5 0 17 0;
+#X connect 5 1 6 1;
+#X connect 6 0 8 0;
+#X connect 7 0 6 0;
+#X connect 8 0 51 0;
+#X connect 11 0 10 0;
+#X connect 13 0 14 0;
+#X connect 14 0 5 0;
+#X connect 17 0 18 0;
+#X connect 18 0 7 0;
+#X connect 19 0 29 0;
+#X connect 20 0 30 0;
+#X connect 21 0 43 0;
+#X connect 22 0 23 0;
+#X connect 23 0 21 0;
+#X connect 24 0 25 0;
+#X connect 24 1 27 0;
+#X connect 25 0 26 0;
+#X connect 27 0 28 0;
+#X connect 29 0 20 0;
+#X connect 29 1 24 0;
+#X connect 30 0 4 0;
+#X connect 31 0 32 0;
+#X connect 32 0 19 0;
+#X connect 33 0 12 0;
+#X connect 33 1 49 0;
+#X connect 35 0 50 0;
+#X connect 35 1 16 0;
+#X connect 37 0 36 0;
+#X connect 37 1 15 0;
+#X connect 38 0 42 0;
+#X connect 38 1 39 1;
+#X connect 39 0 9 0;
+#X connect 40 0 46 0;
+#X connect 41 0 9 0;
+#X connect 42 0 41 0;
+#X connect 42 1 44 0;
+#X connect 44 0 47 0;
+#X connect 45 0 48 0;
+#X connect 46 0 39 0;
+#X connect 46 1 45 0;
+#X connect 50 0 34 0;
+#X connect 51 0 35 0;
+#X connect 51 1 37 0;
+#X connect 51 2 33 0;
+#X connect 51 3 38 0;
+#X connect 51 4 38 0;
+#X coords 0 -1 1 1 200 60 1 100 100;

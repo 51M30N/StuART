@@ -1,0 +1,35 @@
+#!/bin/bash
+#OPEN "patch" "session"
+# crée et ouvre le fichier $patch avec l'argument $session
+
+#test de l argument session
+    if [ $2 ]
+    then
+        session=$2
+    else
+        echo "session :"
+        read
+        session=$REPLY
+    fi
+
+    echo "session=$session"
+
+#test de l'argument patch
+    if [ $1 ]
+    then
+        patch=$1
+    else
+        echo "patch :"
+        read
+        patch=$REPLY
+    fi
+
+    echo "patch=$patch"
+
+#ce script est cense creer un fichier martyr en ajoutant une adresse IP en argument à une abstraction puredata existante
+
+    echo "#N canvas 99 342 468 63 10;" > configure.pd
+    echo "#X obj 20 22 /home/pi/Documents/global/$patch $session;" >> configure.pd
+
+    pd -open configure.pd &
+exit

@@ -1,0 +1,72 @@
+#!/bin/bash
+
+######################################################
+#||||||||||||||||||||||||||||||||||||||||||||||||||||#
+# by_51M30N                                          #
+# for__xxxx                                          #
+# 0 15/09/19                                         #
+# release                                            #
+# 1 15/09/19                                         # date&comment 1st release
+# 2 15/09/19                                         # date&comment 2nd release
+# 3 15/09/19                                         # date&comment 3rd release
+#||||||||||||||||||||||||||||||||||||||||||||||||||||#
+######################################################
+
+######################################################
+#                                                    #
+#     cue_Viewer $SHOW                               #
+#                                                    #
+######################################################
+
+#init
+	marge=1
+	offset=1
+	ii=0
+
+#test de l'argument SHOW
+	if [ $1 ]
+	then
+	        SHOW=$1
+   	else
+	        SHOW="SHOW"
+	fi
+
+#definition du chemin de travail
+	chemin=~/StuART/Cue/$SHOW
+
+#ecriture de :
+	#LISTE = tac  $chemin  // cree un fichier avec tous les noms des Cue a partir du dossier $SHOW/
+
+		#init
+	ls -I "CUE" -I "CUE.pd" -I "LISTE" -t $chemin/ > temp
+	        #copie dans les repertoire parents
+	cp temp $chemin/LISTE
+        echo "create" $chemin"/LISTE" # EST-IL UTILE DE CONSERVER LE FICHIER LISTE APRES L'EXECUTION DU PROGRAMME?
+
+#ecriture de :
+	#CUE = crée un tableau à partir de LISTE sous la nomenclature [numero, Cue_Name;]
+	#CUE.pd = crée un patch.pd avec tous les boutons de Load_Cue [./CueLoader/c $CueName $Midi_IN]
+
+		#intit
+	echo "#N canvas  120 139 194 719 10;" > temp.pd
+	echo "-1, list_of_cue_name;" > temp
+
+		#recursive
+	for i in $(tac $chemin/LISTE)
+	do
+                echo "#X obj "$marge $offset" ~/StuART/CueLoader/c "$i";" >> temp.pd
+		echo $ii", "$i";" >> temp
+                let "offset = offset + 50"
+		let "ii = ii + 1"
+	done
+
+		#copie dans les repertoire parents
+	cp temp.pd $chemin/CUE.pd
+	echo "create" $chemin"/CUE.pd"
+	cp temp $chemin/CUE
+        echo "create" $chemin"/CUE"
+
+#menage
+	rm temp.pd temp
+
+exit

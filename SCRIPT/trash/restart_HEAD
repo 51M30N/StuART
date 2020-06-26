@@ -1,0 +1,8 @@
+#!/bin/bash
+#deprecated
+#pour lancer HEAD.pd, The central desktop
+sleep 1
+sudo killall pd &
+sleep 3
+pd -alsamidi -midiindev 1 -midioutdev 1 /home/pi/Documents/global/HEAD.pd &
+

@@ -1,0 +1,9 @@
+#N canvas 477 236 450 300 10;
+#X msg 233 16 connect 127.0.0.1 8888;
+#X msg 233 116 connect 127.0.0.1 8588;
+#X obj 103 44 OSC/OSCsender 127.0.0.1 8890 OSC-test;
+#X obj 155 168 OSC/OSCreceiver 8888 receiveTST;
+#X msg 342 140 8890;
+#X connect 0 0 2 1;
+#X connect 1 0 2 1;
+#X connect 4 0 3 0;

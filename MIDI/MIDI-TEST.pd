@@ -1,0 +1,13 @@
+#N canvas 2 253 1920 1028 10;
+#X text 269 448 SCRIPT;
+#X text 222 292 ABSTRACTIONS;
+#X text 249 483 PROTOTYPE;
+#X text 265 497 depend OSC;
+#X text 268 99 DEVICE;
+#X text 287 552 MOD_LGQ;
+#X obj 372 545 LGQ_MIDI;
+#X obj 371 290 MIDI;
+#X obj 371 493 temp_MIDI;
+#X msg 371 448 OPEN_MIDI "IP" "port" "midi_input" "midi_output";
+#X obj 966 545 LGQ_MIDI_Y;
+#X obj 1034 294 OSC_MIDI_receiver 9000;

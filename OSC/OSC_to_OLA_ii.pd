@@ -1,0 +1,49 @@
+#N canvas 522 254 1048 609 10;
+#X text 123 8 /home/pi/Documents/SCRIPT/OSC_to_OLA "port" "universe-name"
+, f 66;
+#X msg 400 192 cat /etc/ola/ola-osc.conf;
+#X obj 400 214 ggee/shell;
+#X obj 400 236 print OLA;
+#X obj 400 100 cnv 15 399 59 empty empty OSC_to_OLA_ii_\$1_\$2 20 12
+1 14 -203904 -66577 0;
+#X obj 442 133 bng 15 250 50 0 restart_ola\$0 restart_ola restart_ola
+17 7 0 10 -45076 -262144 -1;
+#X obj 463 120 tgl 15 0 TOGGLE_DMX_\$0 TOGGLE_DMX TOGGLE_DMX 17 7 0
+10 -258113 -4034 -1 0 1;
+#X msg 400 55 sudo service olad restart;
+#X obj 400 78 ggee/shell;
+#X obj 598 78 spigot;
+#X obj 631 60 tgl 15 0 empty TOGGLE_DMX_\$0 TOGGLE_DMX_\$0 17 7 0 10
+-258113 -4034 -1 0 1;
+#X obj 400 35 bng 15 250 50 0 empty restart_ola\$0 restart_ola\$0 17
+7 0 10 -45076 -262144 -1;
+#X msg 679 20 16 255;
+#X obj 791 65 inlet;
+#X obj 400 170 bng 12 250 50 0 empty print-OSC_config_\$0 print-OSC_config_\$0
+14 4 0 10 -191407 -1 -1;
+#X msg 126 36 \; TOGGLE_DMX 0 \; restart_ola \; print-OSC_config 1
+\; dmx_universe-0 connect 127.0.0.1 7770;
+#X obj 598 127 OSCsender 127.0.0.1 \$1 dmx_universe-\$2;
+#X obj 598 40 cyclone/prepend sendtyped /dmx/universe/\$2 ii;
+#X msg 826 65 connect 127.0.0.1 7770;
+#X msg 729 20 11 0;
+#X obj 598 20 r SET_DMX_ii;
+#X obj 400 262 print WTF_OSC_to_OLA_ii;
+#X obj 674 108 bng 12 250 50 0 print-OSC_config_\$0 empty print-OSC_config
+14 4 0 10 -191407 -1 -1;
+#X obj 554 20 inlet;
+#X connect 1 0 2 0;
+#X connect 2 0 3 0;
+#X connect 7 0 8 0;
+#X connect 9 0 16 0;
+#X connect 10 0 9 1;
+#X connect 11 0 7 0;
+#X connect 12 0 17 0;
+#X connect 13 0 16 1;
+#X connect 14 0 1 0;
+#X connect 17 0 9 0;
+#X connect 18 0 16 1;
+#X connect 19 0 17 0;
+#X connect 20 0 17 0;
+#X connect 23 0 17 0;
+#X coords 0 -1 1 1 400 60 1 400 100;

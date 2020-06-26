@@ -1,0 +1,428 @@
+#N canvas 0 85 1680 966 10;
+#X obj 903 45 cnv 15 700 500 empty empty empty 20 12 0 14 -233017 -66577
+0;
+#X obj 900 558 cnv 15 700 400 empty empty empty 20 12 0 14 -233017
+-66577 0;
+#X obj 92 28 cnv 15 700 500 empty empty empty 20 12 0 14 -4032 -66577
+0;
+#X obj 33 18 cnv 15 100 60 empty empty empty 20 12 0 14 -233017 -66577
+0;
+#X obj 33 17 cnv 15 100 60 empty empty empty 20 12 0 14 -233017 -66577
+0;
+#X obj 33 17 cnv 15 100 60 empty empty empty 20 12 0 14 -233017 -66577
+0;
+#X obj 33 17 cnv 15 100 60 empty empty empty 20 12 0 14 -233017 -66577
+0;
+#X obj 33 17 cnv 15 100 60 empty empty empty 20 12 0 14 -233017 -66577
+0;
+#X obj 150 153 xbee/packxbee 2;
+#X obj 150 308 xbee/unpackxbee 2;
+#X obj 337 453 print unpackxbee_data;
+#X obj 390 419 print unpackxbee_status;
+#N canvas 4 77 541 300 sample_frame 0;
+#X obj 32 23 inlet;
+#X obj 32 76 route D0 D1 D2 D3 D4 D5 D10 D11 D12 A0 A1 A2 A3 A7;
+#X obj 26 106 cnv 15 300 50 empty empty Digital_Inputs 20 12 0 14 -204786
+-13381 0;
+#X obj 26 157 cnv 15 400 90 empty empty Analog_Inputs 20 12 0 14 -232576
+-45076 0;
+#X obj 29 190 nbx 5 14 -1e+37 1e+37 0 0 empty empty A0 40 8 0 10 -204800
+-13330 -159808 0 256;
+#X obj 89 190 nbx 5 14 -1e+37 1e+37 0 0 empty empty A1 40 8 0 10 -204800
+-13330 -159808 0 256;
+#X obj 149 190 nbx 5 14 -1e+37 1e+37 0 0 empty empty A2 40 8 0 10 -204800
+-13330 -159808 0 256;
+#X obj 209 190 nbx 5 14 -1e+37 1e+37 0 0 empty empty A3 40 8 0 10 -204800
+-13330 -159808 0 256;
+#X obj 269 190 nbx 5 14 -1e+37 1e+37 0 0 empty empty V+ 40 8 0 10 -204800
+-13330 -159808 0 256;
+#X obj 32 132 nbx 2 14 -1e+37 1e+37 0 0 empty empty D0 8 20 0 10 -4034
+-1 -258113 0 256;
+#X obj 72 132 nbx 2 14 -1e+37 1e+37 0 0 empty empty D1 8 20 0 10 -4034
+-1 -258113 0 256;
+#X obj 102 132 nbx 2 14 -1e+37 1e+37 0 0 empty empty D2 8 20 0 10 -4034
+-1 -258113 0 256;
+#X obj 132 132 nbx 2 14 -1e+37 1e+37 0 0 empty empty D3 8 20 0 10 -4034
+-1 -258113 0 256;
+#X obj 162 132 nbx 2 14 -1e+37 1e+37 0 0 empty empty D4 8 20 0 10 -4034
+-1 -258113 0 256;
+#X obj 192 132 nbx 2 14 -1e+37 1e+37 0 0 empty empty D5 8 20 0 10 -4034
+-1 -258113 0 256;
+#X obj 222 132 nbx 2 14 -1e+37 1e+37 0 0 empty empty P0 8 20 0 10 -4034
+-1 -258113 0 256;
+#X obj 252 132 nbx 2 14 -1e+37 1e+37 0 0 empty empty P1 8 20 0 10 -4034
+-1 -258113 0 256;
+#X obj 282 132 nbx 2 14 -1e+37 1e+37 0 0 empty empty P2 8 20 0 10 -4034
+-1 -258113 0 256;
+#X obj 29 229 nbx 5 14 -1e+37 1e+37 0 0 empty empty A0_mV 40 8 0 10
+-204800 -13330 -159808 0 256;
+#X obj 29 209 * 1.17302;
+#X obj 109 229 nbx 5 14 -1e+37 1e+37 0 0 empty empty A1_mV 40 8 0 10
+-204800 -13330 -159808 0 256;
+#X obj 109 209 * 1.17302;
+#X obj 189 229 nbx 5 14 -1e+37 1e+37 0 0 empty empty A2_mV 40 8 0 10
+-204800 -13330 -159808 0 256;
+#X obj 189 209 * 1.17302;
+#X obj 269 229 nbx 5 14 -1e+37 1e+37 0 0 empty empty A3_mV 40 8 0 10
+-204800 -13330 -159808 0 256;
+#X obj 269 209 * 1.17302;
+#X obj 349 229 nbx 5 14 -1e+37 1e+37 0 0 empty empty V+_mV 40 8 0 10
+-204800 -13330 -159808 0 256;
+#X obj 349 209 * 1.17302;
+#X obj 32 48 list trim;
+#X obj 329 100 print more_sample_frame_stuff;
+#X connect 0 0 28 0;
+#X connect 1 0 9 0;
+#X connect 1 1 10 0;
+#X connect 1 2 11 0;
+#X connect 1 3 12 0;
+#X connect 1 4 13 0;
+#X connect 1 5 14 0;
+#X connect 1 6 15 0;
+#X connect 1 7 16 0;
+#X connect 1 8 17 0;
+#X connect 1 9 4 0;
+#X connect 1 9 19 0;
+#X connect 1 10 5 0;
+#X connect 1 10 21 0;
+#X connect 1 11 6 0;
+#X connect 1 11 23 0;
+#X connect 1 12 7 0;
+#X connect 1 12 25 0;
+#X connect 1 13 8 0;
+#X connect 1 13 27 0;
+#X connect 1 14 29 0;
+#X connect 19 0 18 0;
+#X connect 21 0 20 0;
+#X connect 23 0 22 0;
+#X connect 25 0 24 0;
+#X connect 27 0 26 0;
+#X connect 28 0 1 0;
+#X restore 363 436 pd sample_frame;
+#N canvas 2 95 450 300 SPIGOT 0;
+#X obj 113 132 spigot;
+#X obj 103 102 tgl 15 1 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 109 80 inlet;
+#X obj 108 179 outlet;
+#X obj 170 135 spigot;
+#X obj 122 102 tgl 15 1 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 170 80 inlet;
+#X obj 170 178 outlet;
+#X obj 273 133 spigot;
+#X obj 141 102 tgl 15 1 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 273 78 inlet;
+#X obj 273 176 outlet;
+#X connect 0 0 3 0;
+#X connect 1 0 0 1;
+#X connect 2 0 0 0;
+#X connect 4 0 7 0;
+#X connect 5 0 4 1;
+#X connect 6 0 4 0;
+#X connect 8 0 11 0;
+#X connect 9 0 8 1;
+#X connect 10 0 8 0;
+#X coords 0 -1 1 1 60 20 2 100 100;
+#X restore 337 387 pd SPIGOT;
+#X obj 111 29 inlet;
+#X obj 900 941 outlet;
+#N canvas 187 163 1208 816 COMPORT 0;
+#X obj 400 40 cnv 15 399 79 empty cnv_COMPORT Com_4 6 8 1 12 -260097
+-4160 0;
+#X obj 256 428 comport;
+#X obj 418 74 hradio 15 1 0 12 empty empty empty 120 40 1 20 -262144
+-262144 -262144 4;
+#X msg 363 253 9600 \$1;
+#X obj 256 608 spigot;
+#X obj 295 588 tgl 15 0 empty print_serial_in_\$0 print_serial_in_\$0
+17 7 0 10 -4034 -1 -1 0 1;
+#X obj 302 547 print serial_info;
+#X obj 256 631 print serial_in;
+#X obj 302 524 spigot;
+#X obj 341 504 tgl 15 0 empty print_serial_info_\$0 print_serial_info_\$0
+17 7 0 10 -4034 -1 -1 0 1;
+#X msg 615 277 close;
+#X msg 270 196 info;
+#X obj 343 153 t b f f b;
+#X msg 843 660 13 22;
+#X obj 917 645 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 917 625 == -1;
+#X obj 793 623 route 1 0;
+#X msg 363 280 close \, ports \, baud \$1 \, open \$2;
+#X obj 584 90 bng 14 250 50 0 empty CLOSE-com CLOSE-com -61 7 1 10
+-13330 -262144 -66577;
+#X text 869 421 controle connexion com et retour info couleur;
+#X obj 867 445 route open float ports;
+#X obj 967 550 symbol;
+#X text 923 609 IF erreur comport;
+#X obj 189 31 inlet;
+#X obj 168 687 outlet;
+#X obj 814 58 inlet;
+#X msg 890 83 0;
+#X msg 920 83 1;
+#X msg 950 83 2;
+#X msg 980 83 3;
+#X msg 1010 83 4;
+#X msg 1050 83 9;
+#X obj 584 60 bng 14 250 50 0 empty RECONNECT-com RECONNECT-com -88
+7 1 10 -13330 -262144 -66577;
+#X text 811 42 inlet 1 : float change port COM;
+#X text 187 12 inlet 0 : message to Comport;
+#X text 165 708 outlet 0 : message from Comport;
+#X obj 627 69 tgl 15 0 print_serial_in_\$0 print_serial_in print_serial_in
+17 7 0 10 -4034 -1 -1 0 1;
+#X obj 627 84 tgl 15 0 print_serial_info_\$0 print_serial_info print_serial_info
+17 7 0 10 -4034 -1 -1 0 1;
+#X obj 418 89 tgl 15 1 toggle_out-\$0 toggle_out toggle_out 17 7 0
+10 -1 -262144 -1 0 1;
+#X obj 418 58 tgl 15 1 toggle_in-\$0 toggle_in toggle_in 17 7 0 10
+-1 -262144 -1 1 1;
+#X obj 321 59 r com_in;
+#X obj 814 100 s com_in;
+#X msg 377 184 \; cnv_COMPORT label Com_\$1 \; clear_output 1 \; port
+\$1;
+#X msg 967 576 \; cnv_COMPORT label \$1;
+#X msg 793 660 16 22;
+#X obj 959 514 route;
+#X obj 990 474 r port;
+#X msg 793 693 \; com_in color \$1 \$2 0;
+#X msg 82 195 \; print_serial_info 0 \; print_serial_in 0 \; toggle_in
+0 \; toggle_out \; com_in 0 \;;
+#X text 84 176 init COMPORT;
+#X msg 81 270 \; RECONNECT-com 1 \; CLOSE-com \;;
+#X connect 1 0 4 0;
+#X connect 1 0 24 0;
+#X connect 1 1 8 0;
+#X connect 1 1 20 0;
+#X connect 2 0 12 0;
+#X connect 3 0 17 0;
+#X connect 4 0 7 0;
+#X connect 5 0 4 1;
+#X connect 8 0 6 0;
+#X connect 9 0 8 1;
+#X connect 10 0 1 0;
+#X connect 11 0 1 0;
+#X connect 12 0 11 0;
+#X connect 12 1 3 0;
+#X connect 12 2 42 0;
+#X connect 13 0 47 0;
+#X connect 14 0 13 0;
+#X connect 15 0 14 0;
+#X connect 16 0 44 0;
+#X connect 16 1 13 0;
+#X connect 17 0 1 0;
+#X connect 18 0 10 0;
+#X connect 20 0 16 0;
+#X connect 20 1 15 0;
+#X connect 20 2 45 0;
+#X connect 21 0 43 0;
+#X connect 23 0 1 0;
+#X connect 25 0 41 0;
+#X connect 26 0 41 0;
+#X connect 27 0 41 0;
+#X connect 28 0 41 0;
+#X connect 29 0 41 0;
+#X connect 30 0 41 0;
+#X connect 31 0 41 0;
+#X connect 32 0 2 0;
+#X connect 40 0 2 0;
+#X connect 44 0 47 0;
+#X connect 45 0 21 0;
+#X connect 46 0 45 1;
+#X coords 0 -1 1 1 400 80 1 400 40;
+#X restore 150 200 pd COMPORT;
+#X msg 622 301, f 13;
+#X obj 1314 266 list split 1;
+#X obj 1279 291 bang;
+#X obj 1279 266 list;
+#X obj 1314 291 t b l;
+#X obj 1346 346 list fromsymbol;
+#X msg 1346 326 symbol ^\$1;
+#X obj 1346 365 route 94;
+#X text 1344 307 convert float to symbol;
+#X text 1272 248 serialise la liste;
+#X text 1341 383 remplace ^ par SPACE;
+#X text 569 286 out LOG;
+#X msg 142 83 TX16 0xFFFF 0 255 255 255;
+#X symbolatom 1022 131 10 0 0 0 - - -;
+#X obj 1022 164 symbol;
+#X obj 1022 191 t s b;
+#X msg 1150 245 set;
+#X obj 1022 111 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X text 1039 109 ADRESSE CIBLE;
+#X obj 972 108 inlet;
+#X text 336 83 packet API2 Xbee Serie1 ASCII;
+#X text 246 47 Series 1 data packet: 16-bit_destination options data
+0xFFFF=broadcast adress, f 44;
+#X obj 1294 179 t b a b b;
+#X obj 914 247 bng 15 250 50 0 empty set_adress-\$0 set_adress-\$0
+17 7 0 10 -261682 -1 -1;
+#X obj 1354 207 bng 15 250 50 0 set_out-\$0 empty set_out-\$0 17 7
+0 10 -261234 -1 -1;
+#X obj 1334 221 bng 15 250 50 0 set_adress-\$0 empty set_adress-\$0
+17 7 0 10 -261682 -1 -1;
+#X obj 1294 233 bng 15 250 50 0 set_output-\$0 empty set_output-\$0
+17 7 0 10 -204786 -1 -1;
+#X obj 1294 112 bng 15 250 50 0 empty empty write&send_packet 17 7
+1 10 -262144 -1 -1;
+#X msg 1320 46 HELLO WORLD !;
+#X symbolatom 1294 127 30 0 0 0 - - -;
+#X obj 1563 46 inlet;
+#X text 151 47 DIRECT INPUT;
+#X text 1395 92 String INPUT;
+#X obj 1119 793 list tosymbol;
+#X obj 1114 918 spigot;
+#X obj 1141 885 tgl 15 0 empty empty print_XBEE_output 17 7 0 10 -4034
+-1 -1 0 1;
+#X obj 1426 46 r XBEE-String_Input;
+#X obj 150 29 r XBEE-Direct_Input;
+#X obj 946 941 s XBEE-output;
+#X obj 1212 935 print XBEE_output;
+#X obj 1055 612 list split 1;
+#X obj 1020 637 bang;
+#X obj 1020 612 list;
+#X obj 1055 637 t b l;
+#X text 1013 594 serialise la liste;
+#X obj 1087 693 t b b;
+#X obj 1087 714 bng 15 250 50 0 empty empty raz 17 7 0 10 -262144 -1
+-1;
+#X obj 1140 751 t l l;
+#X obj 1119 768 list;
+#X obj 1140 729 list prepend;
+#X text 1093 655 separateur=SPACE(32ASCII);
+#X obj 1032 571 t b l b;
+#X obj 1078 816 bng 15 250 50 0 empty empty raz 17 7 0 10 -262144 -1
+-1;
+#X obj 1119 852 t l l;
+#X obj 1032 869 list;
+#X obj 1119 830 list prepend;
+#X text 1124 814 recompose la list;
+#X text 1154 712 recompose les symbol;
+#X obj 914 440 t l l;
+#X obj 999 378 bng 15 250 50 0 empty set_out-\$0 set_out-\$0 17 7 0
+10 -261234 -1 -1;
+#X obj 921 483 list;
+#X obj 921 465 bng 15 250 50 0 empty set_output-\$0 set_output-\$0
+17 7 0 10 -204786 -1 -1;
+#X obj 914 418 list prepend;
+#X obj 921 505 route list;
+#X obj 1032 891 route list;
+#X msg 103 100 TX16 0xFFFF 0 72 69 76 76 79 32 87 79 82 76 68 32 33
+32, f 73;
+#X obj 921 526 s XBEE-Direct_Input;
+#X obj 150 175 spigot;
+#X obj 302 160 tgl 15 0 empty toggle_in-\$0 toggle_in-\$0 17 7 0 10
+-1 -262144 -1 1 1;
+#X obj 150 345 spigot;
+#X obj 202 330 tgl 15 0 empty toggle_out-\$0 toggle_out-\$0 17 7 0
+10 -1 -262144 -1 0 1;
+#X obj 150 369 route 1 2 3;
+#X obj 28 59 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 607 169 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X text 555 201 init COM4;
+#X obj 622 184 f \$1;
+#X obj 1063 486 print WTF;
+#X obj 823 577 print WTF;
+#X obj 1403 782 print;
+#X msg 914 262 TX16 0xFFFF 0 0;
+#X obj 1346 401 list append 32;
+#X msg 1022 218 TX16 \$1 0 0;
+#X obj 1087 671 route 32 0;
+#X msg 1441 739 HELLO WORLD !;
+#X msg 1096 130 0xFFFF;
+#X obj 1022 245 cyclone/prepend add2;
+#X connect 8 0 84 0;
+#X connect 9 0 13 0;
+#X connect 9 0 86 0;
+#X connect 9 1 13 1;
+#X connect 9 2 13 2;
+#X connect 13 0 10 0;
+#X connect 13 1 12 0;
+#X connect 13 2 11 0;
+#X connect 14 0 8 0;
+#X connect 16 0 9 0;
+#X connect 18 0 21 0;
+#X connect 18 1 20 1;
+#X connect 19 0 20 0;
+#X connect 20 0 18 0;
+#X connect 21 0 19 0;
+#X connect 21 1 23 0;
+#X connect 22 0 24 0;
+#X connect 23 0 22 0;
+#X connect 24 0 97 0;
+#X connect 29 0 8 0;
+#X connect 30 0 31 0;
+#X connect 31 0 32 0;
+#X connect 32 0 98 0;
+#X connect 32 1 33 0;
+#X connect 33 0 96 0;
+#X connect 34 0 30 0;
+#X connect 36 0 31 0;
+#X connect 39 0 43 0;
+#X connect 39 1 18 0;
+#X connect 39 2 42 0;
+#X connect 39 3 41 0;
+#X connect 40 0 96 0;
+#X connect 44 0 46 0;
+#X connect 45 0 39 0;
+#X connect 46 0 39 0;
+#X connect 47 0 39 0;
+#X connect 50 0 72 0;
+#X connect 51 0 56 0;
+#X connect 52 0 51 1;
+#X connect 53 0 39 0;
+#X connect 54 0 8 0;
+#X connect 57 0 60 0;
+#X connect 57 1 59 1;
+#X connect 58 0 59 0;
+#X connect 59 0 57 0;
+#X connect 60 0 58 0;
+#X connect 60 1 99 0;
+#X connect 62 0 63 0;
+#X connect 62 1 65 0;
+#X connect 63 0 66 1;
+#X connect 64 0 66 1;
+#X connect 64 1 65 1;
+#X connect 65 0 50 0;
+#X connect 66 0 64 0;
+#X connect 68 0 71 0;
+#X connect 68 1 57 0;
+#X connect 68 2 69 0;
+#X connect 69 0 72 1;
+#X connect 70 0 72 1;
+#X connect 70 1 71 1;
+#X connect 71 0 81 0;
+#X connect 72 0 70 0;
+#X connect 75 0 79 1;
+#X connect 75 1 77 1;
+#X connect 76 0 79 1;
+#X connect 77 0 80 0;
+#X connect 78 0 77 0;
+#X connect 79 0 75 0;
+#X connect 80 0 83 0;
+#X connect 81 0 55 0;
+#X connect 81 0 15 0;
+#X connect 81 0 51 0;
+#X connect 82 0 8 0;
+#X connect 84 0 16 0;
+#X connect 85 0 84 1;
+#X connect 86 0 88 0;
+#X connect 87 0 86 1;
+#X connect 88 3 68 0;
+#X connect 89 0 82 0;
+#X connect 90 0 92 0;
+#X connect 96 0 79 0;
+#X connect 97 0 79 0;
+#X connect 98 0 102 0;
+#X connect 99 0 62 0;
+#X connect 99 1 66 0;
+#X connect 99 2 66 0;
+#X connect 101 0 31 0;
+#X connect 102 0 96 0;
+#X coords 0 0 1 1 400 80 2 150 200;

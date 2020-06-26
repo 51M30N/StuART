@@ -1,0 +1,315 @@
+#N canvas 0 74 1920 1006 10;
+#X obj 11 11 cnv 15 198 398 empty empty empty 20 12 0 14 -233017 -66577
+0;
+#X obj 273 136 inlet;
+#X obj 1514 189 prepend \$0;
+#X obj 1514 142 bng 15 250 50 0 empty raz raz 17 7 0 10 -191407 -1
+-1;
+#X obj 11 54 cnv 15 198 16 empty \$0-cnv_ip empty 5 7 0 14 -233017
+-66577 0;
+#X obj 273 388 list split 2;
+#X obj 11 72 cnv 15 198 16 empty \$0-cnv_port empty 5 7 0 14 -233017
+-66577 0;
+#X obj 273 485 prepend \$0;
+#X obj 273 456 +;
+#X obj 306 440 * 256;
+#X obj 1467 756 list tosymbol;
+#X obj 1467 719 list split 18;
+#X obj 1281 735 list split 64;
+#X obj 1108 751 list split 64;
+#X obj 939 767 list split 2;
+#X obj 842 783 list split 4;
+#X obj 582 815 list split 4;
+#X obj 715 799 list split 4;
+#X obj 379 847 list split 4;
+#X obj 485 831 list split 4;
+#X obj 319 1011 list split 6;
+#X obj 1009 1043 list split 1;
+#X obj 457 404 list split 2;
+#X obj 273 413 unpack;
+#X obj 457 508 +;
+#X obj 447 486 * 256;
+#X obj 457 463 unpack;
+#X obj 457 536 print OpPollReply_VersInfo_Firmware;
+#X obj 887 610 +;
+#X obj 877 583 * 256;
+#X obj 887 555 unpack;
+#X obj 887 635 print OpPollReply_Oem;
+#X obj 887 504 list split 2;
+#X obj 921 532 print OpPollReply-UBEA_Version;
+#X obj 1113 452 list split 1;
+#X obj 1433 564 list tosymbol;
+#X msg 1433 533 \$2 \$1;
+#X obj 1433 593 print OpPollReply-ESTA_manufacturer;
+#X obj 939 845 +;
+#X obj 939 820 * 256;
+#X obj 939 794 unpack;
+#X obj 1433 468 list split 2;
+#X obj 55 863 list split 6;
+#X obj 89 995 list split 1;
+#X obj 55 922 print OpPollReply-SwVideo_SwMacro_SwRemote_3*Spare;
+#X obj 273 248 list split 4;
+#X obj 273 366 list store;
+#X msg 415 255 set \$1 \$2 \$3 \$4;
+#X obj 434 164 prepend \$0;
+#X obj 273 271 match 127 0 0 1;
+#X obj 11 90 cnv 15 198 16 empty \$0-cnv_NET empty 5 7 0 14 -233017
+-66577 0;
+#X obj 11 108 cnv 15 198 16 empty \$0-cnv_SubNET empty 5 7 0 14 -233017
+-66577 0;
+#X obj 687 420 list split 2;
+#X obj 687 454 prepend \$0;
+#X msg 687 478 \; \$1-cnv_NET label NET==\$2 \; \$1-cnv_SubNET label
+SubNET==\$3;
+#X msg 273 509 \; \$1-cnv_port label Port==\$2;
+#X obj 1113 491 Dec2Bin8;
+#X obj 11 126 cnv 15 198 16 empty \$0-cnv_Status1 empty 5 7 0 14 -233017
+-66577 0;
+#X obj 1113 514 prepend \$0 Status1;
+#X obj 1113 572 print OpPollReply-Status1;
+#X obj 1467 777 prepend \$0 ShortName;
+#X obj 11 144 cnv 15 198 16 empty \$0-cnv_ShortName empty 5 7 0 12
+-228856 -159808 0;
+#X obj 11 162 cnv 15 198 16 empty \$0-cnv_LongName empty 5 7 0 8 -233017
+-66577 0;
+#X obj 1281 787 list tosymbol;
+#X obj 1281 813 prepend \$0 LongName;
+#X obj 1108 783 list tosymbol;
+#X obj 1108 809 prepend \$0 NodeReport;
+#X obj 11 180 cnv 15 198 16 empty \$0-cnv_NodeReport empty 5 7 0 8
+-233017 -66577 0;
+#X msg 418 54 192 168 1 30;
+#X obj 415 103 list;
+#X msg 418 72 192 168 1 29;
+#X msg 1113 535 \; \$1-cnv_\$2 label \$2==\$3_\$4_\$5_\$6_\$7_\$8_\$9_\$10
+\;;
+#X msg 1281 833 \; \$1-cnv_\$2 label LN==\$3;
+#X msg 1467 798 \; \$1-cnv_\$2 label SN==\$3;
+#X text 1562 140 raz before store// display error cnv;
+#X obj 887 436 list split 3;
+#X obj 887 479 spigot;
+#X obj 948 466 tgl 15 0 empty \$0-print \$0-print 17 7 0 10 -262130
+-1 -1 0 1;
+#X obj 457 439 spigot;
+#X obj 518 426 tgl 15 0 empty \$0-print \$0-print 17 7 0 10 -262130
+-1 -1 0 1;
+#X obj 12 393 tgl 15 0 \$0-print empty Print-filtered 17 7 0 10 -262130
+-1 -1 0 1;
+#X obj 1433 509 spigot;
+#X obj 1494 496 tgl 15 0 empty \$0-print \$0-print 17 7 0 10 -262130
+-1 -1 0 1;
+#X floatatom 75 199 5 0 0 0 NumPorts NumPorts-#0 -;
+#X obj 939 868 send NumPorts-\$0;
+#X floatatom 75 219 5 0 0 0 PortTypes PortTypes-#0-0 -;
+#X floatatom 107 219 5 0 0 0 - PortTypes-#0-1 -;
+#X floatatom 139 219 5 0 0 0 - PortTypes-#0-2 -;
+#X floatatom 171 219 5 0 0 0 - PortTypes-#0-3 -;
+#X msg 992 938 \; \$2-\$1-0 \$3 \; \$2-\$1-1 \$4 \; \$2-\$1-2 \$5 \;
+\$2-\$1-3 \$6 \;;
+#X floatatom 75 239 5 0 0 0 GoodInput GoodInput-#0-0 -;
+#X floatatom 107 239 5 0 0 0 - GoodInput-#0-1 -;
+#X floatatom 139 239 5 0 0 0 - GoodInput-#0-2 -;
+#X floatatom 171 239 5 0 0 0 - GoodInput-#0-3 -;
+#X obj 715 922 prepend \$0 GoodInput;
+#X obj 842 922 prepend \$0 PortTypes;
+#X msg 1653 906 0 0 0 0;
+#X floatatom 75 259 5 0 0 0 GoodOutput GoodOutput-#0-0 -;
+#X floatatom 107 259 5 0 0 0 - GoodOutput-#0-1 -;
+#X floatatom 139 259 5 0 0 0 - GoodOutput-#0-2 -;
+#X floatatom 171 259 5 0 0 0 - GoodOutput-#0-3 -;
+#X obj 582 922 prepend \$0 GoodOutput;
+#X obj 379 922 prepend \$0 SwOut;
+#X obj 485 922 prepend \$0 SwIn;
+#X floatatom 75 279 5 0 0 0 SwIn SwIn-#0-0 -;
+#X floatatom 107 279 5 0 0 0 - SwIn-#0-1 -;
+#X floatatom 139 279 5 0 0 0 - SwIn-#0-2 -;
+#X floatatom 171 279 5 0 0 0 - SwIn-#0-3 -;
+#X floatatom 75 299 5 0 0 0 SwOut SwOut-#0-0 -;
+#X floatatom 107 299 5 0 0 0 - SwOut-#0-1 -;
+#X floatatom 139 299 5 0 0 0 - SwOut-#0-2 -;
+#X floatatom 171 299 5 0 0 0 - SwOut-#0-3 -;
+#X obj 1514 162 t b b;
+#X obj 55 898 spigot;
+#X obj 116 885 tgl 15 0 empty \$0-print \$0-print 17 7 0 10 -262130
+-1 -1 0 1;
+#X obj 89 1039 text get Table4-StyleCode 1 1;
+#X msg 89 1085 \; \$1-cnv_\$2 label \$2==\$3;
+#X obj 89 1064 prepend \$0 Style;
+#X obj 11 320 cnv 15 198 16 empty \$0-cnv_Style empty 5 7 0 14 -233017
+-66577 0;
+#X obj 319 1040 prepend \$0 MAC;
+#X msg 319 1061 \; \$1-cnv_\$2 label \$2==\$3.\$4.\$5.\$6.\$7.\$8;
+#X obj 11 338 cnv 15 198 16 empty \$0-cnv_MAC empty 5 7 0 10 -233017
+-66577 0;
+#X obj 596 1064 prepend \$0 BindIP;
+#X obj 11 356 cnv 15 198 16 empty \$0-cnv_BindIP empty 5 7 0 14 -233017
+-66577 0;
+#X obj 596 1027 list split 5;
+#X msg 596 1088 \; \$1-cnv_\$2 label \$2==\$3.\$4.\$5.\$6:\$7;
+#X obj 1009 1070 Dec2Bin8;
+#X msg 1009 1114 \; \$1-cnv_\$2 label \$2==\$3_\$4_\$5_\$6_\$7_\$8_\$9_\$10
+\;;
+#X obj 1009 1093 prepend \$0 Status2;
+#X obj 11 374 cnv 15 198 16 empty \$0-cnv_Status2 empty 5 7 0 14 -233017
+-66577 0;
+#X obj 1653 178 bang;
+#X obj 415 36 inlet;
+#X obj 415 126 t a a b;
+#X obj 300 331 bng 15 250 50 0 \$0-OpPollReply empty \$0-OpPollReply
+17 7 0 10 -159808 -257985 -1;
+#X obj 193 13 bng 15 1000 50 0 empty \$0-OpPollReply OpPollReply_decoder-\$1
+-135 7 0 10 -159808 -257985 -1;
+#X obj 273 294 t b b;
+#X obj 13 32 hradio 15 1 0 12 empty empty empty 0 -8 0 10 -159808 -257985
+-1 2;
+#X obj 229 66 text get Node_Registration;
+#X obj 250 111 r OpPollReply_to_decoder;
+#X obj 229 -3 loadbang;
+#X obj 229 45 \$1;
+#X msg 434 182 \; \$1-cnv_ip label IP==\$2.\$3.\$4.\$5;
+#X obj 302 -1 r Reload_OpPollReply_decoder;
+#X obj 302 42 route \$1 0;
+#X msg 1108 830 \; \$1-cnv_\$2 label NReport==\$3;
+#X obj 229 87 route 0;
+#X obj 253 45 bang;
+#X msg 1244 221 \; \$1-cnv_ip label #0-cnv_ip \; \$1-cnv_port label
+#0-cnv_port \; \$1-cnv_NET label #0-cnv_NET \; \$1-cnv_SubNET label
+#0-cnv_SubNET \; \$1-cnv_Status1 label #0-cnv_Status1 \; \$1-cnv_Status2
+label #0-cnv_Status2 \; \$1-cnv_ShortName label #0-cnv_ShortName \;
+\$1-cnv_LongName label #0-cnv_LongName \; \$1-cnv_NodeReport label
+#0-cnv_NodeReport \; \$1-cnv_Style label #0-cnv_Style \; \$1-cnv_MAC
+label #0-cnv_MAC \; \$1-cnv_BindIP label #0-cnv_BindIP \; NumPorts-\$1
+0 \;;
+#X msg 1514 221 \; \$1-cnv_ip label \; \$1-cnv_port label \; \$1-cnv_NET
+label \; \$1-cnv_SubNET label \; \$1-cnv_Status1 label \; \$1-cnv_Status2
+label \; \$1-cnv_ShortName label \; \$1-cnv_LongName label \; \$1-cnv_NodeReport
+label \; \$1-cnv_Style label \; \$1-cnv_MAC label \; \$1-cnv_BindIP
+label \; NumPorts-\$1 0 \;;
+#X obj 229 20 del 5000;
+#X connect 1 0 45 0;
+#X connect 2 0 148 0;
+#X connect 3 0 112 0;
+#X connect 5 0 23 0;
+#X connect 5 1 22 0;
+#X connect 7 0 55 0;
+#X connect 8 0 7 0;
+#X connect 9 0 8 1;
+#X connect 10 0 60 0;
+#X connect 11 0 10 0;
+#X connect 11 1 12 0;
+#X connect 12 0 63 0;
+#X connect 12 1 13 0;
+#X connect 13 0 65 0;
+#X connect 13 1 14 0;
+#X connect 14 0 40 0;
+#X connect 14 1 15 0;
+#X connect 15 0 95 0;
+#X connect 15 1 17 0;
+#X connect 16 0 101 0;
+#X connect 16 1 19 0;
+#X connect 17 0 94 0;
+#X connect 17 1 16 0;
+#X connect 18 0 102 0;
+#X connect 18 1 42 0;
+#X connect 19 0 103 0;
+#X connect 19 1 18 0;
+#X connect 20 0 119 0;
+#X connect 20 1 124 0;
+#X connect 21 0 126 0;
+#X connect 22 0 78 0;
+#X connect 22 1 52 0;
+#X connect 23 0 8 0;
+#X connect 23 1 9 0;
+#X connect 24 0 27 0;
+#X connect 25 0 24 0;
+#X connect 26 0 25 0;
+#X connect 26 1 24 1;
+#X connect 28 0 31 0;
+#X connect 29 0 28 0;
+#X connect 30 0 29 0;
+#X connect 30 0 31 0;
+#X connect 30 1 28 1;
+#X connect 30 1 31 0;
+#X connect 32 0 30 0;
+#X connect 32 1 33 0;
+#X connect 34 0 56 0;
+#X connect 34 1 41 0;
+#X connect 35 0 37 0;
+#X connect 36 0 35 0;
+#X connect 38 0 84 0;
+#X connect 39 0 38 0;
+#X connect 40 0 39 0;
+#X connect 40 1 38 1;
+#X connect 41 0 81 0;
+#X connect 41 1 11 0;
+#X connect 42 0 113 0;
+#X connect 42 1 43 0;
+#X connect 43 0 115 0;
+#X connect 43 1 20 0;
+#X connect 45 0 49 0;
+#X connect 45 1 46 1;
+#X connect 46 0 5 0;
+#X connect 47 0 49 0;
+#X connect 48 0 141 0;
+#X connect 49 0 135 0;
+#X connect 52 0 53 0;
+#X connect 52 1 75 0;
+#X connect 53 0 54 0;
+#X connect 56 0 58 0;
+#X connect 58 0 71 0;
+#X connect 60 0 73 0;
+#X connect 63 0 64 0;
+#X connect 64 0 72 0;
+#X connect 65 0 66 0;
+#X connect 66 0 144 0;
+#X connect 68 0 69 0;
+#X connect 69 0 132 0;
+#X connect 70 0 69 0;
+#X connect 75 0 76 0;
+#X connect 75 1 34 0;
+#X connect 76 0 32 0;
+#X connect 77 0 76 1;
+#X connect 78 0 26 0;
+#X connect 79 0 78 1;
+#X connect 81 0 36 0;
+#X connect 82 0 81 1;
+#X connect 94 0 89 0;
+#X connect 95 0 89 0;
+#X connect 96 0 95 0;
+#X connect 96 0 94 0;
+#X connect 96 0 101 0;
+#X connect 96 0 103 0;
+#X connect 96 0 102 0;
+#X connect 101 0 89 0;
+#X connect 102 0 89 0;
+#X connect 103 0 89 0;
+#X connect 112 0 2 0;
+#X connect 112 1 130 0;
+#X connect 113 0 44 0;
+#X connect 114 0 113 1;
+#X connect 115 0 117 0;
+#X connect 117 0 116 0;
+#X connect 119 0 120 0;
+#X connect 122 0 125 0;
+#X connect 124 0 122 0;
+#X connect 124 1 21 0;
+#X connect 126 0 128 0;
+#X connect 128 0 127 0;
+#X connect 130 0 96 0;
+#X connect 131 0 69 0;
+#X connect 132 0 47 0;
+#X connect 132 1 48 0;
+#X connect 132 2 3 0;
+#X connect 135 0 46 0;
+#X connect 135 1 133 0;
+#X connect 136 0 137 0;
+#X connect 137 0 145 0;
+#X connect 138 0 45 0;
+#X connect 139 0 149 0;
+#X connect 140 0 136 0;
+#X connect 142 0 143 0;
+#X connect 142 0 146 0;
+#X connect 145 1 69 0;
+#X connect 146 0 140 0;
+#X connect 149 0 140 0;
+#X coords 0 -1 1 1 200 400 2 10 10;

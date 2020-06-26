@@ -1,0 +1,42 @@
+#!/bin/bash
+#|||||||||||||#
+#|by_51M30N|||#
+#|for__StuART|#
+#|||||||||||||# rev 01092019
+#|||||||||||||#
+
+#init
+chemin="/home/pi/StuART/"
+echo "chemin" $chemin
+
+#lecture du pointeur numerotation
+	num=$(cat ~/Documents/Backup/numerotation)
+	echo num $num
+#generation du chemin de l'archive
+	num=/home/pi/Documents/Backup/StuART$num.tar
+
+#archivage des dossier
+        tar -cvf $num $chemin"Cue/"
+	tar -cvf $num $chemin"CueLoader/"
+	tar -cvf $num $chemin"DMX/"
+        tar -cvf $num $chemin"GPIO/"
+	tar -cvf $num $chemin"MIDI/"
+	tar -cvf $num $chemin"OSC/"
+	tar -cvf $num $chemin"player_Stereo/"
+	tar -cvf $num $chemin"SCRIPT/"
+        tar -cvf $num $chemin"XBEE/"
+        tar -cvf $num $chemin"aplay/"
+        tar -cvf $num $chemin"_ARTEPHILE/"
+        tar -cvf $num $chemin"_LGQ/"
+        tar -cvf $num $chemin"_DLQC/"
+        tar -cvf $num $chemin"_SALON"
+
+        echo "Save in " $num
+
+#recharge numerotation et numerotation++
+	num=$(cat "/home/pi/Documents/Backup/numerotation")
+	let "num= $num + 1"
+	echo $num > "/home/pi/Documents/Backup/numerotation"
+
+
+exit

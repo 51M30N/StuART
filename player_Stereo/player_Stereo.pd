@@ -1,0 +1,253 @@
+#N canvas 93 308 1354 803 10;
+#X obj 300 160 cnv 15 750 50 empty canvas_player_stereo_\$1 Player_Stereo-\$1
+5 7 1 14 -191407 -258699 0;
+#X obj 104 465 readsf~ 2;
+#X obj 141 600 *~;
+#X obj 87 600 *~;
+#X obj 240 517 line;
+#X msg 104 435 open \$1 \, 1;
+#X obj 240 485 pack;
+#X msg 727 380 \$1;
+#X obj 506 195 tgl 15 0 empty empty PLAY 17 7 1 10 -261682 -1 -1 0
+1;
+#X floatatom 883 178 4 0 0 0 START_LEVEL - start_level_#1;
+#X floatatom 335 191 10 0 0 1 time-fade(ms) - audio_time_#1;
+#X floatatom 883 163 4 0 1024 0 LEVEL - level_#1;
+#X symbolatom 335 177 60 0 0 2 - - track_#1;
+#X obj 104 363 spigot;
+#X obj 279 363 spigot;
+#X text 1 41 Chemin Level_end Time Level_Start Boolean_replay;
+#X obj 240 583 / 1024;
+#X obj 5 124 r audio_\$1;
+#X text 153 364 FileName;
+#X text 327 365 StartLevel;
+#X obj 329 602 bang;
+#X obj 781 539 tgl 15 0 empty empty play_\$1 17 7 0 10 -261682 -1 -1
+0 1;
+#X floatatom 637 539 5 0 0 1 start_level_#1 start_level_#1 -;
+#X floatatom 474 539 10 0 0 1 audio_time_#1 audio_time_#1 -;
+#X floatatom 374 539 5 0 0 1 level_#1 level_#1 -;
+#X symbolatom 374 521 60 0 0 1 track_#1 track_#1 -;
+#X obj 401 585 t b a;
+#X obj 474 585 t b a;
+#X obj 637 585 t b a;
+#X obj 781 585 t b a;
+#X obj 104 143 t a a;
+#X obj 131 168 t a a;
+#X obj 158 190 t a a;
+#X obj 185 212 t a a;
+#X obj 301 175 bng 30 250 50 0 OPEN_\$1 empty OPEN 0 15 1 10 -260097
+-1 -4032;
+#X obj 305 141 openpanel;
+#X obj 387 126 bng 15 250 50 0 empty OPEN_\$1 OPEN_\$1 17 7 0 10 -260097
+-1 -1;
+#X obj 31 775 s to_cue;
+#X obj 374 689 cyclone/prepend player_\$1;
+#X obj 8 54 r player_\$1;
+#X obj 104 239 makefilename %s;
+#X obj 164 547 print READSF_\$1;
+#X obj 919 162 hsl 128 15 0 1024 0 0 empty empty level_\$1 4 8 1 12
+-13330 -258113 -261682 0 1;
+#X obj 919 178 hsl 128 15 0 1024 0 0 empty empty start_level_\$1 4
+8 1 12 -13330 -258113 -261682 0 1;
+#X obj 366 561 int;
+#X obj 637 558 int;
+#X obj 404 482 + 0;
+#X obj 727 346 spigot;
+#X obj 766 325 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 766 300 >= 0;
+#X obj 916 195 bng 15 250 50 0 empty empty -1_kill_START_LEVEL 0 9
+1 12 -13330 -258113 -261682;
+#X obj 991 213 - 1;
+#X obj 727 275 t f f f;
+#X obj 265 442 r audio_time_\$1;
+#X obj 240 422 r level_\$1;
+#X floatatom 877 192 5 0 0 0 IRL-LEVEL - -;
+#X obj 374 643 pack s f f f f;
+#X obj 273 712 bng 15 250 50 0 empty Store_pst Store_pst 17 7 0 10
+-258113 -4034 -1;
+#X obj 272 741 cyclone/prepend;
+#X obj 87 653 send~ Left-\$1;
+#X obj 141 632 send~ Right-\$1;
+#X obj 1055 604 bng 15 250 50 0 empty SET_pst-\$1 SET_pst-\$1 17 7
+0 10 -4160 -258113 -1;
+#X obj 173 712 bng 15 250 50 0 empty Store_pst-\$1 Store_pst-\$1 17
+7 0 10 -258113 -4034 -1;
+#X obj 273 692 bng 15 250 50 0 Store_pst empty Store_pst 17 7 0 10
+-258113 -4034 -1;
+#X obj 173 692 bng 15 250 50 0 Store_pst-\$1 empty Store_pst-\$1 17
+7 0 10 -258113 -4034 -1;
+#X obj 1055 574 bng 15 250 50 0 SET_pst-\$1 empty SET_pst-\$1 17 7
+0 10 -4160 -258113 -1;
+#X obj 1135 604 bng 15 250 50 0 empty SET_pst SET_pst 17 7 0 10 -4160
+-258113 -1;
+#X obj 1135 574 bng 15 250 50 0 SET_pst empty SET_pst 17 7 0 10 -4160
+-258113 -1;
+#X obj 632 192 bng 15 250 50 0 SET_pst-\$1 empty SET 17 7 1 10 -4160
+-258113 -1;
+#X text 1062 195 level direct;
+#X text 1056 176 level temporisé;
+#X obj 742 191 bng 15 250 50 0 Store_pst-\$1 empty STORE -35 7 1 10
+-258113 -4034 -1;
+#X obj 745 765 print WTF_player_Stereo-\$1;
+#X obj 1055 664 t b b;
+#X obj 269 302 tgl 15 0 empty empty empty 17 7 0 10 -261682 -1 -1 0
+1;
+#X obj 404 503 s toggle_remote_\$1;
+#X obj 1086 410 tgl 15 0 empty play_\$1 play_\$1 17 7 0 10 -261682
+-1 -1 0 1;
+#X obj 1086 441 route 0 1;
+#X obj 1116 514 s canvas_player_stereo_\$1;
+#X msg 1116 463 color 16 0 13;
+#X msg 1086 482 color 13 0 16;
+#X obj 578 192 tgl 15 0 empty empty LOOP 17 7 1 10 -261682 -1 -1 0
+1;
+#X obj 539 232 spigot;
+#X obj 539 255 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 1072 733 list prepend;
+#X obj 459 81 prepend set;
+#X msg 459 103 0 0 0 1;
+#X obj 728 48 r globaltime;
+#X obj 728 70 * 100;
+#X obj 1072 769 s to_control_audio;
+#X obj 857 325 loadbang;
+#X obj 857 347 \$1;
+#X obj 840 318 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 876 484 send to_control_audio;
+#X floatatom 948 393 10 0 0 1 audio_time_#1time-fade(ms) audio_time_#1
+-;
+#X obj 197 101 route 0 1;
+#X obj 246 259 tgl 15 0 play_\$1 empty PLAY 17 7 1 10 -261682 -1 -1
+0 1;
+#X obj 298 119 + 1;
+#X obj 246 233 r toggle_remote_\$1;
+#X obj 463 467 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 200 124 + 0;
+#X msg 104 18 /home/pi/Music/ONAVIO-LGQNPP/5-LGQNPPMairie.wav 112 0
+0 0, f 67;
+#X obj 1014 421 f;
+#X obj 104 71 unpack s f f f f;
+#X obj 537 54 print WTF_player_Stereo_\$1;
+#X obj 919 427 pack f f f s;
+#X msg 876 456 remote_player_1 \$1 \$2 \$3 \$4;
+#X msg 876 378 set \, add2 remote_player_\$1 \, adddollar 1 \, adddollar
+2 \, adddollar 3 \, adddollar 4, f 82;
+#X obj 883 115 r set_player-\$1;
+#X obj 783 115 r PLAY_player-\$1;
+#X obj 750 133 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X connect 1 0 3 1;
+#X connect 1 1 2 1;
+#X connect 1 2 41 0;
+#X connect 1 2 46 0;
+#X connect 1 2 82 0;
+#X connect 2 0 60 0;
+#X connect 3 0 59 0;
+#X connect 4 0 16 0;
+#X connect 4 0 55 0;
+#X connect 5 0 1 0;
+#X connect 6 0 4 0;
+#X connect 7 0 4 0;
+#X connect 8 0 74 0;
+#X connect 8 0 21 0;
+#X connect 13 0 5 0;
+#X connect 14 0 7 0;
+#X connect 16 0 2 0;
+#X connect 16 0 3 0;
+#X connect 20 0 56 0;
+#X connect 21 0 29 0;
+#X connect 22 0 45 0;
+#X connect 23 0 27 0;
+#X connect 23 0 6 1;
+#X connect 24 0 44 0;
+#X connect 24 0 6 0;
+#X connect 25 0 56 0;
+#X connect 25 0 105 3;
+#X connect 26 0 20 0;
+#X connect 26 1 56 1;
+#X connect 27 0 20 0;
+#X connect 27 1 56 2;
+#X connect 28 0 20 0;
+#X connect 28 1 56 3;
+#X connect 29 0 20 0;
+#X connect 29 1 56 4;
+#X connect 30 0 40 0;
+#X connect 30 1 12 0;
+#X connect 31 1 42 0;
+#X connect 32 1 10 0;
+#X connect 33 0 14 0;
+#X connect 33 1 43 0;
+#X connect 35 0 12 0;
+#X connect 36 0 35 0;
+#X connect 38 0 58 1;
+#X connect 38 0 84 1;
+#X connect 39 0 85 0;
+#X connect 39 0 103 0;
+#X connect 40 0 13 0;
+#X connect 42 0 11 0;
+#X connect 42 0 105 1;
+#X connect 43 0 52 0;
+#X connect 44 0 26 0;
+#X connect 45 0 28 0;
+#X connect 46 0 75 0;
+#X connect 47 0 7 0;
+#X connect 48 0 47 1;
+#X connect 49 0 48 0;
+#X connect 50 0 51 0;
+#X connect 51 0 43 0;
+#X connect 52 0 47 0;
+#X connect 52 1 9 0;
+#X connect 52 2 49 0;
+#X connect 53 0 6 1;
+#X connect 54 0 6 0;
+#X connect 56 0 38 0;
+#X connect 57 0 58 0;
+#X connect 58 0 37 0;
+#X connect 61 0 73 0;
+#X connect 62 0 58 0;
+#X connect 66 0 73 0;
+#X connect 73 1 84 0;
+#X connect 74 0 14 1;
+#X connect 74 0 13 1;
+#X connect 76 0 77 0;
+#X connect 76 0 102 0;
+#X connect 77 0 80 0;
+#X connect 77 1 79 0;
+#X connect 79 0 78 0;
+#X connect 80 0 78 0;
+#X connect 81 0 82 1;
+#X connect 82 0 83 0;
+#X connect 83 0 84 0;
+#X connect 84 0 89 0;
+#X connect 85 0 86 0;
+#X connect 87 0 88 0;
+#X connect 88 0 10 0;
+#X connect 90 0 91 0;
+#X connect 91 0 107 0;
+#X connect 92 0 91 0;
+#X connect 94 0 105 2;
+#X connect 95 0 100 0;
+#X connect 95 1 97 0;
+#X connect 97 0 96 0;
+#X connect 97 0 8 0;
+#X connect 98 0 96 0;
+#X connect 99 0 46 0;
+#X connect 100 0 8 0;
+#X connect 101 0 103 0;
+#X connect 102 0 105 0;
+#X connect 103 0 30 0;
+#X connect 103 1 31 0;
+#X connect 103 2 32 0;
+#X connect 103 3 33 0;
+#X connect 103 4 95 0;
+#X connect 105 0 106 0;
+#X connect 106 0 93 0;
+#X connect 107 0 106 0;
+#X connect 108 0 68 0;
+#X connect 109 0 110 0;
+#X connect 110 0 8 0;
+#X coords 0 -1 1 1 750 50 1 300 160;

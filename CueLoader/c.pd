@@ -1,0 +1,67 @@
+#N canvas 289 215 854 733 10;
+#X obj 101 101 cnv 15 198 48 empty canvas goto>\$1 1 7 2 14 -204786
+-159808 0;
+#X text 7 3 -arg1 cue_name -arg2 midi_toogle;
+#X obj 100 115 bng 35 250 50 0 empty empty mise 36 5 0 10 -4034 -257985
+-260097;
+#X obj 138 127 bng 10 250 50 0 empty empty Edit 12 5 0 10 -257985 -1
+-191407;
+#X msg 138 503 open;
+#X msg 15 286 Cue_name;
+#X obj 16 542 unpack s f f s;
+#X msg 209 503 writeagain;
+#X obj 177 127 bng 10 250 50 0 empty empty Update 12 5 0 10 -258113
+-1 -191407;
+#X obj 177 270 t b b;
+#X msg 16 594 label \$1;
+#X obj 16 616 s next-\$1;
+#X obj 111 606 s bang-\$1;
+#X obj 136 140 cnv 10 140 10 empty next-\$1 monologue 1 5 1 11 -159808
+-204786 0;
+#X obj 13 170 symbol \$1;
+#X obj 510 321 r SHOW;
+#X obj 542 486 makefilename;
+#X obj 457 429 symbol \$1;
+#X obj 457 360 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 542 373 symbol;
+#X msg 542 419 set \$1;
+#X obj 15 520 cyclone/coll;
+#C restore;
+#X msg 242 568 read;
+#X msg 295 503 read \$1;
+#X obj 100 64 r bang-\$1;
+#X obj 542 397 makefilename /home/pi/StuART/Cue/%s/%%s;
+#X obj 510 343 t b b a;
+#X obj 13 220 s to_control_goto;
+#X msg 111 584 label \$1;
+#X msg 625 337 FFM;
+#X connect 2 0 14 0;
+#X connect 3 0 4 0;
+#X connect 4 0 21 0;
+#X connect 5 0 21 0;
+#X connect 6 0 10 0;
+#X connect 6 3 28 0;
+#X connect 7 0 21 0;
+#X connect 8 0 9 0;
+#X connect 9 0 5 0;
+#X connect 9 1 7 0;
+#X connect 10 0 11 0;
+#X connect 14 0 27 0;
+#X connect 15 0 26 0;
+#X connect 16 0 23 0;
+#X connect 17 0 16 0;
+#X connect 18 0 17 0;
+#X connect 19 0 25 0;
+#X connect 20 0 16 0;
+#X connect 21 0 6 0;
+#X connect 22 0 21 0;
+#X connect 23 0 21 0;
+#X connect 24 0 2 0;
+#X connect 25 0 20 0;
+#X connect 26 0 5 0;
+#X connect 26 1 17 0;
+#X connect 26 2 19 0;
+#X connect 28 0 12 0;
+#X connect 29 0 26 0;
+#X coords 0 -1 1 1 200 50 2 100 100;
