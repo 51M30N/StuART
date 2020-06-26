@@ -26,4 +26,3 @@ sudo apt-get install pd-cyclone
 
 penser a ajouter le repertoire ~/StuART dans pd[Fichiers>preferences>Chemins] ainsi que chacun des sous repertoires utilisés (cf StuART.pdsettings)
 
-
