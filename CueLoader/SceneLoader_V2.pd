@@ -36,7 +36,13 @@
 #X msg 539 1299 write \$1;
 #X obj 992 1246 bng 15 250 50 0 empty CLEAR CLEAR 17 7 0 10 -260097
 -1 -1;
-#X msg 54 1501 \;, f 192;
+#X msg 54 1501 \; 17fader 0 1000 \; 18fader 0 1000 \; 19fader 0 1000
+\; 24fader 0 1000 \; 23fader 0 1000 \; 22fader 0 1000 \; 21fader 0
+1000 \; 20fader 0 1000 \; 16fader 0 1000 \; 15fader 0 1000 \; 14fader
+0 1000 \; 13fader 0 1000 \; 1fader 0 1000 \; 2fader 0 1000 \; 3fader
+0 1000 \; 4fader 0 1000 \; 5fader 0 1000 \; 6fader 0 1000 \; 7fader
+0 1000 \; 8fader 0 1000 \; 9fader 0 1000 \; 10fader 0 1000 \; 11fader
+0 1000 \; 12fader 0 1000 \; Cue_name  \;, f 192;
 #X msg 1213 1334 set \, add;
 #X obj 519 1015 r store_cue;
 #X obj 778 1283 bng 15 250 50 0 empty Open_Cue Open_Cue 17 7 0 10 -257985
@@ -61,7 +67,7 @@
 #X obj 841 110 t a a a;
 #X obj 809 140 t a a a;
 #X obj 778 170 t a a a;
-#X msg 613 1260 /home/pi/StuART/Cue/LGQ/s10_manif_debut;
+#X msg 613 1260 /home/pi/Documents/_SHO/Cue/noir;
 #X obj 122 391 s go_cue;
 #X obj 122 350 t a a;
 #X obj 519 754 t b b;
@@ -138,12 +144,13 @@
 #X obj 830 456 * 1000;
 #X obj 940 891 loadbang;
 #X obj 940 916 symbol a_remplir;
-#X obj 275 1100 makefilename /home/pi/StuART/Cue/%s/%%s;
 #X msg 393 1243 set \$1;
-#X msg 183 1260 /home/pi/StuART/Cue/LGQ/s10_manif_debut;
+#X msg 183 1260 /home/pi/Documents/_SHO/Cue/noir;
 #X symbolatom 403 549 30 0 0 0 Next_Cue - Next_Cue;
 #X obj 148 680 r CUE_EDIT_Next_cue;
 #X obj 1045 1467 s to_control_InCue;
+#X obj 275 1100 makefilename /home/pi/Documents/_%s/Cue/%%s;
+#X msg 248 206 noir;
 #X connect 1 0 5 0;
 #X connect 2 0 6 0;
 #X connect 3 0 70 0;
@@ -176,7 +183,7 @@
 #X connect 24 0 20 0;
 #X connect 25 0 27 0;
 #X connect 25 1 22 0;
-#X connect 25 2 117 0;
+#X connect 25 2 116 0;
 #X connect 26 0 28 0;
 #X connect 26 1 30 0;
 #X connect 26 2 21 0;
@@ -191,7 +198,7 @@
 #X connect 38 0 70 0;
 #X connect 38 1 70 3;
 #X connect 39 0 53 0;
-#X connect 39 0 119 0;
+#X connect 39 0 118 0;
 #X connect 39 1 52 0;
 #X connect 39 1 102 0;
 #X connect 39 2 51 0;
@@ -218,7 +225,7 @@
 #X connect 65 0 9 0;
 #X connect 66 0 40 0;
 #X connect 67 0 76 0;
-#X connect 67 0 121 0;
+#X connect 67 0 120 0;
 #X connect 68 0 32 0;
 #X connect 68 0 84 0;
 #X connect 69 0 46 0;
@@ -240,7 +247,7 @@
 #X connect 93 0 90 0;
 #X connect 94 0 80 0;
 #X connect 96 0 97 0;
-#X connect 97 0 116 0;
+#X connect 97 0 121 0;
 #X connect 99 0 32 0;
 #X connect 110 0 104 0;
 #X connect 111 0 99 1;
@@ -249,7 +256,8 @@
 #X connect 114 0 115 0;
 #X connect 115 0 103 0;
 #X connect 115 0 104 0;
-#X connect 116 0 98 0;
-#X connect 117 0 118 0;
-#X connect 120 0 119 0;
+#X connect 116 0 117 0;
+#X connect 119 0 118 0;
+#X connect 121 0 98 0;
+#X connect 122 0 80 0;
 #X coords 0 -1 1 1 800 80 1 50 520;
