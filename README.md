@@ -1,4 +1,7 @@
 # StuART
+
+publication an cours de rangement pour git, potentielement inutilisable
+
 Suite d'objets pure data pour un usage de régie
 
 La Régie StuArt, actuellement développée par 
