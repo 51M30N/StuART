@@ -25,10 +25,10 @@
 #X obj 186 74 inlet;
 #X obj 11 323 print OSCsender \$3;
 #X msg 208 615 /test 1;
-#X obj 11 110 spigot;
+#X obj 11 112 spigot;
 #X obj 18 286 spigot;
 #X text 385 6 [OSCsender "IP" "Port" "Name"];
-#X obj 176 272 osc/packOSC;
+#X obj 176 270 osc/packOSC;
 #X obj 176 341 cyclone/prepend send;
 #X obj 270 647 ggee/shell;
 #X msg 270 624 hostname -I;
@@ -38,7 +38,7 @@
 #X obj 270 846 cyclone/prepend /SOURCE;
 #X obj 176 412 netsend -u -b;
 #X obj 436 48 print WTF;
-#X obj 176 445 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+#X obj 176 445 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
 #X obj 208 509 route 1;
 #X obj 176 939 route 0 1;
@@ -70,14 +70,14 @@
 #X obj 741 91 r port-\$0;
 #X floatatom 741 113 5 0 0 0 - - -;
 #X symbolatom 707 70 15 0 0 0 - - -;
-#X obj 0 0 cnv 15 199 29 empty cnv_\$0 TO_EXEC_192.168.1.255:9997 2
-8 1 10 -24198 -62784 0;
+#X obj 0 0 cnv 15 199 29 empty cnv_\$0 dmx_universe-0_127.0.0.2:7771
+2 8 1 10 -258699 -62784 0;
 #X obj 900 421 prepend \$0 \$3;
 #X obj 208 550 t b b;
 #X msg 823 108 connect 127.0.0.1 8888;
 #X obj 51 269 tgl 10 0 empty OSC_ascii_printer_\$0 OSC_ascii_printer_\$0
 12 5 0 8 -13381 -4032 -4160 0 1;
-#X obj 44 93 tgl 10 0 empty OSC_hex_printer_\$0 OSC_hex_printer_\$0
+#X obj 44 95 tgl 10 0 empty OSC_hex_printer_\$0 OSC_hex_printer_\$0
 12 6 0 8 -13381 -4032 -1 0 1;
 #X obj 674 138 pack s s f;
 #X msg 674 27 connect;

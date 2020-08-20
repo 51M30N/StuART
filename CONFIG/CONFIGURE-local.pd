@@ -1,40 +1,33 @@
-#N canvas 337 274 1206 658 10;
-#X obj 246 584 qlist;
-#X msg 367 536 bang;
-#X msg 246 491 line 0 \, bang;
-#X obj 246 536 prepend add;
-#X msg 265 471 clear;
-#X obj 246 273 bng 15 250 50 0 empty Upgrade-\$0 Upgrade-\$0 17 7 0
+#N canvas 158 139 1309 859 10;
+#X obj 101 111 cnv 15 398 48 empty empty empty 20 12 0 14 -233017 -66577
+0;
+#X obj 265 786 qlist;
+#X msg 246 601 line 0 \, bang;
+#X obj 285 736 prepend add;
+#X msg 265 581 clear;
+#X obj 93 201 bng 15 250 50 0 empty Upgrade-\$0 Upgrade-\$0 17 7 0
 10 -4032 -1 -1;
-#X obj 352 262 loadbang;
-#X obj 352 285 del 1000;
-#X obj 133 530 list trim;
-#X obj 133 553 print INIT;
-#X msg 429 490 click;
-#X obj 429 470 bng 15 250 50 0 empty open-\$0 open-\$0 17 7 0 10 -4034
+#X obj 246 345 loadbang;
+#X obj 246 368 del 1000;
+#X obj 163 756 print INIT;
+#X msg 795 545 click;
+#X obj 795 525 bng 15 250 50 0 empty open-\$0 open-\$0 17 7 0 10 -4034
 -1 -1;
-#X obj 246 513 text sequence init-\$0;
-#X msg 285 419 read \$1;
-#X msg 573 430 write \$1;
-#X obj 285 374 symbol \$1;
-#X obj 285 355 bng 15 250 50 0 empty empty Read 17 7 0 10 -262144 -1
+#X obj 246 623 text sequence init-\$0;
+#X msg 285 552 read \$1;
+#X obj 285 464 symbol \$1;
+#X obj 285 445 bng 15 250 50 0 empty empty Read 17 7 0 10 -258113 -1
 -1;
-#X obj 573 385 symbol \$1;
-#X obj 573 366 bng 15 250 50 0 empty Write-\$0 Write-\$0 17 7 0 10
--258113 -1 -1;
-#X obj 246 301 t b b b;
-#X obj 203 165 bng 15 250 50 0 Upgrade-\$0 empty Upgrade 17 7 0 10
+#X obj 246 391 t b b b;
+#X obj 270 145 bng 15 250 50 0 Upgrade-\$0 empty Upgrade 17 7 0 10
 -4032 -1 -1;
-#X obj 203 149 bng 15 250 50 0 open-\$0 empty Open 17 7 0 10 -4034
+#X obj 270 130 bng 15 250 50 0 open-\$0 empty Open 17 7 0 10 -4034
 -1 -1;
-#X obj 103 164 bng 15 250 50 0 Write-\$0 empty Write 17 7 0 10 -258113
+#X obj 795 568 text define init-\$0;
+#X symbolatom 315 292 60 0 0 0 - - -;
+#X obj 315 207 bng 15 250 50 0 empty LOAD-\$0 LOAD-\$0 17 7 0 10 -257985
 -1 -1;
-#X obj 429 513 text define init-\$0;
-#X obj 524 264 inlet;
-#X symbolatom 167 235 60 0 0 0 - - -;
-#X obj 315 160 bng 15 250 50 0 empty empty LOAD 17 7 0 10 -257985 -1
--1;
-#X obj 167 211 openpanel;
+#X obj 315 270 openpanel;
 #X msg 863 30 read /home/pi/StuART/convert/Hex2Dec_table;
 #X obj 863 53 text define -k Hex2Dec_table;
 #A set 0 0 48 0 0 0 0 \; 1 1 49 1 0 0 0 \; 2 2 50 0 1 0 0 \; 3 3 51
@@ -50,48 +43,114 @@
 #X obj 863 114 text define -k VECTOR_E131_EXTENDED;
 #A set 1 VECTOR_E131_EXTENDED_SYNCHRONIZATION 0x00000001 DISCOVERY
 \; 2 VECTOR_E131_EXTENDED_DISCOVERY 0x00000002 EXTENDED \;;
-#X msg 862 142 symbol ~/StuART/CONFIG;
-#X obj 599 288 savepanel;
-#X obj 315 145 bng 15 250 50 0 empty empty Save_as 17 7 0 10 -257985
+#X obj 315 249 makefilename ~/Documents/_%s/;
+#X obj 315 227 symbol \$1;
+#X obj 402 144 bng 15 250 50 0 LOAD-\$0 empty LOAD 17 7 0 10 -257985
 -1 -1;
-#X msg 599 223 symbol ~/StuART/CONFIG;
-#X symbolatom 599 312 60 0 0 0 - - -;
-#X msg 167 187 symbol ~/Documents/;
-#X obj 573 407 makefilename %s.StuART;
-#X obj 285 396 makefilename %s.StuART;
-#X connect 1 0 0 0;
-#X connect 2 0 12 0;
-#X connect 3 0 0 0;
-#X connect 4 0 0 0;
-#X connect 5 0 19 0;
+#X msg 315 313 read \$1;
+#X symbolatom 685 292 60 0 0 0 - - -;
+#X obj 685 207 bng 15 250 50 0 empty SAVEAS-\$0 SAVE_as-\$0 17 7 0
+10 -257985 -1 -1;
+#X obj 685 249 makefilename ~/Documents/_%s/;
+#X obj 685 227 symbol \$1;
+#X obj 402 129 bng 15 250 50 0 SAVEAS-\$0 empty SAVE_as 17 7 0 10 -257985
+-1 -1;
+#X obj 685 270 savepanel;
+#X msg 685 313 write \$1;
+#X symbolatom 120 112 60 0 0 0 - - -;
+#X obj 285 509 t a a;
+#X obj 246 686 route #;
+#X obj 93 756 print STEP;
+#X obj 246 646 list trim;
+#X msg 357 525 set \$1;
+#X obj 93 265 t b b;
+#X obj 611 56 r SHOW;
+#X obj 611 134 s chemin_du_repertoire_de_travail;
+#X obj 611 79 symbol;
+#X symbolatom 576 152 80 0 0 0 - - -;
+#X msg 538 78 OVE;
+#X obj 611 109 makefilename /home/pi/Documents/_%s;
+#X obj 285 486 makefilename /home/pi/Documents/_%s/.configure0;
+#X text 177 26 remplace l'ancienne abstraction HEADER_host;
+#X obj 70 549 text define -k local-\$0;
+#A set LocalM 1 \; OSC_CTRLM 0 \; OSC_EXECM 0 \; XbeeM 0 \;;
+#X msg 70 608 line 0 \, bang;
+#X obj 70 572 bng 15 250 50 0 empty LOCAL\$0 LOCAL\$0 17 7 0 10 -261682
+-1 -1;
+#X obj 70 630 text sequence local-\$0;
+#X obj 300 763 bng 15 250 50 0 empty SET-qlist\$0 SET-qlist\$0 17 7
+0 10 -232576 -1 -1;
+#X obj 369 659 bng 15 250 50 0 SET-qlist\$0 empty SET-qlist\$0 17 7
+0 10 -232576 -1 -1;
+#X obj 199 666 bng 15 250 50 0 SET-qlist\$0 empty SET-qlist\$0 17 7
+0 10 -232576 -1 -1;
+#X obj -120 549 text define -k broadcast-\$0;
+#A set TO_CTRL connect 255.255.255.255 9998 \; TO_EXEC connect 255.255.255.255
+9997 \; LocalM 0 \; OSC_CTRLM 0 \; OSC_EXECM 1 \; XbeeM 0 \;;
+#X msg -120 608 line 0 \, bang;
+#X obj -120 572 bng 15 250 50 0 empty BROADCAST\$0 BROADCAST\$0 17
+7 0 10 -261682 -1 -1;
+#X obj 33 666 bng 15 250 50 0 SET-qlist\$0 empty SET-qlist\$0 17 7
+0 10 -232576 -1 -1;
+#X obj -120 630 text sequence broadcast-\$0;
+#X obj 120 145 bng 15 250 50 0 LOCAL\$0 empty LOCAL 17 7 0 10 -261682
+-1 -1;
+#X obj 120 129 bng 15 250 50 0 BROADCAST\$0 empty BROADCAST 17 7 0
+10 -261682 -1 -1;
+#X connect 2 0 11 0;
+#X connect 3 0 1 0;
+#X connect 4 0 1 0;
+#X connect 5 0 44 0;
 #X connect 6 0 7 0;
-#X connect 7 0 19 0;
-#X connect 8 0 9 0;
-#X connect 10 0 23 0;
-#X connect 11 0 10 0;
-#X connect 12 0 3 0;
-#X connect 12 0 8 0;
-#X connect 12 1 1 0;
-#X connect 13 0 23 0;
-#X connect 14 0 23 0;
-#X connect 15 0 40 0;
-#X connect 16 0 15 0;
-#X connect 17 0 39 0;
-#X connect 18 0 17 0;
-#X connect 19 0 2 0;
-#X connect 19 1 4 0;
-#X connect 19 2 16 0;
-#X connect 24 0 17 1;
-#X connect 24 0 15 1;
-#X connect 25 0 13 0;
-#X connect 26 0 38 0;
-#X connect 27 0 25 0;
-#X connect 28 0 29 0;
-#X connect 34 0 37 0;
-#X connect 35 0 36 0;
-#X connect 35 0 34 0;
-#X connect 37 0 14 0;
-#X connect 38 0 27 0;
-#X connect 39 0 14 0;
-#X connect 40 0 13 0;
-#X coords 0 -1 1 1 400 80 1 100 100;
+#X connect 7 0 15 0;
+#X connect 9 0 18 0;
+#X connect 10 0 9 0;
+#X connect 11 0 42 0;
+#X connect 11 1 58 0;
+#X connect 12 0 18 0;
+#X connect 13 0 51 0;
+#X connect 14 0 13 0;
+#X connect 15 0 2 0;
+#X connect 15 1 4 0;
+#X connect 15 2 14 0;
+#X connect 19 0 30 0;
+#X connect 19 0 43 0;
+#X connect 20 0 28 0;
+#X connect 21 0 19 0;
+#X connect 22 0 23 0;
+#X connect 27 0 21 0;
+#X connect 28 0 27 0;
+#X connect 30 0 18 0;
+#X connect 31 0 37 0;
+#X connect 31 0 43 0;
+#X connect 32 0 34 0;
+#X connect 33 0 36 0;
+#X connect 34 0 33 0;
+#X connect 36 0 31 0;
+#X connect 37 0 18 0;
+#X connect 38 0 37 0;
+#X connect 39 0 12 0;
+#X connect 39 1 43 0;
+#X connect 40 0 41 0;
+#X connect 40 1 3 0;
+#X connect 40 1 8 0;
+#X connect 42 0 40 0;
+#X connect 43 0 38 0;
+#X connect 44 0 15 0;
+#X connect 44 1 38 0;
+#X connect 45 0 47 0;
+#X connect 47 0 50 0;
+#X connect 49 0 47 0;
+#X connect 50 0 46 0;
+#X connect 50 0 48 0;
+#X connect 51 0 39 0;
+#X connect 54 0 56 0;
+#X connect 55 0 54 0;
+#X connect 56 0 42 0;
+#X connect 56 1 59 0;
+#X connect 57 0 1 0;
+#X connect 61 0 64 0;
+#X connect 62 0 61 0;
+#X connect 64 0 42 0;
+#X connect 64 1 63 0;
+#X coords 0 -1 1 1 400 60 1 100 100;

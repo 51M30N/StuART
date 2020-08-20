@@ -1,6 +1,6 @@
 #N canvas 728 234 696 487 10;
-#X obj 0 0 cnv 15 199 29 empty cnv_\$0 ip_/_source 2 5 0 10 -204786
--4160 0;
+#X obj 0 0 cnv 15 199 29 empty cnv_\$0 \$2/\$1 2 5 0 10 -204786 -4160
+0;
 #X obj 287 240 outlet;
 #X obj 482 41 loadbang;
 #X obj 39 168 spigot;
@@ -13,8 +13,8 @@
 #X text 306 1 [OSCreceiver "Port" "Name"];
 #X obj 29 141 osc/unpackOSC;
 #X obj 29 226 osc/routeOSC /SOURCE;
-#X msg 135 450 FROM Pi4 7773 192.168.1.102 \; FROM Pi4 7773 192.168.1.102
-\; FROM Pi4 0 192.168.1.102 \; FROM Pi4 0 192.168.1.102 \;;
+#X msg 135 450 FROM Pi4 TO_CTRL 192.168.1.104 \; FROM Pi4 TO_CTRL 192.168.1.104
+\;;
 #X msg 135 413 set;
 #X obj 135 389 loadbang;
 #X obj 29 450 outlet;

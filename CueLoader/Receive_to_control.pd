@@ -1,4 +1,4 @@
-#N canvas 650 270 896 621 10;
+#N canvas 967 244 896 621 10;
 #X obj 100 100 cnv 15 98 49 empty cnv_\$0 to_control_midi 2 5 1 10
 -261682 -13330 0;
 #X obj 500 110 r to_control_\$1;

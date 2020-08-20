@@ -1,5 +1,5 @@
 #N canvas 0 74 1920 1006 10;
-#X obj 100 30 cnv 15 799 29 empty cnv_LGQ_host_header SHOW==SALON 24
+#X obj 100 30 cnv 15 799 29 empty cnv_LGQ_host_header SHOW==FFM 24
 8 1 12 -260818 -241291 0;
 #X obj 474 96 loadbang;
 #X obj 474 160 ggee/shell;
@@ -186,8 +186,8 @@ set-dmx 0 0 0 0 0 \;;
 #X msg 329 124 LGQdmx;
 #X msg 329 140 LGQtalkie;
 #X obj 102 401 symbol;
-#X obj 107 43 bng 15 250 50 0 empty PPRESET PRESET==LOCAL_MOD 17 9
-1 12 -260818 -24198 -241291;
+#X obj 107 43 bng 15 250 50 0 empty PPRESET PRESET==FFM-Pi4remote 17
+9 1 12 -260818 -24198 -241291;
 #X obj 175 158 \$0;
 #X obj 199 13 r bang-\$0;
 #X obj 148 179 pack s f;
@@ -272,7 +272,7 @@ audio 0 0 1 0 0 \;;
 #X obj 144 704 bng 15 250 50 0 empty mode-12 mode-12 34 23 0 10 -262144
 -1 -1;
 #X obj 144 724 bng 15 250 50 0 empty FFM-Pi4remote FFM-Pi4remote 34
-23 0 10 -262144 -1 -1;
+23 0 10 -258699 -33289 -258699;
 #X obj 144 744 bng 15 250 50 0 empty mode-14 mode-14 34 23 0 10 -262144
 -1 -1;
 #X obj 144 764 bng 15 250 50 0 empty pivm_SALON pivm_SALON 34 23 0
@@ -529,6 +529,7 @@ set-dmx 1 0 0 0 0 \; GLOBAL_TO_CONTROL gpio 0 1 0 0 0 \;;
 #X msg 319 537 192.168.0.100 192.168.0.255;
 #X msg 319 637 192.168.0.100 192.168.0.255;
 #X msg 319 617 192.168.0.100 192.168.0.255;
+#X text 1249 44 DEPRECATED \, remplace par CONFIGURE-local;
 #X connect 1 0 7 0;
 #X connect 2 0 122 0;
 #X connect 3 0 2 0;

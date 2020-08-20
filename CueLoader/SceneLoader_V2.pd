@@ -36,13 +36,11 @@
 #X msg 539 1299 write \$1;
 #X obj 992 1246 bng 15 250 50 0 empty CLEAR CLEAR 17 7 0 10 -260097
 -1 -1;
-#X msg 54 1501 \; 17fader 0 1000 \; 18fader 0 1000 \; 19fader 0 1000
-\; 24fader 0 1000 \; 23fader 0 1000 \; 22fader 0 1000 \; 21fader 0
-1000 \; 20fader 0 1000 \; 16fader 0 1000 \; 15fader 0 1000 \; 14fader
-0 1000 \; 13fader 0 1000 \; 1fader 0 1000 \; 2fader 0 1000 \; 3fader
-0 1000 \; 4fader 0 1000 \; 5fader 0 1000 \; 6fader 0 1000 \; 7fader
-0 1000 \; 8fader 0 1000 \; 9fader 0 1000 \; 10fader 0 1000 \; 11fader
-0 1000 \; 12fader 0 1000 \; Cue_name  \;, f 192;
+#X msg 54 1501 \; Cue_name s0_cue1 0 0 a_remplir \; Dim_Nicols1 106
+2000 \; SALLE 80 2000 \; escalier 128 2000 \; salle 128 3000 \; Dim_Nicols2
+106 2000 \; W_Nicols1 254 0 \; W_Nicols2 254 0 \; R_Nicols1 170 0 \;
+G_Nicols1 116 0 \; R_Nicols2 170 0 \; G_Nicols2 116 0 \; PAR_jar 74
+0 \; lat_cour 66 0 \; B_Nicols1 84 0 \; B_Nicols2 84 0 \;, f 192;
 #X msg 1213 1334 set \, add;
 #X obj 519 1015 r store_cue;
 #X obj 778 1283 bng 15 250 50 0 empty Open_Cue Open_Cue 17 7 0 10 -257985
@@ -67,7 +65,7 @@
 #X obj 841 110 t a a a;
 #X obj 809 140 t a a a;
 #X obj 778 170 t a a a;
-#X msg 613 1260 /home/pi/Documents/_SHO/Cue/noir;
+#X msg 613 1260 /home/pi/Documents/_OVE/Cue/s0_mise;
 #X obj 122 391 s go_cue;
 #X obj 122 350 t a a;
 #X obj 519 754 t b b;
@@ -145,7 +143,7 @@
 #X obj 940 891 loadbang;
 #X obj 940 916 symbol a_remplir;
 #X msg 393 1243 set \$1;
-#X msg 183 1260 /home/pi/Documents/_SHO/Cue/noir;
+#X msg 183 1260 /home/pi/Documents/_OVE/Cue/s0_mise;
 #X symbolatom 403 549 30 0 0 0 Next_Cue - Next_Cue;
 #X obj 148 680 r CUE_EDIT_Next_cue;
 #X obj 1045 1467 s to_control_InCue;

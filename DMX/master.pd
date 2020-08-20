@@ -1,12 +1,12 @@
-#N canvas 8 93 1680 966 10;
+#N canvas 10 95 1680 966 10;
 #X obj 99 202 cnv 15 149 299 empty empty master 5 6 2 10 -204786 -66577
 0;
 #X obj 138 373 tgl 20 0 toggle_rec_faderdmx toggle_rec_faderdmxM rec_faderdmx
-22 10 0 12 -257985 -260097 -1 0 1;
+22 10 0 12 -257985 -260097 -1 1 1;
 #X obj 138 393 tgl 20 0 toggle_out_faderdmx toggle_out_faderdmxM out_faderdmx
-22 10 0 12 -260097 -262130 -1 0 1;
+22 10 0 12 -260097 -262130 -1 1 1;
 #X obj 138 353 tgl 20 0 Live_Mode Live_ModeM Live_Mode 22 10 0 12 -4032
--1 -1 0 1;
+-1 -1 1 1;
 #X obj 138 455 bng 20 250 50 0 Store_fdmx Store_fdmxM Store_fdmx 22
 10 0 12 -258113 -4034 -1;
 #X obj 202 663 s globaltime;
@@ -15,16 +15,16 @@
 #X obj 138 434 bng 20 250 50 0 SET_fader empty SET_fader 22 10 0 10
 -4160 -258113 -1;
 #X obj 138 413 tgl 20 0 COLOR_FADER COLOR_FADERM COLOR_FADER 22 10
-0 12 -159808 -262144 -1 0 1;
+0 12 -159808 -262144 -1 1 1;
 #X msg 563 281 \; Live_ModeM 1 \; toggle_out_faderdmxM 1 \; toggle_rec_faderdmxM
 0 \; COLOR_FADERM 0 \;;
 #X obj 73 690 r SELECT;
-#X msg 67 927 \; to_control_f-SELECT fader_CanardB2 \$1 \$2;
+#X msg 67 927;
 #X obj 149 776 int;
 #X obj 149 797 pack;
 #X obj 184 769 * 1000;
 #X msg 563 219 \; CCOLOR color 14 0 21;
-#X obj 138 475 bng 20 250 50 0 empty empty base_StuART 22 10 1 12 -261234
+#X obj 443 355 bng 20 250 50 0 empty empty base_StuART 22 10 1 12 -261234
 -1 -261234;
 #X floatatom 101 229 14 0 9999 0 - - -;
 #X obj 299 35 r time_SELECT_master;
@@ -104,7 +104,7 @@ adddollar 1 \, adddollar 2 \, add;
 #X obj 143 548 s CLEAR-SELECT;
 #X msg 563 250 \; CLEAR-GROUP 1 \;;
 #X obj 224 821 outlet;
-#X msg 319 783 \; cnv_fader_SELECT_master label \$1;
+#X msg 320 783 \; cnv_fader_SELECT_master label \$1;
 #X obj 4 483 r CLEAR-GROUP;
 #X obj 22 837 print ****************SELECT _;
 #X obj 73 741 select NO;

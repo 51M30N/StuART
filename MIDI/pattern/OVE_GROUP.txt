@@ -12,40 +12,40 @@
 18 fader Dim_Nicols1
 19 fader Dim_Nicols2
 21 control tracking_Cue_List
-22 control pattern-OVE
+22 control pattern_4x3ch
 23 control time_SELECT_master
 
-32 tcontrol OVE 1
-33 tcontrol OVE 2
-34 tcontrol OVE 3
-35 tcontrol OVE 4
+32 tcontrol select_pattern_4x3 1
+33 tcontrol select_pattern_4x3 2
+34 tcontrol select_pattern_4x3 3
+35 tcontrol select_pattern_4x3 4
 
 36
 37
-38 tcontrol SELECT-GROUP-OVE
+38 tcontrol SELECT-GROUP
 39 tcontrol level_255_SELECT_master
 
 40 tcontrol midi_pattern 8audioremote
 
 
-48 tcontrol OVE 5
-49 tcontrol OVE 6
-50 tcontrol OVE 7
-51 tcontrol OVE 8
+48 tcontrol select_pattern_4x3 5
+49 tcontrol select_pattern_4x3 6
+50 tcontrol select_pattern_4x3 7
+51 tcontrol select_pattern_4x3 8
 
 52
 53
-54 tcontrol OPEN-GROUP-OVE
+54 tcontrol OPEN-GROUP
 55 tcontrol level_128_SELECT_master
 
 
-64 tcontrol OVE 9
-65 tcontrol OVE 10
-66 tcontrol OVE 11
-67 tcontrol OVE 12
+64 tcontrol select_pattern_4x3 9
+65 tcontrol select_pattern_4x3 10
+66 tcontrol select_pattern_4x3 11
+67 tcontrol select_pattern_4x3 12
 
 68
 69
-70 tcontrol CLEAR-GROUP-OVE
+70 tcontrol CLEAR-GROUP
 
 71 tcontrol level_0_SELECT_master
