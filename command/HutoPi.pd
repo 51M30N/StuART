@@ -85,6 +85,8 @@
 -1 4;
 #X msg 546 93 close \, open \$1 \, 1;
 #X msg 627 144 refresh;
+#X obj 339 9 r HutoPi;
+#X msg 339 32 close \, open \$1 \, poll \$2;
 #X connect 0 0 12 0;
 #X connect 1 0 12 0;
 #X connect 2 0 36 0;
@@ -175,3 +177,5 @@
 #X connect 74 0 75 0;
 #X connect 75 0 12 0;
 #X connect 76 0 12 0;
+#X connect 77 0 78 0;
+#X connect 78 0 12 0;

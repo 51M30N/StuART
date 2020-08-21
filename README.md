@@ -32,4 +32,5 @@ La librairie cyclone est requise
 penser a ajouter le repertoire ~/StuART dans pd[Fichiers>preferences>Chemins] 
 ainsi que chacun des sous repertoires utilisés (cf StuART.pdsettings)
 
-
+telechargement de la suite d'objets a partir de github
+*git clone https://github.com/51M30N/StuART.git*

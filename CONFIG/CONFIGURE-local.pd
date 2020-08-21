@@ -97,6 +97,54 @@
 -1 -1;
 #X obj 120 129 bng 15 250 50 0 BROADCAST\$0 empty BROADCAST 17 7 0
 10 -261682 -1 -1;
+#X obj 795 590 text define -k init-example-\$0;
+#A set # ################################################# \; # ################***StuART-INIT***######################
+\; # ################################################# \; # definition
+du show \; SHOW FFM \; SPACE-GOER 0 \; # #################################################
+\; # configuration du dialogue réseau \; TO_CTRL connect 169.254.0.1
+9998 \; TO_EXEC connect 169.254.255.255 9997 \; LOG-STATE 1 \; t-LOG_OUT
+1 \; # ################################################# \; # configuration
+de la communication interne LOCAL CTRL EXEC XBEE Print \; # #################################################
+\; midi_TO_CONTROL 0 0 0 0 0 \; goto_TO_CONTROL 0 1 0 0 0 \; InCue_TO_CONTROL
+1 0 0 0 0 \; audio_TO_CONTROL 0 1 0 0 0 \; aplay_TO_CONTROL 0 1 0 0
+0 \; f-SELECT_TO_CONTROL 1 0 0 0 0 \; f-dmx_TO_CONTROL 1 0 0 0 0 \;
+set-dmx_TO_CONTROL 1 0 0 0 0 \; gpio_TO_CONTROL 0 1 0 0 0 \; # #################################################
+\; # ################################################# \; # configuration
+AUDIO \; # ################################################# \; pd
+dsp 0 \; # TOGGLE_DSP \; # out_master_level1 \; # out_master_level2
+\; # out_master_level3 \; # #################################################
+\; # configuration des abstraction APLAY \; # #################################################
+\; # une config par player \; # toggle_rec_aplay-1- \; # toggle_out_aplay-1-
+\; # OUT-PLAYER-1- \; # #################################################
+\; # ################################################# \; # redemarrage
+de OLA-server \; # #################################################
+\; restart_ola 1 \; TOGGLE_DMX 1 \; # print-OSC_config \; dmx_universe-0
+connect 127.0.0.1 7770 \; # #################################################
+\; # configuration des abstractions DMX \; # #################################################
+\; Live_ModeM 1 \; toggle_out_faderdmxM 1 \; toggle_rec_faderdmxM 1
+\; COLOR_FADERM 1 \; # #################################################
+\; # ################################################# \; # configuration
+du MIDI \; # ################################################# \; #
+MIDI_CONNECT-1 24 128 \; # #################################################
+\; # ################################################# \; # FAUT REDEFINIR
+A QUOI CA SERT CA (ancien plan feu LGQ???) \; # spigot-label \; # pattern-stage1
+\; # ################################################# \; # #################################################
+\; # configuration du port série pour XBEE \, un de ces jours je me
+remet à ça \; # #################################################
+\; print_serial_info 0 \; print_serial_in 0 \; toggle_in 0 \; toggle_out
+0 \; CLOSE-com 1 \; com_in 0 \; RECONNECT-com 1 \; # #################################################
+\; # ################################################# \; # configuration
+des GPIO # une série par GPIO utilisé S1=name \; # #################################################
+\; # toggle_rec_gpio_S1 $S2 \; # toggle_out_gpio_S1 S3 \; # OUT_gpio_S1
+S4 \; # init_gpio_S1 S5 \; toggle_rec_gpio_FONT 1 \; toggle_out_gpio_FONT
+1 \; OUT_gpio_FONT 1 \; init_gpio_FONT 1 \; # #################################################
+\; # ################################################# \; # configuration
+VIDEO \; # ################################################# \; # TOGGLE_Video
+\; # ################################################# \; # #################################################
+\; # chargement de la pattern 0 de l'abstraction 4x3 \; # #################################################
+\; # pattern_4x3ch 0 \; # #################################################
+\; # LOAD one Cue \; # #################################################
+\; to_control_goto s0_mise \;;
 #X connect 2 0 11 0;
 #X connect 3 0 1 0;
 #X connect 4 0 1 0;
