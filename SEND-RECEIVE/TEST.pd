@@ -1,0 +1,53 @@
+#N canvas 690 126 1064 420 10;
+#X obj 126 61 netreceive;
+#X obj 246 274 qlist;
+#X obj 246 242 cyclone/prepend add;
+#X obj 199 245 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 153 216 route clear bang;
+#X msg 153 242 clear;
+#X obj 778 242 netsend;
+#X obj 637 186 prepend send;
+#X msg 126 34 listen 0 \, listen 9991;
+#X obj 778 194 bng 15 250 50 0 empty connect-pdsend-localhost-9992
+connect-pdsend-localhost-9992 17 7 0 10 -262144 -1 -1;
+#X obj 126 334 print netreceive;
+#X obj 126 184 t a a;
+#X obj 126 307 spigot;
+#X obj 159 288 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 126 12 bng 15 250 50 0 empty listen-pdreceive-9991 listen-pdreceive-9991
+17 7 0 10 -262144 -1 -1;
+#X obj 126 134 spigot;
+#X obj 159 115 tgl 15 0 empty pdreceive-toggle pdreceive-toggle 17
+7 0 10 -262144 -1 -1 0 1;
+#X obj 637 226 spigot;
+#X obj 670 207 tgl 15 0 empty pdsend-toggle pdsend-toggle 17 7 0 10
+-262144 -1 -1 0 1;
+#X obj 637 156 r to-pdsend;
+#X msg 484 55 \; pdreceive-toggle 1 \; listen-pdreceive-9991 1 \; pdsend-toggle
+1 \; connect-pdsend-localhost-9992 1 \;;
+#X floatatom 585 171 5 0 0 0 - - -;
+#X msg 778 219 disconnect \, connect 127.0.0.1 9991;
+#X connect 0 0 15 0;
+#X connect 2 0 1 0;
+#X connect 3 0 1 0;
+#X connect 4 0 5 0;
+#X connect 4 1 3 0;
+#X connect 4 2 2 0;
+#X connect 5 0 1 0;
+#X connect 7 0 17 0;
+#X connect 8 0 0 0;
+#X connect 9 0 22 0;
+#X connect 11 0 12 0;
+#X connect 11 1 4 0;
+#X connect 12 0 10 0;
+#X connect 13 0 12 1;
+#X connect 14 0 8 0;
+#X connect 15 0 11 0;
+#X connect 16 0 15 1;
+#X connect 17 0 6 0;
+#X connect 18 0 17 1;
+#X connect 19 0 7 0;
+#X connect 21 0 7 0;
+#X connect 22 0 6 0;

@@ -1,10 +1,8 @@
 audioapi: 1
-noaudioin: False
-audioindev1: 0 2
-audioindevname1: bcm2835 ALSA (hardware)
+noaudioin: True
 noaudioout: False
-audiooutdev1: 0 2
-audiooutdevname1: bcm2835 ALSA (hardware)
+audiooutdev1: 4 6
+audiooutdevname1: nanoKONTROL2 (hardware)
 audiobuf: 25
 rate: 44100
 callback: 0
@@ -18,13 +16,17 @@ midioutdev1: 0
 midioutdevname1: ALSA MIDI device #1
 path1: /home/pi/StuART
 path2: /usr/lib/pd/extra/cyclone
-path3: ~/StuART/DMX
-path4: ~/StuART/CueLoader
-path5: ~/StuART/command
-path6: ~/StuART/convert
-path7: ~/StuART/ARTNET
-path8: ~/StuART/sACN
-npath: 8
+path3: /home/pi/StuART/DMX
+path4: /home/pi/StuART/CueLoader
+path5: /home/pi/StuART/command
+path6: /home/pi/StuART/convert
+path7: /home/pi/StuART/ARTNET
+path8: /home/pi/StuART/sACN
+path9: /home/pi/StuART/player_Stereo
+path10: /home/pi/StuART/CONFIG
+path11: /home/pi/StuART/examples/8_Audio_Player
+path12: /home/pi/StuART/MIDI
+npath: 12
 standardpath: 1
 verbose: 0
 nloadlib: 0

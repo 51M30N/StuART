@@ -143,13 +143,13 @@
 #X floatatom 1178 675 5 0 0 0 time_next_#0 time_next_#0 -;
 #X floatatom 1178 660 5 0 0 0 time_#0 time_#0 -;
 #X floatatom 1308 660 1 0 0 0 link_#0 link_#0 -;
-#X obj 938 715 cnv 15 400 20 empty cnv_LOADED_CUE ON_STAGE== -132 10
-1 20 -204786 -159808 0;
-#X obj 938 734 cnv 15 400 40 empty cnv_next_next NEXT==s0_cue1 -76
-10 1 20 -159808 -204786 0;
-#X obj 818 734 bng 40 250 50 0 go_\$0 go_\$1 GO_1==impulsion_entree_plateau
-43 30 1 20 -24198 -262144 -225271;
-#N canvas 7 102 951 430 Cue_List 1;
+#X obj 938 715 cnv 15 400 20 empty cnv_LOADED_CUE ON_STAGE==0 -132
+10 1 20 -204786 -159808 0;
+#X obj 938 734 cnv 15 400 40 empty cnv_next_next NEXT==0 -76 10 1 20
+-159808 -204786 0;
+#X obj 818 734 bng 40 250 50 0 go_\$0 go_\$1 GO_1==0 43 30 1 20 -24198
+-262144 -225271;
+#N canvas 7 102 951 430 Cue_List 0;
 #X obj 385 227 outlet;
 #X obj 398 9 r SHOW;
 #X msg 386 205 clear;

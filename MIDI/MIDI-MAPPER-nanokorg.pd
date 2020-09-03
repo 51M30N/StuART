@@ -1,0 +1,349 @@
+#N canvas 0 50 1417 903 10;
+#X obj 19 581 cnv 15 800 1200 empty empty nanokorg 20 12 0 14 -261234
+-66577 0;
+#X obj 25 608 r midi;
+#X msg 25 625 \$2 \$1;
+#X obj 525 1135 bng 15 250 50 0 go_1 empty go_1 17 7 0 10 -4034 -1
+-1;
+#X obj 648 1049 bng 15 250 50 0 Open_Cue empty Open_Cue 17 7 0 10 -257985
+-1 -1;
+#X obj 549 1118 bng 15 250 50 0 +go+_1 empty +go+_1 17 7 0 10 -204786
+-1 -1;
+#X obj 574 1100 bng 15 250 50 0 -go-_1 empty -go-_1 17 7 0 10 -204800
+-1 -1;
+#X obj 25 642 route 0 1 2 3 4 5 6 7 16 17 18 19 20 21 22 23;
+#X obj 25 1151 route 32 33 34 35 36 37 38 39;
+#X obj 25 1316 route 48 49 50 51 52 53 54 55;
+#X obj 25 1481 route 64 65 66 67 68 69 70 71;
+#X obj 71 608 r midi-repatch;
+#X obj 173 608 r midi-\$0;
+#X text 781 649 KNOBS;
+#X text 774 815 FADERS;
+#X text 738 983 COMMAND_BTN;
+#X text 760 1165 EXEC_BTN;
+#X text 760 1330 EXEC_BTN;
+#X text 760 1495 EXEC_BTN;
+#X obj 21 21 cnv 15 398 58 empty cnv-nanokorg NanoKorg_pattern_= 6
+8 1 12 -261234 -4160 0;
+#X msg 26 420 line 0 \, auto;
+#X obj 26 540 s midi-repatch;
+#X obj 26 386 bng 15 250 50 0 empty patch_midi\$0 patch_midi\$0 17
+7 1 10 -204786 -1 -1;
+#X obj 317 664 MIDI/assign;
+#X obj 25 939 MIDI/assign;
+#X obj 123 1066 MIDI/assign;
+#X obj 44 922 MIDI/assign;
+#X obj 196 1015 MIDI/assign;
+#X obj 122 854 MIDI/assign;
+#X obj 220 749 MIDI/assign;
+#X obj 25 1134 MIDI/assign;
+#X obj 83 888 MIDI/assign;
+#X obj 50 1447 MIDI/assign;
+#X obj 25 1464 MIDI/assign;
+#X obj 175 1527 MIDI/assign;
+#X obj 100 1248 MIDI/assign;
+#X obj 200 1345 MIDI/assign;
+#X obj 298 681 MIDI/assign;
+#X obj 278 698 MIDI/assign;
+#X obj 259 715 MIDI/assign;
+#X obj 239 732 MIDI/assign;
+#X obj 200 766 MIDI/assign;
+#X obj 161 820 MIDI/assign;
+#X obj 181 783 MIDI/assign;
+#X obj 142 837 MIDI/assign;
+#X obj 103 871 MIDI/assign;
+#X obj 64 905 MIDI/assign;
+#X obj 221 998 MIDI/assign;
+#X obj 172 1032 MIDI/assign;
+#X obj 147 1049 MIDI/assign;
+#X obj 98 1083 MIDI/assign;
+#X obj 74 1100 MIDI/assign;
+#X obj 49 1117 MIDI/assign;
+#X obj 200 1180 MIDI/assign;
+#X obj 175 1197 MIDI/assign;
+#X obj 150 1214 MIDI/assign;
+#X obj 125 1231 MIDI/assign;
+#X obj 75 1265 MIDI/assign;
+#X obj 50 1282 MIDI/assign;
+#X obj 25 1299 MIDI/assign;
+#X obj 175 1362 MIDI/assign;
+#X obj 150 1379 MIDI/assign;
+#X obj 125 1396 MIDI/assign;
+#X obj 100 1413 MIDI/assign;
+#X obj 75 1430 MIDI/assign;
+#X obj 200 1510 MIDI/assign;
+#X obj 150 1544 MIDI/assign;
+#X obj 125 1561 MIDI/assign;
+#X obj 100 1578 MIDI/assign;
+#X obj 75 1595 MIDI/assign;
+#X obj 50 1612 MIDI/assign;
+#X obj 25 1629 MIDI/assign;
+#X msg 654 486 click;
+#X obj 654 465 bng 15 250 50 0 empty OPEN_MIDI-patcher\$0 OPEN_MIDI-patcher\$0
+17 7 0 10 -4034 -1 -1;
+#X obj 416 502 text define -k MIDI-patcher;
+#A set 0 fader lat_jar \; 1 fader lat_cour \; 2 fader PAR_jar \; 3
+fader Dec_baignoire \; 4 fader poisson_douche \; 5 fader tourne_d_douche
+\; 6 fader gobo_robinet \; 7 control level_SELECT_master \; \; \; \;
+13 tcontrol Open_Cue \; 14 tcontrol previous_scene_list \; 15 tcontrol
+next_scene_list \; \; \; 16 fader SALLE \; 17 fader escalier \; 18
+fader Dim_Nicols1 \; 19 fader Dim_Nicols2 \; 21 control tracking_Cue_List
+\; 22 control pattern_4x3ch \; 23 control time_SELECT_master \; \;
+32 tcontrol select_pattern_4x3 1 \; 33 tcontrol select_pattern_4x3
+2 \; 34 tcontrol select_pattern_4x3 3 \; 35 tcontrol select_pattern_4x3
+4 \; \; 36 \; 37 \; 38 tcontrol SELECT-GROUP_ \; 39 tcontrol level_255_SELECT_master
+\; \; 40 tcontrol midi_pattern 8audioremote \; \; \; 44 tcontrol go_1
+\; 43 tcontrol +go+_1 \; 42 tcontrol -go-_1 \; \; \; 48 tcontrol select_pattern_4x3
+5 \; 49 tcontrol select_pattern_4x3 6 \; 50 tcontrol select_pattern_4x3
+7 \; 51 tcontrol select_pattern_4x3 8 \; \; 52 \; 53 \; 54 tcontrol
+OPEN-GROUP_ \; 55 tcontrol level_128_SELECT_master \; \; \; 64 tcontrol
+select_pattern_4x3 9 \; 65 tcontrol select_pattern_4x3 10 \; 66 tcontrol
+select_pattern_4x3 11 \; 67 tcontrol select_pattern_4x3 12 \; \; 68
+\; 69 \; 70 tcontrol CLEAR-GROUP_ \; \; 71 tcontrol level_0_SELECT_master
+\;;
+#X obj 26 41 bng 15 250 50 0 OPEN_MIDI-patcher\$0 OPEN_MIDI-patcher
+OPEN_MIDI-patcher 17 7 1 10 -4034 -1 -1;
+#X msg 1458 739 base_LGQ;
+#X obj 1430 859 symbol;
+#X msg 1259 861 base_LGQ;
+#X obj 1105 860 symbol;
+#X msg 608 486 clear;
+#X msg 1105 941 read -c ../MIDI/pattern/\$1.txt;
+#X msg 1458 839 base_StuART;
+#X msg 1259 842 base_StuART;
+#X msg 1458 796 temp;
+#X msg 1259 823 temp;
+#X obj 1105 881 t b a;
+#X obj 1105 1082 s patch_midi\$0;
+#X obj 920 741 bng 15 250 50 0 empty empty temp 17 7 1 10 -261682 -1
+-1;
+#X obj 920 756 bng 15 250 50 0 empty empty base_StuART 17 7 1 10 -261682
+-1 -1;
+#X obj 920 771 bng 15 250 50 0 empty empty base_LQG 17 7 1 10 -261682
+-1 -1;
+#X obj 1105 797 r midi_pattern;
+#X obj 26 443 text sequence MIDI-patcher;
+#X msg 1458 778 8audioremote;
+#X msg 1259 804 8audioremote;
+#X obj 1010 741 bng 15 250 50 0 empty empty 8audioremote 17 7 1 10
+-261682 -1 -1;
+#X msg 927 1056 \; midi_pattern base_LGQ \; midi_pattern 8audioremote
+\;;
+#X msg 1260 785 8aplay;
+#X obj 1010 756 bng 15 250 50 0 empty empty 8aplay 17 7 1 10 -261682
+-1 -1;
+#X msg 1458 817 8aplay;
+#X text 1483 722 STORE;
+#X obj 53 491 route list;
+#X obj 25 956 route 44 43 42 41 40 13 14 15 58 59;
+#X obj 231 982 MIDI/assign;
+#X obj 53 515 print MIDI REPATCH NANOKONTROL;
+#X obj 1144 881 print __MIDI PATTERN NANOKONTROL__;
+#X msg 916 918 \; cnv-nanokorg label NanoKorg_pattern_=_\$1;
+#X obj 1010 771 bng 15 250 50 0 empty empty SELECT_GROUP 17 7 1 10
+-261682 -1 -1;
+#X text 1267 723 LOAD;
+#X msg 1260 745 SELECT_GROUP;
+#X msg 1476 861 SELECT_GROUP;
+#X obj 1104 739 bng 15 250 50 0 empty empty LGQ_GROUP 17 7 1 10 -261682
+-1 -1;
+#X msg 1260 765 LGQ_GROUP;
+#X msg 1458 759 LGQ_GROUP;
+#X obj 1104 759 bng 15 250 50 0 empty empty OVE_GROUP 17 7 1 10 -261682
+-1 -1;
+#X msg 1320 764 OVE_GROUP;
+#X msg 1530 754 OVE_GROUP;
+#X msg 1430 882 write -c ../MIDI/pattern/\$1.txt;
+#X obj 529 381 bng 15 250 50 0 empty SAVEAS\$0 SAVEAS\$0 17 7 0 10
+-258113 -1 -1;
+#X obj 529 405 savepanel;
+#X msg 529 428 write -c \$1;
+#X obj 461 167 r chemin_du_repertoire_de_travail;
+#X symbolatom 702 206 50 0 0 0 - - -;
+#X msg 478 259 set \$1;
+#X obj 478 288 makefilename;
+#X obj 478 236 makefilename %s/%%s;
+#X obj 445 405 symbol;
+#X obj 445 381 bng 15 250 50 0 empty SAVE\$0 SAVE\$0 17 7 0 10 -258113
+-1 -1;
+#X msg 307 272 symbol .midi0;
+#X msg 445 428 write -c \$1;
+#X obj 287 407 symbol;
+#X obj 268 186 bng 15 250 50 0 empty RELOAD\$0 RELOAD\$0 17 7 0 10
+-257985 -1 -1;
+#X msg 287 428 read -c \$1;
+#X obj 268 484 s patch_midi\$0;
+#X obj 702 444 print **********midi-nanokorg**********;
+#X obj 268 206 t b b b;
+#X floatatom 322 232 5 0 0 0 - - -;
+#X msg 322 254 set symbol .midi\$1;
+#X obj 416 523 text define -k 4x3ch-base_StuART;
+#A set 0 \; 1 \; 2 \; 3 \; 4 \; 5 \; 6 \; 7 control level_SELECT_master
+\; \; 16 \; 17 \; 18 \; 19 \; 21 control tracking_Cue_List \; 22 control
+pattern_4x3ch \; 23 control time_SELECT_master \; \; \; \; \; 32 tcontrol
+select_pattern_4x3 1 \; 33 tcontrol select_pattern_4x3 2 \; 34 tcontrol
+select_pattern_4x3 3 \; 35 tcontrol select_pattern_4x3 4 \; \; 36 \;
+37 \; 38 tcontrol SELECT-GROUP_ \; 39 tcontrol level_255_SELECT_master
+\; \; 40 \; \; \; \; \; 48 tcontrol select_pattern_4x3 5 \; 49 tcontrol
+select_pattern_4x3 6 \; 50 tcontrol select_pattern_4x3 7 \; 51 tcontrol
+select_pattern_4x3 8 \; \; 52 \; 53 \; 54 tcontrol OPEN-GROUP_ \; 55
+tcontrol level_128_SELECT_master \; \; \; \; \; 64 tcontrol select_pattern_4x3
+9 \; 65 tcontrol select_pattern_4x3 10 \; 66 tcontrol select_pattern_4x3
+11 \; 67 tcontrol select_pattern_4x3 12 \; \; 68 \; 69 \; 70 tcontrol
+CLEAR-GROUP_ \; \; 71 tcontrol level_0_SELECT_master \;;
+#X text 1067 692 DEPRECATED;
+#X obj 416 544 text define -k Kontrol-base_StuART;
+#A set 13 tcontrol Open_Cue \; 14 tcontrol previous_scene_list \; 15
+tcontrol next_scene_list \; \; 44 tcontrol go_1 \; 43 tcontrol +go+_1
+\; 42 tcontrol -go-_1 \; 41 \; 40 \; 58 cue F_fade_out_1s \; 59 cue
+F_noir \; \; 7 control level_SELECT_master \; 23 control time_SELECT_master
+\; 39 tcontrol level_255_SELECT_master \; 55 tcontrol level_128_SELECT_master
+\; 71 tcontrol level_0_SELECT_master \;;
+#X obj 26 466 t a a;
+#X obj 26 58 bng 15 250 50 0 patch_midi\$0 empty midi_patch 17 7 1
+10 -204786 -1 -1;
+#X obj 619 321 bng 15 250 50 0 empty LOAD\$0 LOAD\$0 17 7 0 10 -257985
+-1 -1;
+#X obj 619 405 openpanel;
+#X msg 619 428 read -c \$1;
+#X obj 266 58 bng 15 250 50 0 RELOAD\$0 empty RELOAD 17 7 0 10 -257985
+-1 -1;
+#X obj 176 41 bng 15 250 50 0 SAVEAS\$0 empty SAVE_as 17 7 0 10 -258113
+-1 -1;
+#X obj 176 58 bng 15 250 50 0 SAVE\$0 empty SAVE 17 7 0 10 -258113
+-1 -1;
+#X obj 266 41 bng 15 250 50 0 LOAD\$0 empty LOAD 17 7 0 10 -257985
+-1 -1;
+#X msg 702 304 \; cnv-nanokorg label NanoKorg_pattern_=_\$1;
+#X obj 619 343 symbol;
+#X obj 619 366 makefilename %s;
+#X obj 461 190 t a a a a;
+#X connect 1 0 2 0;
+#X connect 2 0 7 0;
+#X connect 7 0 24 0;
+#X connect 7 1 26 0;
+#X connect 7 2 46 0;
+#X connect 7 3 31 0;
+#X connect 7 4 45 0;
+#X connect 7 5 28 0;
+#X connect 7 6 44 0;
+#X connect 7 7 42 0;
+#X connect 7 8 43 0;
+#X connect 7 9 41 0;
+#X connect 7 10 29 0;
+#X connect 7 11 40 0;
+#X connect 7 12 39 0;
+#X connect 7 13 38 0;
+#X connect 7 14 37 0;
+#X connect 7 15 23 0;
+#X connect 7 16 102 0;
+#X connect 8 0 59 0;
+#X connect 8 1 58 0;
+#X connect 8 2 57 0;
+#X connect 8 3 35 0;
+#X connect 8 4 56 0;
+#X connect 8 5 55 0;
+#X connect 8 6 54 0;
+#X connect 8 7 53 0;
+#X connect 8 8 9 0;
+#X connect 9 0 33 0;
+#X connect 9 1 32 0;
+#X connect 9 2 64 0;
+#X connect 9 3 63 0;
+#X connect 9 4 62 0;
+#X connect 9 5 61 0;
+#X connect 9 6 60 0;
+#X connect 9 7 36 0;
+#X connect 9 8 10 0;
+#X connect 10 0 71 0;
+#X connect 10 1 70 0;
+#X connect 10 2 69 0;
+#X connect 10 3 68 0;
+#X connect 10 4 67 0;
+#X connect 10 5 66 0;
+#X connect 10 6 34 0;
+#X connect 10 7 65 0;
+#X connect 11 0 7 0;
+#X connect 12 0 7 0;
+#X connect 20 0 92 0;
+#X connect 22 0 20 0;
+#X connect 72 0 74 0;
+#X connect 73 0 72 0;
+#X connect 76 0 77 0;
+#X connect 77 0 117 0;
+#X connect 78 0 79 0;
+#X connect 79 0 86 0;
+#X connect 79 0 105 0;
+#X connect 79 0 106 0;
+#X connect 80 0 74 0;
+#X connect 83 0 79 0;
+#X connect 84 0 77 0;
+#X connect 85 0 79 0;
+#X connect 86 1 81 0;
+#X connect 88 0 85 0;
+#X connect 89 0 83 0;
+#X connect 90 0 78 0;
+#X connect 91 0 79 0;
+#X connect 92 0 141 0;
+#X connect 93 0 77 0;
+#X connect 94 0 79 0;
+#X connect 95 0 94 0;
+#X connect 97 0 79 0;
+#X connect 98 0 97 0;
+#X connect 99 0 77 0;
+#X connect 101 0 104 0;
+#X connect 102 0 30 0;
+#X connect 102 1 52 0;
+#X connect 102 2 51 0;
+#X connect 102 3 50 0;
+#X connect 102 4 25 0;
+#X connect 102 5 49 0;
+#X connect 102 6 48 0;
+#X connect 102 7 27 0;
+#X connect 102 8 47 0;
+#X connect 102 9 103 0;
+#X connect 102 10 8 0;
+#X connect 107 0 109 0;
+#X connect 109 0 79 0;
+#X connect 110 0 77 0;
+#X connect 111 0 112 0;
+#X connect 112 0 79 0;
+#X connect 113 0 77 0;
+#X connect 114 0 115 0;
+#X connect 115 0 79 0;
+#X connect 116 0 77 0;
+#X connect 118 0 119 0;
+#X connect 119 0 120 0;
+#X connect 120 0 74 0;
+#X connect 120 0 134 0;
+#X connect 121 0 153 0;
+#X connect 123 0 124 0;
+#X connect 124 0 126 1;
+#X connect 124 0 130 1;
+#X connect 124 0 150 0;
+#X connect 125 0 123 0;
+#X connect 126 0 129 0;
+#X connect 127 0 126 0;
+#X connect 128 0 124 0;
+#X connect 129 0 74 0;
+#X connect 129 0 134 0;
+#X connect 130 0 132 0;
+#X connect 131 0 135 0;
+#X connect 132 0 74 0;
+#X connect 132 0 134 0;
+#X connect 135 0 133 0;
+#X connect 135 1 130 0;
+#X connect 135 2 128 0;
+#X connect 136 0 137 0;
+#X connect 137 0 128 0;
+#X connect 141 0 21 0;
+#X connect 141 1 101 0;
+#X connect 143 0 151 0;
+#X connect 144 0 145 0;
+#X connect 151 0 152 0;
+#X connect 152 0 144 0;
+#X connect 153 0 135 0;
+#X connect 153 1 125 0;
+#X connect 153 2 151 1;
+#X connect 153 3 122 0;
+#X coords 0 -1 1 1 400 60 1 20 20;

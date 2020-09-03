@@ -1,6 +1,6 @@
-#N canvas 109 163 941 914 10;
-#X obj 1 1 cnv 15 398 58 empty BACK_MIDI empty 6 8 1 12 -261234 -4160
-0;
+#N canvas 342 159 941 914 10;
+#X obj 1 1 cnv 15 398 58 empty BACK_MIDI MIDI_Connect:0-0 6 8 1 12
+-261234 -4160 0;
 #X msg 321 480 aconnect -lo;
 #X msg 321 463 aconnect -li;
 #X msg 322 742 SDOUT client 0: 'System' [type=kernel] \; SDOUT 0 'Timer
@@ -12,7 +12,7 @@ Data Midi-Out 1' \; DONE 0 \; SDOUT client 14: 'Midi Through' [type=kernel]
 \; SDOUT 0 'Midi Through Port-0' \; SDOUT client 24: 'nanoKONTROL2'
 [type=kernel \; SDOUT card=2] \; SDOUT 0 'nanoKONTROL2 MIDI 1' \; SDOUT
 client 128: 'Pure Data' [type=user \; SDOUT pid=18458] \; SDOUT 0 'Pure
-Data Midi-In 1' \; DONE 0 \; DONE 0 \; DONE 0 \;, f 64;
+Data Midi-In 1' \; DONE 0 \; DONE 0 \; DONE 0 \; DONE 0 \;, f 64;
 #X msg 244 728 set;
 #X obj 244 687 bng 15 250 50 0 empty Clear_MIDI Clear_MIDI 17 7 0 10
 -261234 -1 -1;
@@ -67,6 +67,7 @@ Data Midi-In 1' \; DONE 0 \; DONE 0 \; DONE 0 \;, f 64;
 #X msg 353 141 \; MIDI_CONNECT-1 20 128;
 #X obj 352 213 t a a a;
 #X msg 493 141 \; MIDI_CONNECT-1 24 128;
+#X obj 458 172 r MIDI_CONNECT-;
 #X connect 1 0 20 0;
 #X connect 2 0 20 0;
 #X connect 4 0 3 0;
@@ -112,4 +113,5 @@ Data Midi-In 1' \; DONE 0 \; DONE 0 \; DONE 0 \;, f 64;
 #X connect 47 0 22 0;
 #X connect 47 1 45 0;
 #X connect 47 2 40 0;
+#X connect 49 0 47 0;
 #X coords 0 -1 1 1 400 60 1 0 0;

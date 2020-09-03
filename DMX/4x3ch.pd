@@ -21,7 +21,7 @@
 #X obj 253 499 spigot;
 #X obj 360 497 symbol \$1;
 #X msg 360 541 set \, add2 \$1;
-#X msg 253 571 OVE;
+#X msg 253 571 RDP;
 #X obj 272 -11 r pattern-\$1;
 #X obj 536 115 tgl 15 0 LEARN-\$1 empty LEARN 8 8 0 12 -45076 -257985
 -257985 0 1;
@@ -33,7 +33,7 @@
 -257985 0 1;
 #X obj 605 726 loadbang;
 #X floatatom 663 659 5 0 0 0 - - -;
-#X msg 560 510 OVE-2;
+#X msg 560 510 RDP-0;
 #X obj 587 464 list;
 #X obj 560 419 t b f;
 #X msg 363 984 GROUP1 ManifA3 ManifA4 ManifA5 ManifB4 ManifB5 ManifC5
@@ -58,10 +58,10 @@ ManifD4 ManifD5 ManifE5, f 123;
 #X obj 19 1323 s cvn_pattern-\$0;
 #X msg 19 1303 label pattern-\$1-\$2;
 #X obj 19 1281 list;
-#X obj 600 115 cnv 15 130 15 empty cvn_pattern-\$0 pattern-OVE-2 4
-7 2 14 -45076 -257985 0;
+#X obj 600 115 cnv 15 130 15 empty cvn_pattern-\$0 pattern-\$1-\$2
+4 7 2 14 -45076 -257985 0;
 #X obj 272 115 hradio 15 1 0 16 empty empty empty 0 -8 0 10 -4160 -257985
--1 2;
+-1 0;
 #X obj 100 240 t f f;
 #X obj 714 793 t f f;
 #X msg 545 747 128;
@@ -140,8 +140,8 @@ label \$8 \; \$1-8 label \$9 \; \$1-9 label \$10 \; \$1-10 label \$11
 #X obj 1269 158 t b b a a;
 #X obj 1132 209 bng 15 250 50 0 empty empty SET 17 7 0 10 -262144 -1
 -1;
-#X obj 104 113 bng 15 250 50 0 STORE\$0 empty STORE 17 7 0 10 -258113
--1 -258113;
+#X obj 104 113 bng 15 250 50 0 STORE\$0 empty STORE-patterns 17 7 0
+10 -258113 -1 -258113;
 #X msg 1037 340 read \$1 \; pattern-DMX 0;
 #X connect 2 0 83 0;
 #X connect 2 0 72 0;
