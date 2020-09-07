@@ -1,0 +1,34 @@
+#N canvas 7 241 1107 698 10;
+#X obj 200 202 cnv 15 99 149 empty empty ESIMAYA22USB 5 8 2 10 -204800
+-66577 0;
+#X obj 117 112 loadbang;
+#X msg 117 143 \; pd dsp 1;
+#X obj 205 217 vsl 15 128 0 1 0 1 empty empty Audio_Volum 16 9 0 10
+-262144 -1 -1 12700 1;
+#X obj 205 143 inlet;
+#X obj 198 180 / 128;
+#X obj 179 120 r out_master_level1;
+#X obj 671 704 *~;
+#X obj 711 684 *~;
+#X obj 398 147 player_Stereo/receiveLRmixer~ 1;
+#X obj 609 147 player_Stereo/receiveLRmixer~ 2;
+#X obj 720 824 dac~ 1 2;
+#X obj 203 391 cyclone/prepend MASTER_LEVEL_1;
+#X obj 320 516 r MASTER_LEVEL_1;
+#X floatatom 320 539 5 0 0 0 - - -;
+#X obj 203 414 send to_control_audio;
+#X connect 3 0 12 0;
+#X connect 4 0 5 0;
+#X connect 5 0 3 0;
+#X connect 6 0 5 0;
+#X connect 7 0 11 0;
+#X connect 8 0 11 1;
+#X connect 9 0 7 0;
+#X connect 9 1 8 0;
+#X connect 10 0 7 0;
+#X connect 10 1 8 0;
+#X connect 12 0 15 0;
+#X connect 13 0 14 0;
+#X connect 14 0 8 1;
+#X connect 14 0 7 1;
+#X coords 0 -1 1 1 80 150 1 200 200;
