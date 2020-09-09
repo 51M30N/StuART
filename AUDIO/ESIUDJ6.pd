@@ -5,17 +5,17 @@
 #X obj 205 851 send to_control_audio;
 #X obj 191 124 r out_master_level2;
 #X obj 310 359 vsl 20 128 0 1 0 0 empty empty L1 2 -9 0 15 -159808
--4034 -4034 7400 1;
+-4034 -4034 0 1;
 #X obj 330 359 vsl 10 128 0 1 0 0 empty empty empty 16 9 0 10 -4034
--258113 -1 7400 1;
+-258113 -1 0 1;
 #X obj 340 359 vsl 20 128 0 1 0 0 empty empty R1 2 -9 0 15 -159808
--4034 -4034 7400 1;
+-4034 -4034 0 1;
 #X obj 370 359 vsl 20 128 0 1 0 0 empty empty L2 2 -9 0 15 -159808
--4034 -4034 2900 1;
+-4034 -4034 0 1;
 #X obj 390 359 vsl 10 128 0 1 0 0 empty empty empty 16 9 0 10 -4034
--258113 -1 2900 1;
+-258113 -1 0 1;
 #X obj 400 359 vsl 20 128 0 1 0 0 empty empty R2 1 -9 0 15 -159808
--4034 -4034 2900 1;
+-4034 -4034 0 1;
 #X obj 205 731 cyclone/prepend MASTER_LEVEL_1_1;
 #X obj 225 751 cyclone/prepend MASTER_LEVEL_1_2;
 #X obj 235 771 cyclone/prepend MASTER_LEVEL_2_1;
@@ -59,11 +59,11 @@
 #X obj 794 438 *~;
 #X obj 834 418 *~;
 #X obj 430 359 vsl 20 128 0 1 0 0 empty empty L3 2 -9 0 15 -159808
--4034 -4034 2900 1;
+-4034 -4034 0 1;
 #X obj 450 359 vsl 10 128 0 1 0 0 empty empty empty 16 9 0 10 -4034
--258113 -1 2900 1;
+-258113 -1 0 1;
 #X obj 460 359 vsl 20 128 0 1 0 0 empty empty R3 1 -9 0 15 -159808
--4034 -4034 2900 1;
+-4034 -4034 0 1;
 #X obj 440 230 / 128;
 #X obj 470 278 / 128;
 #X obj 440 208 r out_master_level_2_1;
@@ -93,6 +93,7 @@
 #X obj 915 624 throw~ out_2_2;
 #X obj 995 604 throw~ out_3_1;
 #X obj 1015 624 throw~ out_3_2;
+#X obj 114 438 cyclone/prepend main_DSP;
 #X connect 1 0 16 0;
 #X connect 1 0 17 0;
 #X connect 3 0 18 0;

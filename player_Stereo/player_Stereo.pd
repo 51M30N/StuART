@@ -47,9 +47,9 @@
 #X obj 104 239 makefilename %s;
 #X obj 164 547 print READSF_\$1;
 #X obj 919 162 hsl 128 15 0 1024 0 0 empty empty level_\$1 4 8 1 12
--13330 -258113 -261682 0 1;
+-159808 -4034 -261682 0 1;
 #X obj 919 178 hsl 128 15 0 1024 0 0 empty empty start_level_\$1 4
-8 1 12 -13330 -258113 -261682 0 1;
+8 1 12 -159808 -4034 -261682 0 1;
 #X obj 366 561 int;
 #X obj 637 558 int;
 #X obj 404 482 + 0;
@@ -58,7 +58,7 @@
 1;
 #X obj 766 300 >= 0;
 #X obj 916 195 bng 15 250 50 0 empty empty -1_kill_START_LEVEL 0 9
-1 12 -13330 -258113 -261682;
+1 12 -159808 -4034 -258113;
 #X obj 991 213 - 1;
 #X obj 727 275 t f f f;
 #X obj 265 442 r audio_time_\$1;
@@ -133,7 +133,7 @@
 #X obj 104 71 unpack s f f f f;
 #X obj 537 54 print WTF_player_Stereo_\$1;
 #X obj 919 427 pack f f f s;
-#X msg 876 456 remote_player_8 \$1 \$2 \$3 \$4;
+#X msg 876 456 remote_player_1 \$1 \$2 \$3 \$4;
 #X msg 876 378 set \, add2 remote_player_\$1 \, adddollar 1 \, adddollar
 2 \, adddollar 3 \, adddollar 4, f 82;
 #X obj 883 115 r set_player-\$1;
