@@ -68,10 +68,10 @@
 #X symbolatom 576 152 80 0 0 0 - - -;
 #X obj 611 109 makefilename /home/pi/Documents/_%s;
 #X text 177 26 remplace l'ancienne abstraction HEADER_host;
-#X obj 70 549 text define -k local-\$0;
+#X obj 70 522 text define -k local-\$0;
 #A set LocalM 1 \; OSC_CTRLM 0 \; OSC_EXECM 0 \; XbeeM 0 \;;
 #X msg 70 608 line 0 \, bang;
-#X obj 70 572 bng 15 250 50 0 empty LOCAL\$0 LOCAL\$0 17 7 0 10 -261682
+#X obj 70 545 bng 15 250 50 0 empty LOCAL\$0 LOCAL\$0 17 7 0 10 -261682
 -1 -1;
 #X obj 70 630 text sequence local-\$0;
 #X obj 300 763 bng 15 250 50 0 empty SET-qlist\$0 SET-qlist\$0 17 7
@@ -80,11 +80,11 @@
 0 10 -232576 -1 -1;
 #X obj 199 666 bng 15 250 50 0 SET-qlist\$0 empty SET-qlist\$0 17 7
 0 10 -232576 -1 -1;
-#X obj -120 549 text define -k broadcast-\$0;
+#X obj -120 522 text define -k broadcast-\$0;
 #A set TO_CTRL connect 255.255.255.255 9998 \; TO_EXEC connect 255.255.255.255
 9997 \; LocalM 0 \; OSC_CTRLM 0 \; OSC_EXECM 1 \; XbeeM 0 \;;
 #X msg -120 608 line 0 \, bang;
-#X obj -120 572 bng 15 250 50 0 empty BROADCAST\$0 BROADCAST\$0 17
+#X obj -120 545 bng 15 250 50 0 empty BROADCAST\$0 BROADCAST\$0 17
 7 0 10 -261682 -1 -1;
 #X obj 33 666 bng 15 250 50 0 SET-qlist\$0 empty SET-qlist\$0 17 7
 0 10 -232576 -1 -1;
@@ -153,6 +153,8 @@ VIDEO \; # ################################################# \; # TOGGLE_Video
 #X obj 454 144 bng 15 250 50 0 Read\$0 empty Read 17 7 0 10 -258113
 -1 -1;
 #X text 181 51 S1=./_RepertoireSource/ S2=./.configureS2;
+#X obj -120 565 t b b;
+#X obj 70 565 t b b;
 #X connect 2 0 11 0;
 #X connect 3 0 1 0;
 #X connect 4 0 1 0;
@@ -194,12 +196,12 @@ VIDEO \; # ################################################# \; # TOGGLE_Video
 #X connect 47 0 45 0;
 #X connect 47 0 46 0;
 #X connect 50 0 52 0;
-#X connect 51 0 50 0;
+#X connect 51 0 76 0;
 #X connect 52 0 41 0;
 #X connect 52 1 55 0;
 #X connect 53 0 1 0;
 #X connect 57 0 60 0;
-#X connect 58 0 57 0;
+#X connect 58 0 75 0;
 #X connect 60 0 41 0;
 #X connect 60 1 59 0;
 #X connect 64 0 65 0;
@@ -215,4 +217,8 @@ VIDEO \; # ################################################# \; # TOGGLE_Video
 #X connect 71 2 13 0;
 #X connect 71 3 66 0;
 #X connect 72 0 70 0;
+#X connect 75 0 57 0;
+#X connect 75 1 4 0;
+#X connect 76 0 50 0;
+#X connect 76 1 4 0;
 #X coords 0 -1 1 1 400 60 1 100 100;
