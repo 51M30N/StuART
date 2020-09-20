@@ -1,4 +1,4 @@
-#N canvas 460 105 1091 936 10;
+#N canvas 320 112 1091 936 10;
 #X obj 301 266 vsl 48 256 0 255 0 0 empty empty \$2 0 10 1 9 -1 -24198
 -24198 0 1;
 #X obj 107 709 loadbang;
@@ -20,9 +20,9 @@
 #X obj 414 251 r globaltime;
 #X obj 439 843 cyclone/prepend \$2;
 #X obj 512 899 tgl 15 0 empty toggle_rec_faderdmx-\$0 rec_faderdmx-\$0
-17 7 0 10 -257985 -260097 -1 1 1;
+17 7 0 10 -257985 -260097 -1 0 1;
 #X obj 119 651 tgl 15 0 empty toggle_out_faderdmx-\$0 toggle_out_faderdmx-\$0
-17 7 0 10 -260097 -262130 -1 1 1;
+17 7 0 10 -260097 -262130 -1 0 1;
 #X obj 86 677 spigot;
 #X floatatom 300 250 4 0 0 1 Load - -;
 #X floatatom 650 523 3 0 0 1 out - -;
@@ -33,7 +33,7 @@
 #X obj 86 560 int;
 #X obj 790 556 spigot;
 #X obj 823 484 tgl 15 0 empty Live_Mode-\$0 Live_Mode-\$0 17 7 0 10
--4032 -1 -1 1 1;
+-4032 -1 -1 0 1;
 #X msg 98 36 255 3000;
 #X obj 86 139 t a a;
 #X obj 107 762 - 1;
@@ -49,13 +49,13 @@
 #X obj 345 526 bng 15 250 50 0 SET_fader-\$0 SET_fader SET 17 8 1 8
 -4160 -258113 -1;
 #X obj 300 587 tgl 15 0 toggle_rec_faderdmx-\$0 toggle_rec_faderdmx
-REC 17 7 1 10 -257985 -260097 -1 1 1;
+REC 17 7 1 10 -257985 -260097 -1 0 1;
 #X obj 300 601 tgl 15 0 toggle_out_faderdmx-\$0 toggle_out_faderdmx
-OUT 17 7 1 10 -260097 -262130 -1 1 1;
+OUT 17 7 1 10 -260097 -262130 -1 0 1;
 #X obj 300 572 bng 15 250 50 0 Store_fdmx-\$0 Store_fdmx Store 17 7
 1 10 -258113 -4034 -1;
 #X obj 300 556 tgl 15 0 Live_Mode-\$0 Live_Mode LM 17 8 1 8 -4032 -1
--1 1 1;
+-1 0 1;
 #X obj 672 583 * 1000;
 #X obj 622 495 symbol \$2;
 #X obj 790 740 list;
@@ -78,7 +78,7 @@ OUT 17 7 1 10 -260097 -262130 -1 1 1;
 #X floatatom 231 68 5 0 0 0 - - -;
 #X obj 231 42 spigot;
 #X obj 101 102 tgl 15 0 empty COLOR_FADER COLOR_FADER 17 7 0 10 -159808
--262144 -1 1 1;
+-262144 -1 0 1;
 #X msg 299 227 color \$1 16 16;
 #X connect 0 0 11 0;
 #X connect 2 0 3 0;
@@ -253,7 +253,7 @@ OUT 17 7 1 10 -260097 -262130 -1 1 1;
 #X obj 372 21 r FX-RAMP_\$2;
 #X text 452 18 FX-RAMP_\$2 \, max_val min_val up_time down_tine Dlay
 Loop \;;
-#N canvas 0 50 1125 918 FX-ramp 1;
+#N canvas 0 50 1125 918 FX-ramp 0;
 #X obj 178 -2 inlet;
 #X floatatom 196 622 5 0 0 1 min_val - -;
 #X floatatom 697 484 5 0 0 1 up_time - -;
@@ -340,6 +340,7 @@ loop = une fois ou toutes \;;
 #X obj 496 606 list prepend \$1 \$2;
 #X obj 496 561 bng 15 250 50 0 empty send_list_faderdmx_name send_list_faderdmx_name
 17 7 0 10 -159808 -1 -1;
+#X obj 169 724 r repatch_\$2;
 #X connect 0 0 22 0;
 #X connect 1 0 2 0;
 #X connect 2 0 32 0;
@@ -418,4 +419,5 @@ loop = une fois ou toutes \;;
 #X connect 86 0 31 0;
 #X connect 88 0 87 0;
 #X connect 89 0 88 0;
+#X connect 90 0 2 0;
 #X coords 0 -1 1 1 60 382 2 300 250;
