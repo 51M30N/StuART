@@ -341,6 +341,7 @@ loop = une fois ou toutes \;;
 #X obj 496 561 bng 15 250 50 0 empty send_list_faderdmx_name send_list_faderdmx_name
 17 7 0 10 -159808 -1 -1;
 #X obj 169 724 r repatch_\$2;
+#X obj 401 202 inlet;
 #X connect 0 0 22 0;
 #X connect 1 0 2 0;
 #X connect 2 0 32 0;
@@ -420,4 +421,5 @@ loop = une fois ou toutes \;;
 #X connect 88 0 87 0;
 #X connect 89 0 88 0;
 #X connect 90 0 2 0;
+#X connect 91 0 0 0;
 #X coords 0 -1 1 1 60 382 2 300 250;
