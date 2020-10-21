@@ -4,12 +4,12 @@
 #X obj 509 942 throw~ out_1_1;
 #X obj 832 942 throw~ out_1_2;
 #X obj 160 103 hsl 128 10 0 1 0 0 empty canvas_player_Stereo_master_1_1_\$1
-_\$1_L1 -2 5 0 10 -159808 -66577 -261682 10414 1;
+_\$1_L1 -2 5 0 10 -159808 -66577 -261682 0 1;
 #X obj 523 811 t f f;
 #X obj 550 870 prepend \$1;
 #X msg 550 892 \; canvas_player_Stereo_master_1_1_\$1 label _\$2;
 #X obj 160 113 hsl 128 10 0 1 0 0 empty canvas_player_Stereo_master_1_2_\$1
-_\$1_R1 -2 5 0 10 -159808 -258113 -261682 7712 1;
+_\$1_R1 -2 5 0 10 -159808 -258113 -261682 0 1;
 #X obj 848 811 t f f;
 #X obj 875 870 prepend \$1;
 #X obj 508 911 *~;
@@ -21,11 +21,11 @@ _\$1_R1 -2 5 0 10 -159808 -258113 -261682 7712 1;
 #X obj 1521 786 receive~ Right-\$1;
 #X obj 1184 785 receive~ Left-\$1;
 #X obj 160 124 hsl 128 10 0 1 0 0 empty canvas_player_Stereo_master_2_1_\$1
-_\$1_L2 -2 5 0 10 -159808 -66577 -261682 7170 1;
+_\$1_L2 -2 5 0 10 -159808 -66577 -261682 0 1;
 #X obj 1200 811 t f f;
 #X obj 1227 870 prepend \$1;
 #X obj 160 134 hsl 128 10 0 1 0 0 empty canvas_player_Stereo_master_2_2_\$1
-_\$1_R2 -2 5 0 10 -159808 -258113 -261682 6938 1;
+_\$1_R2 -2 5 0 10 -159808 -258113 -261682 0 1;
 #X obj 1535 813 t f f;
 #X obj 1562 872 prepend \$1;
 #X obj 1185 911 *~;
@@ -39,7 +39,7 @@ _\$1_R2 -2 5 0 10 -159808 -258113 -261682 6938 1;
 #X obj 617 83 prepend \$1;
 #X obj 1519 944 throw~ out_2_2;
 #X obj 1186 942 throw~ out_2_1;
-#X obj 617 60 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+#X obj 617 60 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
 #X msg 1128 433 \; canvas_player_Stereo_master_1_1_\$1 label _#1_L1
 \; canvas_player_Stereo_master_1_2_\$1 label _#1_R1 \; canvas_player_Stereo_master_2_1_\$1
@@ -69,7 +69,7 @@ label _#1_L2 \; canvas_player_Stereo_master_2_2_\$1 label _#1_R2;
 #X msg 805 492 next;
 #X obj 564 479 bang;
 #X msg 618 203 \$1 1000 \$1 2000 \$1 3000 \$1 4000;
-#X obj 618 178 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+#X obj 618 178 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
 #X obj 383 492 prepend add;
 #X obj 645 581 print;
@@ -222,4 +222,4 @@ lvl_2_2 time_2_2 "time next", f 155;
 #X connect 88 0 86 0;
 #X connect 90 0 93 0;
 #X connect 91 0 90 0;
-#X coords 0 -1 1 1 200 50 1 100 100;
+#X coords 0 -1 1 1 200 50 2 100 100;
