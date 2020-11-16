@@ -77,8 +77,8 @@
 #X obj 445 91 + 35;
 #X obj 100 229 cnv 15 90 15 empty cnv_time_SELECT_master f-time=0s
 2 8 2 14 -13381 -261682 0;
-#X obj 100 245 cnv 15 90 15 empty cnv_level_SELECT_master level=0 2
-8 2 14 -45076 -232576 0;
+#X obj 100 245 cnv 15 90 15 empty cnv_level_SELECT_master level=-2
+2 8 2 14 -45076 -232576 0;
 #X obj 45 108 r level_0_SELECT_master;
 #X obj 65 128 r level_128_SELECT_master;
 #X obj 85 148 r level_255_SELECT_master;
@@ -109,6 +109,8 @@ adddollar 1 \, adddollar 2 \, add;
 #X obj 22 837 print ****************SELECT _;
 #X obj 73 741 select NO;
 #X obj 73 713 list;
+#X obj 272 12 r direct_time_SELECT_master;
+#X obj 498 10 r direct_level_SELECT_master;
 #X connect 6 0 5 0;
 #X connect 6 0 18 0;
 #X connect 7 0 67 0;
@@ -177,4 +179,6 @@ adddollar 1 \, adddollar 2 \, add;
 #X connect 78 1 63 0;
 #X connect 78 1 77 0;
 #X connect 79 0 78 0;
+#X connect 80 0 21 0;
+#X connect 81 0 23 0;
 #X coords 0 -1 1 1 150 300 1 100 200;

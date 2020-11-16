@@ -48,8 +48,8 @@ Dlay loop \;;
 #X obj 856 194 int;
 #X obj 766 194 int;
 #X obj 684 293 print FX-RAMP;
-#X obj 103 119 bng 15 250 50 0 empty empty KillAll-FX 17 7 0 10 -262144
--1 -1;
+#X obj 103 119 bng 15 250 50 0 empty KillAll-FX KillAll-FX 17 7 0 10
+-262144 -1 -1;
 #X obj 103 390 int 0;
 #X obj 490 -13 bng 15 250 50 0 empty empty RAZ 17 7 0 10 -191407 -1
 -1;
