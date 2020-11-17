@@ -1,0 +1,12 @@
+#N canvas 815 506 315 483 10;
+#X obj 1 1 cnv 15 248 448 empty empty 8_player_Stereo_mixer 20 12 2
+14 -128992 -204786 0;
+#X obj 2 25 player_Stereo_mixer 1;
+#X obj 2 75 player_Stereo_mixer 2;
+#X obj 2 125 player_Stereo_mixer 3;
+#X obj 2 175 player_Stereo_mixer 4;
+#X obj 2 225 player_Stereo_mixer 5;
+#X obj 2 275 player_Stereo_mixer 6;
+#X obj 2 325 player_Stereo_mixer 7;
+#X obj 2 375 player_Stereo_mixer 8;
+#X coords 0 -1 1 1 250 450 1 0 0;

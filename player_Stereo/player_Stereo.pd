@@ -101,8 +101,8 @@
 #X obj 1116 514 s canvas_player_stereo_\$1;
 #X msg 1116 463 color 16 0 13;
 #X msg 1086 482 color 13 0 16;
-#X obj 578 192 tgl 15 0 empty empty LOOP 17 7 1 10 -261682 -1 -1 0
-1;
+#X obj 578 192 tgl 15 0 empty LOOP-player_Stereo-\$1 LOOP 17 7 1 10
+-261682 -1 -1 0 1;
 #X obj 539 232 spigot;
 #X obj 539 255 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
@@ -133,13 +133,14 @@
 #X obj 104 71 unpack s f f f f;
 #X obj 537 54 print WTF_player_Stereo_\$1;
 #X obj 919 427 pack f f f s;
-#X msg 876 456 remote_player_1 \$1 \$2 \$3 \$4;
+#X msg 876 456 remote_player_0 \$1 \$2 \$3 \$4;
 #X msg 876 378 set \, add2 remote_player_\$1 \, adddollar 1 \, adddollar
 2 \, adddollar 3 \, adddollar 4, f 82;
 #X obj 883 115 r set_player-\$1;
 #X obj 783 115 r PLAY_player-\$1;
 #X obj 750 133 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
+#X text 882 12 LOOP-player_Stereo-#1 en commandeline;
 #X connect 1 0 3 1;
 #X connect 1 1 2 1;
 #X connect 1 2 41 0;
