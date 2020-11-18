@@ -1,8 +1,8 @@
-#N canvas 792 139 854 733 10;
+#N canvas 133 212 854 733 10;
 #X obj 101 101 cnv 15 198 48 empty canvas goto>\$1 1 7 2 14 -204786
 -159808 0;
 #X text 7 3 -arg1 cue_name -arg2 midi_toogle;
-#X obj 100 115 bng 35 250 50 0 empty empty empty 36 5 0 10 -4034 -257985
+#X obj 100 115 bng 35 250 50 0 empty empty no 36 5 0 10 -4034 -257985
 -260097;
 #X obj 138 127 bng 10 250 50 0 empty empty Edit 12 5 0 10 -257985 -1
 -191407;
@@ -16,8 +16,8 @@
 #X msg 16 594 label \$1;
 #X obj 16 616 s next-\$1;
 #X obj 111 606 s bang-\$1;
-#X obj 136 140 cnv 10 140 10 empty next-\$1 empty 1 5 1 11 -159808
--204786 0;
+#X obj 136 140 cnv 10 140 10 empty next-\$1 _s10 1 5 1 11 -159808 -204786
+0;
 #X obj 13 170 symbol \$1;
 #X obj 510 321 r SHOW;
 #X obj 542 486 makefilename;
@@ -34,8 +34,13 @@
 #X obj 510 343 t b b a;
 #X obj 13 220 s to_control_goto;
 #X msg 111 584 label \$1;
-#X msg 625 337 FFM;
+#X msg 625 327 FFM;
 #X obj 542 397 makefilename /home/pi/Documents/_%s/Cue/%%s;
+#X obj 351 196 s CUE_LOADER_goto;
+#X obj 339 177 s CUE_EDIT_Next_cue;
+#X obj 351 135 symbol \$1;
+#X obj 237 127 bng 10 250 50 0 empty empty SELECT 12 5 0 10 -4160 -257985
+-191407;
 #X connect 2 0 14 0;
 #X connect 3 0 4 0;
 #X connect 4 0 21 0;
@@ -64,4 +69,7 @@
 #X connect 27 0 12 0;
 #X connect 28 0 25 0;
 #X connect 29 0 20 0;
+#X connect 32 0 31 0;
+#X connect 32 0 30 0;
+#X connect 33 0 32 0;
 #X coords 0 -1 1 1 200 50 2 100 100;

@@ -1,5 +1,5 @@
 #N canvas 172 186 1354 803 10;
-#X obj 300 160 cnv 15 750 50 empty canvas_player_stereo_\$1 Player_Stereo-\$1
+#X obj 301 161 cnv 15 748 48 empty canvas_player_stereo_\$1 Player_Stereo-\$1
 5 7 1 14 -191407 -258699 0;
 #X obj 104 465 readsf~ 2;
 #X obj 141 600 *~;
@@ -108,7 +108,7 @@
 -1 -1;
 #X obj 1072 733 list prepend;
 #X obj 459 81 prepend set;
-#X msg 459 103 0 0 0 1;
+#X msg 459 103 /home/pi/Music/TORTUE_RDP/dingue.wav 0 10000 -1 0;
 #X obj 728 48 r globaltime;
 #X obj 728 70 * 100;
 #X obj 1072 769 s to_control_audio;
@@ -133,7 +133,7 @@
 #X obj 104 71 unpack s f f f f;
 #X obj 537 54 print WTF_player_Stereo_\$1;
 #X obj 919 427 pack f f f s;
-#X msg 876 456 remote_player_0 \$1 \$2 \$3 \$4;
+#X msg 876 456 remote_player_1 \$1 \$2 \$3 \$4;
 #X msg 876 378 set \, add2 remote_player_\$1 \, adddollar 1 \, adddollar
 2 \, adddollar 3 \, adddollar 4, f 82;
 #X obj 883 115 r set_player-\$1;
