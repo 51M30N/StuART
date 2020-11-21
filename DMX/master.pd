@@ -2,11 +2,11 @@
 #X obj 101 201 cnv 15 148 298 empty empty master 5 6 2 10 -203904 -66577
 0;
 #X obj 138 373 tgl 20 0 toggle_rec_faderdmx toggle_rec_faderdmxM rec_faderdmx
-22 10 0 12 -257985 -260097 -1 0 1;
+22 10 0 12 -257985 -260097 -1 1 1;
 #X obj 138 393 tgl 20 0 toggle_out_faderdmx toggle_out_faderdmxM out_faderdmx
-22 10 0 12 -260097 -262130 -1 0 1;
+22 10 0 12 -260097 -262130 -1 1 1;
 #X obj 138 353 tgl 20 0 Live_Mode Live_ModeM Live_Mode 22 10 0 12 -4032
--1 -1 0 1;
+-1 -1 1 1;
 #X obj 138 455 bng 20 250 50 0 Store_fdmx Store_fdmxM Store_fdmx 22
 10 0 12 -258113 -4034 -1;
 #X obj 202 663 s globaltime;
@@ -15,7 +15,7 @@
 #X obj 138 434 bng 20 250 50 0 SET_fader empty SET_fader 22 10 0 10
 -4160 -258113 -1;
 #X obj 138 413 tgl 20 0 COLOR_FADER COLOR_FADERM COLOR_FADER 22 10
-0 12 -159808 -262144 -1 0 1;
+0 12 -159808 -262144 -1 1 1;
 #X msg 563 281 \; Live_ModeM 1 \; toggle_out_faderdmxM 1 \; toggle_rec_faderdmxM
 0 \; COLOR_FADERM 0 \;;
 #X obj 73 690 r SELECT;
@@ -26,45 +26,45 @@
 #X msg 563 219 \; CCOLOR color 14 0 21;
 #X obj 443 355 bng 20 250 50 0 empty empty base_StuART 22 10 1 12 -261234
 -1 -261234;
-#X floatatom 101 229 14 0 9999 0 - - -;
+#X floatatom 103 229 14 0 9999 0 - - -;
 #X obj 299 35 r time_SELECT_master;
 #X obj 298 56 / 3;
 #X obj 298 77 int;
 #X msg 326 140 \; cnv_time_SELECT_master label f-time=\$1s;
-#X floatatom 101 245 14 0 255 0 - - -;
+#X floatatom 103 245 14 0 255 0 - - -;
 #X obj 498 30 r level_SELECT_master;
 #X msg 498 85 \; cnv_level_SELECT_master label level=\$1;
 #X obj 498 51 * 2;
-#X obj 100 214 cnv 15 149 15 empty cnv_fader_SELECT_master CLEAR 2
+#X obj 102 214 cnv 15 147 15 empty cnv_fader_SELECT_master CLEAR 2
 8 2 12 -1 -4032 0;
 #X obj 18 15 bng 15 250 50 0 empty empty empty 17 7 0 10 -1 -262144
 -1;
 #X obj 376 121 + 0;
 #X obj 445 121 + 255;
-#X obj 100 260 bng 30 250 50 0 empty empty 255 3 16 2 15 -45076 -232576
+#X obj 102 260 bng 30 250 50 0 empty empty 255 3 16 2 15 -45076 -232576
 -232576;
-#X obj 100 290 bng 30 250 50 0 empty empty 128 3 16 2 15 -45076 -232576
+#X obj 102 290 bng 30 250 50 0 empty empty 128 3 16 2 15 -45076 -232576
 -232576;
-#X obj 100 320 bng 30 250 50 0 empty empty 0 11 16 2 15 -45076 -232576
+#X obj 102 320 bng 30 250 50 0 empty empty 0 11 16 2 15 -45076 -232576
 -232576;
 #X obj 406 121 + 128;
-#X obj 191 260 bng 30 250 50 0 empty empty 2 11 16 2 15 -13381 -1 -261682
+#X obj 193 260 bng 30 250 50 0 empty empty 2 11 16 2 15 -13381 -1 -261682
 ;
-#X obj 161 260 bng 30 250 50 0 empty empty 1 11 16 2 15 -13381 -1 -261682
+#X obj 163 260 bng 30 250 50 0 empty empty 1 11 16 2 15 -13381 -1 -261682
 ;
-#X obj 131 260 bng 30 250 50 0 empty empty 0 11 16 2 15 -13381 -1 -261682
+#X obj 133 260 bng 30 250 50 0 empty empty 0 11 16 2 15 -13381 -1 -261682
 ;
-#X obj 191 290 bng 30 250 50 0 empty empty 9 11 16 2 15 -13381 -1 -261682
+#X obj 193 290 bng 30 250 50 0 empty empty 9 11 16 2 15 -13381 -1 -261682
 ;
-#X obj 161 290 bng 30 250 50 0 empty empty 5 11 16 2 15 -13381 -1 -261682
+#X obj 163 290 bng 30 250 50 0 empty empty 5 11 16 2 15 -13381 -1 -261682
 ;
-#X obj 131 290 bng 30 250 50 0 empty empty 3 11 16 2 15 -13381 -1 -261682
+#X obj 133 290 bng 30 250 50 0 empty empty 3 11 16 2 15 -13381 -1 -261682
 ;
-#X obj 191 320 bng 30 250 50 0 empty empty 35 8 16 2 15 -13381 -1 -261682
+#X obj 193 320 bng 30 250 50 0 empty empty 35 8 16 2 15 -13381 -1 -261682
 ;
-#X obj 161 320 bng 30 250 50 0 empty empty 21 8 16 2 15 -13381 -1 -261682
+#X obj 163 320 bng 30 250 50 0 empty empty 21 8 16 2 15 -13381 -1 -261682
 ;
-#X obj 131 320 bng 30 250 50 0 empty empty 14 7 16 2 15 -13381 -1 -261682
+#X obj 133 320 bng 30 250 50 0 empty empty 14 7 16 2 15 -13381 -1 -261682
 ;
 #X obj 376 51 + 0;
 #X obj 406 51 + 1;
@@ -75,9 +75,9 @@
 #X obj 376 91 + 14;
 #X obj 406 91 + 21;
 #X obj 445 91 + 35;
-#X obj 100 229 cnv 15 90 15 empty cnv_time_SELECT_master f-time=0s
+#X obj 102 229 cnv 15 90 15 empty cnv_time_SELECT_master f-time=0s
 2 8 2 14 -13381 -261682 0;
-#X obj 100 245 cnv 15 90 15 empty cnv_level_SELECT_master level=-2
+#X obj 102 245 cnv 15 90 15 empty cnv_level_SELECT_master level=-2
 2 8 2 14 -45076 -232576 0;
 #X obj 45 108 r level_0_SELECT_master;
 #X obj 65 128 r level_128_SELECT_master;
