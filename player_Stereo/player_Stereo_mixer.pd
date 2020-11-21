@@ -46,7 +46,7 @@ _\$1_L4 -2 5 0 10 -159808 -258113 -261682 0 1;
 #X obj 1663 1124 tgl 15 0 empty view-value-\$0 view-value-\$0 17 7
 0 10 -228856 -1 -1 0 1;
 #X obj 108 118 tgl 15 0 empty toogle-\$0 Value 17 7 0 10 -262144 -1
--1 0 1;
+-261234 0 1;
 #X obj 37 178 route 0;
 #X obj 37 271 prepend \$0;
 #X msg 37 294 \; view-value-\$1 0 \; toogle-\$1 label Value \; NAME-\$1
@@ -57,12 +57,12 @@ _\$1_L4 -2 5 0 10 -159808 -258113 -261682 0 1;
 #X obj 873 76 bng 15 250 50 0 empty LR-1-\$0 LR-1-\$0 17 7 0 10 -159808
 -258113 -1;
 #X obj 108 102 bng 15 250 50 0 LR-1-\$0 empty LR-1 17 7 0 10 -159808
--258113 -1;
+-258113 -261234;
 #X obj 1103 97 prepend \$1;
 #X obj 1103 76 bng 15 250 50 0 empty LR-2-\$0 LR-2-\$0 17 7 0 10 -159808
 -258113 -1;
 #X obj 108 133 bng 15 250 50 0 LR-2-\$0 empty LR-2 17 7 0 10 -159808
--258113 -1;
+-258113 -261234;
 #N canvas 397 192 1336 948 machinerie 0;
 #X obj 259 161 inlet;
 #X obj 286 681 outlet;
