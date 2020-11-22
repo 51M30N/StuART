@@ -1,6 +1,6 @@
 #N canvas 480 126 1037 852 10;
 #X obj 101 601 cnv 15 148 198 empty empty Spatial-editor 20 12 0 14
--162280 -258113 0;
+-191407 -258113 0;
 #X obj 702 773 send;
 #X msg 723 748 symbol player_Stereo_mixer-\$1;
 #X obj 723 537 vradio 15 1 0 8 empty Player-\$0 Player-\$0 0 -8 0 10
