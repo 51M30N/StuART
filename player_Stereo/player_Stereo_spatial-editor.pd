@@ -4,7 +4,7 @@
 #X obj 702 773 send;
 #X msg 723 748 symbol player_Stereo_mixer-\$1;
 #X obj 723 537 vradio 15 1 0 8 empty Player-\$0 Player-\$0 0 -8 0 10
--262144 -1 -1 5;
+-262144 -1 -1 0;
 #X obj 723 662 + 1;
 #X floatatom 674 65 5 0 30000 0 fade_time-#0 fade_time-#0 -;
 #X floatatom 310 473 5 1 15000 0 delay_time-#0 delay_time-#0 -;
@@ -68,8 +68,8 @@
 ;
 #X obj 211 681 tgl 15 0 R4-\$0 empty R4 17 7 0 10 -262144 -1 -1 0 1
 ;
-#X obj 110 636 vradio 15 1 1 8 Player-\$0 Player-\$0-lbl Player-6 0
--8 0 10 -262144 -1 -1 5;
+#X obj 110 636 vradio 15 1 1 10 Player-\$0 Player-\$0-lbl Player-\$0
+0 -8 0 10 -262144 -1 -1 0;
 #X obj 133 767 bng 15 250 50 0 send-dynamic-\$0 empty send-dynamic
 17 7 0 10 -262144 -1 -1;
 #X obj 133 782 bng 15 250 50 0 Clear-\$0 empty Clear 17 7 0 10 -262144

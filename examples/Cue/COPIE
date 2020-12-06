@@ -1,0 +1,41 @@
+#!/bin/bash
+
+# pour la recurence 
+#for((i=0; i<=999; i++)); do ./COPIE $i; done
+
+
+    if [ $1 ]
+    then
+        num_cue=$1
+    else
+        echo "num_cue :"
+        read
+        num_cue=$REPLY
+    fi
+    echo "num_cue=$num_cue"
+
+
+# ecriture du cue.0
+let "next=$num_cue+1"
+echo "next=$next"
+echo "Cue_name, s$next.0 0 0 top;" > s$num_cue.0
+
+
+
+#copie des 10 autres
+# a refaire en plus propore avec un for
+
+cp s$num_cue.0 s$num_cue.1
+cp s$num_cue.0 s$num_cue.2
+cp s$num_cue.0 s$num_cue.3
+cp s$num_cue.0 s$num_cue.4
+cp s$num_cue.0 s$num_cue.5
+cp s$num_cue.0 s$num_cue.6
+cp s$num_cue.0 s$num_cue.7
+cp s$num_cue.0 s$num_cue.8
+cp s$num_cue.0 s$num_cue.9
+
+#relecture
+ls s$num_cue.*
+cat s$num_cue.*
+exit
