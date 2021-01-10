@@ -1,0 +1,157 @@
+#N canvas 0 74 1920 1006 10;
+#X obj 101 101 cnv 15 598 98 empty empty 3Step-Motor-\$1 3 8 0 14 -233017
+-66577 0;
+#X obj 108 128 cnv 15 200 60 empty empty empty 20 12 0 14 -191407 -66577
+0;
+#X obj 1541 50 cnv 15 250 100 empty empty empty 20 12 0 14 -233017
+-66577 0;
+#X obj 1542 163 cnv 15 100 60 empty empty empty 20 12 0 14 -233017
+-66577 0;
+#X obj 327 126 tgl 15 0 empty X_Dir-\$0 X_Dir 17 7 0 10 -262144 -1
+-1 1 1;
+#X obj 327 179 bng 15 250 50 0 empty empty Send-Mouvement 17 7 0 10
+-4034 -1 -1;
+#X obj 1149 161 print WTF;
+#X obj 225 504 list trim;
+#X obj 225 458 pack s f f f f f f;
+#X obj 225 424 symbol /mouvement;
+#X obj 193 135 bng 15 250 50 0 empty empty Send-Vitesse 17 7 0 10 -4034
+-1 -1;
+#X obj 525 429 pack s f;
+#X obj 524 407 symbol /vitesse;
+#X obj 525 504 list trim;
+#X floatatom 160 133 5 0 0 0 Vitesse Vitesse-#0 -;
+#X obj 441 180 bng 15 250 50 0 empty STOP-\$0 STOP 17 7 0 10 -258113
+-1 -1;
+#X msg 708 317 python3 OSC_to_I2C.py &;
+#X msg 735 287 sudo killall python3;
+#X obj 547 120 bng 15 250 50 0 empty empty Run_Python_Script 17 7 0
+10 -4034 -1 -1;
+#X obj 547 138 bng 15 250 50 0 empty empty killall_Python_Script 17
+7 0 10 -258113 -1 -1;
+#X floatatom 379 125 10 0 32000 1 X_Step X_Step-#0 -;
+#X obj 327 142 tgl 15 0 empty Y_Dir-\$0 Y_Dir 17 7 0 10 -262144 -1
+-1 0 1;
+#X floatatom 379 142 10 0 32000 1 Y_Step Y_Step-#0 -;
+#X obj 327 158 tgl 15 0 empty Z_Dir-\$0 Z_Dir 17 7 0 10 -262144 -1
+-1 0 1;
+#X floatatom 379 159 10 0 32000 1 Z_Step Z_Step-#0 -;
+#X obj 327 109 tgl 15 0 empty empty Dir 17 7 0 10 -262144 -1 -1 0 1
+;
+#X floatatom 379 107 10 0 32000 1 Step - -;
+#X msg 706 504 /vitesse 500;
+#X msg 792 504 /vitesse 1000;
+#X obj 193 151 bng 15 250 50 0 empty empty V-500µs 17 7 0 10 -204786
+-1 -1;
+#X obj 193 167 bng 15 250 50 0 empty empty V-1000µs 17 7 0 10 -204786
+-1 -1;
+#X obj 457 587 prepend \$0;
+#X msg 458 608 \; X_\$2-\$1 \$3 \; Y_\$2-\$1 \$3 \; Z_\$2-\$1 \$3;
+#X obj 457 564 prepend Step;
+#X obj 405 544 prepend Dir;
+#X obj 11 505 prepend /mouvement;
+#X msg 11 449 0 0 0 0 0 0;
+#X obj 1132 520 s to_osc-\$0;
+#X obj 497 47 r to_osc-\$0;
+#X obj 735 397 print From-Python-Script;
+#X obj 903 73 r 3-motor-\$1;
+#X obj 903 96 route mouvement vitesse;
+#X obj 983 73 r 3-motor-M;
+#X obj 970 504 prepend /vitesse;
+#X obj 497 166 OSC/OSCsender 127.0.0.1 5005 Python_I2C-\$1;
+#X msg 1548 103 \; Python_I2C-\$1 connect 127.0.0.1 5005;
+#X obj 1548 81 hradio 15 1 0 10 empty empty empty 0 -8 0 10 -262144
+-1 -1 1;
+#X text 1550 59 config IP adress;
+#X obj 997 475 s Vitesse-\$0;
+#X obj 970 446 t a a;
+#X obj 903 188 t a a;
+#X obj 930 685 prepend \$0;
+#X msg 931 706 \; X_Dir-\$1 \$2 \; X_Step-\$1 \$3 \; Y_Dir-\$1 \$4
+\; Y_Step-\$1 \$5 \; Z_Dir-\$1 \$6 \; Z_Step-\$1 \$7;
+#X obj 1038 133 route run kill stop;
+#X obj 1112 191 s STOP-\$0;
+#X obj 1542 243 cnv 15 100 60 empty empty empty 20 12 0 14 -233017
+-66577 0;
+#X obj 1542 323 cnv 15 100 60 empty empty empty 20 12 0 14 -233017
+-66577 0;
+#X obj 1542 403 cnv 15 100 60 empty empty empty 20 12 0 14 -233017
+-66577 0;
+#X obj 1394 477 s 3-motor-\$1;
+#X msg 1546 184 vitesse 600;
+#X msg 1546 164 vitesse 1000;
+#X msg 1548 405 stop;
+#X msg 1548 424 run;
+#X msg 1548 443 kill;
+#X msg 1546 204 vitesse 400;
+#X msg 1543 246 mouvement 1 200 1 200 1 200;
+#X msg 1543 266 mouvement 0 200 0 200 0 200;
+#X msg 1543 286 mouvement 0 2000 0 2000 0 2000;
+#X msg 1543 336 mouvement 0 0 0 0 0 0;
+#X msg 1543 356 mouvement 1 0 1 0 1 0;
+#X obj 225 550 print WTF;
+#X obj 735 374 ggee/shell;
+#X obj 1276 254 r STOP_MOTOR-M;
+#X connect 4 0 8 1;
+#X connect 5 0 9 0;
+#X connect 7 0 37 0;
+#X connect 8 0 7 0;
+#X connect 9 0 8 0;
+#X connect 10 0 12 0;
+#X connect 11 0 13 0;
+#X connect 12 0 11 0;
+#X connect 13 0 37 0;
+#X connect 14 0 11 1;
+#X connect 15 0 36 0;
+#X connect 16 0 71 0;
+#X connect 17 0 71 0;
+#X connect 18 0 16 0;
+#X connect 19 0 17 0;
+#X connect 20 0 8 2;
+#X connect 21 0 8 3;
+#X connect 22 0 8 4;
+#X connect 23 0 8 5;
+#X connect 24 0 8 6;
+#X connect 25 0 34 0;
+#X connect 26 0 33 0;
+#X connect 27 0 37 0;
+#X connect 28 0 37 0;
+#X connect 29 0 27 0;
+#X connect 30 0 28 0;
+#X connect 31 0 32 0;
+#X connect 33 0 31 0;
+#X connect 34 0 31 0;
+#X connect 35 0 37 0;
+#X connect 36 0 35 0;
+#X connect 38 0 44 0;
+#X connect 40 0 41 0;
+#X connect 41 0 50 0;
+#X connect 41 1 49 0;
+#X connect 41 2 53 0;
+#X connect 42 0 41 0;
+#X connect 43 0 37 0;
+#X connect 46 0 45 0;
+#X connect 49 0 43 0;
+#X connect 49 1 48 0;
+#X connect 50 0 35 0;
+#X connect 50 1 51 0;
+#X connect 51 0 52 0;
+#X connect 53 0 18 0;
+#X connect 53 1 19 0;
+#X connect 53 2 54 0;
+#X connect 53 3 6 0;
+#X connect 59 0 58 0;
+#X connect 60 0 58 0;
+#X connect 61 0 58 0;
+#X connect 62 0 58 0;
+#X connect 63 0 58 0;
+#X connect 64 0 58 0;
+#X connect 65 0 58 0;
+#X connect 66 0 58 0;
+#X connect 67 0 58 0;
+#X connect 68 0 58 0;
+#X connect 69 0 58 0;
+#X connect 71 0 39 0;
+#X connect 71 1 39 0;
+#X connect 72 0 54 0;
+#X coords 0 -1 1 1 600 100 1 100 100;
