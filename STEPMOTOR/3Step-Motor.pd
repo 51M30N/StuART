@@ -8,7 +8,7 @@
 #X obj 1542 163 cnv 15 100 60 empty empty empty 20 12 0 14 -233017
 -66577 0;
 #X obj 327 126 tgl 15 0 empty X_Dir-\$0 X_Dir 17 7 0 10 -262144 -1
--1 1 1;
+-1 0 1;
 #X obj 327 179 bng 15 250 50 0 empty empty Send-Mouvement 17 7 0 10
 -4034 -1 -1;
 #X obj 1149 161 print WTF;
@@ -26,7 +26,7 @@
 #X msg 708 317 python3 OSC_to_I2C.py &;
 #X msg 735 287 sudo killall python3;
 #X obj 547 120 bng 15 250 50 0 empty empty Run_Python_Script 17 7 0
-10 -4034 -1 -1;
+10 -4032 -1 -1;
 #X obj 547 138 bng 15 250 50 0 empty empty killall_Python_Script 17
 7 0 10 -258113 -1 -1;
 #X floatatom 379 125 10 0 32000 1 X_Step X_Step-#0 -;
@@ -58,7 +58,6 @@
 #X obj 903 96 route mouvement vitesse;
 #X obj 983 73 r 3-motor-M;
 #X obj 970 504 prepend /vitesse;
-#X obj 497 166 OSC/OSCsender 127.0.0.1 5005 Python_I2C-\$1;
 #X msg 1548 103 \; Python_I2C-\$1 connect 127.0.0.1 5005;
 #X obj 1548 81 hradio 15 1 0 10 empty empty empty 0 -8 0 10 -262144
 -1 -1 1;
@@ -92,6 +91,20 @@
 #X obj 225 550 print WTF;
 #X obj 735 374 ggee/shell;
 #X obj 1276 254 r STOP_MOTOR-M;
+#X obj 498 167 OSC/OSCsender 127.0.0.1 501\$1 Python_I2C-\$1;
+#X obj 494 104 bng 15 250 50 0 empty empty 0 17 7 0 10 -204786 -1 -1
+;
+#X obj 494 119 bng 15 250 50 0 empty empty 200 17 7 0 10 -204786 -1
+-1;
+#X obj 494 134 bng 15 250 50 0 empty empty 1000 17 7 0 10 -204786 -1
+-1;
+#X obj 494 149 bng 15 250 50 0 empty empty 10000 17 7 0 10 -204786
+-1 -1;
+#X msg 436 13 0;
+#X msg 436 33 200;
+#X msg 436 53 1000;
+#X msg 436 73 10000;
+#X text 710 21 |Python_I2C-11 connect 127.0.0.1 5011(;
 #X connect 4 0 8 1;
 #X connect 5 0 9 0;
 #X connect 7 0 37 0;
@@ -103,8 +116,8 @@
 #X connect 13 0 37 0;
 #X connect 14 0 11 1;
 #X connect 15 0 36 0;
-#X connect 16 0 71 0;
-#X connect 17 0 71 0;
+#X connect 16 0 70 0;
+#X connect 17 0 70 0;
 #X connect 18 0 16 0;
 #X connect 19 0 17 0;
 #X connect 20 0 8 2;
@@ -123,35 +136,43 @@
 #X connect 34 0 31 0;
 #X connect 35 0 37 0;
 #X connect 36 0 35 0;
-#X connect 38 0 44 0;
+#X connect 38 0 72 0;
 #X connect 40 0 41 0;
-#X connect 41 0 50 0;
-#X connect 41 1 49 0;
-#X connect 41 2 53 0;
+#X connect 41 0 49 0;
+#X connect 41 1 48 0;
+#X connect 41 2 52 0;
 #X connect 42 0 41 0;
 #X connect 43 0 37 0;
-#X connect 46 0 45 0;
-#X connect 49 0 43 0;
-#X connect 49 1 48 0;
-#X connect 50 0 35 0;
-#X connect 50 1 51 0;
-#X connect 51 0 52 0;
-#X connect 53 0 18 0;
-#X connect 53 1 19 0;
-#X connect 53 2 54 0;
-#X connect 53 3 6 0;
-#X connect 59 0 58 0;
-#X connect 60 0 58 0;
-#X connect 61 0 58 0;
-#X connect 62 0 58 0;
-#X connect 63 0 58 0;
-#X connect 64 0 58 0;
-#X connect 65 0 58 0;
-#X connect 66 0 58 0;
-#X connect 67 0 58 0;
-#X connect 68 0 58 0;
-#X connect 69 0 58 0;
-#X connect 71 0 39 0;
-#X connect 71 1 39 0;
-#X connect 72 0 54 0;
+#X connect 45 0 44 0;
+#X connect 48 0 43 0;
+#X connect 48 1 47 0;
+#X connect 49 0 35 0;
+#X connect 49 1 50 0;
+#X connect 50 0 51 0;
+#X connect 52 0 18 0;
+#X connect 52 1 19 0;
+#X connect 52 2 53 0;
+#X connect 52 3 6 0;
+#X connect 58 0 57 0;
+#X connect 59 0 57 0;
+#X connect 60 0 57 0;
+#X connect 61 0 57 0;
+#X connect 62 0 57 0;
+#X connect 63 0 57 0;
+#X connect 64 0 57 0;
+#X connect 65 0 57 0;
+#X connect 66 0 57 0;
+#X connect 67 0 57 0;
+#X connect 68 0 57 0;
+#X connect 70 0 39 0;
+#X connect 70 1 39 0;
+#X connect 71 0 53 0;
+#X connect 73 0 77 0;
+#X connect 74 0 78 0;
+#X connect 75 0 79 0;
+#X connect 76 0 80 0;
+#X connect 77 0 26 0;
+#X connect 78 0 26 0;
+#X connect 79 0 26 0;
+#X connect 80 0 26 0;
 #X coords 0 -1 1 1 600 100 1 100 100;
