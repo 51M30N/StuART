@@ -47,15 +47,15 @@
 #X obj 352 144 bng 15 250 50 0 LOAD-\$0 empty LOAD 17 7 0 10 -257985
 -1 -1;
 #X msg 315 313 read \$1;
-#X symbolatom 685 292 60 0 0 0 - - -;
+#X symbolatom 685 332 60 0 0 0 - - -;
 #X obj 685 207 bng 15 250 50 0 empty SAVEAS-\$0 SAVE_as-\$0 17 7 0
 10 -257985 -1 -1;
 #X obj 685 249 makefilename ~/Documents/_%s/;
 #X obj 685 227 symbol \$1;
 #X obj 352 129 bng 15 250 50 0 SAVEAS-\$0 empty SAVE_as 17 7 0 10 -257985
 -1 -1;
-#X obj 685 270 savepanel;
-#X msg 685 313 write \$1;
+#X obj 685 310 savepanel;
+#X msg 685 353 write \$1;
 #X symbolatom 115 112 60 0 0 0 - - -;
 #X obj 285 509 t a a;
 #X obj 246 686 route #;
@@ -155,6 +155,14 @@ VIDEO \; # ################################################# \; # TOGGLE_Video
 #X text 181 51 S1=./_RepertoireSource/ S2=./.configureS2;
 #X obj -120 565 t b b;
 #X obj 70 565 t b b;
+#X obj 481 121 bng 15 250 50 0 Local-pws-\$0 empty Local-pws-\$0 17
+7 0 10 -258113 -1 -1;
+#X obj 1087 250 r chemin_du_repertoire_de_travail;
+#X msg 1087 296 set \$1;
+#X obj 963 235 prepend symbol;
+#X obj 685 272 prepend symbol;
+#X obj 1093 335 print WtTF;
+#X obj 1087 273 makefilename %s/;
 #X connect 2 0 11 0;
 #X connect 3 0 1 0;
 #X connect 4 0 1 0;
@@ -179,7 +187,7 @@ VIDEO \; # ################################################# \; # TOGGLE_Video
 #X connect 30 0 36 0;
 #X connect 30 0 42 0;
 #X connect 31 0 33 0;
-#X connect 32 0 35 0;
+#X connect 32 0 81 0;
 #X connect 33 0 32 0;
 #X connect 35 0 30 0;
 #X connect 36 0 17 0;
@@ -204,7 +212,6 @@ VIDEO \; # ################################################# \; # TOGGLE_Video
 #X connect 58 0 75 0;
 #X connect 60 0 41 0;
 #X connect 60 1 59 0;
-#X connect 64 0 65 0;
 #X connect 65 0 47 0;
 #X connect 66 0 67 0;
 #X connect 66 0 72 0;
@@ -221,4 +228,8 @@ VIDEO \; # ################################################# \; # TOGGLE_Video
 #X connect 75 1 4 0;
 #X connect 76 0 50 0;
 #X connect 76 1 4 0;
+#X connect 78 0 83 0;
+#X connect 79 0 82 0;
+#X connect 81 0 35 0;
+#X connect 83 0 79 0;
 #X coords 0 -1 1 1 400 60 1 100 100;

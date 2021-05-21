@@ -40,7 +40,7 @@
 #X obj 647 695 loadbang;
 #X obj 565 665 list;
 #X floatatom 617 795 5 0 0 0 LOG_OUT_size LOG_OUT_size -;
-#X msg 961 608 \; B_Nicols2 84 0;
+#X msg 961 608 \; SALLE6 16 10000;
 #X obj 1237 711 loadbang;
 #X obj 1183 701 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
@@ -254,7 +254,32 @@ aplay_OSC_CTRL \$2 \; aplay_OSC_EXEC \$3 \; aplay_Xbee \$4 \; aplay_Print
 \$5 \; f-SELECT_Local \$1 \; f-SELECT_OSC_CTRL \$2 \; f-SELECT_OSC_EXEC
 \$3 \; f-SELECT_Xbee \$4 \; f-SELECT_Print \$5 \; gpio_Local \$1 \;
 gpio_OSC_CTRL \$2 \; gpio_OSC_EXEC \$3 \; gpio_Xbee \$4 \; gpio_Print
-\$5 \;;
+\$5 \; audio_Local \$1 \; audio_OSC_CTRL \$2 \; audio_OSC_EXEC \$3
+\; audio_Xbee \$4 \; audio_Print \$5 \; goto_Local \$1 \; goto_OSC_CTRL
+\$2 \; goto_OSC_EXEC \$3 \; goto_Xbee \$4 \; goto_Print \$5 \; InCue_Local
+\$1 \; InCue_OSC_CTRL \$2 \; InCue_OSC_EXEC \$3 \; InCue_Xbee \$4 \;
+InCue_Print \$5 \; midi_Local \$1 \; midi_OSC_CTRL \$2 \; midi_OSC_EXEC
+\$3 \; midi_Xbee \$4 \; midi_Print \$5 \; f-dmx_Local \$1 \; f-dmx_OSC_CTRL
+\$2 \; f-dmx_OSC_EXEC \$3 \; f-dmx_Xbee \$4 \; f-dmx_Print \$5 \; set-dmx_Local
+\$1 \; set-dmx_OSC_CTRL \$2 \; set-dmx_OSC_EXEC \$3 \; set-dmx_Xbee
+\$4 \; set-dmx_Print \$5 \; aplay_Local \$1 \; aplay_OSC_CTRL \$2 \;
+aplay_OSC_EXEC \$3 \; aplay_Xbee \$4 \; aplay_Print \$5 \; f-SELECT_Local
+\$1 \; f-SELECT_OSC_CTRL \$2 \; f-SELECT_OSC_EXEC \$3 \; f-SELECT_Xbee
+\$4 \; f-SELECT_Print \$5 \; gpio_Local \$1 \; gpio_OSC_CTRL \$2 \;
+gpio_OSC_EXEC \$3 \; gpio_Xbee \$4 \; gpio_Print \$5 \; audio_Local
+\$1 \; audio_OSC_CTRL \$2 \; audio_OSC_EXEC \$3 \; audio_Xbee \$4 \;
+audio_Print \$5 \; goto_Local \$1 \; goto_OSC_CTRL \$2 \; goto_OSC_EXEC
+\$3 \; goto_Xbee \$4 \; goto_Print \$5 \; InCue_Local \$1 \; InCue_OSC_CTRL
+\$2 \; InCue_OSC_EXEC \$3 \; InCue_Xbee \$4 \; InCue_Print \$5 \; midi_Local
+\$1 \; midi_OSC_CTRL \$2 \; midi_OSC_EXEC \$3 \; midi_Xbee \$4 \; midi_Print
+\$5 \; f-dmx_Local \$1 \; f-dmx_OSC_CTRL \$2 \; f-dmx_OSC_EXEC \$3
+\; f-dmx_Xbee \$4 \; f-dmx_Print \$5 \; set-dmx_Local \$1 \; set-dmx_OSC_CTRL
+\$2 \; set-dmx_OSC_EXEC \$3 \; set-dmx_Xbee \$4 \; set-dmx_Print \$5
+\; aplay_Local \$1 \; aplay_OSC_CTRL \$2 \; aplay_OSC_EXEC \$3 \; aplay_Xbee
+\$4 \; aplay_Print \$5 \; f-SELECT_Local \$1 \; f-SELECT_OSC_CTRL \$2
+\; f-SELECT_OSC_EXEC \$3 \; f-SELECT_Xbee \$4 \; f-SELECT_Print \$5
+\; gpio_Local \$1 \; gpio_OSC_CTRL \$2 \; gpio_OSC_EXEC \$3 \; gpio_Xbee
+\$4 \; gpio_Print \$5 \;;
 #X msg 332 355 set \, add;
 #X obj 305 330 t b b;
 #X obj 108 317 bng 15 250 50 0 empty empty Edit_command 17 7 0 10 -257985
@@ -290,4 +315,4 @@ gpio_OSC_CTRL \$2 \; gpio_OSC_EXEC \$3 \; gpio_Xbee \$4 \; gpio_Print
 1;
 #X obj 100 400 CueLoader/SceneLoader_V2;
 #X connect 8 0 5 0;
-#X coords 0 -1 1 1 800 380 1 100 100;
+#X coords 0 -1 1 1 800 200 1 100 280;
