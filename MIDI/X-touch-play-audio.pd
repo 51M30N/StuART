@@ -1,0 +1,11 @@
+#N canvas 698 403 586 383 10;
+#X text 61 35 X-touch [MidiChannel][String];
+#X obj 348 53 ctlin \$1 11;
+#X obj 348 76 route 127;
+#X obj 348 126 s \$2;
+#X obj 348 103 bng 15 250 50 0 empty empty \$2 17 7 0 10 -262144 -258113
+-1;
+#X connect 1 0 2 0;
+#X connect 2 0 4 0;
+#X connect 4 0 3 0;
+#X coords 0 -1 1 1 350 20 1 100 100;

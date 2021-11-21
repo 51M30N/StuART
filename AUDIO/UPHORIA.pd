@@ -1,4 +1,4 @@
-#N canvas 170 120 1250 881 10;
+#N canvas 96 221 1250 881 10;
 #X obj 301 301 cnv 15 198 198 empty empty UPHORIA_UMC204 5 10 2 20
 -1 -204786 0;
 #X obj 191 71 r out_master_level1;
@@ -7,9 +7,9 @@
 #X obj 981 354 *~;
 #X obj 1041 354 *~;
 #X obj 440 359 vsl 20 128 0 1 0 0 empty empty IN1 -2 -9 0 15 -260097
--257985 -257985 0 1;
+-257985 -257985 10021 1;
 #X obj 470 359 vsl 20 128 0 1 0 0 empty empty IN2 -2 -9 0 15 -260097
--257985 -257985 0 1;
+-257985 -257985 10021 1;
 #X obj 564 552 cyclone/prepend INPUT_LEVEL_2;
 #X obj 544 532 cyclone/prepend INPUT_LEVEL_1;
 #X obj 575 169 / 128;
@@ -18,17 +18,17 @@
 #X obj 191 124 r out_master_level2;
 #X obj 595 23 r in_master_level2;
 #X obj 310 359 vsl 20 128 0 1 0 0 empty empty L1 2 -9 0 15 -159808
--4034 -4034 0 1;
+-4034 -4034 11906 1;
 #X obj 330 359 vsl 10 128 0 1 0 0 empty empty empty 16 9 0 10 -4034
 -258113 -1 0 1;
 #X obj 340 359 vsl 20 128 0 1 0 0 empty empty R1 2 -9 0 15 -159808
--4034 -4034 0 1;
+-4034 -4034 11906 1;
 #X obj 370 359 vsl 20 128 0 1 0 0 empty empty L2 2 -9 0 15 -159808
--4034 -4034 2900 1;
+-4034 -4034 11906 1;
 #X obj 390 359 vsl 10 128 0 1 0 0 empty empty empty 16 9 0 10 -4034
 -258113 -1 0 1;
 #X obj 400 359 vsl 20 128 0 1 0 0 empty empty R2 1 -9 0 15 -159808
--4034 -4034 0 1;
+-4034 -4034 11906 1;
 #X obj 205 731 cyclone/prepend MASTER_LEVEL_1_1;
 #X obj 225 751 cyclone/prepend MASTER_LEVEL_1_2;
 #X obj 235 771 cyclone/prepend MASTER_LEVEL_2_1;
@@ -74,11 +74,9 @@
 #X obj 946 637 r INPUT_LEVEL_1;
 #X obj 931 753 throw~ IN1;
 #X obj 974 731 throw~ IN2;
-#X obj 984 811 catch~ IN2;
-#X obj 941 833 catch~ IN1;
 #X msg 193 334 \; pd dsp \$1;
 #X obj 311 320 tgl 15 0 empty main_DSP DSP 17 9 0 15 -258113 -4034
--4034 0 1;
+-4034 1 1;
 #X obj 716 816 throw~ out_1_1;
 #X obj 736 836 throw~ out_1_2;
 #X obj 826 816 throw~ out_2_1;
@@ -89,10 +87,30 @@
 #X obj 1067 274 catch~ out_2_2;
 #X msg 893 678 set \$1;
 #X msg 903 698 set \$1;
+#X obj 941 833 catch ~ IN1;
+#X obj 984 811 catch ~ IN2;
+#X obj 688 425 env~;
+#X obj 688 448 - 100;
+#X obj 728 425 env~;
+#X obj 728 448 - 100;
+#X obj 768 425 env~;
+#X obj 768 448 - 100;
+#X obj 808 425 env~;
+#X obj 808 448 - 100;
+#X obj 688 471 s out_1-1;
+#X obj 768 471 s out_2-1;
+#X obj 728 491 s out_1-2;
+#X obj 808 491 s out_2-2;
+#X obj 35 332 vu 15 120 out_1-1 empty -1 -8 0 10 -66577 -1 0 0;
+#X obj 53 332 vu 15 120 out_1-2 empty -1 -8 0 10 -66577 -1 0 0;
+#X obj 71 332 vu 15 120 out_2-1 empty -1 -8 0 10 -66577 -1 0 0;
+#X obj 89 332 vu 15 120 out_2-2 empty -1 -8 0 10 -66577 -1 0 0;
 #X connect 1 0 27 0;
 #X connect 1 0 28 0;
 #X connect 4 0 3 2;
+#X connect 4 0 83 0;
 #X connect 5 0 3 3;
+#X connect 5 0 85 0;
 #X connect 6 0 9 0;
 #X connect 7 0 8 0;
 #X connect 8 0 2 0;
@@ -138,7 +156,9 @@
 #X connect 40 1 39 0;
 #X connect 42 0 40 0;
 #X connect 43 0 3 0;
+#X connect 43 0 79 0;
 #X connect 44 0 3 1;
+#X connect 44 0 81 0;
 #X connect 45 0 47 0;
 #X connect 45 0 17 0;
 #X connect 46 0 44 1;
@@ -158,16 +178,24 @@
 #X connect 57 0 63 0;
 #X connect 58 0 64 0;
 #X connect 59 0 57 1;
-#X connect 59 0 77 0;
+#X connect 59 0 75 0;
 #X connect 60 0 58 1;
-#X connect 60 0 78 0;
+#X connect 60 0 76 0;
 #X connect 61 0 60 0;
 #X connect 62 0 59 0;
-#X connect 68 0 67 0;
-#X connect 73 0 43 0;
-#X connect 74 0 44 0;
-#X connect 75 0 4 0;
-#X connect 76 0 5 0;
-#X connect 77 0 6 0;
-#X connect 78 0 7 0;
+#X connect 66 0 65 0;
+#X connect 71 0 43 0;
+#X connect 72 0 44 0;
+#X connect 73 0 4 0;
+#X connect 74 0 5 0;
+#X connect 75 0 6 0;
+#X connect 76 0 7 0;
+#X connect 79 0 80 0;
+#X connect 80 0 87 0;
+#X connect 81 0 82 0;
+#X connect 82 0 89 0;
+#X connect 83 0 84 0;
+#X connect 84 0 88 0;
+#X connect 85 0 86 0;
+#X connect 86 0 90 0;
 #X coords 0 -1 1 1 200 200 1 300 300;
