@@ -1,4 +1,4 @@
-#N canvas 172 186 1354 803 10;
+#N canvas 397 178 1490 803 10;
 #X obj 301 161 cnv 15 748 48 empty canvas_player_stereo_\$1 Player_Stereo-\$1
 5 7 1 14 -191407 -258699 0;
 #X obj 104 465 readsf~ 2;
@@ -10,10 +10,10 @@
 #X msg 727 380 \$1;
 #X obj 506 195 tgl 15 0 empty empty PLAY 17 7 1 10 -261682 -1 -1 0
 1;
-#X floatatom 883 178 4 0 0 0 START_LEVEL - start_level_#1;
+#X floatatom 888 178 4 0 0 0 START_LEVEL - start_level_#1;
 #X floatatom 335 191 10 0 0 1 time-fade(ms) - audio_time_#1;
-#X floatatom 883 163 4 0 1024 0 LEVEL - level_#1;
-#X symbolatom 335 177 60 0 0 2 - - track_#1;
+#X floatatom 888 163 4 0 1024 0 LEVEL - level_#1;
+#X symbolatom 335 177 80 0 0 2 - - track_#1;
 #X obj 104 363 spigot;
 #X obj 279 363 spigot;
 #X text 1 41 Chemin Level_end Time Level_Start Boolean_replay;
@@ -63,7 +63,7 @@
 #X obj 727 275 t f f f;
 #X obj 265 442 r audio_time_\$1;
 #X obj 240 422 r level_\$1;
-#X floatatom 877 192 5 0 0 0 IRL-LEVEL - -;
+#X floatatom 882 192 5 0 0 0 IRL-LEVEL - -;
 #X obj 374 643 pack s f f f f;
 #X obj 273 712 bng 15 250 50 0 empty Store_pst Store_pst 17 7 0 10
 -258113 -4034 -1;
@@ -82,11 +82,11 @@
 -258113 -1;
 #X obj 1135 574 bng 15 250 50 0 SET_pst empty SET_pst 17 7 0 10 -4160
 -258113 -1;
-#X obj 632 192 bng 15 250 50 0 SET_pst-\$1 empty SET 17 7 1 10 -4160
+#X obj 612 194 bng 15 250 50 0 SET_pst-\$1 empty SET 17 7 1 10 -4160
 -258113 -1;
 #X text 1062 195 level direct;
 #X text 1056 176 level temporisé;
-#X obj 742 191 bng 15 250 50 0 Store_pst-\$0 empty STORE -35 7 1 10
+#X obj 652 194 bng 15 250 50 0 Store_pst-\$0 empty STORE 18 7 1 10
 -258113 -4034 -1;
 #X obj 745 765 print WTF_player_Stereo-\$1;
 #X obj 1055 664 t b b;
@@ -99,7 +99,7 @@
 #X obj 1116 514 s canvas_player_stereo_\$1;
 #X msg 1116 463 color 16 0 13;
 #X msg 1086 482 color 13 0 16;
-#X obj 578 192 tgl 15 0 empty LOOP-player_Stereo-\$1 LOOP 17 7 1 10
+#X obj 558 194 tgl 15 0 empty LOOP-player_Stereo-\$1 LOOP 17 7 1 10
 -261682 -1 -1 0 1;
 #X obj 539 232 spigot;
 #X obj 539 255 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
@@ -131,7 +131,7 @@
 #X obj 104 71 unpack s f f f f;
 #X obj 537 54 print WTF_player_Stereo_\$1;
 #X obj 919 427 pack f f f s;
-#X msg 876 456 remote_player_3 \$1 \$2 \$3 \$4;
+#X msg 876 456 remote_player_1 \$1 \$2 \$3 \$4;
 #X msg 876 378 set \, add2 remote_player_\$1 \, adddollar 1 \, adddollar
 2 \, adddollar 3 \, adddollar 4, f 82;
 #X obj 883 115 r set_player-\$1;
@@ -157,8 +157,18 @@
 #X obj 17 282 vu 10 80 vu_\$1 empty -1 -8 0 10 -66577 -1 0 0;
 #X obj 21 717 s vu_\$1;
 #X obj 669 105 r Store_pst-\$1;
-#X connect 1 0 3 1;
-#X connect 1 1 2 1;
+#X obj 123 570 lop~ 44000;
+#X obj 43 570 lop~ 44000;
+#X obj 21 426 r lowpass_\$1;
+#X obj 21 406 r lowpass;
+#X floatatom 730 193 6 0 0 1 lowpass - -;
+#X obj 15 538 mtof;
+#X obj 15 448 unpack;
+#X obj 15 470 ftom;
+#X obj 15 493 pack;
+#X obj 15 516 line;
+#X connect 1 0 130 0;
+#X connect 1 1 129 0;
 #X connect 1 2 41 0;
 #X connect 1 2 46 0;
 #X connect 1 2 81 0;
@@ -285,4 +295,16 @@
 #X connect 124 0 125 0;
 #X connect 125 0 127 0;
 #X connect 128 0 70 0;
+#X connect 129 0 2 1;
+#X connect 130 0 3 1;
+#X connect 131 0 135 0;
+#X connect 132 0 135 0;
+#X connect 134 0 129 1;
+#X connect 134 0 130 1;
+#X connect 134 0 133 0;
+#X connect 135 0 136 0;
+#X connect 135 1 137 1;
+#X connect 136 0 137 0;
+#X connect 137 0 138 0;
+#X connect 138 0 134 0;
 #X coords 0 -1 1 1 750 50 1 300 160;

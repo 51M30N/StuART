@@ -1,4 +1,4 @@
-#N canvas 8 93 1680 966 10;
+#N canvas 63 78 1680 966 10;
 #X obj 118 32 cnv 15 400 150 empty empty cree_le_chemin_vers_~/$SHOW
 20 12 0 14 -233017 -66577 0;
 #X obj 121 242 cnv 15 300 150 empty empty coll_le_next_Cue 20 12 0
@@ -137,17 +137,18 @@
 #X obj 703 731 bng 20 250 50 0 -go-_\$0 -go-_\$1 -go-_\$1 20 10 0 20
 -204800 -1 -1;
 #X floatatom 1309 675 1 0 0 0 link_next_#0 link_next_#0 -;
-#X symbolatom 788 675 50 0 0 0 next_next_#0 next_next_#0 -;
+#X symbolatom 788 675 50 0 0 0 next_next_#0 next_next_#0 mobmuplat-next_next_1
+;
 #X symbolatom 788 645 50 0 0 0 LOADED_CUE LOADED_CUE -;
-#X symbolatom 788 660 50 0 0 0 next-#0 next-#0 -;
+#X symbolatom 788 660 50 0 0 0 next-#0 next-#0 mobmuplat-next-1;
 #X floatatom 1178 675 5 0 0 0 time_next_#0 time_next_#0 -;
 #X floatatom 1178 660 5 0 0 0 time_#0 time_#0 -;
 #X floatatom 1308 660 1 0 0 0 link_#0 link_#0 -;
-#X obj 938 715 cnv 15 400 20 empty cnv_LOADED_CUE ON_STAGE==0 -132
-10 1 20 -204786 -159808 0;
-#X obj 938 734 cnv 15 400 40 empty cnv_next_next NEXT==0 -76 10 1 20
--159808 -204786 0;
-#X obj 818 734 bng 40 250 50 0 go_\$0 go_\$1 GO_1==0 43 30 1 20 -24198
+#X obj 938 715 cnv 15 400 20 empty cnv_LOADED_CUE ON_STAGE==STOP_MOTOR
+-132 10 1 20 -204786 -159808 0;
+#X obj 938 734 cnv 15 400 40 empty cnv_next_next NEXT==s47.0 -76 10
+1 20 -159808 -204786 0;
+#X obj 818 734 bng 40 250 50 0 go_\$0 go_\$1 GO_1==top 43 30 1 20 -24198
 -262144 -225271;
 #N canvas 7 102 951 430 Cue_List 0;
 #X obj 385 227 outlet;
@@ -269,7 +270,35 @@
 #X obj 1318 774 tgl 20 0 LinkM LinkM_\$1 LinkM 22 10 1 15 -4032 -1
 -1 0 1;
 #X obj 388 847 text define -k deroule-\$0;
-#A set;
+#A set s0_mise \; s69.0 \; s69.0 \; s69.0 \; s69.0 \; s69.0 \; sPCOUT
+\; sPCO \; sPCOUT \; s69.0 \; s69.0 \; s0_mise \; s60.0 \; s60.1 \;
+s60.2 \; s0.0 \; s61.0 \; s61.5 \; s62.0 \; s62.2 \; s62.5 \; s60.0
+\; s60.1 \; s60.2 \; s0_mise \; s60.0 \; s60.1 \; s60.2 \; s0.0 \;
+s61.0 \; s61.5 \; s62.0 \; s62.2 \; s62.5 \; s62.7 \; s63.0 \; s63.4
+\; s63.8 \; s63.9 \; s64.0 \; s64.2 \; s64.4 \; s64.6 \; s64.8 \; s64.9
+\; s65.0 \; s65.1 \; s69.0 \; s0_mise \; s60.0 \; s60.1 \; s60.2 \;
+s0.0 \; s61.0 \; s61.5 \; s62.0 \; s62.2 \; s62.5 \; s62.7 \; s63.0
+\; s63.4 \; s63.8 \; s63.9 \; s64.0 \; s64.2 \; s64.4 \; s64.6 \; s64.8
+\; s64.9 \; s65.0 \; s65.1 \; s65.3 \; s65.5 \; s65.6 \; s8.0 \; s9.0
+\; s10.0 \; s11.0 \; s13.0 \; s14.0 \; s66.0 \; s66.5 \; s66.6 \; s66.8
+\; s67.0 \; s67.2 \; s67.4 \; s67.6 \; s67.8 \; s68.0 \; s68.2 \; s68.4
+\; s18.3 \; s19.0 \; s19.1 \; s19.2 \; s19.3 \; s19.5 \; s19.6 \; s19.7
+\; s19.8 \; s20.0 \; s21.0 \; s22.0 \; s20.0 \; s22.0 \; s66.8 \; s66.8
+\; s66.8 \; s66.9 \; s66.8 \; s66.9 \; s67.0 \; s67.2 \; s67.4 \; s67.6
+\; s67.8 \; s68.0 \; s68.2 \; s68.4 \; s18.3 \; s19.0 \; s19.1 \; s19.2
+\; s19.3 \; s19.5 \; s19.6 \; s19.7 \; s19.6 \; s19.7 \; s19.8 \; s20.0
+\; s22.0 \; s65.0 \; s65.1 \; s65.3 \; s66.0 \; s66.0 \; s65.0 \; s64.0
+\; s63.0 \; s63.4 \; s63.8 \; s63.0 \; s63.4 \; s63.8 \; s63.4 \; s63.8
+\; s63.9 \; s64.0 \; s64.2 \; s64.4 \; s64.6 \; s64.8 \; s64.0 \; s64.2
+\; s64.4 \; s64.0 \; s63.0 \; s63.4 \; s63.8 \; s63.9 \; s64.0 \; s63.8
+\; s63.9 \; s64.0 \; s64.2 \; s64.4 \; s64.6 \; s64.4 \; s64.6 \; s64.8
+\; s64.9 \; s19.0 \; s19.1 \; s19.2 \; s19.3 \; s19.5 \; s19.6 \; s19.7
+\; s19.8 \; s20.0 \; s22.0 \; s23.0 \; s23.1 \; s23.2 \; s23.4 \; s23.5
+\; s21.0 \; s22.0 \; s23.0 \; s23.1 \; s23.2 \; s23.4 \; s23.5 \; s23.6
+\; s24.0 \; s24.4 \; s24.0 \; s24.4 \; s24.0 \; s24.4 \; s24.0 \; s24.4
+\; s24.5 \; s24.6 \; s25.0 \; s40.0 \; s41.0 \; s40.0 \; s41.0 \; s41.5
+\; s42.0 \; s42.1 \; s42.2 \; s42.5 \; s43.0 \; s43.2 \; s44.0 \; s45.0
+\; s46.0 \; s46.5 \; s46.7 \; STOP_MOTOR \;;
 #X obj 269 845 text set deroule-\$0;
 #X obj 1188 393 text delete deroule-\$0;
 #X obj 702 782 bng 15 250 50 0 OPEN_deroule\$0 OPEN_deroule OPEN_deroule
@@ -292,6 +321,8 @@
 #X connect 5 0 0 0;
 #X coords 0 -1 1 1 100 20 2 100 100;
 #X restore 1032 777 pd KEY_Control;
+#X obj 629 980 list split 3;
+#X obj 653 1013 s mobmuplat-top;
 #X connect 6 0 85 0;
 #X connect 7 0 64 0;
 #X connect 7 0 8 0;
@@ -370,6 +401,7 @@
 #X connect 73 0 74 0;
 #X connect 76 0 11 0;
 #X connect 77 0 101 0;
+#X connect 77 0 134 0;
 #X connect 79 0 81 0;
 #X connect 81 0 23 0;
 #X connect 81 0 22 0;
@@ -400,4 +432,5 @@
 #X connect 130 0 21 0;
 #X connect 131 0 85 0;
 #X connect 132 0 7 0;
+#X connect 134 1 135 0;
 #X coords 0 -1 1 1 800 100 1 700 700;
