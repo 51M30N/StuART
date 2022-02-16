@@ -1,7 +1,7 @@
 #N canvas 175 251 1001 655 10;
 #X obj 196 433 send to_control_audio;
 #X obj 106 117 vsl 20 128 0 1 0 0 empty empty IN\$1 -2 -9 0 15 -260097
--257985 -257985 0 1;
+-257985 -257985 12700 1;
 #X obj 106 78 / 128;
 #X obj 316 159 *~;
 #X floatatom 331 95 5 0 0 0 - - -;
@@ -13,17 +13,17 @@
 #X obj 316 182 throw~ IN\$1;
 #X obj 425 176 env~;
 #X obj 425 199 - 100;
-#X obj 137 120 vu 15 120 in_\$1 empty -1 -8 0 10 -66577 -1 0 0;
+#X obj 137 120 vu 15 120 in-\$1 empty -1 -8 0 10 -66577 -1 0 0;
 #X obj 425 222 s in-\$1;
 #X connect 1 0 9 0;
 #X connect 2 0 1 0;
 #X connect 3 0 10 0;
-#X connect 3 0 11 0;
 #X connect 4 0 3 1;
 #X connect 4 0 5 0;
 #X connect 5 0 1 0;
 #X connect 6 0 2 0;
 #X connect 7 0 3 0;
+#X connect 7 0 11 0;
 #X connect 8 0 4 0;
 #X connect 9 0 0 0;
 #X connect 11 0 12 0;

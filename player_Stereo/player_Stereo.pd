@@ -1,6 +1,6 @@
 #N canvas 397 178 1490 803 10;
 #X obj 301 161 cnv 15 748 48 empty canvas_player_stereo_\$1 Player_Stereo-\$1
-5 7 1 14 -191407 -258699 0;
+5 7 1 14 -258699 -24198 0;
 #X obj 104 465 readsf~ 2;
 #X obj 141 600 *~;
 #X obj 87 600 *~;
@@ -106,7 +106,8 @@
 -1 -1;
 #X obj 1072 733 list prepend;
 #X obj 459 81 prepend set;
-#X msg 459 103 symbl 0 0 0 0;
+#X msg 459 103 /home/pi/Music/FFM/11_Fin_arrangee_rallongee.wav 0 0
+0 0;
 #X obj 728 48 r globaltime;
 #X obj 728 70 * 100;
 #X obj 1072 769 s to_control_audio;
@@ -167,6 +168,7 @@
 #X obj 15 470 ftom;
 #X obj 15 493 pack;
 #X obj 15 516 line;
+#X obj 728 28 r globaltimeaudio;
 #X connect 1 0 130 0;
 #X connect 1 1 129 0;
 #X connect 1 2 41 0;
@@ -307,4 +309,5 @@
 #X connect 136 0 137 0;
 #X connect 137 0 138 0;
 #X connect 138 0 134 0;
+#X connect 139 0 87 0;
 #X coords 0 -1 1 1 750 50 1 300 160;
