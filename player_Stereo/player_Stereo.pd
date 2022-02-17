@@ -106,8 +106,7 @@
 -1 -1;
 #X obj 1072 733 list prepend;
 #X obj 459 81 prepend set;
-#X msg 459 103 /home/pi/Music/FFM/11_Fin_arrangee_rallongee.wav 0 0
-0 0;
+#X msg 459 103 symbl 0 0 0 0;
 #X obj 728 48 r globaltime;
 #X obj 728 70 * 100;
 #X obj 1072 769 s to_control_audio;

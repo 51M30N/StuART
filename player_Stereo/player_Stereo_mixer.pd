@@ -5,11 +5,11 @@
 #X obj 382 1439 throw~ out_1_1;
 #X obj 745 1439 throw~ out_1_2;
 #X obj 160 103 hsl 64 10 0 1 0 0 empty canvas_player_Stereo_master_L_1_1_\$1
-_\$1_L1 -2 5 0 10 -159808 -66577 -261682 0 1;
+_\$1_L1-L -2 5 0 10 -159808 -66577 -261682 0 1;
 #X obj 412 1108 t f f;
 #X obj 449 1167 prepend \$1;
 #X obj 160 113 hsl 64 10 0 1 0 0 empty canvas_player_Stereo_master_L_1_2_\$1
-_\$1_L2 -2 5 0 10 -159808 -258113 -261682 0 1;
+_\$1_R1-L -2 5 0 10 -159808 -258113 -261682 0 1;
 #X obj 777 1108 t f f;
 #X obj 814 1167 prepend \$1;
 #X obj 397 1238 *~;
@@ -18,11 +18,11 @@ _\$1_L2 -2 5 0 10 -159808 -258113 -261682 0 1;
 #X obj 527 67 bng 15 250 50 0 empty NAME-\$0 NAME-\$0 17 7 0 10 -191407
 -159808 -1;
 #X obj 160 124 hsl 64 10 0 1 0 0 empty canvas_player_Stereo_master_L_2_1_\$1
-_\$1_L3 -2 5 0 10 -159808 -66577 -261682 0 1;
+_\$1_L2-L -2 5 0 10 -159808 -66577 -261682 0 1;
 #X obj 1129 1108 t f f;
 #X obj 1166 1167 prepend \$1;
 #X obj 160 134 hsl 64 10 0 1 0 0 empty canvas_player_Stereo_master_L_2_2_\$1
-_\$1_L4 -2 5 0 10 -159808 -258113 -261682 0 1;
+_\$1_R2-L -2 5 0 10 -159808 -258113 -261682 0 1;
 #X obj 1494 1110 t f f;
 #X obj 1531 1169 prepend \$1;
 #X obj 1114 1238 *~;
@@ -205,13 +205,13 @@ time_2_1 lvl_L_2_2 lvl_R_2_2 time_2_2 "time next", f 138;
 #X msg 468 889 \; canvas_player_Stereo_master_R_1_1_\$1 label _\$2
 ;
 #X obj 231 103 hsl 64 10 0 1 0 0 empty canvas_player_Stereo_master_R_1_1_\$1
-_\$1_R1 -2 5 0 10 -159808 -66577 -261682 0 1;
+_\$1_L1-R -2 5 0 10 -159808 -66577 -261682 0 1;
 #X obj 231 113 hsl 64 10 0 1 0 0 empty canvas_player_Stereo_master_R_1_2_\$1
-_\$1_R2 -2 5 0 10 -159808 -258113 -261682 6300 1;
+_\$1_R1-R -2 5 0 10 -159808 -258113 -261682 0 1;
 #X obj 231 124 hsl 64 10 0 1 0 0 empty canvas_player_Stereo_master_R_2_1_\$1
-_\$1_R3 -2 5 0 10 -159808 -66577 -261682 0 1;
+_\$1_L2-R -2 5 0 10 -159808 -66577 -261682 0 1;
 #X obj 231 134 hsl 64 10 0 1 0 0 empty canvas_player_Stereo_master_R_2_2_\$1
-_\$1_R4 -2 5 0 10 -159808 -258113 -261682 6300 1;
+_\$1_R2-R -2 5 0 10 -159808 -258113 -261682 0 1;
 #X msg 1103 119 \; player_Stereo_mixer_L_1_1_\$1 0 0 \; player_Stereo_mixer_L_1_2_\$1
 0 0 \; player_Stereo_mixer_L_2_1_\$1 1 0 \; player_Stereo_mixer_L_2_2_\$1
 0 0 \; player_Stereo_mixer_R_1_1_\$1 0 0 \; player_Stereo_mixer_R_1_2_\$1
@@ -230,12 +230,12 @@ _\$1_R4 -2 5 0 10 -159808 -258113 -261682 6300 1;
 #X text 711 12 gestionnaire de diffusion IN 1*Stereo to OUT 2*Stereo
 ;
 #X text 717 29 automation de boucles de mouvement sonore;
-#X msg 527 119 \; canvas_player_Stereo_master_L_1_1_\$1 label _#1_L1
-\; canvas_player_Stereo_master_L_1_2_\$1 label _#1_L2 \; canvas_player_Stereo_master_L_2_1_\$1
-label _#1_L3 \; canvas_player_Stereo_master_L_2_2_\$1 label _#1_L4
-\; canvas_player_Stereo_master_R_1_1_\$1 label _#1_R1 \; canvas_player_Stereo_master_R_1_2_\$1
-label _#1_R2 \; canvas_player_Stereo_master_R_2_1_\$1 label _#1_R3
-\; canvas_player_Stereo_master_R_2_2_\$1 label _#1_R4;
+#X msg 527 119 \; canvas_player_Stereo_master_L_1_1_\$1 label _#1_L1-L
+\; canvas_player_Stereo_master_L_1_2_\$1 label _#1_R1-L \; canvas_player_Stereo_master_L_2_1_\$1
+label _#1_L2-L \; canvas_player_Stereo_master_L_2_2_\$1 label _#1_R2-L
+\; canvas_player_Stereo_master_R_1_1_\$1 label _#1_L1-R \; canvas_player_Stereo_master_R_1_2_\$1
+label _#1_R1-R \; canvas_player_Stereo_master_R_2_1_\$1 label _#1_L2-R
+\; canvas_player_Stereo_master_R_2_2_\$1 label _#1_R2-R;
 #X connect 1 0 10 0;
 #X connect 1 0 20 0;
 #X connect 1 0 11 0;
@@ -390,4 +390,4 @@ label _#1_R2 \; canvas_player_Stereo_master_R_2_1_\$1 label _#1_R3
 #X connect 124 0 98 0;
 #X connect 125 0 99 0;
 #X connect 126 0 100 0;
-#X coords 0 -1 1 1 200 50 2 100 100;
+#X coords 0 -1 1 1 200 50 1 100 100;

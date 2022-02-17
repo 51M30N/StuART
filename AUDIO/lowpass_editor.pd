@@ -1,4 +1,4 @@
-#N canvas 2537 100 1037 941 10;
+#N canvas 289 139 1037 941 10;
 #X obj 101 601 cnv 15 148 198 empty empty lowpass-editor 20 12 0 14
 -191407 -4160 0;
 #X obj 702 773 send;
@@ -16,10 +16,10 @@
 #X obj 566 596 receive \$0-output;
 #X obj 566 806 send to_cue;
 #X obj 106 648 vradio 15 1 1 10 Player-\$0 Player-\$0-lbl Player-1
-19 10 0 10 -262144 -1 -1 0;
-#X obj 151 748 bng 15 250 50 0 send-static-\$0 empty send-static 17
-7 0 10 -262144 -1 -1;
-#X floatatom 139 699 5 0 30000 1 fade_time(s) - fade_time-#0;
+19 10 0 10 -257985 -1 -257985 0;
+#X obj 140 743 bng 15 250 50 0 send-static-\$0 empty send-static 17
+7 0 10 -4034 -1 -1;
+#X floatatom 138 694 5 0 30000 1 fade_time(s) - fade_time-#0;
 #X msg 751 704 \; Player-\$1-lbl label Player-\$2;
 #X obj 751 678 prepend \$0;
 #X obj 566 764 list prepend;
@@ -28,7 +28,7 @@
 #X obj 340 193 pack f f;
 #X obj 779 386 print WTF_lowpass-editor;
 #X obj 111 622 hsl 127 15 20 44100 1 0 empty empty empty -2 -8 0 10
--262144 -1 -1 12600 1;
+-262144 -1 -1 0 1;
 #X obj 370 649 int;
 #X floatatom 138 673 5 0 0 1 freq(Hz) - -;
 #X obj 792 243 ftom;
