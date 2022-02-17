@@ -286,7 +286,7 @@ _\$1_R5-L -2 5 0 10 -159808 -258113 -261682 0 1;
 #X obj 3580 1238 *~;
 #X obj 3945 1238 *~;
 #X obj 281 127 hsl 64 10 0 1 0 0 empty canvas_player_Stereo_master_L_6_1_\$1
-_\$1_L6-L -2 5 0 10 -159808 -66577 -261682 0 1;
+_\$1_L6-L -2 5 0 10 -159808 -66577 -261682 3300 1;
 #X obj 281 137 hsl 64 10 0 1 0 0 empty canvas_player_Stereo_master_L_6_2_\$1
 _\$1_R6-L -2 5 0 10 -159808 -258113 -261682 0 1;
 #X obj 4297 1238 *~;
@@ -342,15 +342,15 @@ _\$1_R5-R -2 5 0 10 -159808 -258113 -261682 0 1;
 #X obj 352 127 hsl 64 10 0 1 0 0 empty canvas_player_Stereo_master_R_6_1_\$1
 _\$1_L6-R -2 5 0 10 -159808 -66577 -261682 0 1;
 #X obj 352 137 hsl 64 10 0 1 0 0 empty canvas_player_Stereo_master_R_6_2_\$1
-_\$1_R6-R -2 5 0 10 -159808 -258113 -261682 0 1;
+_\$1_R6-R -2 5 0 10 -159808 -258113 -261682 2200 1;
 #X obj 432 127 hsl 64 10 0 1 0 0 empty canvas_player_Stereo_master_L_7_1_\$1
-_\$1_L7-L -2 5 0 10 -159808 -66577 -261682 0 1;
+_\$1_L7-L -2 5 0 10 -159808 -66577 -261682 3000 1;
 #X obj 432 137 hsl 64 10 0 1 0 0 empty canvas_player_Stereo_master_L_7_2_\$1
 _\$1_R7-L -2 5 0 10 -159808 -258113 -261682 0 1;
 #X obj 5266 1238 *~;
 #X obj 5631 1238 *~;
 #X obj 583 127 hsl 64 10 0 1 0 0 empty canvas_player_Stereo_master_L_8_1_\$1
-_\$1_L8-L -2 5 0 10 -159808 -66577 -261682 0 1;
+_\$1_L8-L -2 5 0 10 -159808 -66577 -261682 3800 1;
 #X obj 583 137 hsl 64 10 0 1 0 0 empty canvas_player_Stereo_master_L_8_2_\$1
 _\$1_R8-L -2 5 0 10 -159808 -258113 -261682 0 1;
 #X obj 5983 1238 *~;
@@ -398,11 +398,11 @@ _\$1_R8-L -2 5 0 10 -159808 -258113 -261682 0 1;
 #X obj 503 127 hsl 64 10 0 1 0 0 empty canvas_player_Stereo_master_R_7_1_\$1
 _\$1_L7-R -2 5 0 10 -159808 -66577 -261682 0 1;
 #X obj 503 137 hsl 64 10 0 1 0 0 empty canvas_player_Stereo_master_R_7_2_\$1
-_\$1_R7-R -2 5 0 10 -159808 -258113 -261682 0 1;
+_\$1_R7-R -2 5 0 10 -159808 -258113 -261682 3300 1;
 #X obj 654 127 hsl 64 10 0 1 0 0 empty canvas_player_Stereo_master_R_8_1_\$1
 _\$1_L8-R -2 5 0 10 -159808 -66577 -261682 0 1;
 #X obj 654 137 hsl 64 10 0 1 0 0 empty canvas_player_Stereo_master_R_8_2_\$1
-_\$1_R8-R -2 5 0 10 -159808 -258113 -261682 0 1;
+_\$1_R8-R -2 5 0 10 -159808 -258113 -261682 3800 1;
 #X obj 3655 732 receive player_Stereo_mixer_R_5_1_\$1;
 #X obj 4019 732 receive player_Stereo_mixer_R_5_2_\$1;
 #X obj 4000 1032 receive player_Stereo_mixer_L_5_2_\$1;
@@ -811,7 +811,6 @@ _\$1_R8-R -2 5 0 10 -159808 -258113 -261682 0 1;
 #X connect 267 0 259 0;
 #X connect 268 0 260 0;
 #X connect 269 0 261 0;
-#X connect 269 0 222 0;
 #X connect 270 0 206 0;
 #X connect 271 0 207 0;
 #X connect 272 0 171 0;
