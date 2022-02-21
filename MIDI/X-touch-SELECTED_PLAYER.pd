@@ -1,0 +1,11 @@
+#N canvas 278 157 735 624 10;
+#X obj 133 220 route 127;
+#X obj 133 243 \$2;
+#X obj 133 197 ctlin \$1 11;
+#X obj 133 266 s SELECTED_PLAYER;
+#X text 56 20 X-touch X-touch-SELECTED_PLAYER;
+#X text 56 39 X-touch [MidiChannel][ID_player];
+#X connect 0 0 1 0;
+#X connect 1 0 3 0;
+#X connect 2 0 0 0;
+#X coords 0 -1 1 1 350 20 1 100 100;

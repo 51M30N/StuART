@@ -1,8 +1,8 @@
 #N canvas 0 76 1920 1004 10;
-#X obj 301 301 cnv 15 998 348 empty empty FIREFACE_UCX 5 10 2 20 -1
--204786 0;
+#X obj 301 301 cnv 15 998 348 empty empty Soundcraft_SI_IMPACT_1616
+5 10 2 20 -1 -204786 0;
 #X msg 193 334 \; pd dsp \$1;
-#X obj 547 314 tgl 15 0 empty main_DSP DSP 17 9 0 15 -258113 -4034
+#X obj 577 304 tgl 15 0 empty main_DSP DSP 17 9 0 15 -258113 -4034
 -4034 1 1;
 #X obj 707 851 throw~ out_1_1;
 #X obj 727 871 throw~ out_1_2;

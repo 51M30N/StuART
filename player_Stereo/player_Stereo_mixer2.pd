@@ -1,21 +1,21 @@
 #N canvas 0 74 1920 1006 10;
-#X obj 101 101 cnv 15 648 48 empty canvas_player_stereo_\$1 empty 5
-7 1 14 -191407 -258699 0;
+#X obj 101 101 cnv 15 628 48 empty canvas_player_stereo_\$1 empty 5
+7 1 14 -258699 -24198 0;
 #X obj 176 1223 receive~ Left-\$1;
 #X obj 382 1439 throw~ out_1_1;
 #X obj 745 1439 throw~ out_1_2;
-#X obj 110 103 hsl 64 10 0 1 0 0 empty canvas_player_Stereo_master_L_1_1_\$1
-_\$1_L1-L -2 5 0 10 -159808 -66577 -261682 0 1;
-#X obj 110 113 hsl 64 10 0 1 0 0 empty canvas_player_Stereo_master_L_1_2_\$1
+#X obj 107 103 hsl 64 10 0 1 0 0 empty canvas_player_Stereo_master_L_1_1_\$1
+_\$1_L1-L -2 5 0 10 -159808 -66577 -261682 1624 1;
+#X obj 107 113 hsl 64 10 0 1 0 0 empty canvas_player_Stereo_master_L_1_2_\$1
 _\$1_R1-L -2 5 0 10 -159808 -258113 -261682 0 1;
 #X obj 397 1238 *~;
 #X obj 762 1238 *~;
 #X obj 745 80 prepend \$1;
 #X obj 745 55 bng 15 250 50 0 empty NAME-\$0 NAME-\$0 17 7 0 10 -191407
 -159808 -1;
-#X obj 261 103 hsl 64 10 0 1 0 0 empty canvas_player_Stereo_master_L_2_1_\$1
+#X obj 258 103 hsl 64 10 0 1 0 0 empty canvas_player_Stereo_master_L_2_1_\$1
 _\$1_L2-L -2 5 0 10 -159808 -66577 -261682 0 1;
-#X obj 261 113 hsl 64 10 0 1 0 0 empty canvas_player_Stereo_master_L_2_2_\$1
+#X obj 258 113 hsl 64 10 0 1 0 0 empty canvas_player_Stereo_master_L_2_2_\$1
 _\$1_R2-L -2 5 0 10 -159808 -258113 -261682 0 1;
 #X obj 1114 1238 *~;
 #X obj 1479 1240 *~;
@@ -155,7 +155,7 @@ time_2_1 lvl_L_2_2 lvl_R_2_2 time_2_2 "time next", f 138;
 #X obj 796 760 line;
 #X obj 1148 757 line;
 #X obj 1513 757 line;
-#X msg 452 783 set \$1;
+#X msg 495 804 set \$1;
 #X msg 816 783 set \$1;
 #X msg 1168 780 set \$1;
 #X msg 1533 780 set \$1;
@@ -164,13 +164,13 @@ time_2_1 lvl_L_2_2 lvl_R_2_2 time_2_2 "time next", f 138;
 #X obj 836 732 receive player_Stereo_mixer_R_1_2_\$1;
 #X obj 1188 729 receive player_Stereo_mixer_R_2_1_\$1;
 #X obj 1553 729 receive player_Stereo_mixer_R_2_2_\$1;
-#X obj 181 103 hsl 64 10 0 1 0 0 empty canvas_player_Stereo_master_R_1_1_\$1
+#X obj 178 103 hsl 64 10 0 1 0 0 empty canvas_player_Stereo_master_R_1_1_\$1
 _\$1_L1-R -2 5 0 10 -159808 -66577 -261682 0 1;
-#X obj 181 113 hsl 64 10 0 1 0 0 empty canvas_player_Stereo_master_R_1_2_\$1
-_\$1_R1-R -2 5 0 10 -159808 -258113 -261682 0 1;
-#X obj 332 103 hsl 64 10 0 1 0 0 empty canvas_player_Stereo_master_R_2_1_\$1
+#X obj 178 113 hsl 64 10 0 1 0 0 empty canvas_player_Stereo_master_R_1_2_\$1
+_\$1_R1-R -2 5 0 10 -159808 -258113 -261682 1624 1;
+#X obj 329 103 hsl 64 10 0 1 0 0 empty canvas_player_Stereo_master_R_2_1_\$1
 _\$1_L2-R -2 5 0 10 -159808 -66577 -261682 0 1;
-#X obj 332 113 hsl 64 10 0 1 0 0 empty canvas_player_Stereo_master_R_2_2_\$1
+#X obj 329 113 hsl 64 10 0 1 0 0 empty canvas_player_Stereo_master_R_2_2_\$1
 _\$1_R2-R -2 5 0 10 -159808 -258113 -261682 0 1;
 #X msg 1321 107 \; player_Stereo_mixer_L_1_1_\$1 0 0 \; player_Stereo_mixer_L_1_2_\$1
 0 0 \; player_Stereo_mixer_L_2_1_\$1 1 0 \; player_Stereo_mixer_L_2_2_\$1
@@ -191,15 +191,15 @@ label _#1_L2-L \; canvas_player_Stereo_master_L_2_2_\$1 label _#1_R2-L
 \; canvas_player_Stereo_master_R_1_1_\$1 label _#1_L1-R \; canvas_player_Stereo_master_R_1_2_\$1
 label _#1_R1-R \; canvas_player_Stereo_master_R_2_1_\$1 label _#1_L2-R
 \; canvas_player_Stereo_master_R_2_2_\$1 label _#1_R2-R;
-#X obj 412 103 hsl 64 10 0 1 0 0 empty canvas_player_Stereo_master_L_3_1_\$1
+#X obj 409 103 hsl 64 10 0 1 0 0 empty canvas_player_Stereo_master_L_3_1_\$1
 _\$1_L3-L -2 5 0 10 -159808 -66577 -261682 0 1;
-#X obj 412 113 hsl 64 10 0 1 0 0 empty canvas_player_Stereo_master_L_3_2_\$1
+#X obj 409 113 hsl 64 10 0 1 0 0 empty canvas_player_Stereo_master_L_3_2_\$1
 _\$1_R3-L -2 5 0 10 -159808 -258113 -261682 0 1;
 #X obj 2083 1238 *~;
 #X obj 2448 1238 *~;
-#X obj 563 103 hsl 64 10 0 1 0 0 empty canvas_player_Stereo_master_L_4_1_\$1
+#X obj 560 103 hsl 64 10 0 1 0 0 empty canvas_player_Stereo_master_L_4_1_\$1
 _\$1_L4-L -2 5 0 10 -159808 -66577 -261682 0 1;
-#X obj 563 113 hsl 64 10 0 1 0 0 empty canvas_player_Stereo_master_L_4_2_\$1
+#X obj 560 113 hsl 64 10 0 1 0 0 empty canvas_player_Stereo_master_L_4_2_\$1
 _\$1_R4-L -2 5 0 10 -159808 -258113 -261682 0 1;
 #X obj 2800 1238 *~;
 #X obj 3165 1240 *~;
@@ -243,13 +243,13 @@ _\$1_R4-L -2 5 0 10 -159808 -258113 -261682 0 1;
 #X msg 2502 783 set \$1;
 #X msg 2854 780 set \$1;
 #X msg 3219 780 set \$1;
-#X obj 483 103 hsl 64 10 0 1 0 0 empty canvas_player_Stereo_master_R_3_1_\$1
+#X obj 480 103 hsl 64 10 0 1 0 0 empty canvas_player_Stereo_master_R_3_1_\$1
 _\$1_L3-R -2 5 0 10 -159808 -66577 -261682 0 1;
-#X obj 483 113 hsl 64 10 0 1 0 0 empty canvas_player_Stereo_master_R_3_2_\$1
+#X obj 480 113 hsl 64 10 0 1 0 0 empty canvas_player_Stereo_master_R_3_2_\$1
 _\$1_R3-R -2 5 0 10 -159808 -258113 -261682 0 1;
-#X obj 634 103 hsl 64 10 0 1 0 0 empty canvas_player_Stereo_master_R_4_1_\$1
+#X obj 631 103 hsl 64 10 0 1 0 0 empty canvas_player_Stereo_master_R_4_1_\$1
 _\$1_L4-R -2 5 0 10 -159808 -66577 -261682 0 1;
-#X obj 634 113 hsl 64 10 0 1 0 0 empty canvas_player_Stereo_master_R_4_2_\$1
+#X obj 631 113 hsl 64 10 0 1 0 0 empty canvas_player_Stereo_master_R_4_2_\$1
 _\$1_R4-R -2 5 0 10 -159808 -258113 -261682 0 1;
 #X obj 2158 732 receive player_Stereo_mixer_R_3_1_\$1;
 #X obj 2522 732 receive player_Stereo_mixer_R_3_2_\$1;
@@ -279,15 +279,15 @@ label _#1_L\$2-R \; canvas_player_Stereo_master_R_\$2_2_\$1 label _#1_R\$2-R
 #X obj 2431 1439 throw~ out_3_2;
 #X obj 2785 1439 throw~ out_4_1;
 #X obj 3148 1441 throw~ out_4_2;
-#X obj 130 127 hsl 64 10 0 1 0 0 empty canvas_player_Stereo_master_L_5_1_\$1
+#X obj 127 127 hsl 64 10 0 1 0 0 empty canvas_player_Stereo_master_L_5_1_\$1
 _\$1_L5-L -2 5 0 10 -159808 -66577 -261682 0 1;
-#X obj 130 137 hsl 64 10 0 1 0 0 empty canvas_player_Stereo_master_L_5_2_\$1
+#X obj 127 137 hsl 64 10 0 1 0 0 empty canvas_player_Stereo_master_L_5_2_\$1
 _\$1_R5-L -2 5 0 10 -159808 -258113 -261682 0 1;
 #X obj 3580 1238 *~;
 #X obj 3945 1238 *~;
-#X obj 281 127 hsl 64 10 0 1 0 0 empty canvas_player_Stereo_master_L_6_1_\$1
-_\$1_L6-L -2 5 0 10 -159808 -66577 -261682 3300 1;
-#X obj 281 137 hsl 64 10 0 1 0 0 empty canvas_player_Stereo_master_L_6_2_\$1
+#X obj 278 127 hsl 64 10 0 1 0 0 empty canvas_player_Stereo_master_L_6_1_\$1
+_\$1_L6-L -2 5 0 10 -159808 -66577 -261682 0 1;
+#X obj 278 137 hsl 64 10 0 1 0 0 empty canvas_player_Stereo_master_L_6_2_\$1
 _\$1_R6-L -2 5 0 10 -159808 -258113 -261682 0 1;
 #X obj 4297 1238 *~;
 #X obj 4662 1240 *~;
@@ -335,23 +335,23 @@ _\$1_R6-L -2 5 0 10 -159808 -258113 -261682 0 1;
 #X msg 3999 783 set \$1;
 #X msg 4351 780 set \$1;
 #X msg 4716 780 set \$1;
-#X obj 201 127 hsl 64 10 0 1 0 0 empty canvas_player_Stereo_master_R_5_1_\$1
+#X obj 198 127 hsl 64 10 0 1 0 0 empty canvas_player_Stereo_master_R_5_1_\$1
 _\$1_L5-R -2 5 0 10 -159808 -66577 -261682 0 1;
-#X obj 201 137 hsl 64 10 0 1 0 0 empty canvas_player_Stereo_master_R_5_2_\$1
+#X obj 198 137 hsl 64 10 0 1 0 0 empty canvas_player_Stereo_master_R_5_2_\$1
 _\$1_R5-R -2 5 0 10 -159808 -258113 -261682 0 1;
-#X obj 352 127 hsl 64 10 0 1 0 0 empty canvas_player_Stereo_master_R_6_1_\$1
+#X obj 349 127 hsl 64 10 0 1 0 0 empty canvas_player_Stereo_master_R_6_1_\$1
 _\$1_L6-R -2 5 0 10 -159808 -66577 -261682 0 1;
-#X obj 352 137 hsl 64 10 0 1 0 0 empty canvas_player_Stereo_master_R_6_2_\$1
-_\$1_R6-R -2 5 0 10 -159808 -258113 -261682 2200 1;
-#X obj 432 127 hsl 64 10 0 1 0 0 empty canvas_player_Stereo_master_L_7_1_\$1
-_\$1_L7-L -2 5 0 10 -159808 -66577 -261682 3000 1;
-#X obj 432 137 hsl 64 10 0 1 0 0 empty canvas_player_Stereo_master_L_7_2_\$1
+#X obj 349 137 hsl 64 10 0 1 0 0 empty canvas_player_Stereo_master_R_6_2_\$1
+_\$1_R6-R -2 5 0 10 -159808 -258113 -261682 0 1;
+#X obj 429 127 hsl 64 10 0 1 0 0 empty canvas_player_Stereo_master_L_7_1_\$1
+_\$1_L7-L -2 5 0 10 -159808 -66577 -261682 0 1;
+#X obj 429 137 hsl 64 10 0 1 0 0 empty canvas_player_Stereo_master_L_7_2_\$1
 _\$1_R7-L -2 5 0 10 -159808 -258113 -261682 0 1;
 #X obj 5266 1238 *~;
 #X obj 5631 1238 *~;
-#X obj 583 127 hsl 64 10 0 1 0 0 empty canvas_player_Stereo_master_L_8_1_\$1
-_\$1_L8-L -2 5 0 10 -159808 -66577 -261682 3800 1;
-#X obj 583 137 hsl 64 10 0 1 0 0 empty canvas_player_Stereo_master_L_8_2_\$1
+#X obj 580 127 hsl 64 10 0 1 0 0 empty canvas_player_Stereo_master_L_8_1_\$1
+_\$1_L8-L -2 5 0 10 -159808 -66577 -261682 0 1;
+#X obj 580 137 hsl 64 10 0 1 0 0 empty canvas_player_Stereo_master_L_8_2_\$1
 _\$1_R8-L -2 5 0 10 -159808 -258113 -261682 0 1;
 #X obj 5983 1238 *~;
 #X obj 6348 1240 *~;
@@ -395,14 +395,14 @@ _\$1_R8-L -2 5 0 10 -159808 -258113 -261682 0 1;
 #X msg 5685 783 set \$1;
 #X msg 6037 780 set \$1;
 #X msg 6402 780 set \$1;
-#X obj 503 127 hsl 64 10 0 1 0 0 empty canvas_player_Stereo_master_R_7_1_\$1
+#X obj 500 127 hsl 64 10 0 1 0 0 empty canvas_player_Stereo_master_R_7_1_\$1
 _\$1_L7-R -2 5 0 10 -159808 -66577 -261682 0 1;
-#X obj 503 137 hsl 64 10 0 1 0 0 empty canvas_player_Stereo_master_R_7_2_\$1
-_\$1_R7-R -2 5 0 10 -159808 -258113 -261682 3300 1;
-#X obj 654 127 hsl 64 10 0 1 0 0 empty canvas_player_Stereo_master_R_8_1_\$1
+#X obj 500 137 hsl 64 10 0 1 0 0 empty canvas_player_Stereo_master_R_7_2_\$1
+_\$1_R7-R -2 5 0 10 -159808 -258113 -261682 0 1;
+#X obj 651 127 hsl 64 10 0 1 0 0 empty canvas_player_Stereo_master_R_8_1_\$1
 _\$1_L8-R -2 5 0 10 -159808 -66577 -261682 0 1;
-#X obj 654 137 hsl 64 10 0 1 0 0 empty canvas_player_Stereo_master_R_8_2_\$1
-_\$1_R8-R -2 5 0 10 -159808 -258113 -261682 3800 1;
+#X obj 651 137 hsl 64 10 0 1 0 0 empty canvas_player_Stereo_master_R_8_2_\$1
+_\$1_R8-R -2 5 0 10 -159808 -258113 -261682 0 1;
 #X obj 3655 732 receive player_Stereo_mixer_R_5_1_\$1;
 #X obj 4019 732 receive player_Stereo_mixer_R_5_2_\$1;
 #X obj 4000 1032 receive player_Stereo_mixer_L_5_2_\$1;
@@ -413,8 +413,6 @@ _\$1_R8-R -2 5 0 10 -159808 -258113 -261682 3800 1;
 #X obj 4736 729 receive player_Stereo_mixer_R_6_2_\$1;
 #X obj 4645 1441 throw~ out_6_2;
 #X obj 4282 1439 throw~ out_6_1;
-#X obj 3928 1439 throw~ out_6_2;
-#X obj 3565 1439 throw~ out_6_1;
 #X obj 5341 732 receive player_Stereo_mixer_R_7_1_\$1;
 #X obj 5705 732 receive player_Stereo_mixer_R_7_2_\$1;
 #X obj 6057 729 receive player_Stereo_mixer_R_8_1_\$1;
@@ -427,6 +425,17 @@ _\$1_R8-R -2 5 0 10 -159808 -258113 -261682 3800 1;
 #X obj 5614 1439 throw~ out_7_2;
 #X obj 5967 1438 throw~ out_8_1;
 #X obj 6331 1441 throw~ out_8_2;
+#X obj 3565 1439 throw~ out_5_1;
+#X obj 3928 1439 throw~ out_5_2;
+#X obj 729 101 cnv 15 20 48 empty canvas_selected_\$1 empty 20 12 0
+14 -66577 -262144 0;
+#X obj 78 386 prepend \$1;
+#X obj 78 258 r SELECTED_PLAYER;
+#X obj 78 281 == \$1;
+#X obj 78 307 route 0 1;
+#X msg 78 417 \; canvas_selected_\$1 color \$2 0 0;
+#X msg 78 330 2;
+#X msg 107 356 16;
 #X connect 1 0 6 0;
 #X connect 1 0 12 0;
 #X connect 1 0 7 0;
@@ -674,8 +683,8 @@ _\$1_R8-R -2 5 0 10 -159808 -258113 -261682 3800 1;
 #X connect 177 0 167 0;
 #X connect 178 0 183 0;
 #X connect 178 1 186 0;
-#X connect 179 0 281 0;
-#X connect 180 0 280 0;
+#X connect 179 0 292 0;
+#X connect 180 0 293 0;
 #X connect 181 0 279 0;
 #X connect 182 0 278 0;
 #X connect 183 0 184 0;
@@ -758,10 +767,10 @@ _\$1_R8-R -2 5 0 10 -159808 -258113 -261682 3800 1;
 #X connect 233 0 223 0;
 #X connect 234 0 239 0;
 #X connect 234 1 242 0;
-#X connect 235 0 290 0;
-#X connect 236 0 291 0;
-#X connect 237 0 292 0;
-#X connect 238 0 293 0;
+#X connect 235 0 288 0;
+#X connect 236 0 289 0;
+#X connect 237 0 290 0;
+#X connect 238 0 291 0;
 #X connect 239 0 240 0;
 #X connect 239 1 241 0;
 #X connect 239 2 241 1;
@@ -819,12 +828,19 @@ _\$1_R8-R -2 5 0 10 -159808 -258113 -261682 3800 1;
 #X connect 275 0 172 0;
 #X connect 276 0 173 0;
 #X connect 277 0 209 0;
-#X connect 282 0 258 0;
-#X connect 283 0 259 0;
-#X connect 284 0 260 0;
-#X connect 285 0 261 0;
-#X connect 286 0 229 0;
-#X connect 287 0 228 0;
-#X connect 288 0 226 0;
-#X connect 289 0 227 0;
+#X connect 280 0 258 0;
+#X connect 281 0 259 0;
+#X connect 282 0 260 0;
+#X connect 283 0 261 0;
+#X connect 284 0 229 0;
+#X connect 285 0 228 0;
+#X connect 286 0 226 0;
+#X connect 287 0 227 0;
+#X connect 295 0 299 0;
+#X connect 296 0 297 0;
+#X connect 297 0 298 0;
+#X connect 298 0 300 0;
+#X connect 298 1 301 0;
+#X connect 300 0 295 0;
+#X connect 301 0 295 0;
 #X coords 0 -1 1 1 650 50 1 100 100;
