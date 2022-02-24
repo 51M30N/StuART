@@ -28,14 +28,14 @@
 #X obj 640 838 cyclone/prepend player_\$1;
 #X obj 8 194 r player_\$1;
 #X obj 919 302 hsl 128 15 0 1024 0 0 empty empty level_\$1 4 8 1 12
--159808 -4034 -261682 10319 1;
+-159808 -4034 -261682 3969 1;
 #X obj 919 318 hsl 128 15 0 1024 0 0 empty empty start_level_\$1 4
 8 1 12 -159808 -4034 -261682 0 1;
 #X obj 632 710 int;
 #X obj 903 707 int;
 #X obj 1082 554 spigot;
 #X obj 1121 533 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1
-1 1;
+0 1;
 #X obj 1121 508 >= 0;
 #X obj 916 335 bng 15 250 50 0 empty empty -1_kill_START_LEVEL 0 9
 1 12 -159808 -4034 -258113;
@@ -121,10 +121,11 @@
 #X obj 427 23 catch~ \$3;
 #X obj 427 92 *~ 1;
 #X obj 365 93 *~ 1;
-#X obj 494 331 hsl 128 15 1 2 0 0 empty gain-numerique-\$1 gain-numerique
+#X obj 494 331 hsl 128 15 1 2 0 0 empty gain-numerique-\$1 gain-numerique-9=1
 -2 -8 0 10 -262144 -1 -1 0 1;
 #X obj 897 39 prepend \$1;
 #X msg 895 62 \; gain-numerique-\$1 label gain-numerique-\$1=\$2;
+#X obj 728 28 r globaltimeaudio;
 #X connect 1 0 43 0;
 #X connect 1 0 72 1;
 #X connect 2 0 42 0;
@@ -227,4 +228,5 @@
 #X connect 107 0 105 1;
 #X connect 107 0 106 1;
 #X connect 108 0 109 0;
+#X connect 110 0 59 0;
 #X coords 0 -1 1 1 750 50 1 300 300;

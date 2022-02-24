@@ -1,0 +1,196 @@
+#N canvas 230 273 1500 738 10;
+#X obj 101 101 cnv 15 558 48 empty canvas_player_stereo_\$1 empty 5
+7 1 14 -258699 -24198 0;
+#X obj 745 80 prepend \$1;
+#X obj 745 55 bng 15 250 50 0 empty NAME-\$0 NAME-\$0 17 7 0 10 -191407
+-159808 -1;
+#X obj 1572 85 prepend \$1;
+#X obj 1572 62 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 376 258 receive player_Stereo_mixer-\$1;
+#X obj 140 469 tgl 15 0 empty toogle-\$0 NAME 17 7 0 10 -99865 -262144
+-99865 0 1;
+#X obj 69 529 route 0;
+#X obj 69 622 prepend \$0;
+#X msg 69 645 \; view-value-\$1 0 \; toogle-\$1 label Value \; NAME-\$1
+1;
+#X obj 108 552 prepend \$0;
+#X msg 108 575 \; view-value-\$1 1 \; toogle-\$1 label NAME \;;
+#X obj 1091 85 prepend \$1;
+#X obj 1091 64 bng 15 250 50 0 empty LR-1-\$0 LR-1-\$0 17 7 0 10 -159808
+-258113 -1;
+#X obj 140 453 bng 15 250 50 0 LR-1-\$0 empty LR-1 17 7 0 10 -159808
+-258113 -99865;
+#X obj 1321 85 prepend \$1;
+#X obj 1321 64 bng 15 250 50 0 empty LR-2-\$0 LR-2-\$0 17 7 0 10 -159808
+-258113 -1;
+#X obj 140 484 bng 15 250 50 0 LR-2-\$0 empty LR-2 17 7 0 10 -159808
+-258113 -99865;
+#N canvas 277 349 1336 948 machinerie 0;
+#X obj 259 161 inlet;
+#X obj 286 681 outlet;
+#X obj 58 293 list;
+#X obj 171 352 delay;
+#X obj 286 387 qlist;
+#X msg 340 371 rewind;
+#X msg 286 319 clear;
+#X msg 446 371 next;
+#X obj 205 368 bang;
+#X obj 24 371 prepend add;
+#X obj 259 254 t a b;
+#X obj 171 407 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 93 293 t b b f;
+#X obj 313 410 t b b;
+#X obj 313 435 delay 1;
+#X msg 132 346 stop;
+#X obj 323 29 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X text 320 259 lvl_L_1_1 lvl_R_1_1 time_1_1 lvl_L_1_2 lvl_R_1_2 time_1_2
+lvl_L_2_1 lvl_R_2_1 time_2_1 lvl_L_2_2 lvl_R_2_2 time_2_2, f 118;
+#X text 320 209 lvl_L_1_1 lvl_R_1_1 time_1_1 lvl_L_1_2 lvl_R_1_2 time_1_2
+lvl_L_2_1 lvl_R_2_1 time_2_1 lvl_L_2_2 lvl_R_2_2 time_2_2 [...] lvl_L_1_1
+lvl_R_1_1 time_1_1 lvl_L_1_2 lvl_R_1_2 time_1_2 lvl_L_2_1 lvl_R_2_1
+time_2_1 lvl_L_2_2 lvl_R_2_2 time_2_2 "time next", f 138;
+#X obj 24 270 list split 48;
+#X obj 159 494 print;
+#X obj 132 315 route 0 1;
+#X msg 323 100 1 1 1000 1 1 2000 1 1 3000 1 1 4000 0 0 1000 0 0 2000
+0 0 3000 0 0 4000 1 1 1000 1 1 2000 1 1 3000 1 1 4000 0 0 1000 0 0
+2000 0 0 3000 0 0 4000 1 1 1000 1 1 2000 1 1 3000 1 1 4000 0 0 1000
+0 0 2000 0 0 3000 0 0 4000 1 1 1000 1 1 2000 1 1 3000 1 1 4000 0 0
+1000 0 0 2000 0 0 3000 0 0 4000 4000, f 137;
+#X msg 323 54 \$1 \$1 1000 \$1 \$1 2000 \$1 \$1 3000 \$1 \$1 4000 \$1
+\$1 1000 \$1 \$1 2000 \$1 \$1 3000 \$1 \$1 4000 \$1 \$1 1000 \$1 \$1
+2000 \$1 \$1 3000 \$1 \$1 4000 \$1 \$1 1000 \$1 \$1 2000 \$1 \$1 3000
+\$1 \$1 4000;
+#X connect 0 0 10 0;
+#X connect 2 0 19 0;
+#X connect 3 0 8 0;
+#X connect 3 0 11 0;
+#X connect 3 0 7 0;
+#X connect 4 0 1 0;
+#X connect 4 1 13 0;
+#X connect 5 0 4 0;
+#X connect 6 0 4 0;
+#X connect 7 0 4 0;
+#X connect 8 0 3 0;
+#X connect 9 0 4 0;
+#X connect 10 0 19 0;
+#X connect 10 1 6 0;
+#X connect 12 0 7 0;
+#X connect 12 2 20 0;
+#X connect 12 2 21 0;
+#X connect 13 0 14 0;
+#X connect 13 1 5 0;
+#X connect 14 0 7 0;
+#X connect 15 0 3 0;
+#X connect 16 0 23 0;
+#X connect 19 0 9 0;
+#X connect 19 1 2 0;
+#X connect 19 2 12 0;
+#X connect 21 0 15 0;
+#X connect 21 2 3 0;
+#X connect 22 0 10 0;
+#X connect 23 0 10 0;
+#X restore 376 287 pd machinerie;
+#X msg 1321 107 \; player_Stereo_mixer_L_1_1_\$1 0 0 \; player_Stereo_mixer_L_1_2_\$1
+0 0 \; player_Stereo_mixer_L_2_1_\$1 1 0 \; player_Stereo_mixer_L_2_2_\$1
+0 0 \; player_Stereo_mixer_R_1_1_\$1 0 0 \; player_Stereo_mixer_R_1_2_\$1
+0 0 \; player_Stereo_mixer_R_2_1_\$1 0 0 \; player_Stereo_mixer_R_2_2_\$1
+1 0 \;;
+#X msg 1091 107 \; player_Stereo_mixer_L_1_1_\$1 1 0 \; player_Stereo_mixer_L_1_2_\$1
+0 0 \; player_Stereo_mixer_L_2_1_\$1 0 0 \; player_Stereo_mixer_L_2_2_\$1
+0 0 \; player_Stereo_mixer_R_1_1_\$1 0 0 \; player_Stereo_mixer_R_1_2_\$1
+1 0 \; player_Stereo_mixer_R_2_1_\$1 0 0 \; player_Stereo_mixer_R_2_2_\$1
+0 0 \;;
+#X text 711 12 gestionnaire de diffusion IN 1*Stereo to OUT 2*Stereo
+;
+#X text 717 29 automation de boucles de mouvement sonore;
+#X msg 745 107 \; canvas_player_Stereo_master_L_1_1_\$1 label _#1_L1-L
+\; canvas_player_Stereo_master_L_1_2_\$1 label _#1_R1-L \; canvas_player_Stereo_master_L_2_1_\$1
+label _#1_L2-L \; canvas_player_Stereo_master_L_2_2_\$1 label _#1_R2-L
+\; canvas_player_Stereo_master_R_1_1_\$1 label _#1_L1-R \; canvas_player_Stereo_master_R_1_2_\$1
+label _#1_R1-R \; canvas_player_Stereo_master_R_2_1_\$1 label _#1_L2-R
+\; canvas_player_Stereo_master_R_2_2_\$1 label _#1_R2-R;
+#X msg 1572 107 \; player_Stereo_mixer_L_1_1_\$1 \$2 1000 \; player_Stereo_mixer_L_1_2_\$1
+\$2 2000 \; player_Stereo_mixer_L_2_1_\$1 \$2 3000 \; player_Stereo_mixer_L_2_2_\$1
+\$2 4000 \; player_Stereo_mixer_R_1_1_\$1 \$2 5000 \; player_Stereo_mixer_R_1_2_\$1
+\$2 6000 \; player_Stereo_mixer_R_2_1_\$1 \$2 7000 \; player_Stereo_mixer_R_2_2_\$1
+\$2 8000 \; player_Stereo_mixer_L_3_1_\$1 \$2 1000 \; player_Stereo_mixer_L_3_2_\$1
+\$2 2000 \; player_Stereo_mixer_L_4_1_\$1 \$2 3000 \; player_Stereo_mixer_L_4_2_\$1
+\$2 4000 \; player_Stereo_mixer_R_3_1_\$1 \$2 5000 \; player_Stereo_mixer_R_3_2_\$1
+\$2 6000 \; player_Stereo_mixer_R_4_1_\$1 \$2 7000 \; player_Stereo_mixer_R_4_2_\$1
+\$2 8000;
+#X obj 1834 97 prepend \$1;
+#X msg 1834 124 \; canvas_player_Stereo_master_L_\$2_1_\$1 label _#1_L\$2-L
+\; canvas_player_Stereo_master_L_\$2_2_\$1 label _#1_R\$2-L \; canvas_player_Stereo_master_R_\$2_1_\$1
+label _#1_L\$2-R \; canvas_player_Stereo_master_R_\$2_2_\$1 label _#1_R\$2-R
+\;;
+#X obj 1906 84 hradio 15 1 0 9 empty empty empty 0 -8 0 10 -262144
+-1 -1 8;
+#X obj 660 101 cnv 9 10 48 empty canvas_selected_\$1 empty 20 12 0
+14 -24198 -262144 0;
+#X obj 78 386 prepend \$1;
+#X obj 78 258 r SELECTED_PLAYER;
+#X obj 78 281 == \$1;
+#X obj 78 307 route 0 1;
+#X msg 78 417 \; canvas_selected_\$1 color \$2 0 0;
+#X msg 78 330 2;
+#X msg 107 356 16;
+#X obj 376 350 list split 6;
+#X obj 106 100 player_Stereo_mixer3-unit \$1 1;
+#X obj 176 100 player_Stereo_mixer3-unit \$1 2;
+#X obj 246 100 player_Stereo_mixer3-unit \$1 3;
+#X obj 316 100 player_Stereo_mixer3-unit \$1 4;
+#X obj 386 100 player_Stereo_mixer3-unit \$1 5;
+#X obj 456 100 player_Stereo_mixer3-unit \$1 6;
+#X obj 526 100 player_Stereo_mixer3-unit \$1 7;
+#X obj 596 100 player_Stereo_mixer3-unit \$1 8;
+#X obj 406 380 list split 6;
+#X obj 426 410 list split 6;
+#X obj 456 440 list split 6;
+#X obj 486 470 list split 6;
+#X obj 516 500 list split 6;
+#X obj 536 530 list split 6;
+#X obj 566 560 list split 6;
+#X connect 1 0 23 0;
+#X connect 2 0 1 0;
+#X connect 3 0 24 0;
+#X connect 4 0 3 0;
+#X connect 5 0 18 0;
+#X connect 6 0 7 0;
+#X connect 7 0 8 0;
+#X connect 7 1 10 0;
+#X connect 8 0 9 0;
+#X connect 10 0 11 0;
+#X connect 12 0 20 0;
+#X connect 13 0 12 0;
+#X connect 15 0 19 0;
+#X connect 16 0 15 0;
+#X connect 18 0 36 0;
+#X connect 25 0 26 0;
+#X connect 27 0 25 0;
+#X connect 29 0 33 0;
+#X connect 30 0 31 0;
+#X connect 31 0 32 0;
+#X connect 32 0 34 0;
+#X connect 32 1 35 0;
+#X connect 34 0 29 0;
+#X connect 35 0 29 0;
+#X connect 36 0 37 0;
+#X connect 36 1 45 0;
+#X connect 45 0 38 0;
+#X connect 45 1 46 0;
+#X connect 46 0 39 0;
+#X connect 46 1 47 0;
+#X connect 47 0 40 0;
+#X connect 47 1 48 0;
+#X connect 48 0 41 0;
+#X connect 48 1 49 0;
+#X connect 49 0 42 0;
+#X connect 49 1 50 0;
+#X connect 50 0 43 0;
+#X connect 50 1 51 0;
+#X connect 51 0 44 0;
+#X coords 0 -1 1 1 570 50 1 100 100;

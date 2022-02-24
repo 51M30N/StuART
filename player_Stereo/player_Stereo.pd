@@ -8,7 +8,7 @@
 #X msg 104 435 open \$1 \, 1;
 #X obj 240 485 pack;
 #X msg 727 380 \$1;
-#X obj 506 195 tgl 15 0 empty empty PLAY 17 7 1 10 -261682 -1 -1 0
+#X obj 506 195 tgl 15 0 empty empty PLAY 17 7 1 10 -261682 -1 -1 1
 1;
 #X floatatom 888 178 4 0 0 0 START_LEVEL - start_level_#1;
 #X floatatom 335 191 10 0 0 1 time-fade(ms) - audio_time_#1;
@@ -23,7 +23,7 @@
 #X text 327 365 StartLevel;
 #X obj 329 602 bang;
 #X obj 781 539 tgl 15 0 empty empty play_\$1 17 7 0 10 -261682 -1 -1
-0 1;
+1 1;
 #X floatatom 637 539 5 0 0 1 start_level_#1 start_level_#1 -;
 #X floatatom 474 539 10 0 0 1 audio_time_#1 audio_time_#1 -;
 #X floatatom 374 539 5 0 0 1 level_#1 level_#1 -;
@@ -90,7 +90,7 @@
 -258113 -4034 -1;
 #X obj 745 765 print WTF_player_Stereo-\$1;
 #X obj 1055 664 t b b;
-#X obj 269 302 tgl 15 0 empty empty empty 17 7 0 10 -261682 -1 -1 0
+#X obj 269 302 tgl 15 0 empty empty empty 17 7 0 10 -261682 -1 -1 1
 1;
 #X obj 404 503 s toggle_remote_\$1;
 #X obj 1086 410 tgl 15 0 empty play_\$1 play_\$1 17 7 0 10 -261682
@@ -106,7 +106,8 @@
 -1 -1;
 #X obj 1072 733 list prepend;
 #X obj 459 81 prepend set;
-#X msg 459 103 symbl 0 0 0 0;
+#X msg 459 103 /home/pi/Music/ONAVIO-MARTINE/1-21-converted.wav 0 0
+0 1;
 #X obj 728 48 r globaltime;
 #X obj 728 70 * 100;
 #X obj 1072 769 s to_control_audio;
@@ -114,7 +115,7 @@
 #X obj 857 347 \$1;
 #X obj 840 318 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
-#X obj 876 484 send to_control_audio;
+#X obj 876 494 send to_control_audio;
 #X floatatom 948 393 10 0 0 1 audio_time_#1time-fade(ms) audio_time_#1
 -;
 #X obj 197 101 route 0 1;
@@ -130,8 +131,8 @@
 #X obj 1014 421 f;
 #X obj 104 71 unpack s f f f f;
 #X obj 537 54 print WTF_player_Stereo_\$1;
-#X obj 919 427 pack f f f s;
-#X msg 876 456 remote_player_1 \$1 \$2 \$3 \$4;
+#X obj 891 444 pack f f f s;
+#X msg 876 466 remote_player_2 \$1 \$2 \$3 \$4;
 #X msg 876 378 set \, add2 remote_player_\$1 \, adddollar 1 \, adddollar
 2 \, adddollar 3 \, adddollar 4, f 82;
 #X obj 883 115 r set_player-\$1;
@@ -268,7 +269,6 @@
 #X connect 98 0 46 0;
 #X connect 99 0 8 0;
 #X connect 100 0 102 0;
-#X connect 101 0 104 0;
 #X connect 102 0 30 0;
 #X connect 102 1 31 0;
 #X connect 102 2 32 0;

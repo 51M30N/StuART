@@ -1,11 +1,11 @@
 #N canvas 404 246 942 808 10;
 #X obj 105 641 send to_control_audio;
-#X obj 105 127 vsl 20 128 0 1 0 0 empty empty L\$1 2 -9 0 15 -159808
--4034 -4034 0 1;
-#X obj 125 127 vsl 10 128 0 1 0 0 empty empty empty 16 9 0 10 -4034
+#X obj 105 121 vsl 20 128 0 1 0 0 empty empty L\$1 2 -9 0 15 -159808
+-4034 -4034 6350 1;
+#X obj 125 121 vsl 10 128 0 1 0 0 empty empty empty 16 9 0 10 -4034
 -258113 -1 0 1;
-#X obj 135 127 vsl 20 128 0 1 0 0 empty empty R\$1 2 -9 0 15 -159808
--4034 -4034 0 1;
+#X obj 135 121 vsl 20 128 0 1 0 0 empty empty R\$1 2 -9 0 15 -159808
+-4034 -4034 6350 1;
 #X obj 105 18 / 128;
 #X obj 135 74 / 128;
 #X obj -44 2 r out_master_level\$1;
@@ -39,8 +39,8 @@
 #X obj 672 273 catch~ out_\$1_2;
 #X obj 672 443 s out_\$1-2;
 #X obj 612 493 s out_\$1-1;
-#X obj 106 270 vu 15 120 out_\$1-1 empty -1 -8 0 10 -66577 -1 0 0;
-#X obj 136 270 vu 15 120 out_\$1-2 empty -1 -8 0 10 -66577 -1 0 0;
+#X obj 106 264 vu 15 80 out_\$1-1 empty -1 -8 0 10 -66577 -1 0 0;
+#X obj 136 264 vu 15 80 out_\$1-2 empty -1 -8 0 10 -66577 -1 0 0;
 #X obj 553 643 outlet~;
 #X obj 653 643 outlet~;
 #X connect 1 0 10 0;
@@ -85,4 +85,4 @@
 #X connect 31 0 13 1;
 #X connect 32 0 12 0;
 #X connect 33 0 13 0;
-#X coords 0 -1 1 1 60 300 1 100 100;
+#X coords 0 -1 1 1 60 250 1 100 100;

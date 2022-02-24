@@ -34,7 +34,7 @@
 #X obj 903 707 int;
 #X obj 1082 554 spigot;
 #X obj 1121 533 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1
-0 1;
+1 1;
 #X obj 1121 508 >= 0;
 #X obj 916 335 bng 15 250 50 0 empty empty -1_kill_START_LEVEL 0 9
 1 12 -159808 -4034 -258113;
@@ -118,6 +118,7 @@
 -2 -8 0 10 -262144 -1 -1 0 1;
 #X obj 897 39 prepend \$1;
 #X msg 895 62 \; gain-numerique-\$1 label gain-numerique-\$1=\$2;
+#X obj 728 28 r globaltimeaudio;
 #X connect 1 0 41 0;
 #X connect 1 0 42 0;
 #X connect 1 0 71 0;
@@ -210,4 +211,5 @@
 #X connect 100 0 101 0;
 #X connect 100 0 99 1;
 #X connect 101 0 102 0;
+#X connect 103 0 58 0;
 #X coords 0 -1 1 1 750 50 1 300 300;
