@@ -144,12 +144,12 @@
 #X floatatom 1178 675 5 0 0 0 time_next_#0 time_next_#0 -;
 #X floatatom 1178 660 5 0 0 0 time_#0 time_#0 -;
 #X floatatom 1308 660 1 0 0 0 link_#0 link_#0 -;
-#X obj 938 715 cnv 15 400 20 empty cnv_LOADED_CUE ON_STAGE==s0_mise
--132 10 1 20 -204786 -159808 0;
-#X obj 938 734 cnv 15 400 40 empty cnv_next_next NEXT==s0.0 -76 10
+#X obj 938 715 cnv 15 400 20 empty cnv_LOADED_CUE ON_STAGE==s7.0 -132
+10 1 20 -204786 -159808 0;
+#X obj 938 734 cnv 15 400 40 empty cnv_next_next NEXT==s8.0 -76 10
 1 20 -159808 -204786 0;
-#X obj 818 734 bng 40 250 50 0 go_\$0 go_\$1 GO_1==a_la_mise 43 30
-1 20 -24198 -262144 -225271;
+#X obj 818 734 bng 40 250 50 0 go_\$0 go_\$1 GO_1==REC_"embrouille_per_gilbert"...TOP
+43 30 1 20 -24198 -262144 -225271;
 #N canvas 7 102 951 430 Cue_List 1;
 #X obj 385 227 outlet;
 #X obj 398 9 r SHOW;
@@ -172,9 +172,9 @@
 #X floatatom 63 200 5 0 0 0 tracking_Cue_List tracking_Cue_List -;
 #X symbolatom 96 285 10 0 0 0 - - -;
 #X obj 100 186 hradio 10 1 0 10 empty empty empty 0 -8 0 10 -4034 -1
--1 0;
+-1 2;
 #X obj 100 176 hradio 10 1 0 10 empty empty empty 0 -8 0 10 -4034 -1
--1 0;
+-1 2;
 #X obj 12 39 * 10;
 #X obj 12 91 +;
 #X obj -2 67 t b f;
@@ -200,8 +200,6 @@
 17 7 0 10 -4034 -1 -1;
 #X obj 80 393 s CUE_LOADER_goto;
 #X obj 68 374 s CUE_EDIT_Next_cue;
-#X obj 311 66 cyclone/prepend;
-#X obj 571 66 cyclone/prepend;
 #X obj 96 263 text get Cue_List-\$0;
 #X obj 311 269 text set Cue_List-\$0;
 #X obj 63 219 / 3;
@@ -210,25 +208,32 @@
 #X msg 571 143 ls /home/pi/Documents/_\$1/Cue/ | grep \$2;
 #X obj 647 255 text define Cue_List-\$0;
 #X obj 311 11 del 5000;
-#X obj 470 34 prepend set;
-#X connect 1 0 49 0;
+#X obj 537 211 print IN_Cue_List;
+#X msg 575 4 FFM;
+#X obj 638 10 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 311 66 list prepend;
+#X obj 571 66 list prepend;
+#X connect 1 0 50 1;
+#X connect 1 0 51 1;
 #X connect 2 0 0 0;
-#X connect 2 0 47 0;
+#X connect 2 0 45 0;
 #X connect 3 0 6 0;
-#X connect 4 0 45 0;
-#X connect 5 0 42 1;
-#X connect 6 0 42 0;
-#X connect 7 0 39 0;
+#X connect 4 0 43 0;
+#X connect 5 0 40 1;
+#X connect 6 0 40 0;
+#X connect 7 0 50 0;
 #X connect 7 1 2 0;
 #X connect 7 1 5 0;
-#X connect 8 0 40 0;
+#X connect 8 0 51 0;
 #X connect 8 1 2 0;
 #X connect 9 0 10 1;
-#X connect 10 0 46 0;
+#X connect 10 0 44 0;
+#X connect 10 0 47 0;
 #X connect 12 0 9 0;
-#X connect 13 0 48 0;
+#X connect 13 0 46 0;
 #X connect 14 0 8 0;
-#X connect 15 0 43 0;
+#X connect 15 0 41 0;
 #X connect 16 0 38 0;
 #X connect 16 0 37 0;
 #X connect 17 0 21 0;
@@ -243,7 +248,7 @@
 #X connect 23 0 22 0;
 #X connect 24 0 22 0;
 #X connect 25 0 24 0;
-#X connect 26 0 41 0;
+#X connect 26 0 39 0;
 #X connect 27 0 29 1;
 #X connect 27 0 32 1;
 #X connect 28 0 29 0;
@@ -254,25 +259,27 @@
 #X connect 32 0 33 0;
 #X connect 33 0 23 0;
 #X connect 33 0 27 0;
-#X connect 34 0 47 0;
+#X connect 34 0 45 0;
 #X connect 35 0 34 0;
-#X connect 39 0 4 0;
-#X connect 40 0 10 0;
-#X connect 41 0 16 0;
-#X connect 43 0 26 0;
-#X connect 44 0 27 0;
-#X connect 44 0 23 0;
-#X connect 45 0 3 0;
-#X connect 46 0 3 0;
-#X connect 48 0 7 0;
-#X connect 49 0 40 0;
-#X connect 49 0 39 0;
+#X connect 39 0 16 0;
+#X connect 41 0 26 0;
+#X connect 42 0 27 0;
+#X connect 42 0 23 0;
+#X connect 43 0 3 0;
+#X connect 44 0 3 0;
+#X connect 46 0 7 0;
+#X connect 48 0 51 1;
+#X connect 48 0 50 1;
+#X connect 49 0 8 0;
+#X connect 50 0 4 0;
+#X connect 51 0 10 0;
 #X coords 0 -1 1 1 100 100 1 100 100;
 #X restore 1400 700 pd Cue_List;
 #X obj 1318 774 tgl 20 0 LinkM LinkM_\$1 LinkM 22 10 1 15 -4032 -1
 -1 0 1;
 #X obj 388 847 text define -k deroule-\$0;
-#A set s0_mise \;;
+#A set s0_mise \; s0.0 \; s1.0 \; s1.2 \; s1.6 \; s2.0 \; s3.0 \; s3.2
+\; s3.5 \; s4.0 \; s4.5 \; s5.0 \; s6.0 \; s7.0 \;;
 #X obj 269 845 text set deroule-\$0;
 #X obj 1188 393 text delete deroule-\$0;
 #X obj 702 782 bng 15 250 50 0 OPEN_deroule\$0 OPEN_deroule OPEN_deroule
