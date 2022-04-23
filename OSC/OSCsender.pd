@@ -38,7 +38,7 @@
 #X obj 270 846 cyclone/prepend /SOURCE;
 #X obj 176 412 netsend -u -b;
 #X obj 436 48 print WTF;
-#X obj 176 445 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+#X obj 176 445 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
 1;
 #X obj 208 509 route 1;
 #X obj 176 939 route 0 1;
@@ -70,8 +70,8 @@
 #X obj 741 91 r port-\$0;
 #X floatatom 741 113 5 0 0 0 - - -;
 #X symbolatom 707 70 15 0 0 0 - - -;
-#X obj 0 0 cnv 15 199 29 empty cnv_\$0 dmx_universe-0_127.0.0.2:7771
-2 8 1 10 -258699 -62784 0;
+#X obj 0 0 cnv 15 199 29 empty cnv_\$0 TO_CTRL_127.0.0.1:9998 2 8 1
+10 -24198 -62784 0;
 #X obj 900 421 prepend \$0 \$3;
 #X obj 208 550 t b b;
 #X msg 823 108 connect 127.0.0.1 8888;
@@ -110,6 +110,7 @@
 #X obj 308 525 delay 10000;
 #X msg 270 501 stop;
 #X obj 208 528 delay 1000;
+#X obj 288 795 prepend set;
 #X connect 0 0 1 0;
 #X connect 1 0 4 0;
 #X connect 2 0 3 0;
@@ -139,7 +140,7 @@
 #X connect 35 0 36 0;
 #X connect 35 0 52 0;
 #X connect 37 0 38 0;
-#X connect 37 0 26 1;
+#X connect 37 0 92 0;
 #X connect 40 0 54 0;
 #X connect 41 0 55 0;
 #X connect 43 0 51 0;
@@ -189,4 +190,5 @@
 #X connect 89 0 70 0;
 #X connect 90 0 89 0;
 #X connect 91 0 62 0;
+#X connect 92 0 26 0;
 #X coords 0 -1 1 1 200 30 2 0 0;
