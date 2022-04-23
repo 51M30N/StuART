@@ -20,9 +20,9 @@
 #X obj 414 251 r globaltime;
 #X obj 439 843 cyclone/prepend \$2;
 #X obj 512 899 tgl 15 0 empty toggle_rec_faderdmx-\$0 rec_faderdmx-\$0
-17 7 0 10 -257985 -260097 -1 0 1;
+17 7 0 10 -257985 -260097 -1 1 1;
 #X obj 119 651 tgl 15 0 empty toggle_out_faderdmx-\$0 toggle_out_faderdmx-\$0
-17 7 0 10 -260097 -262130 -1 0 1;
+17 7 0 10 -260097 -262130 -1 1 1;
 #X obj 86 677 spigot;
 #X floatatom 300 250 4 0 0 1 Load - -;
 #X floatatom 650 523 3 0 0 1 out - -;
@@ -33,7 +33,7 @@
 #X obj 86 560 int;
 #X obj 790 556 spigot;
 #X obj 823 484 tgl 15 0 empty Live_Mode-\$0 Live_Mode-\$0 17 7 0 10
--4032 -1 -1 0 1;
+-4032 -1 -1 1 1;
 #X msg 98 36 255 3000;
 #X obj 86 139 t a a;
 #X obj 107 762 - 1;
@@ -49,13 +49,13 @@
 #X obj 345 526 bng 15 250 50 0 SET_fader-\$0 SET_fader SET 17 8 1 8
 -4160 -258113 -1;
 #X obj 300 587 tgl 15 0 toggle_rec_faderdmx-\$0 toggle_rec_faderdmx
-REC 17 7 1 10 -257985 -260097 -1 0 1;
+REC 17 7 1 10 -257985 -260097 -1 1 1;
 #X obj 300 601 tgl 15 0 toggle_out_faderdmx-\$0 toggle_out_faderdmx
-OUT 17 7 1 10 -260097 -262130 -1 0 1;
+OUT 17 7 1 10 -260097 -262130 -1 1 1;
 #X obj 300 572 bng 15 250 50 0 Store_fdmx-\$0 Store_fdmx Store 17 7
 1 10 -258113 -4034 -1;
 #X obj 300 556 tgl 15 0 Live_Mode-\$0 Live_Mode LM 17 8 1 8 -4032 -1
--1 0 1;
+-1 1 1;
 #X obj 672 583 * 1000;
 #X obj 622 495 symbol \$2;
 #X obj 790 740 list;
@@ -78,7 +78,7 @@ OUT 17 7 1 10 -260097 -262130 -1 0 1;
 #X floatatom 231 68 5 0 0 0 - - -;
 #X obj 231 42 spigot;
 #X obj 101 102 tgl 15 0 empty COLOR_FADER COLOR_FADER 17 7 0 10 -159808
--262144 -1 0 1;
+-262144 -1 1 1;
 #X msg 299 227 color \$1 16 16;
 #X connect 0 0 11 0;
 #X connect 2 0 3 0;
@@ -350,15 +350,16 @@ loop = une fois ou toutes \;;
 #X obj 86 375 pack;
 #X obj 119 294 spigot;
 #X obj 152 241 tgl 15 0 empty toogle-time-\$0 toogle-time-\$0 17 7
-0 10 -204786 -1 -1 0 1;
+0 10 -204786 -1 -1 1 1;
 #X obj 333 553 tgl 10 0 toogle-time-\$0 Kill-time-M t-t 12 5 0 7 -204786
--1 -1 0 1;
+-1 -1 1 1;
 #X obj 179 330 route 0;
 #X obj 179 353 i 0;
 #X obj 152 261 t a a;
 #X obj 414 271 r globaltimedmx;
 #X obj 414 294 / 5;
 #X obj 414 317 int;
+#X obj 338 859 prepend set;
 #X connect 0 0 22 0;
 #X connect 1 0 2 0;
 #X connect 2 0 32 0;
@@ -407,7 +408,7 @@ loop = une fois ou toutes \;;
 #X connect 56 0 37 1;
 #X connect 56 1 28 0;
 #X connect 57 0 53 0;
-#X connect 58 0 34 1;
+#X connect 58 0 103 0;
 #X connect 58 1 33 0;
 #X connect 64 0 10 1;
 #X connect 64 1 37 2;
@@ -451,4 +452,5 @@ loop = une fois ou toutes \;;
 #X connect 100 0 101 0;
 #X connect 101 0 102 0;
 #X connect 102 0 13 0;
+#X connect 103 0 34 0;
 #X coords 0 -1 1 1 60 382 2 300 250;
