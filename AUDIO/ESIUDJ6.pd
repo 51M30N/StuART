@@ -59,11 +59,11 @@
 #X obj 794 438 *~;
 #X obj 834 418 *~;
 #X obj 430 359 vsl 20 128 0 1 0 0 empty empty L3 2 -9 0 15 -159808
--4034 -4034 400 1;
+-4034 -4034 0 1;
 #X obj 450 359 vsl 10 128 0 1 0 0 empty empty empty 16 9 0 10 -4034
--258113 -1 400 1;
+-258113 -1 0 1;
 #X obj 460 359 vsl 20 128 0 1 0 0 empty empty R3 1 -9 0 15 -159808
--4034 -4034 400 1;
+-4034 -4034 0 1;
 #X obj 440 230 / 128;
 #X obj 470 278 / 128;
 #X obj 443 680 cyclone/prepend MASTER_LEVEL_3;
@@ -147,12 +147,10 @@
 #X connect 41 0 26 0;
 #X connect 41 0 29 0;
 #X connect 43 0 42 0;
-#X connect 45 0 44 4;
-#X connect 46 0 44 5;
-#X connect 47 0 44 2;
-#X connect 48 0 44 3;
-#X connect 49 0 44 0;
-#X connect 50 0 44 1;
+#X connect 47 0 44 4;
+#X connect 48 0 44 5;
+#X connect 49 0 44 2;
+#X connect 50 0 44 3;
 #X connect 51 0 57 0;
 #X connect 52 0 51 0;
 #X connect 52 0 53 0;

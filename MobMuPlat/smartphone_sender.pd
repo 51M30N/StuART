@@ -1,4 +1,4 @@
-#N canvas 2259 307 896 618 10;
+#N canvas 371 244 896 757 10;
 #X msg 766 43 /meuh 1;
 #X msg 640 24 /sonne 1;
 #X msg 740 121 /notification 1;
@@ -18,7 +18,7 @@
 #X msg 640 62 /reveil 1;
 #X msg 431 124 /readsf MobyDickcut1min.wav;
 #X msg 431 104 /readsf MobyDick.wav;
-#X obj 492 423 bng 15 250 50 0 empty empty STOP 17 7 0 10 -258113 -257985
+#X obj 501 419 bng 15 250 50 0 empty empty STOP 17 7 0 10 -258113 -257985
 -1;
 #X msg 11 38 /label sperme_de_baleine;
 #X msg 12 110 /label Jessi_CACA_riatre;
@@ -26,7 +26,7 @@
 #X msg 12 2 /label _;
 #X msg 12 74 /label COIN_COIN;
 #X msg 12 92 /label COIN_COIN_COIN;
-#X obj 552 501 send to_cue;
+#X obj 527 707 send to_cue;
 #X obj 434 368 prepend toSmartphone-\$1;
 #X obj 333 199 r toSmartphone-\$1;
 #X obj 191 209 r toSmartphone-\$0;
@@ -34,7 +34,7 @@
 #X obj 631 147 s toSmartphone-\$0;
 #X obj 217 151 s toSmartphone-\$0;
 #X obj 7 171 s toSmartphone-\$0;
-#X obj 494 542 s toSmartphone-\$0;
+#X obj 703 603 s toSmartphone-\$0;
 #X obj 333 220 route connect;
 #X obj 333 240 prepend connect;
 #X msg 441 74 /readsf bouilloire2.wav;
@@ -44,7 +44,7 @@
 #X msg 400 304 connect 192.168.10.108 54322;
 #X msg 451 44 /readsf que_vois_je_plus_chant.wav;
 #X obj 190 14 inlet;
-#X obj 561 475 prepend levelSmartphone-\$1;
+#X obj 534 654 prepend levelSmartphone-\$1;
 #X obj 10 193 r levelSmartphone-\$1;
 #X obj 320 418 hsl 150 15 0.01 1 1 0 empty empty LEVEL -2 -6 0 10 -191407
 -1 -1 0 1;
@@ -58,18 +58,23 @@
 #X obj 102 418 OSC/OSCsender 255.255.255.255 54322 to_phone-\$1;
 #X obj 544 419 bng 15 250 50 0 empty empty Test 17 7 0 10 -204786 -1
 -1;
-#X msg 656 302 /readsf final_coin.wav;
 #X obj 544 435 bng 15 250 50 0 empty empty RePlay 17 7 0 10 -204786
 -1 -1;
 #X msg 74 147 /label BATTERIE_FAIBLE;
 #X obj 196 508 unpack;
-#X floatatom 434 433 5 0 30 0 time(s) - -;
+#X floatatom 472 433 5 0 30 0 time(s) - -;
 #X obj 10 245 unpack;
 #X obj 43 416 / 1000;
 #X obj 348 472 pack;
 #X obj 127 487 * 1000;
 #X msg 348 509 /level \$1 \$2, f 20;
 #X msg 10 317 set \$1;
+#X obj 236 647 prepend PageSmartphone-\$1;
+#X obj 246 599 r PageSmartphone-\$1;
+#X msg 269 627 /setPage \$1;
+#X floatatom 342 433 4 0 30 0 PAGE - -;
+#X obj 229 12 r remoteSmartphone-\$1;
+#X msg 656 302 /readsf MBD/final_coin.wav;
 #X connect 0 0 31 0;
 #X connect 1 0 31 0;
 #X connect 2 0 31 0;
@@ -116,26 +121,33 @@
 #X connect 42 0 30 0;
 #X connect 43 0 32 0;
 #X connect 44 0 26 0;
-#X connect 45 0 60 0;
-#X connect 45 0 64 0;
-#X connect 46 0 62 0;
+#X connect 45 0 59 0;
+#X connect 45 0 63 0;
+#X connect 46 0 61 0;
 #X connect 47 0 48 0;
 #X connect 48 0 30 0;
 #X connect 49 0 47 0;
 #X connect 50 0 51 0;
 #X connect 51 0 52 0;
 #X connect 52 0 47 0;
-#X connect 54 0 55 0;
-#X connect 55 0 30 0;
-#X connect 56 0 47 0;
-#X connect 57 0 33 0;
-#X connect 59 0 63 0;
-#X connect 60 0 65 0;
-#X connect 60 1 61 0;
-#X connect 61 0 59 0;
-#X connect 62 0 44 0;
-#X connect 62 0 64 0;
-#X connect 63 0 62 1;
-#X connect 64 0 53 0;
-#X connect 65 0 46 0;
+#X connect 54 0 70 0;
+#X connect 55 0 47 0;
+#X connect 56 0 33 0;
+#X connect 58 0 62 0;
+#X connect 59 0 64 0;
+#X connect 59 1 60 0;
+#X connect 60 0 58 0;
+#X connect 61 0 44 0;
+#X connect 61 0 63 0;
+#X connect 62 0 61 1;
+#X connect 63 0 53 0;
+#X connect 64 0 46 0;
+#X connect 65 0 26 0;
+#X connect 66 0 68 0;
+#X connect 67 0 65 0;
+#X connect 67 0 53 0;
+#X connect 68 0 67 0;
+#X connect 68 0 65 0;
+#X connect 69 0 32 0;
+#X connect 70 0 30 0;
 #X coords 0 -1 1 1 500 50 1 100 400;

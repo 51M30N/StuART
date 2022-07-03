@@ -2,11 +2,11 @@
 #X obj 101 201 cnv 15 148 298 empty empty master 5 6 2 10 -203904 -66577
 0;
 #X obj 138 373 tgl 20 0 toggle_rec_faderdmx toggle_rec_faderdmxM rec_faderdmx
-22 10 0 12 -257985 -260097 -1 0 1;
+22 10 0 12 -257985 -260097 -1 1 1;
 #X obj 138 393 tgl 20 0 toggle_out_faderdmx toggle_out_faderdmxM out_faderdmx
-22 10 0 12 -260097 -262130 -1 0 1;
+22 10 0 12 -260097 -262130 -1 1 1;
 #X obj 138 353 tgl 20 0 Live_Mode Live_ModeM Live_Mode 22 10 0 12 -4032
--1 -1 0 1;
+-1 -1 1 1;
 #X obj 138 455 bng 20 250 50 0 Store_fdmx Store_fdmxM Store_fdmx 22
 10 0 12 -258113 -4034 -1;
 #X obj 202 663 s globaltime;
@@ -15,7 +15,7 @@
 #X obj 138 434 bng 20 250 50 0 SET_fader empty SET_fader 22 10 0 10
 -4160 -258113 -1;
 #X obj 138 413 tgl 20 0 COLOR_FADER COLOR_FADERM COLOR_FADER 22 10
-0 12 -159808 -262144 -1 0 1;
+0 12 -159808 -262144 -1 1 1;
 #X msg 563 281 \; Live_ModeM 1 \; toggle_out_faderdmxM 1 \; toggle_rec_faderdmxM
 0 \; COLOR_FADERM 0 \;;
 #X obj 73 690 r SELECT;
@@ -75,9 +75,9 @@
 #X obj 376 91 + 14;
 #X obj 406 91 + 21;
 #X obj 445 91 + 35;
-#X obj 102 229 cnv 15 90 15 empty cnv_time_SELECT_master f-time=0s
+#X obj 102 229 cnv 15 90 15 empty cnv_time_SELECT_master f-time=19s
 2 8 2 14 -13381 -261682 0;
-#X obj 102 245 cnv 15 90 15 empty cnv_level_SELECT_master level=-2
+#X obj 102 245 cnv 15 90 15 empty cnv_level_SELECT_master level=164
 2 8 2 14 -45076 -232576 0;
 #X obj 45 108 r level_0_SELECT_master;
 #X obj 65 128 r level_128_SELECT_master;
@@ -111,8 +111,8 @@ adddollar 1 \, adddollar 2 \, add;
 #X obj 73 713 list;
 #X obj 272 12 r direct_time_SELECT_master;
 #X obj 498 10 r direct_level_SELECT_master;
-#X obj 138 476 tgl 20 1 Kill-time-M empty Kill-time 22 10 0 10 -204786
--258113 -1 1 1;
+#X obj 138 476 tgl 20 1 Kill-time-M Kill-time-MM Kill-time 22 10 0
+10 -204786 -258113 -1 1 1;
 #X connect 6 0 5 0;
 #X connect 6 0 18 0;
 #X connect 7 0 67 0;
