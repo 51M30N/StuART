@@ -1,5 +1,5 @@
 #N canvas 621 246 1027 650 10;
-#X obj 101 101 cnv 15 198 248 empty cnv_FX-RAMP-editor SELECTED 2 10
+#X obj 101 101 cnv 15 198 248 empty cnv_FX-RAMP-editor 44fader 2 10
 0 12 -203904 -66577 0;
 #X obj 103 416 tgl 15 0 FX-ramp-toogle empty FX-ramp-toogle 17 7 0
 10 -262144 -1 -1 0 1;
@@ -10,19 +10,19 @@ Dlay loop \;;
 #X obj 389 190 prepend;
 #X obj 428 332 s to_control_f-dmx;
 #X msg 137 -69 255 55 500 1500 1100 0;
-#X obj 159 315 tgl 15 0 empty empty loop -26 7 0 10 -262144 -1 -1 0
+#X obj 159 315 tgl 15 0 empty empty loop -26 7 0 10 -262144 -1 -1 1
 1;
 #X obj 350 331 send to_cue;
 #X obj 159 147 vsl 15 128 0 255 0 0 empty empty empty 0 -9 0 10 -4160
 -4032 -1 0 1;
 #X obj 766 171 * 1000;
 #X obj 199 147 vsl 15 128 0.001 60 1 0 empty empty empty 0 -9 0 10
--260097 -262144 -1 0 1;
+-260097 -262144 -1 7974 1;
 #X floatatom 199 280 5 0.001 3600 1 up_time/s - -;
 #X msg 766 143 set \$1;
 #X obj 856 171 * 1000;
 #X obj 215 147 vsl 15 128 0.001 60 1 0 empty empty empty 0 -9 0 10
--260097 -262144 -1 0 1;
+-260097 -262144 -1 7974 1;
 #X floatatom 199 297 5 0.001 3600 1 down_time/s - -;
 #X msg 856 143 set \$1;
 #X obj 956 171 * 1000;
@@ -33,7 +33,7 @@ Dlay loop \;;
 #X floatatom 159 280 5 0 255 0 min_value - -;
 #X msg 616 143 set \$1;
 #X obj 175 147 vsl 15 128 0 255 0 0 empty empty empty 0 -9 0 10 -4160
--4032 -1 0 1;
+-4032 -1 12700 1;
 #X floatatom 159 297 5 0 255 0 max_value - -;
 #X msg 706 143 set \$1;
 #X obj 956 224 t b f;
@@ -47,7 +47,7 @@ Dlay loop \;;
 #X obj 956 194 int;
 #X obj 856 194 int;
 #X obj 766 194 int;
-#X obj 684 293 print FX-RAMP;
+#X obj 664 303 print FX-RAMP;
 #X obj 103 119 bng 15 250 50 0 empty KillAll-FX KillAll-FX 17 7 0 10
 -258113 -1 -1;
 #X obj 103 390 int 0;
@@ -96,7 +96,6 @@ Dlay loop \;;
 #X connect 32 0 33 0;
 #X connect 32 1 33 5;
 #X connect 33 0 5 0;
-#X connect 33 0 39 0;
 #X connect 34 0 23 0;
 #X connect 35 0 26 0;
 #X connect 36 0 28 0;

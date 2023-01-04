@@ -1,0 +1,12 @@
+#N canvas 684 252 450 633 10;
+#X obj 101 101 palette1 \$1-1;
+#X obj 101 152 palette1 \$1-2;
+#X obj 101 203 palette1 \$1-3;
+#X obj 101 254 palette1 \$1-4;
+#X obj 101 305 palette1 \$1-5;
+#X obj 101 356 palette1 \$1-6;
+#X obj 101 407 palette1 \$1-7;
+#X obj 101 458 palette1 \$1-8;
+#X obj 101 509 palette1 \$1-9;
+#X obj 101 560 palette1 \$1-10;
+#X coords 0 -1 1 1 152 511 1 100 100;

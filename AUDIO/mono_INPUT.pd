@@ -119,6 +119,7 @@
 #X msg 895 62 \; gain-numerique-\$1 label gain-numerique-\$1=\$2;
 #X obj 728 28 r globaltimeaudio;
 #X obj 538 890 list prepend;
+#X obj 64 421 send AudioLevelMobmuplat-\$1;
 #X connect 1 0 40 0;
 #X connect 1 0 41 0;
 #X connect 1 0 70 0;
@@ -139,6 +140,7 @@
 #X connect 18 1 75 1;
 #X connect 19 0 13 0;
 #X connect 19 1 75 2;
+#X connect 20 0 104 0;
 #X connect 20 1 26 0;
 #X connect 21 1 6 0;
 #X connect 22 0 8 0;
