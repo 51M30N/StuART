@@ -1,7 +1,6 @@
 #N canvas 31 280 998 800 10;
 #X obj 100 100 cnv 15 799 300 empty empty HEADER_StuART 5 8 2 10 -4160
 -162280 0;
-#X obj 100 113 XBEE/XBEE_box 1;
 #N canvas 8 92 1680 966 tocontrolcnv_COMPORT 0;
 #X obj 949 496 cnv 15 200 150 empty empty empty 20 12 0 14 -232576
 -66577 0;
@@ -40,7 +39,8 @@
 #X obj 647 695 loadbang;
 #X obj 565 665 list;
 #X floatatom 617 795 5 0 0 0 LOG_OUT_size LOG_OUT_size -;
-#X msg 961 608 \; SALLE6 16 10000;
+#X msg 961 608 \; player_8 /home/pi/Music/divers/Martine_fantome.wav
+1024 0 0 0;
 #X obj 1237 711 loadbang;
 #X obj 1183 701 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
@@ -279,7 +279,19 @@ audio_Print \$5 \; goto_Local \$1 \; goto_OSC_CTRL \$2 \; goto_OSC_EXEC
 \$4 \; aplay_Print \$5 \; f-SELECT_Local \$1 \; f-SELECT_OSC_CTRL \$2
 \; f-SELECT_OSC_EXEC \$3 \; f-SELECT_Xbee \$4 \; f-SELECT_Print \$5
 \; gpio_Local \$1 \; gpio_OSC_CTRL \$2 \; gpio_OSC_EXEC \$3 \; gpio_Xbee
-\$4 \; gpio_Print \$5 \;;
+\$4 \; gpio_Print \$5 \; audio_Local \$1 \; audio_OSC_CTRL \$2 \; audio_OSC_EXEC
+\$3 \; audio_Xbee \$4 \; audio_Print \$5 \; goto_Local \$1 \; goto_OSC_CTRL
+\$2 \; goto_OSC_EXEC \$3 \; goto_Xbee \$4 \; goto_Print \$5 \; InCue_Local
+\$1 \; InCue_OSC_CTRL \$2 \; InCue_OSC_EXEC \$3 \; InCue_Xbee \$4 \;
+InCue_Print \$5 \; midi_Local \$1 \; midi_OSC_CTRL \$2 \; midi_OSC_EXEC
+\$3 \; midi_Xbee \$4 \; midi_Print \$5 \; f-dmx_Local \$1 \; f-dmx_OSC_CTRL
+\$2 \; f-dmx_OSC_EXEC \$3 \; f-dmx_Xbee \$4 \; f-dmx_Print \$5 \; set-dmx_Local
+\$1 \; set-dmx_OSC_CTRL \$2 \; set-dmx_OSC_EXEC \$3 \; set-dmx_Xbee
+\$4 \; set-dmx_Print \$5 \; aplay_Local \$1 \; aplay_OSC_CTRL \$2 \;
+aplay_OSC_EXEC \$3 \; aplay_Xbee \$4 \; aplay_Print \$5 \; f-SELECT_Local
+\$1 \; f-SELECT_OSC_CTRL \$2 \; f-SELECT_OSC_EXEC \$3 \; f-SELECT_Xbee
+\$4 \; f-SELECT_Print \$5 \; gpio_Local \$1 \; gpio_OSC_CTRL \$2 \;
+gpio_OSC_EXEC \$3 \; gpio_Xbee \$4 \; gpio_Print \$5 \;;
 #X msg 332 355 set \, add;
 #X obj 305 330 t b b;
 #X obj 108 317 bng 15 250 50 0 empty empty Edit_command 17 7 0 10 -257985
@@ -314,5 +326,5 @@ audio_Print \$5 \; goto_Local \$1 \; goto_OSC_CTRL \$2 \; goto_OSC_EXEC
 #X obj 707 586 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
 #X obj 100 400 CueLoader/SceneLoader_V2;
-#X connect 8 0 5 0;
+#X connect 7 0 4 0;
 #X coords 0 -1 1 1 800 200 1 100 280;
