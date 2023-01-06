@@ -1,16 +1,16 @@
-#N canvas -6 377 1368 604 10;
-#X obj 296 44 OSC/OSCreceiver 54321 fromPhone;
-#X obj 296 481 OSC/OSCsender 255.255.255.255 54322 to_phone;
-#X msg 552 465 connect 192.168.10.102 54322;
-#X msg 296 337 /LAbelGOER-\$1 \$2;
-#X msg 553 500 connect 192.168.10.100 54322;
-#X obj 406 337 r labelGoer;
-#X obj 868 208 route loveisall fantomes;
-#X obj 868 150 OSC/OSCreceiver 5560 macbook;
-#X obj 868 186 route /qlabtostuart;
-#X obj 938 248 s bang-fantomes;
-#X obj 868 266 s bang-loveisall;
-#X obj 1009 230 send to_control_goto;
+#N canvas 272 339 1368 604 10;
+#X obj 342 71 OSC/OSCreceiver 54321 fromPhone;
+#X obj 342 508 OSC/OSCsender 255.255.255.255 54322 to_phone;
+#X msg 598 492 connect 192.168.10.102 54322;
+#X msg 342 364 /LAbelGOER-\$1 \$2;
+#X msg 599 527 connect 192.168.10.100 54322;
+#X obj 452 364 r labelGoer;
+#X obj 946 147 route loveisall fantomes;
+#X obj 946 89 OSC/OSCreceiver 5560 macbook;
+#X obj 946 125 route /qlabtostuart;
+#X obj 1016 187 s bang-fantomes;
+#X obj 946 205 s bang-loveisall;
+#X obj 1087 169 send to_control_goto;
 #N canvas 18 103 1191 467 _resend-mobmuplat 0;
 #X obj 37 37 inlet;
 #X obj 37 80 route /resend;
@@ -84,7 +84,7 @@
 #X connect 27 0 29 0;
 #X connect 28 0 22 0;
 #X connect 29 0 22 0;
-#X restore 296 423 pd _resend-mobmuplat;
+#X restore 342 450 pd _resend-mobmuplat;
 #N canvas 934 420 773 373 AudioLevel-mobmuplat 0;
 #X obj 31 91 / 1024;
 #X obj 91 91 / 1024;
@@ -151,7 +151,7 @@
 #X connect 26 1 27 1;
 #X connect 27 0 8 0;
 #X connect 28 0 27 0;
-#X restore 296 395 pd AudioLevel-mobmuplat;
+#X restore 342 422 pd AudioLevel-mobmuplat;
 #N canvas 179 289 885 560 GOER-Label 0;
 #X obj 5 31 route /GOER;
 #X obj 5 54 unpack f f f;
@@ -239,7 +239,7 @@
 #X connect 38 0 34 0;
 #X connect 38 1 36 0;
 #X connect 40 0 37 0;
-#X restore 296 164 pd GOER-Label;
+#X restore 342 191 pd GOER-Label;
 #N canvas 0 50 450 300 mobmulat-data-cues 0;
 #X obj 118 101 prepend /OnStage;
 #X obj 118 78 r LOADED_CUE;
@@ -258,7 +258,7 @@
 #X connect 5 0 8 0;
 #X connect 6 0 7 0;
 #X connect 7 0 8 0;
-#X restore 296 365 pd mobmulat-data-cues;
+#X restore 342 392 pd mobmulat-data-cues;
 #N canvas 295 108 695 880 mobmulat-audio-control 0;
 #X obj 88 44 inlet;
 #X obj 411 76 outlet;
@@ -337,7 +337,7 @@
 #X connect 34 1 37 0;
 #X connect 36 0 35 0;
 #X connect 37 0 35 1;
-#X restore 296 135 pd mobmulat-audio-control;
+#X restore 342 162 pd mobmulat-audio-control;
 #N canvas 0 50 450 300 mobmuplat-DMX 0;
 #X obj 74 65 route /SET_DMX;
 #X obj 74 88 s SET_DMX;
@@ -346,8 +346,8 @@
 #X connect 0 0 1 0;
 #X connect 0 1 3 0;
 #X connect 2 0 0 0;
-#X restore 296 196 pd mobmuplat-DMX;
-#N canvas 664 268 425 727 mobmulat-light-control 0;
+#X restore 342 223 pd mobmuplat-DMX;
+#N canvas 664 298 425 727 mobmulat-light-control 0;
 #X obj 47 22 inlet;
 #X obj 296 68 outlet;
 #X obj 47 52 route /LightTime /LightLevel;
@@ -407,20 +407,20 @@
 #X connect 27 0 19 0;
 #X connect 28 0 20 0;
 #X connect 29 0 21 0;
-#X restore 296 228 pd mobmulat-light-control;
-#X obj 296 79 route /LoadBang;
-#X text 533 80 envoie les données de GOER-Label au lancement e l'App
+#X restore 342 255 pd mobmulat-light-control;
+#X obj 342 106 route /LoadBang;
+#X text 442 105 envoie les données de GOER-Label au lancement e l'App
 ;
-#X text 409 197 dmxtest univers 1;
-#X text 464 133 les données audio LOADCUE sont envoyés à l'App;
-#X text 466 226 l'App envoie les données pour 8 Light-GROUP-\$1;
-#X text 449 394 les données audio LOADCUE sont envoyés à l'App;
-#X text 435 423 mod delay \, les donnnées OnStage sont envoyés en
+#X text 455 224 dmxtest univers 1;
+#X text 510 160 les données audio LOADCUE sont envoyés à l'App;
+#X text 512 253 l'App envoie les données pour 8 Light-GROUP-\$1;
+#X text 495 421 les données audio LOADCUE sont envoyés à l'App;
+#X text 481 450 mod delay \, les donnnées OnStage sont envoyés en
 boucle;
-#X text 429 366 envoi des données OnStage;
-#X text 502 337 le [text define -k MobMuPlat-Goer] definit les boutons
+#X text 475 393 envoi des données OnStage;
+#X text 548 364 le [text define -k MobMuPlat-Goer] definit les boutons
 de l'App, f 64;
-#X text 390 165 le [text define -k MobMuPlat-Goer] definit les bouton
+#X text 436 192 le [text define -k MobMuPlat-Goer] definit les bouton
 de l'App, f 63;
 #N canvas 0 50 450 300 GoGo+Go- 0;
 #X obj 85 16 inlet;
@@ -440,15 +440,39 @@ de l'App, f 63;
 #X connect 6 0 4 0;
 #X connect 7 0 2 0;
 #X connect 8 0 3 0;
-#X restore 296 110 pd GoGo+Go-;
-#X text 376 110 Gestion Go Go+ Go-;
-#X text 866 129 MaLP input GLab;
-#X text 291 23 INPUT;
-#X text 285 515 OUTPUT;
+#X restore 342 137 pd GoGo+Go-;
+#X text 422 137 Gestion Go Go+ Go-;
+#X text 944 68 MaLP input GLab;
+#X text 337 50 INPUT;
+#X text 331 542 OUTPUT;
 #X obj 101 101 cnv 15 168 38 empty empty MobMuPlat/MobMuPlat-master
 5 6 0 10 -228856 -162280 0;
 #X obj 103 122 bng 15 250 50 0 Send-Label-GOer empty Send-Label-GOer
 17 7 0 10 -4034 -258113 -1;
+#N canvas 28 201 450 300 mobmulat-midi 0;
+#X obj 104 5 inlet;
+#X obj 104 29 route /midi;
+#X obj 104 53 s midi;
+#X obj 201 45 outlet;
+#X connect 0 0 1 0;
+#X connect 1 0 2 0;
+#X connect 1 1 3 0;
+#X restore 342 285 pd mobmulat-midi;
+#N canvas 28 201 823 162 mobmulat-Hutopi 0;
+#X obj 104 5 inlet;
+#X obj 252 45 outlet;
+#X obj 104 69 send Hutopi-HID;
+#X obj 104 29 route /hutopi-hid;
+#X connect 0 0 3 0;
+#X connect 3 0 2 0;
+#X connect 3 1 1 0;
+#X restore 342 314 pd mobmulat-Hutopi;
+#X text 463 286 l'App envoie les données midi d'un peripherique connecté
+;
+#X text 465 317 l'App envoie les boutons d'un HID connecte su le periherique
+;
+#X text 94 144 la cible doit etre dans un abstrac local pd Local-MobMuPlat-master
+, f 28;
 #X connect 0 0 19 0;
 #X connect 2 0 1 1;
 #X connect 3 0 1 0;
@@ -465,7 +489,9 @@ de l'App, f 63;
 #X connect 15 0 1 0;
 #X connect 16 0 14 0;
 #X connect 17 0 18 0;
+#X connect 18 0 36 0;
 #X connect 19 0 35 0;
 #X connect 19 1 29 0;
 #X connect 29 0 16 0;
+#X connect 36 0 37 0;
 #X coords 0 -1 1 1 170 40 1 100 100;
