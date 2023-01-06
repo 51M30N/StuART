@@ -64,6 +64,12 @@
 #X obj 101 154 t b b;
 #X msg 168 184 0;
 #X obj 141 155 t b b;
+#X obj 158 16 inlet;
+#X obj 571 9 inlet;
+#X text 620 9 Right inlet juste send;
+#X text 620 29 Left inlet send & add to Cue;
+#X obj 240 101 bng 10 250 50 0 empty empty empty 17 7 0 10 -4034 -258113
+-1;
 #X connect 1 0 25 0;
 #X connect 2 0 22 0;
 #X connect 2 1 22 1;
@@ -111,10 +117,13 @@
 #X connect 44 0 41 0;
 #X connect 45 0 20 0;
 #X connect 45 1 24 0;
+#X connect 45 2 54 0;
 #X connect 46 0 47 0;
 #X connect 47 0 45 0;
 #X connect 47 1 42 0;
 #X connect 48 0 38 0;
 #X connect 49 0 33 0;
 #X connect 49 1 48 0;
+#X connect 50 0 46 0;
+#X connect 51 0 37 0;
 #X coords 0 -1 1 1 150 50 1 100 100;

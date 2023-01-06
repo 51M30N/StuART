@@ -1,4 +1,4 @@
-#N canvas 192 400 886 546 10;
+#N canvas 718 369 444 392 10;
 #X obj 26 332 send to_cue;
 #X obj 26 307 prepend notes;
 #X obj 67 238 r notes;
@@ -8,19 +8,19 @@
 #X obj 26 58 t b a;
 #X obj 26 11 bng 15 250 50 0 empty Clear-Notes Clear-Notes 17 7 0 10
 -260097 -257985 -1;
-#X obj 406 254 text define notes;
-#X obj 367 282 text set notes;
-#X msg 26 194 neazazazeazeaze vrac;
-#X obj 367 254 list;
-#X msg 406 227 click;
-#X obj 406 208 bng 15 250 50 0 empty Open-Notes Open-Notes 17 7 0 10
+#X obj 276 254 text define notes;
+#X obj 237 282 text set notes;
+#X msg 26 194 no-Notes;
+#X obj 237 254 list;
+#X msg 276 227 click;
+#X obj 276 208 bng 15 250 50 0 empty Open-Notes Open-Notes 17 7 0 10
 -4034 -258113 -1;
-#X obj 406 178 prepend set;
-#X obj 406 155 text get notes;
-#X msg 406 105 0;
-#X floatatom 406 128 5 0 0 0 - - -;
-#X obj 379 79 t b b;
-#X obj 379 58 bng 15 250 50 0 empty STORE-notes STORE-notes 17 7 0
+#X obj 276 178 prepend set;
+#X obj 276 155 text get notes;
+#X msg 276 105 0;
+#X floatatom 276 128 5 0 0 0 - - -;
+#X obj 249 79 t b b;
+#X obj 249 58 bng 15 250 50 0 empty STORE-notes STORE-notes 17 7 0
 10 -258113 -4034 -1;
 #X msg 26 34 set no-Notes;
 #X obj 101 101 cnv 15 98 78 empty empty MobMuPlat/Notes 3 10 0 10 -162280
