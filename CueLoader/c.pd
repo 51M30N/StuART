@@ -2,7 +2,7 @@
 #X obj 101 101 cnv 15 198 48 empty canvas goto>\$1 1 7 2 14 -204786
 -159808 0;
 #X text 7 3 -arg1 cue_name -arg2 midi_toogle;
-#X obj 100 115 bng 35 250 50 0 empty empty nope 36 5 0 10 -4034 -257985
+#X obj 100 115 bng 35 250 50 0 empty empty empty 36 5 0 10 -4034 -257985
 -260097;
 #X obj 138 127 bng 10 250 50 0 empty empty Edit 12 5 0 10 -257985 -1
 -191407;
@@ -16,7 +16,7 @@
 #X msg 16 594 label \$1;
 #X obj 16 616 s next-\$1;
 #X obj 111 606 s bang-\$1;
-#X obj 136 140 cnv 10 140 10 empty next-\$1 s0_noir 1 5 1 11 -159808
+#X obj 136 140 cnv 10 140 10 empty next-\$1 empty 1 5 1 11 -159808
 -204786 0;
 #X obj 13 170 symbol \$1;
 #X obj 510 321 r SHOW;
