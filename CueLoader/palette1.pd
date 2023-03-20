@@ -1,4 +1,4 @@
-#N canvas 47 373 1592 729 10;
+#N canvas 114 164 1592 729 10;
 #X obj 101 101 cnv 15 148 48 empty empty palett-\$1 3 7 0 14 -4034
 -4160 0;
 #X obj 84 11 r to_cue;
@@ -6,7 +6,7 @@
 #C restore;
 #X obj 84 311 cyclone/prepend store;
 #X msg 1071 364 set \$1;
-#X obj 909 259 t b a a b;
+#X obj 909 279 t b a a b;
 #X obj 909 311 bang;
 #X msg 926 338 write \$1;
 #X obj 415 322 bng 15 250 50 0 empty empty Open_palette-\$1 17 7 0
@@ -15,18 +15,18 @@
 #X msg 861 381 /home/pi/Documents/_SHO/palette/palette-1-1;
 #X obj 244 322 bng 15 250 50 0 empty empty clear-palette-\$1 17 7 0
 10 -260097 -1 -1;
-#X msg 670 195 set \$1;
-#X obj 909 234 makefilename;
+#X msg 670 215 set \$1;
+#X obj 909 254 makefilename;
 #X obj 669 75 r SHOW;
 #X obj 669 97 symbol;
 #X obj 669 121 makefilename /home/pi/Documents/_%s/palette/%%s;
 #X obj 669 144 send CHEMIN-\$0;
-#X obj 670 167 r CHEMIN-\$0;
+#X obj 670 187 r CHEMIN-\$0;
 #X obj 260 526 qlist;
 #X msg 278 138 dump;
-#X obj 84 424 prepend add;
-#X obj 84 400 prepend;
-#X obj 173 396 bng 15 250 50 0 empty empty dump-qlist 17 7 0 10 -262144
+#X obj 84 474 prepend add;
+#X obj 84 450 prepend;
+#X obj 153 396 bng 15 250 50 0 empty empty dump-qlist 17 7 0 10 -262144
 -1 -1;
 #X msg 297 111 clear;
 #X obj 84 77 spigot;
@@ -38,14 +38,14 @@
 #X obj 670 349 symbol palette-\$1;
 #X obj 670 327 bng 15 250 50 0 empty read-palette-\$1 read-palette-\$1
 17 7 0 10 -262130 -1 -1;
-#X obj 909 204 symbol palette-\$1;
-#X obj 909 182 bng 15 250 50 0 empty empty store-palette-\$1 17 7 0
+#X obj 909 223 symbol palette-\$1;
+#X obj 909 171 bng 15 250 50 0 empty empty store-palette-\$1 17 7 0
 10 -258113 -1 -1;
-#X obj 670 218 t b a a;
+#X obj 670 238 t b a a;
 #X msg 244 338 clear;
 #X obj 202 119 bng 15 250 50 0 empty Open_palette-\$1 O 17 7 0 10 -257985
 -1 -1;
-#X obj 278 9 bng 30 250 50 0 empty send-palette-\$1 send-palette-\$1
+#X obj 278 25 bng 30 250 50 0 empty send-palette-\$1 send-palette-\$1
 3 15 0 10 -204786 -1 -258113;
 #X obj 141 119 tgl 15 0 empty listen-palette-\$1 Listen 17 7 0 10 -261234
 -1 -1 0 1;
@@ -70,9 +70,10 @@
 #X text 620 29 Left inlet send & add to Cue;
 #X obj 240 101 bng 10 250 50 0 empty empty empty 17 7 0 10 -4034 -258113
 -1;
+#X obj 107 426 prepend set;
 #X connect 1 0 25 0;
 #X connect 2 0 22 0;
-#X connect 2 1 22 1;
+#X connect 2 1 55 0;
 #X connect 2 3 23 0;
 #X connect 3 0 2 0;
 #X connect 4 0 10 0;
@@ -126,4 +127,5 @@
 #X connect 49 1 48 0;
 #X connect 50 0 46 0;
 #X connect 51 0 37 0;
+#X connect 55 0 22 0;
 #X coords 0 -1 1 1 150 50 1 100 100;

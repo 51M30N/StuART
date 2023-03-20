@@ -26,7 +26,7 @@
 #X obj 330 785 print to_control;
 #X obj 1485 525 spigot;
 #X obj 1524 508 tgl 15 0 empty tcontrol_\$0 tcontrol_\$0 17 7 0 10
--262144 -1 -1 1 1;
+-262144 -1 -1 0 1;
 #X obj 975 535 spigot;
 #X obj 1014 518 tgl 15 0 empty cue_\$0 cue_\$0 17 7 0 10 -262144 -1
 -1 0 1;
@@ -38,9 +38,9 @@
 -1 -1 0 1;
 #X obj 1374 525 spigot;
 #X obj 1413 508 tgl 15 0 empty control_\$0 control_\$0 17 7 0 10 -262144
--1 -1 0 1;
-#X msg 1364 275 set \, add2 \$1 \, adddollar 1;
-#X obj 1364 250 symbol;
+-1 -1 1 1;
+#X msg 1364 315 set \, add2 \$1 \, adddollar 1;
+#X obj 1364 290 symbol;
 #X obj 390 176 t a a b;
 #X msg 423 69 control TESTcontrol;
 #X msg 423 40 cue TESTcur;
@@ -64,7 +64,7 @@
 #X msg 959 625;
 #X msg 1125 618;
 #X msg 1245 644;
-#X msg 1364 621;
+#X msg 1364 621 pattern_4x3ch \$1;
 #X msg 1475 613;
 #X obj 661 261 \$0;
 #X obj 770 261 \$0;
@@ -92,14 +92,15 @@
 1;
 #X obj 1184 67 unpack;
 #X obj 1475 197 list split 1;
-#X obj 1475 222 cyclone/prepend;
-#X obj 1485 252 route list symbol;
-#X obj 1487 302 list;
+#X obj 1475 263 cyclone/prepend;
+#X obj 1475 292 route list symbol;
+#X obj 1474 342 list;
 #X msg 1475 355 set \, add2 \$2 \, add2 \$1;
 #X msg 1485 375 set \, add2 \$1 \, add2 1;
 #X obj 335 134 route cue control fader repatch tcontrol clear;
 #X obj 577 433 symbol empty;
 #X msg 734 39 clear;
+#X obj 1509 230 cyclone/prepend set;
 #X connect 0 0 6 0;
 #X connect 3 0 2 0;
 #X connect 3 1 19 0;
@@ -187,7 +188,7 @@
 #X connect 75 0 84 0;
 #X connect 76 0 74 1;
 #X connect 78 0 79 0;
-#X connect 78 1 79 1;
+#X connect 78 1 87 0;
 #X connect 79 0 80 0;
 #X connect 80 0 81 0;
 #X connect 80 1 83 0;
@@ -205,4 +206,5 @@
 #X connect 85 0 4 0;
 #X connect 86 0 84 0;
 #X connect 86 0 74 0;
+#X connect 87 0 79 0;
 #X coords 0 -1 1 1 500 15 1 100 500;
