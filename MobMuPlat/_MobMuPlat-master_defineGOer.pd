@@ -5,8 +5,12 @@
 #X obj 132 204 send labelGoer;
 #X obj 132 101 r patch-mobmuplat-label-\$1;
 #X obj 80 59 inlet;
+#X obj 240 179 prepend set;
+#X msg 240 202;
 #X connect 1 0 3 0;
 #X connect 1 1 2 0;
 #X connect 2 0 0 1;
+#X connect 2 0 6 0;
 #X connect 4 0 1 0;
 #X connect 5 0 0 0;
+#X connect 6 0 7 0;

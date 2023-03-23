@@ -1,6 +1,6 @@
-#N canvas 288 62 1091 936 10;
+#N canvas 208 144 1091 936 10;
 #X obj 301 266 vsl 48 256 0 255 0 0 empty empty \$2 0 10 1 9 -1 -24198
--24198 0 1;
+-24198 20600 1;
 #X obj 107 709 loadbang;
 #X obj 107 740 \$1;
 #X obj 86 792 pack;
@@ -14,15 +14,15 @@
 #X obj 353 956 send to_cue;
 #X obj 12 64 r \$2;
 #X obj 350 265 vradio 10 1 0 26 empty empty empty 0 -8 0 10 -260097
--4032 -1 12.7;
+-4032 -1 5;
 #X obj 350 147 / 1000;
 #X obj 350 169 int;
 #X obj 414 251 r globaltime;
 #X obj 439 843 cyclone/prepend \$2;
 #X obj 512 899 tgl 15 0 empty toggle_rec_faderdmx-\$0 rec_faderdmx-\$0
-17 7 0 10 -257985 -260097 -1 1 1;
+17 7 0 10 -257985 -260097 -1 0 1;
 #X obj 119 651 tgl 15 0 empty toggle_out_faderdmx-\$0 toggle_out_faderdmx-\$0
-17 7 0 10 -260097 -262130 -1 1 1;
+17 7 0 10 -260097 -262130 -1 0 1;
 #X obj 86 677 spigot;
 #X floatatom 300 250 4 0 0 1 Load - -;
 #X floatatom 650 523 3 0 0 1 out - -;
@@ -48,9 +48,9 @@
 #X obj 345 526 bng 15 250 50 0 SET_fader-\$0 SET_fader SET 17 8 1 8
 -4160 -258113 -1;
 #X obj 300 587 tgl 15 0 toggle_rec_faderdmx-\$0 toggle_rec_faderdmx
-REC 17 7 1 10 -257985 -260097 -1 1 1;
+REC 17 7 1 10 -257985 -260097 -1 0 1;
 #X obj 300 601 tgl 15 0 toggle_out_faderdmx-\$0 toggle_out_faderdmx
-OUT 17 7 1 10 -260097 -262130 -1 1 1;
+OUT 17 7 1 10 -260097 -262130 -1 0 1;
 #X obj 300 572 bng 15 250 50 0 Store_fdmx-\$0 Store_fdmx Store 17 7
 1 10 -258113 -4034 -1;
 #X obj 300 556 tgl 15 0 Live_Mode-\$0 Live_Mode LM 17 8 1 8 -4032 -1
@@ -77,7 +77,7 @@ OUT 17 7 1 10 -260097 -262130 -1 1 1;
 #X floatatom 231 68 5 0 0 0 - - -;
 #X obj 231 42 spigot;
 #X obj 101 102 tgl 15 0 empty COLOR_FADER COLOR_FADER 17 7 0 10 -159808
--262144 -1 1 1;
+-262144 -1 0 1;
 #X msg 299 227 color \$1 16 16;
 #X connect 0 0 11 0;
 #X connect 2 0 3 0;
@@ -359,6 +359,7 @@ loop = une fois ou toutes \;;
 #X obj 414 294 / 5;
 #X obj 414 317 int;
 #X obj 353 926 list prepend;
+#X obj 300 677 outlet;
 #X connect 0 0 22 0;
 #X connect 1 0 2 0;
 #X connect 2 0 32 0;
@@ -368,6 +369,7 @@ loop = une fois ou toutes \;;
 #X connect 8 0 0 0;
 #X connect 9 0 21 0;
 #X connect 9 0 81 1;
+#X connect 9 0 103 0;
 #X connect 9 1 14 0;
 #X connect 10 0 17 0;
 #X connect 12 0 50 0;

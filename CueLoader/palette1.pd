@@ -1,65 +1,62 @@
-#N canvas 114 164 1592 729 10;
-#X obj 101 101 cnv 15 148 48 empty empty palett-\$1 3 7 0 14 -4034
+#N canvas 152 301 1592 729 10;
+#X obj 101 101 cnv 15 148 48 empty palett-\$1 palett-\$1 3 7 0 14 -4034
 -4160 0;
 #X obj 84 11 r to_cue;
 #X obj 84 354 cyclone/coll;
 #C restore;
 #X obj 84 311 cyclone/prepend store;
-#X msg 1071 364 set \$1;
-#X obj 909 279 t b a a b;
-#X obj 909 311 bang;
-#X msg 926 338 write \$1;
+#X msg 1251 364 set \$1;
+#X obj 1089 279 t b a a b;
+#X obj 1089 311 bang;
+#X msg 1106 338 write \$1;
 #X obj 415 322 bng 15 250 50 0 empty empty Open_palette-\$1 17 7 0
 10 -257985 -1 -1;
 #X msg 415 338 open;
-#X msg 861 381 /home/pi/Documents/_SHO/palette/palette-1-1;
+#X msg 1041 381 /home/pi/Documents/_SHO/palette/palette-COLOR-1;
 #X obj 244 322 bng 15 250 50 0 empty empty clear-palette-\$1 17 7 0
 10 -260097 -1 -1;
-#X msg 670 215 set \$1;
-#X obj 909 254 makefilename;
-#X obj 669 75 r SHOW;
-#X obj 669 97 symbol;
-#X obj 669 121 makefilename /home/pi/Documents/_%s/palette/%%s;
-#X obj 669 144 send CHEMIN-\$0;
-#X obj 670 187 r CHEMIN-\$0;
-#X obj 260 526 qlist;
+#X msg 850 215 set \$1;
+#X obj 1089 254 makefilename;
+#X obj 849 75 r SHOW;
+#X obj 849 97 symbol;
+#X obj 849 121 makefilename /home/pi/Documents/_%s/palette/%%s;
+#X obj 849 144 send CHEMIN-\$0;
+#X obj 850 187 r CHEMIN-\$0;
+#X obj 265 586 qlist;
 #X msg 278 138 dump;
-#X obj 84 474 prepend add;
-#X obj 84 450 prepend;
 #X obj 153 396 bng 15 250 50 0 empty empty dump-qlist 17 7 0 10 -262144
 -1 -1;
 #X msg 297 111 clear;
 #X obj 84 77 spigot;
 #X obj 117 59 tgl 15 0 empty empty listen-palette-\$1 17 7 0 10 -261234
 -1 -1 0 1;
-#X obj 670 381 makefilename;
-#X msg 670 405 read \$1;
-#X obj 156 579 print qlint;
-#X obj 670 349 symbol palette-\$1;
-#X obj 670 327 bng 15 250 50 0 empty read-palette-\$1 read-palette-\$1
+#X obj 850 381 makefilename;
+#X msg 850 405 read \$1;
+#X obj -13 647 print qlint;
+#X obj 850 349 symbol palette-\$1;
+#X obj 850 327 bng 15 250 50 0 empty read-palette-\$1 read-palette-\$1
 17 7 0 10 -262130 -1 -1;
-#X obj 909 223 symbol palette-\$1;
-#X obj 909 171 bng 15 250 50 0 empty empty store-palette-\$1 17 7 0
-10 -258113 -1 -1;
-#X obj 670 238 t b a a;
+#X obj 1089 223 symbol palette-\$1;
+#X obj 1089 171 bng 15 250 50 0 empty empty store-palette-\$1 17 7
+0 10 -258113 -1 -1;
+#X obj 850 238 t b a a;
 #X msg 244 338 clear;
-#X obj 202 119 bng 15 250 50 0 empty Open_palette-\$1 O 17 7 0 10 -257985
+#X obj 202 128 bng 10 250 50 0 empty Open_palette-\$1 O 17 7 0 10 -257985
 -1 -1;
 #X obj 278 25 bng 30 250 50 0 empty send-palette-\$1 send-palette-\$1
 3 15 0 10 -204786 -1 -258113;
-#X obj 141 119 tgl 15 0 empty listen-palette-\$1 Listen 17 7 0 10 -261234
+#X obj 141 128 tgl 10 0 empty listen-palette-\$1 Listen 17 7 0 10 -261234
 -1 -1 0 1;
-#X obj 141 135 bng 15 250 50 0 empty store-palette-\$1 Store 17 7 0
+#X obj 141 140 bng 10 250 50 0 empty store-palette-\$1 Store 17 7 0
 10 -258113 -1 -1;
-#X obj 202 134 bng 15 250 50 0 empty clear-palette-\$1 Clear 17 7 0
+#X obj 202 139 bng 10 250 50 0 empty clear-palette-\$1 Clear 17 7 0
 10 -260097 -1 -1;
-#X obj 335 565 prepend send-palette-\$1;
-#X obj 335 520 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+#X obj 340 655 prepend send-palette-\$1;
+#X obj 459 588 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
-#X obj 335 587 s to_cue;
-#X msg 335 540 1;
-#X obj 278 82 t b b b;
-#X obj 101 119 bng 30 250 50 0 empty bang-palette-\$1 Send 3 15 0 10
+#X obj 340 677 s to_cue;
+#X msg 340 630 1;
+#X obj 101 124 bng 25 250 50 0 empty bang-palette-\$1 Send 3 15 0 10
 -204786 -1 -258113;
 #X obj 101 154 t b b;
 #X msg 168 184 0;
@@ -70,22 +67,58 @@
 #X text 620 29 Left inlet send & add to Cue;
 #X obj 240 101 bng 10 250 50 0 empty empty empty 17 7 0 10 -4034 -258113
 -1;
-#X obj 107 426 prepend set;
-#X connect 1 0 25 0;
-#X connect 2 0 22 0;
-#X connect 2 1 55 0;
-#X connect 2 3 23 0;
+#X floatatom 656 429 10 0 10000 0 tempo-palette-#1 - -;
+#X obj 610 579 s bang-palette-\$1;
+#X msg 610 547 label Send;
+#X msg 690 547 label \$1s;
+#X obj 359 528 list append;
+#X obj 453 512 * 1000;
+#X obj 38 546 list prepend;
+#X obj 38 570 prepend add;
+#X obj 38 424 gate 2;
+#X obj 38 395 hradio 15 1 0 3 empty gate-palette-\$1 gate-palette-\$1
+0 -8 0 10 -262144 -1 -1 1;
+#X msg 347 76 1;
+#X obj 347 99 s gate-palette-\$1;
+#X obj 359 471 list split 1;
+#X obj 278 60 t b b;
+#X obj 278 82 t b b b;
+#X obj 656 451 t a a a b;
+#X obj 739 490 s gate-palette-\$1;
+#X msg 739 467 2;
+#X obj 500 655 prepend send-tempo-palette-\$1;
+#X msg 500 630 0;
+#X msg 500 597 set \$1;
+#X obj 426 614 gate 2;
+#X obj 426 561 hradio 15 1 0 3 empty gate-palette-\$1 gate-palette-\$1
+0 -8 0 10 -262144 -1 -1 1;
+#X floatatom 629 44 5 0 0 0 send-tempo-palette-#1 send-tempo-palette-#1
+-;
+#X obj 629 66 t b a;
+#X obj 104 115 hsl 100 8 0 99 0 0 empty empty time 104 4 0 10 -260097
+-257985 -1 0 1;
+#X obj 405 198 route 99;
+#X obj 405 221 t b b;
+#X text 472 198 99 met le send en mode coll only sans la tempo;
+#X obj 347 47 loadbang;
+#X floatatom 779 51 5 0 0 0 tempo-palette tempo-palette -;
+#X obj 712 74 bng 15 250 50 0 empty reset-palett-time reset-palett-time
+17 7 0 10 -262144 -1 -1;
+#X connect 1 0 23 0;
+#X connect 2 0 60 1;
+#X connect 2 1 58 1;
+#X connect 2 3 21 0;
 #X connect 3 0 2 0;
 #X connect 4 0 10 0;
 #X connect 5 0 6 0;
 #X connect 5 1 7 0;
 #X connect 5 2 4 0;
-#X connect 6 0 31 0;
+#X connect 6 0 29 0;
 #X connect 7 0 2 0;
 #X connect 8 0 9 0;
 #X connect 9 0 2 0;
-#X connect 11 0 35 0;
-#X connect 12 0 34 0;
+#X connect 11 0 33 0;
+#X connect 12 0 32 0;
 #X connect 13 0 5 0;
 #X connect 14 0 15 0;
 #X connect 15 0 16 0;
@@ -93,39 +126,72 @@
 #X connect 18 0 12 0;
 #X connect 20 0 2 0;
 #X connect 21 0 19 0;
-#X connect 22 0 21 0;
-#X connect 23 0 19 0;
-#X connect 24 0 19 0;
-#X connect 25 0 3 0;
-#X connect 26 0 25 1;
-#X connect 27 0 28 0;
-#X connect 28 0 2 0;
-#X connect 30 0 27 0;
+#X connect 22 0 19 0;
+#X connect 23 0 3 0;
+#X connect 24 0 23 1;
+#X connect 25 0 26 0;
+#X connect 26 0 2 0;
+#X connect 28 0 25 0;
+#X connect 29 0 28 0;
+#X connect 30 0 13 0;
 #X connect 31 0 30 0;
-#X connect 32 0 13 0;
-#X connect 33 0 32 0;
-#X connect 34 0 31 0;
-#X connect 34 1 13 0;
-#X connect 34 2 27 0;
-#X connect 35 0 2 0;
-#X connect 36 0 8 0;
-#X connect 37 0 45 0;
-#X connect 38 0 26 0;
-#X connect 39 0 49 0;
-#X connect 40 0 11 0;
-#X connect 41 0 43 0;
-#X connect 42 0 44 0;
-#X connect 44 0 41 0;
-#X connect 45 0 20 0;
-#X connect 45 1 24 0;
-#X connect 45 2 54 0;
-#X connect 46 0 47 0;
-#X connect 47 0 45 0;
-#X connect 47 1 42 0;
-#X connect 48 0 38 0;
-#X connect 49 0 33 0;
-#X connect 49 1 48 0;
-#X connect 50 0 46 0;
-#X connect 51 0 37 0;
-#X connect 55 0 22 0;
+#X connect 32 0 29 0;
+#X connect 32 1 13 0;
+#X connect 32 2 25 0;
+#X connect 33 0 2 0;
+#X connect 34 0 8 0;
+#X connect 35 0 65 0;
+#X connect 36 0 24 0;
+#X connect 37 0 46 0;
+#X connect 38 0 11 0;
+#X connect 39 0 41 0;
+#X connect 40 0 73 1;
+#X connect 42 0 39 0;
+#X connect 43 0 44 0;
+#X connect 44 0 66 0;
+#X connect 44 1 40 0;
+#X connect 45 0 36 0;
+#X connect 46 0 31 0;
+#X connect 46 1 45 0;
+#X connect 47 0 43 0;
+#X connect 48 0 35 0;
+#X connect 52 0 67 0;
+#X connect 54 0 53 0;
+#X connect 55 0 53 0;
+#X connect 56 0 58 0;
+#X connect 57 0 56 1;
+#X connect 58 0 59 0;
+#X connect 59 0 19 0;
+#X connect 60 0 58 0;
+#X connect 60 1 64 0;
+#X connect 61 0 60 0;
+#X connect 62 0 63 0;
+#X connect 64 0 56 0;
+#X connect 65 0 66 0;
+#X connect 65 1 62 0;
+#X connect 66 0 20 0;
+#X connect 66 1 22 0;
+#X connect 66 2 51 0;
+#X connect 67 0 72 0;
+#X connect 67 1 57 0;
+#X connect 67 2 55 0;
+#X connect 67 3 69 0;
+#X connect 69 0 68 0;
+#X connect 70 0 41 0;
+#X connect 71 0 70 0;
+#X connect 72 0 71 0;
+#X connect 73 0 42 0;
+#X connect 73 1 71 0;
+#X connect 74 0 73 0;
+#X connect 75 0 76 0;
+#X connect 76 0 66 0;
+#X connect 76 1 52 0;
+#X connect 77 0 78 0;
+#X connect 78 0 79 0;
+#X connect 78 1 52 0;
+#X connect 79 0 62 0;
+#X connect 79 1 54 0;
+#X connect 81 0 62 0;
+#X connect 82 0 52 0;
+#X connect 83 0 79 0;
 #X coords 0 -1 1 1 150 50 1 100 100;
