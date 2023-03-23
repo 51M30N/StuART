@@ -1,4 +1,4 @@
-#N canvas 44 115 742 852 10;
+#N canvas 674 173 742 852 10;
 #X obj 274 191 list;
 #X obj 274 8 r SHOW;
 #X obj 274 148 symbol;
@@ -9,9 +9,11 @@
 #X msg 375 226 SHO-1;
 #X obj 274 242 symbol;
 #X msg 274 219 \$2-\$1;
-#X msg 359 501;
-#X msg 359 447 add \, add2 to_control_f-SELECT fader_\$1 \, adddollar
-1 \, adddollar 2;
+#X msg 359 501 \; fader_RED_GBH3-10 \$1 \$2 \; fader_RED_GBH3-9 \$1
+\$2 \; fader_RED_GBH3-8 \$1 \$2 \; fader_RED_GBH3-7 \$1 \$2 \; fader_RED_GBH3-6
+\$1 \$2 \; fader_RED_GBH3-5 \$1 \$2 \; fader_RED_GBH3-4 \$1 \$2 \;
+fader_RED_GBH3-3 \$1 \$2 \; fader_RED_GBH3-2 \$1 \$2 \; fader_RED_GBH3-1
+\$1 \$2;
 #X obj 308 416 select NO;
 #X obj 342 385 list;
 #X msg 623 211 set;
@@ -30,36 +32,38 @@
 #X obj 274 31 t b a;
 #X floatatom 102 117 5 0 255 1 lvl - -;
 #X floatatom 157 117 3 0 255 1 t - -;
+#X msg 359 447 add \, add2 fader_\$1 \, adddollar 1 \, adddollar 2
+;
 #X connect 0 0 4 0;
 #X connect 0 0 9 0;
-#X connect 1 0 27 0;
-#X connect 2 0 18 0;
-#X connect 3 0 15 0;
+#X connect 1 0 26 0;
+#X connect 2 0 17 0;
+#X connect 3 0 14 0;
 #X connect 4 0 7 0;
-#X connect 5 0 17 0;
+#X connect 5 0 16 0;
 #X connect 6 0 5 0;
 #X connect 8 0 6 0;
 #X connect 9 0 8 0;
-#X connect 11 0 10 0;
-#X connect 12 1 11 0;
-#X connect 13 0 16 0;
-#X connect 14 0 10 0;
-#X connect 15 0 2 0;
-#X connect 15 1 14 0;
-#X connect 16 0 12 0;
-#X connect 16 1 13 0;
-#X connect 17 1 16 0;
-#X connect 18 0 0 0;
+#X connect 11 1 29 0;
+#X connect 12 0 15 0;
+#X connect 13 0 10 0;
+#X connect 14 0 2 0;
+#X connect 14 1 13 0;
+#X connect 15 0 11 0;
+#X connect 15 1 12 0;
+#X connect 16 1 15 0;
+#X connect 17 0 0 0;
+#X connect 18 0 27 0;
 #X connect 19 0 28 0;
-#X connect 20 0 29 0;
+#X connect 20 0 10 0;
 #X connect 21 0 10 0;
 #X connect 22 0 10 0;
-#X connect 23 0 10 0;
-#X connect 24 0 21 1;
-#X connect 25 0 26 0;
-#X connect 26 0 15 0;
-#X connect 27 0 25 0;
-#X connect 27 1 26 1;
-#X connect 28 0 21 0;
-#X connect 29 0 24 0;
+#X connect 23 0 20 1;
+#X connect 24 0 25 0;
+#X connect 25 0 14 0;
+#X connect 26 0 24 0;
+#X connect 26 1 25 1;
+#X connect 27 0 20 0;
+#X connect 28 0 23 0;
+#X connect 29 0 10 0;
 #X coords 0 -1 1 1 85 35 1 100 100;
