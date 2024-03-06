@@ -58,7 +58,7 @@
 #X obj 741 91 r port-\$0;
 #X floatatom 741 113 5 0 0 0 - - - 0;
 #X symbolatom 707 70 15 0 0 0 - - - 0;
-#X obj 0 0 cnv 15 199 29 empty cnv_\$0 To-D::Light_127.0.0.1:7000 2 8 1 10 #14e814 #3c50fc 0;
+#X obj 0 0 cnv 15 199 29 empty cnv_\$0 StuART_Board-7B_1RA_:8888 2 8 1 10 #fc2828 #3c50fc 0;
 #X obj 900 421 prepend \$0 \$3;
 #X obj 208 550 t b b;
 #X msg 823 108 connect 127.0.0.1 8888;
