@@ -1,0 +1,16 @@
+#N canvas -10 24 960 977 12;
+#X obj 102 218 s ESP-8266-OSC-WS2812B-PIXLED-SERIE-TIME-FADE-\$1;
+#X obj 108 125 hsl 256 20 0 60 0 0 empty empty FADE_TIME_(ms) -2 -10 0 12 #ff8300 #00ff04 #000000 0 1;
+#X floatatom 294 104 10 0 0 0 - - - 0;
+#X obj 105 158 * 1000;
+#X obj 105 183 int;
+#X msg 368 185 set \$1;
+#X obj 368 158 / 1000;
+#X connect 1 0 3 0;
+#X connect 2 0 6 0;
+#X connect 2 0 0 0;
+#X connect 3 0 4 0;
+#X connect 4 0 2 0;
+#X connect 5 0 1 0;
+#X connect 6 0 5 0;
+#X coords 0 -1 1 1 280 50 2 100 100;

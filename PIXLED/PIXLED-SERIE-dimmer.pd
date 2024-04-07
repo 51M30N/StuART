@@ -1,0 +1,10 @@
+#N canvas -10 24 960 977 12;
+#X obj 108 125 hsl 256 20 0 255 0 0 empty empty DIMMER -2 -10 0 12 #bbbbbb #00ff04 #000000 0 1;
+#X floatatom 294 104 10 0 255 0 - - - 0;
+#X msg 368 185 set \$1;
+#X obj 102 218 s ESP-8266-OSC-WS2812B-PIXLED-DIMMER-\$1;
+#X connect 0 0 1 0;
+#X connect 1 0 3 0;
+#X connect 1 0 2 0;
+#X connect 2 0 0 0;
+#X coords 0 -1 1 1 280 50 2 100 100;
