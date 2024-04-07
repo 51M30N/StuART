@@ -96,12 +96,12 @@
 #X floatatom 1178 675 5 0 0 0 time_next_\$0 time_next_\$0 - 0;
 #X floatatom 1178 660 5 0 0 0 time_\$0 time_\$0 - 0;
 #X floatatom 1308 660 1 0 0 0 link_\$0 link_\$0 - 0;
-#X obj 938 715 cnv 15 400 20 empty cnv_LOADED_CUE-\$0 ON_STAGE__s1.0 -132 10 1 20 #c4fcc4 #9c00fc 0;
-#X obj 938 734 cnv 15 400 40 empty cnv_next_next-\$0 NEXT__s2.0 -76 10 1 20 #9c00fc #c4fcc4 0;
-#X obj 818 734 bng 40 250 50 0 go_\$0 go_\$1 GO_1__gcvhjkhcgjcfhgj 43 30 1 20 #14e814 #fcfcfc #d8fcd8;
+#X obj 938 715 cnv 15 400 20 empty cnv_LOADED_CUE-\$0 ON_STAGE____ -132 10 1 20 #c4fcc4 #9c00fc 0;
+#X obj 938 734 cnv 15 400 40 empty cnv_next_next-\$0 NEXT____ -76 10 1 20 #9c00fc #c4fcc4 0;
+#X obj 818 734 bng 40 250 50 0 go_\$0 go_\$1 GO_1____ 43 30 1 20 #14e814 #fcfcfc #d8fcd8;
 #X obj 1318 774 tgl 20 0 LinkM LinkM_\$1 LinkM 22 10 1 15 #00f8fc #000000 #000000 0 1;
 #X obj 399 845 text define -k deroule-\$0;
-#A set s0.0 \; s1.0 \; s2.0 \; s1.0 \; s1.0 \; s0.0 \; s2.0 \; s0.0 \; s1.0 \; s2.0 \; s0.0 \; s1.0 \; s2.0 \; s0.0 \; s1.0 \; s2.0 \; s0.0 \; s1.0 \; s2.0 \; s0.0 \; s1.0 \;;
+#A set;
 #X obj 269 845 text set deroule-\$0;
 #X obj 1188 393 text delete deroule-\$0;
 #X obj 702 782 bng 15 250 50 0 OPEN_deroule\$0 OPEN_deroule OPEN_deroule 17 7 0 10 #00fc04 #000000 #000000;
@@ -146,6 +146,11 @@
 #X msg 1223 1015 \; cnv_next_next-\$1 label NEXT__\$2;
 #X msg 470 1021 \; go_\$5 label GO_1__\$4 \; time_next_\$1 \$2 \; link_next_\$1 \$3;
 #X obj 470 976 list prepend \$0;
+#X obj 1477 852 bng 18 250 50 0 empty empty raz 0 -9 0 10 #fcfcfc #000000 #000000;
+#X msg 1477 875 __;
+#X obj 1477 928 list append \$1;
+#X obj 1477 906 list prepend \$0;
+#X msg 1477 951 \; go_\$3 label GO_1__\$2 \; cnv_next_next-\$1 label NEXT__\$2 \; cnv_LOADED_CUE-\$1 label ON_STAGE__\$2 \; link_\$1 0;
 #X connect 6 0 112 0;
 #X connect 7 0 49 0;
 #X connect 7 0 8 0;
@@ -252,4 +257,8 @@
 #X connect 125 0 127 0;
 #X connect 126 0 128 0;
 #X connect 130 0 58 0;
+#X connect 131 0 132 0;
+#X connect 132 0 134 0;
+#X connect 133 0 135 0;
+#X connect 134 0 133 0;
 #X coords 0 -1 1 1 800 100 1 700 700;
